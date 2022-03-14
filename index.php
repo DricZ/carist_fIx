@@ -1,3 +1,3 @@
 <?php
-    header('location: project1-carist/index.php')
+    header('location: project1-carist/index.php');
 ?>
