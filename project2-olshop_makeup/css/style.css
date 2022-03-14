@@ -1,0 +1,175 @@
+.container{
+    padding: 50px;
+}
+
+hr{
+    border: 0.8px;
+    color: #818FEC;
+}
+
+/* HEADER */
+.header{
+   z-index: 1; 
+}
+
+.logo{
+    position: relative;
+}
+
+.logo.kiri{
+    width: 9vw;
+    margin: 30px;
+    left: 50%;
+}
+
+.logo.tengah{
+    width: 30vw;
+    margin: 15px;
+    margin-top: 10px;
+    left: 25%;
+}
+
+.nav{
+    margin: -25px;
+    padding-bottom: 60px;
+}
+
+/* CAROUSEL PROMO */
+#banner{
+    opacity: 0.8;
+}
+
+#banner:hover{
+    opacity: 1;
+}
+
+.carousel-indicators [data-bs-target] {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 0.5rem;
+    height: 0.5rem;
+    padding: 0;
+    margin-right: 0.625rem;
+    margin-left: 0.625rem;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #000;
+    border: 0;
+    border-radius: 50%;
+    position: relative;
+}
+
+.b1{
+    background-image: url(../img/Banner_Produk_Primaderma.png);
+    background-size: 100%;
+    background-position: center;
+    width: 100vw;
+    height: 50vh;
+    max-width: 100vw;
+}
+
+.b2{
+    background-image: url(../img/Banner_Produk_Primaderma.png);
+    background-size: 100%;
+    background-position: center;
+    width: 100vw;
+    height: 50vh;
+    max-width: 100vw;
+}
+
+.b3{
+    background-image: url(../img/Banner_Produk_Primaderma.png);
+    background-size: 100%;
+    background-position: center;
+    width: 100vw;
+    height: 50vh;
+    max-width: 100vw;
+}
+
+.btn-br{
+    background: #818FEC;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 44px;
+    color: white;
+}
+
+.shop{
+    position: absolute;
+    left: 80vw;
+    top: 35vh;
+}
+
+.btn-br:hover{
+    background-color: #2B388F;
+}
+
+/* CARD FASI & TEAM */
+.ft{
+    width: 30vw;
+    height: 35vh;
+}
+
+.c-img{
+    height: 35vh;
+    opacity: 0.5;
+}
+
+.c1{
+    margin-left: 9vw;
+}
+
+.c2{
+    margin-left: 1vw;
+}
+
+.card-bg1{
+    background-image: linear-gradient(180deg, rgba(129, 143, 236, 0.25) 0%, rgba(34, 50, 154, 0.55) 100%);
+    /* opacity: 0; */
+}
+
+.card-text{
+    position: absolute;
+    left: 10vw;
+    top: 15vh;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.c-img:hover{
+    opacity: 0.8;
+}
+
+/* PRODUCT */
+
+.p{
+    width: 18vw;
+    height: 40vh;
+    margin:1vw;
+}
+
+.pct-l{
+    left: -10vw;
+}
+
+.pct-r{
+    right: -10vw;
+}
+
+.carousel .carousel-control-prev-icon {
+/* change fill="currentColor" to %23fff to make it white  */
+    background-image: url('data:image/svg+xml,<svg class="bi bi-camera" width="1em" height="1em" viewBox="0 0 20 20" fill="%23fff " xmlns="http://www.w3.org/2000/svg"><path d="M11 7c-1.657 0-4 1.343-4 3a4 4 0 014-4v1z"/><path fill-rule="evenodd" d="M16.333 5h-2.015A5.97 5.97 0 0011 4a5.972 5.972 0 00-3.318 1H3.667C2.747 5 2 5.746 2 6.667v6.666C2 14.253 2.746 15 3.667 15h4.015c.95.632 2.091 1 3.318 1a5.973 5.973 0 003.318-1h2.015c.92 0 1.667-.746 1.667-1.667V6.667C18 5.747 17.254 5 16.333 5zM3.5 7a.5.5 0 100-1 .5.5 0 000 1zm7.5 8a5 5 0 100-10 5 5 0 000 10z" clip-rule="evenodd"/><path d="M4 5a1 1 0 011-1h1a1 1 0 010 2H5a1 1 0 01-1-1z"/></svg>');
+}
+
+.carousel .carousel-control-next-icon {
+/* change fill="currentColor" to %23fff to make it white  */
+    background-image: url('data:image/svg+xml,<svg class="bi bi-bootstrap-fill" viewBox="0 0 20 20" fill="%23fff" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.002 2a4 4 0 00-4 4v8a4 4 0 004 4h8a4 4 0 004-4V6a4 4 0 00-4-4h-8zm1.06 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.543-2.11H7.063V14zm1.313-4.875V6.658h1.78c.974 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23H8.375zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H8.375v2.725z" clip-rule="evenodd"/></svg>');
+}
+
+/* NEWS */
