@@ -7,8 +7,9 @@
     <title>Add Product</title>
 </head>
 <body>
+    <h1>Upload Produk Baru</h1>
     <form method="post" action="sys/upload_product.php" enctype="multipart/form-data">
-        Foto Produk: <input type="file" name="logo" required><br>
+        Foto Produk: <input type="file" name="image" required><br>
         Nama: <input type="text" name="nama"><br>
         Deskripsi: <textarea name="deskripsi" rows="10" cols="30"></textarea><br>
         Kandungan: <textarea name="kandungan" rows="10" cols="30"></textarea><br>
