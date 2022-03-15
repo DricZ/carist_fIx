@@ -50,14 +50,14 @@
         }
 
         input {
-        border: 1px solid transparent;
-        background-color: #f1f1f1;
+        /* border: 1px solid transparent; */
+        /* background-color: #f1f1f1; */
         padding: 10px;
         font-size: 16px;
         }
 
         input[type=text] {
-        background-color: #f1f1f1;
+        /* background-color: #f1f1f1; */
         width: 100%;
         }
 
@@ -101,13 +101,13 @@
 <body>
     <h1>Upload Produk Baru</h1>
     <form method="post" action="sys/upload_product.php" enctype="multipart/form-data" autocomplete="off">
-        Foto Produk: <input type="file" name="img" required><br>
+        Foto Produk: <br><input type="file" name="img" required><br>
         <div class="autocomplete" style="width:300px;">
             Nama: <input type="text" name="nama" id="nama">
         </div><br>
-        Deskripsi: <textarea name="deskripsi" rows="10" cols="30"></textarea><br>
-        Kandungan: <textarea name="kandungan" rows="10" cols="30"></textarea><br>
-        Cara Pakai: <textarea name="cara_pakai" rows="10" cols="30"></textarea><br>
+        Deskripsi: <br><textarea name="deskripsi" rows="10" cols="30"></textarea><br>
+        Kandungan: <br><textarea name="kandungan" rows="10" cols="30"></textarea><br>
+        Cara Pakai: <br><textarea name="cara_pakai" rows="10" cols="30"></textarea><br>
         No BPOM: <input type="text" name="bpom"><br>
         <button type="submit">ADD</button>
     </form>
