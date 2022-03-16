@@ -1,57 +1,6 @@
 <?php
     require "sys/connect.php";
 
-    class Product{
-        private $id;
-        private $image;
-        private $nama;
-        private $deskripsi;
-        private $kandungan;
-        private $cara_pakai;
-        private $bpom;
-        private $harga;
-
-        function __construct($_id, $_image, $_nama, $_deskripsi, $_kandungan, $_cara_pakai, $_bpom, $_harga=0)
-        {
-            $this->id = $_id;
-            $this->image = $_image;
-            $this->nama = $_nama;
-            $this->deskripsi = $_deskripsi;
-            $this->kandungan = $_kandungan;
-            $this->cara_pakai = $_cara_pakai;
-            $this->bpom = $_bpom;
-            $this->harga = $_harga;
-        }
-
-        function get_id() {
-            return $this->id;
-        }
-        function get_image() {
-            return $this->image;
-        }
-        function get_nama() {
-            return $this->nama;
-        }
-        function get_deskripsi() {
-            return $this->deskripsi;
-        }
-        function get_kandungan() {
-            return $this->kandungan;
-        }
-        function get_cara_pakai() {
-            return $this->cara_pakai;
-        }
-        function get_bpom() {
-            return $this->bpom;
-        }
-        function get_harga() {
-            return $this->harga;
-        }
-    }
-
-    //Buat array
-    $products = array();
-
     echo "<table border='1'>
             <tr>
                 <th>ID</th>
@@ -78,11 +27,6 @@
             $kandungan = $row['kandungan'];
             $cara_pakai = $row['cara_pakai'];
             $bpom = $row['bpom'];
-
-            //Buat Object
-            $obj = new Product($id, $img, $nama, $deskripsi, $kandungan, $cara_pakai, $bpom);
-            array_push($products, $obj);
-            //Masukkan ke array
 
             //Display
             echo "<tr>";
