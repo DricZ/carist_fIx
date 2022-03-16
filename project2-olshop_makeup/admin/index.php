@@ -36,7 +36,7 @@
             echo "<td style='white-space: pre-line'>$deskripsi</td>";
             echo "<td style='white-space: pre-line'>$kandungan</td>";
             echo "<td style='white-space: pre-line'>$cara_pakai</td>";
-            //echo "<td>$bpom</td>";
+            echo "<td>$bpom</td>";
             echo "</tr>";
             
         }
