@@ -1,6 +1,8 @@
 <?php
     require "sys/connect.php";
 
+    echo "<a href='./add_product.php'></a>";
+
     echo "<table border='1'>
             <tr>
                 <th>ID</th>
