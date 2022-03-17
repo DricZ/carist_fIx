@@ -31,7 +31,7 @@
     //if (file_exists($target_file)) {
     //    echo "Sorry, file already exists.";
     //    $uploadOk = 0;
-    }
+    //}
 
     // Check file size
     if ($_FILES["img"]["size"] > 500000000) {
@@ -70,6 +70,20 @@
     $result = $conn->query($sql);
 
     if ($result === TRUE) { //Jika input client ke Database Sukses
-        echo "Upload Produk Sukses!";
+        echo "<br>Upload Produk Sukses!<br>";
+        echo "<a href='../add_product.php'>Back</a>";
     }
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Upload Status</title>
+</head>
+<body>
+    
+</body>
+</html>
