@@ -51,8 +51,8 @@
     }
 
     // Check file size
-    if ($_FILES["logo"]["size"] > 50000000) {
-        echo "Sorry, your file is too large. Maximum is 50MB";
+    if ($_FILES["logo"]["size"] > 500000000) {
+        echo "Sorry, your file is too large. Maximum is 500MB";
         $uploadOk = 0;
     }
 
