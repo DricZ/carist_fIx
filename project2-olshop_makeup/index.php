@@ -1,6 +1,7 @@
 <?php
-        require_once 'include.php';
-        require_once 'header.php';
+    header("Location: ./coming-soon/");
+    require_once 'include.php';
+    require_once 'header.php';
 ?>
 
 <!DOCTYPE html>
