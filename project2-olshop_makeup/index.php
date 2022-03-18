@@ -71,7 +71,7 @@
         <!-- PRODUCTS -->
         <div class="container product">
             <div class="row products-text" style="padding: 20px">
-                <center><h2><b>Products</b></h2></center>
+                <center><h2 class="judul"><b>Products</b></h2></center>
             </div>
 
             <div class="row">
@@ -84,18 +84,22 @@
                             <div class="row">
                                 <div class="card p ">
                                     <img class="card-img-top product" src="./img/PRODUK/Alfacid AHA _ BHA pore serum.jpg" alt="Fasilitas">
+                                    <center class="judul pr">Nama Produk</center>
                                 </div>
 
                                 <div class="card p">
                                     <img class="card-img-top product" src="./img/PRODUK/Alfacid Face Toner.jpg" alt="Fasilitas">
+                                    <center class="judul pr">Nama Produk</center>
                                 </div>
 
                                 <div class="card p">
                                     <img class="card-img-top product" src="./img/PRODUK/Alfacid Face Wash.jpg" alt="Fasilitas">
+                                    <center class="judul pr">Nama Produk</center>
                                 </div>
 
                                 <div class="card p">
                                     <img class="card-img-top product" src="./img/PRODUK/Alfacid Pro Peel 20.jpg" alt="Fasilitas">
+                                    <center class="judul pr">Nama Produk</center>
                                 </div>
                             </div>
                         </div>
@@ -103,18 +107,22 @@
                             <div class="row">
                                 <div class="card p ">
                                     <img class="card-img-top product" src="./img/PRODUK/Alfacid AHA _ BHA pore serum.jpg" alt="Fasilitas">
+                                    <center class="judul pr">Nama Produk</center>
                                 </div>
 
                                 <div class="card p">
                                     <img class="card-img-top product" src="./img/PRODUK/Alfacid Face Toner.jpg" alt="Fasilitas">
+                                    <center class="judul pr">Nama Produk</center>
                                 </div>
 
                                 <div class="card p">
                                     <img class="card-img-top product" src="./img/PRODUK/Alfacid Face Wash.jpg" alt="Fasilitas">
+                                    <center class="judul pr">Nama Produk</center>
                                 </div>
 
                                 <div class="card p">
                                     <img class="card-img-top product" src="./img/PRODUK/Alfacid Pro Peel 20.jpg" alt="Fasilitas">
+                                    <center class="judul pr">Nama Produk</center>
                                 </div>
                             </div>
                         </div>
@@ -122,18 +130,22 @@
                             <div class="row">
                                 <div class="card p ">
                                     <img class="card-img-top product" src="./img/PRODUK/Alfacid AHA _ BHA pore serum.jpg" alt="Fasilitas">
+                                    <center class="judul pr">Nama Produk</center>
                                 </div>
 
                                 <div class="card p">
                                     <img class="card-img-top product" src="./img/PRODUK/Alfacid Face Toner.jpg" alt="Fasilitas">
+                                    <center class="judul pr">Nama Produk</center>
                                 </div>
 
                                 <div class="card p">
                                     <img class="card-img-top product" src="./img/PRODUK/Alfacid Face Wash.jpg" alt="Fasilitas">
+                                    <center class="judul pr">Nama Produk</center>
                                 </div>
 
                                 <div class="card p">
                                     <img class="card-img-top product" src="./img/PRODUK/Alfacid Pro Peel 20.jpg" alt="Fasilitas">
+                                    <center class="judul pr">Nama Produk</center>
                                 </div>
                             </div>
                         </div>
@@ -152,7 +164,7 @@
 
             <div class="row">
                 <center>
-                    <button type="button" class="button-active" value="SHOP" onclick="" style="margin: 50px;">SHOP</button>
+                    <button type="button" class="button-active btn-2" value="SHOP" onclick="" style="margin: 50px;">VIEW ALL PRODUCTS</button>
 
                 </center>
             </div>
@@ -164,13 +176,14 @@
         <!-- NEWS -->
         <div class="container news">
             <div class="row products-text" style="padding: 20px">
-                <center ><h2><b>News</b></h2></center>
+                <center ><h2 class="judul"><b>News</b></h2></center>
             </div>
 
-            <div class="card" style="width: 79vw;border-radius: 35px; margin-bottom: 30px">
+            <div class="card" style="border-radius: 35px; margin-bottom: 30px">
                 <div class="row">
                     <div class="col-4">
-                        <img src="./img/news.png" alt="Fasilitas" style="width: 25vw; height:40vh; border-top-left-radius: 35px; border-bottom-left-radius: 35px;">
+                        <img src="./img/news.png" alt="Fasilitas" style="width: 20vw;
+    height: 35vh; border-top-left-radius: 35px; border-bottom-left-radius: 35px;">
                     </div>
                     <div class="col-8" style="padding: 25px">
                         <h2>News/Article Headline <br> SENSATIONAL </h2>                
@@ -180,10 +193,11 @@
                 </div>    
             </div>
 
-            <div class="card" style="width: 79vw;border-radius: 35px; margin-bottom: 20px">
+            <div class="card" style="border-radius: 35px; margin-bottom: 20px">
                 <div class="row">
                     <div class="col-4">
-                        <img src="./img/news.png" alt="Fasilitas" style="width: 25vw; height:40vh; border-top-left-radius: 35px; border-bottom-left-radius: 35px;">
+                        <img src="./img/news.png" alt="Fasilitas" style="width: 20vw;
+    height: 35vh; border-top-left-radius: 35px; border-bottom-left-radius: 35px;">
                     </div>
                     <div class="col-8" style="padding: 25px">
                         <h2>News/Article Headline <br> SENSATIONAL </h2>                
@@ -195,7 +209,7 @@
 
             <div class="row">
                 <center>
-                    <button type="button" class="button-active" value="SHOP" onclick="" style="margin: 50px;">VIEW ALL NEWS</button>
+                    <button type="button" class="button-active btn-2" value="SHOP" onclick="" style="margin: 50px;">VIEW ALL NEWS</button>
 
                 </center>
             </div>
@@ -207,50 +221,58 @@
         <!-- SOSIALS -->
         <div class="container isi">
             <div class="row products-text" style="padding: 20px">
-                <center ><h2><b>SOCIALS</b></h2></center>
+                <center ><h2 class="judul"><b>SOCIALS</b></h2></center>
             </div>
 
-            <div class="row" style="margin: 30px">
+            <center>
+            <div class="row">
                 <div class="col-sm-4">
-                    <div class="card" style="width: 50vh; height: 50vh">
+                    <div class="card" style="width: 20vw;
+    height: 50vh;">
                         <img src="./img/social.png" alt="Fasilitas">
                     </div>
                 </div>
 
                 <div class="col-sm-4">
-                    <div class="card" style="width: 50vh; height: 50vh">
+                    <div class="card" style="width: 20vw;
+    height: 50vh;">
                         <img src="./img/social.png" alt="Fasilitas">
                     </div>
                 </div>
 
                 <div class="col-sm-4">
-                    <div class="card" style="width: 50vh; height: 50vh">
+                    <div class="card" style="width: 20vw;
+    height: 50vh;">
                         <img src="./img/social.png" alt="Fasilitas">
                     </div>
                 </div>
             </div>    
 
-            <div class="row" style="margin: 30px">
+            <div class="row">
                 <div class="col-sm-4">
-                    <div class="card" style="width: 50vh; height: 50vh">
+                    <div class="card" style="width: 20vw;
+    height: 50vh;">
                         <img src="./img/social.png" alt="Fasilitas">
                     </div>
                 </div>
 
                 <div class="col-sm-4">
-                    <div class="card" style="width: 50vh; height: 50vh">
+                    <div class="card" style="width: 20vw;
+    height: 50vh;">
                         <img src="./img/social.png" alt="Fasilitas">
                     </div>
                 </div>
 
                 <div class="col-sm-4">
-                    <div class="card" style="width: 50vh; height: 50vh">
+                    <div class="card" style="width: 20vw;
+    height: 50vh;">
                         <img src="./img/social.png" alt="Fasilitas">
                     </div>
                 </div>
             </div>
+            </center>
             <center>
-                Follow us on @PT.Unifarma
+                <a href="#">Follow us on @PT.Unifarma</a>
             </center>    
         </div>
     </body>

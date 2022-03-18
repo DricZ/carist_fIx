@@ -15,9 +15,9 @@
     </head>
 
     <body>
-        <hr/>
-        <div class="container-fluid" style="background-color: black; height: 40vh">>
-            TEST
+        <hr style="margin-bottom: 0;" />
+        <div class="container-fluid megathronz" style="background-image: url('./img/gp.jpg'); ">
+            
         </div>
         <div class="container">
             <h3>PT. UNITED FARMATIC INDONESIA</h3>

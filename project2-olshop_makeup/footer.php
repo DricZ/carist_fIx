@@ -15,9 +15,9 @@
         <div class="col mt-2">
             <h5 style="color:white;">CONTACT US</h5>
             <div class="contact row justify-content-center">
-                <div class="col-12 mt-2"><a class="yess" target="_blank" href="#" style="text-decoration: none;">FAQ</a>
+                <div class="col-12 mt-2"><a style="color: white" class="yess" target="_blank" href="#" style="text-decoration: none;">FAQ</a>
                 </div>
-                <div class="col-12 mt-2"><a class="yess" target="_blank" href="#" style="text-decoration: none;">Terms & Conditions</a>
+                <div class="col-12 mt-2"><a style="color: white" class="yess" target="_blank" href="#" style="text-decoration: none;">Terms & Conditions</a>
                 </div>
             </div>    
         </div>
@@ -25,7 +25,7 @@
             <h5 style="color:white;">FIND US</h5>
             <div class="menu row">
                 <div class="col-1 mt-2 m-1"><a class="" target="_blank" href="#" style="text-decoration: none;"><i class="fab fa-instagram pr-1" style="color: white; font-size: 15pt;"></i></a></div>
-                <div class="col-2 mt-2 m-1 mb-4"><a class="" target="_blank" href="#" style="text-decoration: none;"><i class="fab fa-facebook pr-1" style="color: white; font-size: 15pt;"></i></a></div>
+                <div class="col-2 mt-2 m-1 mb-4"><a class="" target="_blank" href="#" style="text-decoration: none;"><i class="fab fa-facebook-f pr-1" style="color: white; font-size: 15pt; border: 1px white"></i></a></div>
             </div>
 
             <div class="menu row">

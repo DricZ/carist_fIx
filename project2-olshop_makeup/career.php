@@ -20,7 +20,7 @@
             <h2>We Are Hiring</h2>
             <div class="row mt-4 mb-4">
                 <div class="col-5">
-                    <img src="./img/marketing 1.jpg" style="width: 30vw">
+                    <img src="./img/marketing 1.jpg" style="width: 100%;">
                 </div>
                 <div class="col-7">
                     <h4>QC Staff</h4>
@@ -32,7 +32,7 @@
 
             <div class="row mt-4 mb-4">
                 <div class="col-5">
-                    <img src="./img/marketing 1.jpg" style="width: 30vw">
+                    <img src="./img/marketing 1.jpg" style="width: 100%;">
                 </div>
                 <div class="col-7">
                     <h4>Production Staff</h4>
