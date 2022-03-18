@@ -2,6 +2,8 @@
     require "connect.php";
     $product_name = $_POST["nama"];
     $category = $_POST["category"];
+
+    //die();
     
 
     //Cari Product ID
@@ -15,21 +17,23 @@
         }
     }
 
-    //Cari Category ID
-    $sql = "SELECT * FROM category_list WHERE nama='$category'";
-    $result = $conn->query($sql);
+    // //Cari Category ID
+    // $sql = "SELECT * FROM category_list WHERE nama='$category'";
+    // $result = $conn->query($sql);
 
-    if ($result->num_rows > 0) {
-        // output data of each row
-        if($row = $result->fetch_assoc()) {
-            $category_id = $row['id'];
-        }
-    }
+    // if ($result->num_rows > 0) {
+    //     // output data of each row
+    //     if($row = $result->fetch_assoc()) {
+    //         $category_id = $row['id'];
+    //     }
+    // }
     
-    //Masukkan ke DB
-    $sql = "INSERT INTO category (category_id, product_id)
-            VALUES ($category_id, $product_id)";
-    $result = $conn->query($sql);
+    foreach ($category as $id){
+        //Masukkan ke DB
+        $sql = "INSERT INTO category (category_id, product_id)
+                VALUES ($id, $product_id)";
+        $result = $conn->query($sql);
+    }
 
     if ($result === TRUE) { //Jika input client ke Database Sukses
         echo "<br>Set Kategori Sukses!<br>";

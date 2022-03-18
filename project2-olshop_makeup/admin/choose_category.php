@@ -117,12 +117,27 @@
 <body>
     <h1>Upload Produk Baru</h1>
     <form method="post" action="sys/select_category.php" autocomplete="off">
-        <div class="autocomplete" style="width:300px;">
+        <!-- <div class="autocomplete" style="width:300px;">
             Category: <input type="text" name="category" id="category">
-        </div><br>
+        </div><br> -->
         <div class="autocomplete" style="width:300px;">
             Nama: <input type="text" name="nama" id="nama">
         </div><br>
+        <?php
+        //Checkbox
+        $sql = "SELECT * FROM category_list";
+        $result = $conn->query($sql);
+        $products = array();
+
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while($row = $result->fetch_assoc()) {
+                $id = $row['id'];
+                $nama = $row['nama'];
+                echo "<input type='checkbox' id='category' name='category[]' value='$id'> $nama<br>";
+            }
+        }
+        ?>
         <button type="submit">ADD</button>
     </form>
     <script>
