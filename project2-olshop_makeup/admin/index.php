@@ -12,6 +12,7 @@
                 <th>Kandungan</th>
                 <th>Cara Pakai</th>
                 <th>BPOM</th>
+                <th>Category</th>
             </tr>";
 
     $sql = "SELECT * FROM product";
@@ -29,6 +30,20 @@
             $kandungan = $row['kandungan'];
             $cara_pakai = $row['cara_pakai'];
             $bpom = $row['bpom'];
+            $category = "";
+
+            //Search Category
+            $sql2 = "SELECT category.category_id AS category_id, category_list.nama FROM category LEFT JOIN category_list ON category.category_id = category_list.id WHERE product_id = '$id'";
+            $result2 = $conn->query($sql2);
+
+            if ($result2->num_rows > 0) {
+                // output data of each row
+                while($row2 = $result2->fetch_assoc()) {
+                    $temp = $row2['nama'];
+                    $category = $category . $temp . ", ";
+                }
+            }
+            
 
             //Display
             echo "<tr>";
@@ -39,6 +54,7 @@
             echo "<td style='white-space: pre-line'>$kandungan</td>";
             echo "<td style='white-space: pre-line'>$cara_pakai</td>";
             echo "<td>$bpom</td>";
+            echo "<td>$category</td>";
             echo "</tr>";
             
         }
