@@ -1,5 +1,5 @@
 <?php
-    header("Location: ./coming-soon/");
+    //header("Location: ./coming-soon/");
     require_once 'include.php';
     require_once 'header.php';
 ?>
