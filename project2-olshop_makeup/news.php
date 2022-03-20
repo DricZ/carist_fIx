@@ -1,6 +1,10 @@
 <?php
         require_once 'include.php';
         require_once 'header.php';
+        require "admin/sys/connect.php";
+
+        $sql = "SELECT * FROM news";
+        $result = $conn->query($sql);
 ?>
 
 <!DOCTYPE html>
@@ -16,16 +20,29 @@
 
     <body>
         <hr/>
+        
         <div class="container" style="">
+            <?php
+                if ($result->num_rows > 0) {
+                    // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                        $title = $row['title'];
+                        $img = "img/news/".$row['img'];
+                        $news = $row['news'];
+            ?>
             <div class="row">
                 <div class="col-md-4">
-                    <img src="./img/QC_2.jpg" style="width: 20vw; height: 30vh; border-radius: 20px; object-fit: cover;">
+                    <img src="<?=$img?>" style="width: 20vw; height: 30vh; border-radius: 20px; object-fit: cover;">
                 </div>
-                <div class="col-md-8" style="margin-left: 0px;">
-                <h3>TEST Title</h3>
-                News Here
+                <div class="col-md-8">
+                <h3><?=$title?></h3>
+                <?=$news?>
                 </div>
             </div>
+            <?php
+                    }
+                }
+            ?>
         </div>
         
         
