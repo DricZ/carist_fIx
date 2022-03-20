@@ -18,7 +18,13 @@
         <hr/>
         <div class="container" style="">
             <div class="row">
-                <img src="./img/QC_2.jpg" style="width: 20vw; height: 30vh; border-radius: 20px">
+                <div class="col-md-4">
+                    <img src="./img/QC_2.jpg" style="width: 20vw; height: 30vh; border-radius: 20px; object-fit: cover;">
+                </div>
+                <div class="col-md-8" style="margin-left: 0px;">
+                <h3>TEST Title</h3>
+                News Here
+                </div>
             </div>
         </div>
         
