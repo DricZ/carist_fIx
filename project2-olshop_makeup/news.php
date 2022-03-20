@@ -28,7 +28,9 @@
                     while($row = $result->fetch_assoc()) {
                         $title = $row['title'];
                         $img = "img/news/".$row['img'];
+                        $wrap_limit = 550;
                         $news = $row['news'];
+                        $news = strlen($news) > $wrap_limit ? substr($news,0,$wrap_limit)."..." : $news;
             ?>
             <div class="row">
                 <div class="col-md-4">
