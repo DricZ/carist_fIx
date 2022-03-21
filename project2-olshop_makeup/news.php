@@ -28,17 +28,21 @@
                     while($row = $result->fetch_assoc()) {
                         $title = $row['title'];
                         $img = "img/news/".$row['img'];
-                        $wrap_limit = 550;
+                        $wrap_limit = 500;
                         $news = $row['news'];
                         $news = strlen($news) > $wrap_limit ? substr($news,0,$wrap_limit)."..." : $news;
+                        $upload_date = $row['upload_date'];
+                        $phpdate = strtotime($upload_date);
+                        $date = date('l, d F Y', $phpdate);
             ?>
             <div class="row">
                 <div class="col-md-4">
                     <img src="<?=$img?>" style="width: 20vw; height: 30vh; border-radius: 20px; object-fit: cover;">
                 </div>
                 <div class="col-md-8">
-                <h3><?=$title?></h3>
-                <?=$news?>
+                    <h3><?=$title?></h3>
+                    <p><?=$news?></b></p>
+                    <p><?=$date?></p>
                 </div>
             </div>
             <?php
