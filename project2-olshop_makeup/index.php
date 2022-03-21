@@ -1,5 +1,9 @@
 <?php
+<<<<<<< Updated upstream
     //header("Location: ./coming-soon/");
+=======
+    // header("Location: ./coming-soon/");
+>>>>>>> Stashed changes
     require_once 'include.php';
     require_once 'header.php';
 ?>
