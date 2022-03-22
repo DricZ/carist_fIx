@@ -161,11 +161,11 @@
                     </div>
 
                 <!-- Left and right controls/icons -->
-                    <button class="carousel-control-prev pct-l" type="button" data-bs-target="#products" data-bs-slide="prev">
+                    <button class="carousel-control-prev pct-l" type="button" data-bs-target="#products" data-bs-slide="prev" style="margin: 20px">
                     <span class="carousel-control-prev-icon"></span>
                     </button>
 
-                    <button class="carousel-control-next pct-r" type="button" data-bs-target="#products" data-bs-slide="next">
+                    <button class="carousel-control-next pct-r" type="button" data-bs-target="#products" data-bs-slide="next" style="margin: 20px">
                     <span class="carousel-control-next-icon"></span>
                     </button>
                 </div>
