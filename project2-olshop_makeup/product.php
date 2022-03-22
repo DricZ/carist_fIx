@@ -143,7 +143,7 @@
                 ?>
                 <div class="col-md-3">
                     <div class="card produk-p" onclick="openProduk('<?=$nama?>')">
-                        <img src="<?=$path?>" alt="Fasilitas">
+                        <img src="<?=$path?>" alt="<?=$img?>">
                         <center class="judul pr"><?=$nama?></center>
                     </div>
                 </div>
