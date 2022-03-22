@@ -2,6 +2,8 @@
     //header("Location: ./coming-soon/");
     require_once 'include.php';
     require_once 'header.php';
+    require "admin/sys/connect.php";
+
 ?>
 
 <!DOCTYPE html>
@@ -186,33 +188,40 @@
                 <center ><h2 class="judul"><b>News</b></h2></center>
             </div>
 
-            <div class="card c-news" style="border-radius: 35px; margin-bottom: 30px">
-                <div class="row">
-                    <div class="col-4">
-                        <img src="./img/news.png" alt="Fasilitas" style="width: 20vw;
-    height: 37vh; border-top-left-radius: 35px; border-bottom-left-radius: 35px;">
-                    </div>
-                    <div class="col-8" style="padding: 25px">
-                        <h2>News/Article Headline <br> SENSATIONAL </h2>                
-                        <p>The song came from the bathroom belting over the sound of the shower's running water. It was the same way each day began since he could remember. It listened intently and concluded that the singing today was as terrible as it had ever been.</p>
-                        <p>01 January 2022</p>
-                    </div>
-                </div>    
-            </div>
+            <?php
+                $sql = "SELECT * FROM news";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                        $title = $row['title'];
+                        $img = "img/news/".$row['img'];
+                        $wrap_limit = 500;
+                        $news = $row['news'];
+                        $news = strlen($news) > $wrap_limit ? substr($news,0,$wrap_limit)."..." : $news;
+                        $upload_date = $row['upload_date'];
+                        $phpdate = strtotime($upload_date);
+                        $date = date('l, d F Y', $phpdate);
+            ?>
 
-            <div class="card c-new" style="border-radius: 35px; margin-bottom: 20px">
+            <div class="card c-news" style="border-radius: 35px; margin-bottom: 20px">
                 <div class="row">
                     <div class="col-4">
-                        <img src="./img/news.png" alt="Fasilitas" style="width: 20vw;
+                        <img src="<?=$img?>" alt="Fasilitas" style="width: 20vw;
     height: 37vh; border-top-left-radius: 35px; border-bottom-left-radius: 35px;">
                     </div>
                     <div class="col-8" style="padding: 25px">
-                        <h2>News/Article Headline <br> SENSATIONAL </h2>                
-                        <p>The song came from the bathroom belting over the sound of the shower's running water. It was the same way each day began since he could remember. It listened intently and concluded that the singing today was as terrible as it had ever been.</p>
-                        <p>01 January 2022</p>
+                        <h2><?=$title?> <br> SENSATIONAL </h2>                
+                        <p><?=$news?></b></p>
+                        <p><?=$date?></p>
                     </div>
                 </div>    
             </div>
+            
+            <?php
+                    }
+                }
+            ?>
 
             <div class="row">
                 <center>
