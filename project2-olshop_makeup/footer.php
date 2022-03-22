@@ -9,7 +9,7 @@
 }
 </style>
 
-<footer id="contactus" class="contain mt-5 py-4 px-5" style="z-index:2000; background-color:#2B388F">
+<footer id="contactus" class="contain py-4 px-5" style="z-index:2000; background-color:#2B388F">
     <div class="row row-cols-md-5 row-cols-1">
 
         <div class="col mt-2">
