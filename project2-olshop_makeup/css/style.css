@@ -285,3 +285,21 @@ div.content {
 .produk-p:hover{
     width: 16vw; 
 }
+
+.p-foto{
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+.p-foto:hover{
+    width: 71%
+}
+
+.p-lain{
+    width: 20%;
+    margin: 5px;
+}
+
+.p-lain:hover{
+    width: 21%;
+}

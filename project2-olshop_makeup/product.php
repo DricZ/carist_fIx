@@ -20,7 +20,7 @@
 
     <body>
         <hr/>
-        <div class="container-fluid"  style="background-color: #2B388F;     margin-top: -15px;">
+        <div class="container-fluid"  style="background-color: #2B388F; margin-top: -15px;">
             <!-- The sidebar -->
             <div class="sidebar">
                 <h3 style="color: white; margin: 20px; margin-top: 40px">Category</h3>
