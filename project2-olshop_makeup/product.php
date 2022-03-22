@@ -27,70 +27,70 @@
 
                 <a onclick="openbar('bar1')" class="">Based on PRODUCT HIGHLIGHT</a>
                 <div id="bar1" hidden>
-                    <a onclick="">Best Seller / Recomendation</a>
-                    <a onclick="">New Arrival</a>
+                    <a class="dalem" onclick="">Best Seller / Recomendation</a>
+                    <a class="dalem" onclick="">New Arrival</a>
                 </div>
 
                 <a onclick="openbar('bar2')" class="">Based on SKIN TYPE</a>
                 <div id="bar2" hidden>
-                    <a onclick="">All Skin Type</a>
-                    <a onclick="">Normal</a>
-                    <a onclick="">Dry Skin</a>
-                    <a onclick="">Oily Skin</a>
-                    <a onclick="">Sensitive Skin</a>
+                    <a class="dalem" onclick="">All Skin Type</a>
+                    <a class="dalem" onclick="">Normal</a>
+                    <a class="dalem" onclick="">Dry Skin</a>
+                    <a class="dalem" onclick="">Oily Skin</a>
+                    <a class="dalem" onclick="">Sensitive Skin</a>
                 </div>
 
                 <a onclick="openbar('bar3')" class="">Based on SKIN CONDITION</a>
                 <div id="bar3" hidden>
-                    <a onclick="">Normal</a>
-                    <a onclick="">Kusam</a>
-                    <a onclick="">Berjerawat</a>
-                    <a onclick="">Aging</a>
-                    <a onclick="">Kering</a>
-                    <a onclick="">Inflamasi</a>
+                    <a class="dalem" onclick="">Normal</a>
+                    <a class="dalem" onclick="">Kusam</a>
+                    <a class="dalem" onclick="">Berjerawat</a>
+                    <a class="dalem" onclick="">Aging</a>
+                    <a class="dalem" onclick="">Kering</a>
+                    <a class="dalem" onclick="">Inflamasi</a>
                 </div>
 
                 <a onclick="openbar('bar4')" class="">Based on ACNE SEVERITY</a>
                 <div id="bar4" hidden>
-                    <a onclick="">All Condition</a>
-                    <a onclick="">Komedo</a>
-                    <a onclick="">Papule (light)</a>
-                    <a onclick="">Pustule (Medium)</a>
-                    <a onclick="">Nodule ( Severe)</a>
+                    <a class="dalem" onclick="">All Condition</a>
+                    <a class="dalem" onclick="">Komedo</a>
+                    <a class="dalem" onclick="">Papule (light)</a>
+                    <a class="dalem" onclick="">Pustule (Medium)</a>
+                    <a class="dalem" onclick="">Nodule ( Severe)</a>
                 </div>
 
                 <a onclick="openbar('bar5')" class="">Based on PRODUCT TYPE</a>
                 <div id="bar5" hidden>
-                    <a onclick="">Face Wash</a>
-                    <a onclick="">Face Cleanser</a>
-                    <a onclick="">Face Toner</a>
-                    <a onclick="">Serum</a>
-                    <a onclick="">Cream</a>
-                    <a onclick="">Gel</a>
-                    <a onclick="">Lotion</a>
-                    <a onclick="">Body Care</a>
-                    <a onclick="">Neutralizing</a>
-                    <a onclick="">Peeling</a>
-                    <a onclick="">Decorative</a>
+                    <a class="dalem" onclick="">Face Wash</a>
+                    <a class="dalem" onclick="">Face Cleanser</a>
+                    <a class="dalem" onclick="">Face Toner</a>
+                    <a class="dalem" onclick="">Serum</a>
+                    <a class="dalem" onclick="">Cream</a>
+                    <a class="dalem" onclick="">Gel</a>
+                    <a class="dalem" onclick="">Lotion</a>
+                    <a class="dalem" onclick="">Body Care</a>
+                    <a class="dalem" onclick="">Neutralizing</a>
+                    <a class="dalem" onclick="">Peeling</a>
+                    <a class="dalem" onclick="">Decorative</a>
                 </div>
 
                 <a onclick="openbar('bar6')" class="">Based on FUNCTION</a>
                 <div id="bar6" hidden>
-                    <a onclick="">Sunscreen</a>
-                    <a onclick="">Moisturizer</a>
-                    <a onclick="">Brightening</a>
-                    <a onclick="">Acne Care</a>
-                    <a onclick="">Anti Aging</a>
-                    <a onclick="">Nutritive</a>
-                    <a onclick="">Conditioning</a>
+                    <a class="dalem" onclick="">Sunscreen</a>
+                    <a class="dalem" onclick="">Moisturizer</a>
+                    <a class="dalem" onclick="">Brightening</a>
+                    <a class="dalem" onclick="">Acne Care</a>
+                    <a class="dalem" onclick="">Anti Aging</a>
+                    <a class="dalem" onclick="">Nutritive</a>
+                    <a class="dalem" onclick="">Conditioning</a>
                 </div>
 
                 <a onclick="openbar('bar7')" class="">Based on BRAND</a>
                 <div id="bar7" hidden>
-                    <a onclick="">Alfacid</a>
-                    <a onclick="">Primaderma</a>
-                    <a onclick="">Hydrosnail</a>
-                    <a onclick="">Solasense</a>
+                    <a class="dalem" onclick="">Alfacid</a>
+                    <a class="dalem" onclick="">Primaderma</a>
+                    <a class="dalem" onclick="">Hydrosnail</a>
+                    <a class="dalem" onclick="">Solasense</a>
                 </div>
             </div>
 
@@ -100,28 +100,28 @@
                 <center>
                 <div class="row">
                     <div class="col-sm-3">
-                        <div class="card produk-p">
+                        <div class="card produk-p" onclick="openProduk()">
                             <img src="./img/produk/Acne Loose Powder Lo1.jpg" alt="Fasilitas">
                             <center class="judul pr">Nama Produk</center>
                         </div>
                     </div>
 
                     <div class="col-sm-3">
-                        <div class="card produk-p">
+                        <div class="card produk-p" onclick="openProduk()">
                             <img src="./img/produk/Acne Loose Powder Lo1.jpg" alt="Fasilitas">
                             <center class="judul pr">Nama Produk</center>
                         </div>
                     </div>
 
                     <div class="col-sm-3">
-                        <div class="card produk-p">
+                        <div class="card produk-p" onclick="openProduk()">
                             <img src="./img/produk/Acne Loose Powder Lo1.jpg" alt="Fasilitas">
                             <center class="judul pr">Nama Produk</center>
                         </div>
                     </div>
 
                     <div class="col-sm-3">
-                        <div class="card produk-p">
+                        <div class="card produk-p" onclick="openProduk()">
                             <img src="./img/produk/Acne Loose Powder Lo1.jpg" alt="Fasilitas">
                             <center class="judul pr">Nama Produk</center>
                         </div>
@@ -130,58 +130,28 @@
 
                 <div class="row">
                     <div class="col-sm-3">
-                        <div class="card produk-p">
+                        <div class="card produk-p" onclick="openProduk()">
                             <img src="./img/produk/Acne Loose Powder Lo1.jpg" alt="Fasilitas">
                             <center class="judul pr">Nama Produk</center>
                         </div>
                     </div>
 
                     <div class="col-sm-3">
-                        <div class="card produk-p">
+                        <div class="card produk-p" onclick="openProduk()">
                             <img src="./img/produk/Acne Loose Powder Lo1.jpg" alt="Fasilitas">
                             <center class="judul pr">Nama Produk</center>
                         </div>
                     </div>
 
                     <div class="col-sm-3">
-                        <div class="card produk-p">
+                        <div class="card produk-p" onclick="openProduk()">
                             <img src="./img/produk/Acne Loose Powder Lo1.jpg" alt="Fasilitas">
                             <center class="judul pr">Nama Produk</center>
                         </div>
                     </div>
 
                     <div class="col-sm-3">
-                        <div class="card produk-p">
-                            <img src="./img/produk/Acne Loose Powder Lo1.jpg" alt="Fasilitas">
-                            <center class="judul pr">Nama Produk</center>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-sm-3">
-                        <div class="card produk-p">
-                            <img src="./img/produk/Acne Loose Powder Lo1.jpg" alt="Fasilitas">
-                            <center class="judul pr">Nama Produk</center>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-3">
-                        <div class="card produk-p">
-                            <img src="./img/produk/Acne Loose Powder Lo1.jpg" alt="Fasilitas">
-                            <center class="judul pr">Nama Produk</center>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-3">
-                        <div class="card produk-p">
-                            <img src="./img/produk/Acne Loose Powder Lo1.jpg" alt="Fasilitas">
-                            <center class="judul pr">Nama Produk</center>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-3">
-                        <div class="card produk-p">
+                        <div class="card produk-p" onclick="openProduk()">
                             <img src="./img/produk/Acne Loose Powder Lo1.jpg" alt="Fasilitas">
                             <center class="judul pr">Nama Produk</center>
                         </div>
@@ -190,28 +160,58 @@
 
                 <div class="row">
                     <div class="col-sm-3">
-                        <div class="card produk-p">
+                        <div class="card produk-p" onclick="openProduk()">
                             <img src="./img/produk/Acne Loose Powder Lo1.jpg" alt="Fasilitas">
                             <center class="judul pr">Nama Produk</center>
                         </div>
                     </div>
 
                     <div class="col-sm-3">
-                        <div class="card produk-p">
+                        <div class="card produk-p" onclick="openProduk()">
                             <img src="./img/produk/Acne Loose Powder Lo1.jpg" alt="Fasilitas">
                             <center class="judul pr">Nama Produk</center>
                         </div>
                     </div>
 
                     <div class="col-sm-3">
-                        <div class="card produk-p">
+                        <div class="card produk-p" onclick="openProduk()">
                             <img src="./img/produk/Acne Loose Powder Lo1.jpg" alt="Fasilitas">
                             <center class="judul pr">Nama Produk</center>
                         </div>
                     </div>
 
                     <div class="col-sm-3">
-                        <div class="card produk-p">
+                        <div class="card produk-p" onclick="openProduk()">
+                            <img src="./img/produk/Acne Loose Powder Lo1.jpg" alt="Fasilitas">
+                            <center class="judul pr">Nama Produk</center>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card produk-p" onclick="openProduk()">
+                            <img src="./img/produk/Acne Loose Powder Lo1.jpg" alt="Fasilitas">
+                            <center class="judul pr">Nama Produk</center>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="card produk-p" onclick="openProduk()">
+                            <img src="./img/produk/Acne Loose Powder Lo1.jpg" alt="Fasilitas">
+                            <center class="judul pr">Nama Produk</center>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="card produk-p" onclick="openProduk()">
+                            <img src="./img/produk/Acne Loose Powder Lo1.jpg" alt="Fasilitas">
+                            <center class="judul pr">Nama Produk</center>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="card produk-p" onclick="openProduk()">
                             <img src="./img/produk/Acne Loose Powder Lo1.jpg" alt="Fasilitas">
                             <center class="judul pr">Nama Produk</center>
                         </div>
@@ -228,6 +228,10 @@
             } else {
                 x.setAttribute('hidden', 'hidden');
             }
+        }
+
+        function openProduk(){
+            window.location.href = 'product-detail.php';
         }
         </script>
 

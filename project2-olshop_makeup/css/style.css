@@ -33,6 +33,14 @@ hr{
     text-decoration: none;
 }
 
+.dalem {
+    display: block;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
 /* Active/current link */
 .sidebar a.active {
     background-color: white;
