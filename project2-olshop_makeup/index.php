@@ -243,19 +243,19 @@
             <center>
             <div class="row">
                 <div class="col-sm-4">
-                    <div class="card" style="width: 20vw; margin: 20px;">
+                    <div class="card ig">
                         <img src="./img/social.png" alt="Fasilitas">
                     </div>
                 </div>
 
                 <div class="col-sm-4">
-                    <div class="card" style="width: 20vw; margin: 20px;">
+                    <div class="card ig">
                         <img src="./img/social.png" alt="Fasilitas">
                     </div>
                 </div>
 
                 <div class="col-sm-4">
-                    <div class="card" style="width: 20vw; margin: 20px;">
+                    <div class="card ig">
                         <img src="./img/social.png" alt="Fasilitas">
                     </div>
                 </div>
@@ -263,19 +263,19 @@
 
             <div class="row">
                 <div class="col-sm-4">
-                    <div class="card" style="width: 20vw; margin: 20px;">
+                    <div class="card ig">
                         <img src="./img/social.png" alt="Fasilitas">
                     </div>
                 </div>
 
                 <div class="col-sm-4">
-                    <div class="card" style="width: 20vw; margin: 20px;">
+                    <div class="card ig">
                         <img src="./img/social.png" alt="Fasilitas">
                     </div>
                 </div>
 
                 <div class="col-sm-4">
-                    <div class="card" style="width: 20vw; margin: 20px;">
+                    <div class="card ig">
                         <img src="./img/social.png" alt="Fasilitas">
                     </div>
                 </div>

@@ -87,7 +87,7 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link nav-hd" href="#"><b class="nav-color">PRODUCT</b></a>
+                                    <a class="nav-link nav-hd" href="product.php"><b class="nav-color">PRODUCT</b></a>
                                 </li>
 
                                 <li class="nav-item">
