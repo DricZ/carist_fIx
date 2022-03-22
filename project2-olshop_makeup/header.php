@@ -36,10 +36,9 @@
             }
 
             .logo.tengah{
-                width: 30vw;
+                width: 35vw;
                 margin: 15px;
                 margin-top: 10px;
-                left: 25%;
             }
 
             .nav{
@@ -49,6 +48,11 @@
 
             .nav-color{
                 color: #818FEC;
+            }
+            
+            .nav-hd{
+                margin-left: 10px;
+                margin-right: 10px;
             }
 
         </style>
@@ -69,35 +73,37 @@
                 <div class="col-sm-8">
                     <div class="row">
                         <div class="col-sm-12">
-                            <img class="logo tengah" src="./img/Nama PT.png" alt="PT. United Farmatic Indonesia">
+                            <center>
+                                <img class="logo tengah" src="./img/Nama PT.png" alt="PT. United Farmatic Indonesia">
+                            </center>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-sm-12">
                             <ul class="nav justify-content-center">
-                                <li class="nav-item">
+                                <li class="nav-item nav-hd">
                                     <a class="nav-link" href="index.php"><b class="nav-color">HOME</b></a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"><b class="nav-color">PRODUCT</b></a>
+                                    <a class="nav-link nav-hd" href="#"><b class="nav-color">PRODUCT</b></a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="about_us.php"><b class="nav-color">ABOUT US</b></a>
+                                    <a class="nav-link nav-hd" href="about_us.php"><b class="nav-color">ABOUT US</b></a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="news.php"><b class="nav-color">NEWS</b></a>
+                                    <a class="nav-link nav-hd" href="news.php"><b class="nav-color">NEWS</b></a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="career.php"><b class="nav-color">CAREER</b></a>
+                                    <a class="nav-link nav-hd" href="career.php"><b class="nav-color">CAREER</b></a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact_us.php"><b class="nav-color">CONTACT US</b></a>
+                                    <a class="nav-link nav-hd" href="contact_us.php"><b class="nav-color">CONTACT US</b></a>
                                 </li>
                             </ul>
                         </div>

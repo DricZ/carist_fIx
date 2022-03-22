@@ -24,12 +24,12 @@
         <div class="col mt-2 mb-1">
             <h5 style="color:white;">FIND US</h5>
             <div class="menu row">
-                <div class="col-1 mt-2 m-1"><a class="" target="_blank" href="#" style="text-decoration: none;"><i class="fab fa-instagram pr-1" style="color: white; font-size: 15pt;"></i></a></div>
-                <div class="col-2 mt-2 m-1 mb-4"><a class="" target="_blank" href="#" style="text-decoration: none;"><i class="fab fa-facebook-f pr-1" style="color: white; font-size: 15pt; border: 1px white"></i></a></div>
+                <div class="col-1 mt-2 m-1"><a class="" target="_blank" href="#" style="text-decoration: none;"><i class="fab fa-instagram pr-1" style="color: white; font-size: 17pt;"></i></a></div>
+                <div class="col-2 mt-2 m-1 mb-4"><a class="" target="_blank" href="#" style="text-decoration: none;"><i class="fab fa-facebook-f pr-1" style="color: white; font-size: 17pt; border: 1px white"></i></a></div>
             </div>
 
-            <div class="menu row">
-                <div class="card mt-2 m-1 p-2" style="">
+            <div class="menu row" style="width: 85%">
+                <div class="card mt-1 p-2" style="">
                     <div class="row">
                         <div class="col-4 text-center">
                             <img class="logo-footer" src="./img/Logo-Halal-PNG-Terbaru.png">
@@ -54,12 +54,14 @@
         </div>
 
         <div class="float-end">
-            <h5 style="color:white; float:right">Ikuti berita dan update kami</h5>
+            <h4 style="color:white; float:right">Ikuti berita dan update kami</h4>
             <form action="#">
                 <div class="input-group mt-5">
-                    <input type="email" class="form-control" id="email" placeholder="Write email here..." name="email" style="height: 70px">
+                    <input type="email" class="form-control" id="email" placeholder="Write email here..." name="email" style="height: 55px">
                     <div class="input-group-append">
-                        <button class="" style="width: 70px; height: 70px"></button>
+                        <button class="" style="width: 55px; height: 55px; background-color: #818FEC;">
+                            <span class="carousel-control-next-icon" style="color:#2B388F"></span>
+                        </button>
                     </div>
                 </div>
             </form>

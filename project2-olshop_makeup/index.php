@@ -1,9 +1,5 @@
 <?php
-<<<<<<< Updated upstream
     //header("Location: ./coming-soon/");
-=======
-    // header("Location: ./coming-soon/");
->>>>>>> Stashed changes
     require_once 'include.php';
     require_once 'header.php';
 ?>
@@ -30,6 +26,7 @@
                         <button type="button" data-bs-target="#banner" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#banner" data-bs-slide-to="1" aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#banner" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#banner" data-bs-slide-to="3" aria-label="Slide 4"></button>
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -39,6 +36,11 @@
                         </div>
                         <div class="carousel-item">
                             <div class="container text-left b2">
+                                <button type="button" class="button-active shop btn-br" value="SHOP" onclick="">SHOP</button>
+                            </div>                        
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container text-left b3">
                                 <button type="button" class="button-active shop btn-br" value="SHOP" onclick="">SHOP</button>
                             </div>                        
                         </div>
@@ -184,11 +186,11 @@
                 <center ><h2 class="judul"><b>News</b></h2></center>
             </div>
 
-            <div class="card" style="border-radius: 35px; margin-bottom: 30px">
+            <div class="card c-news" style="border-radius: 35px; margin-bottom: 30px">
                 <div class="row">
                     <div class="col-4">
                         <img src="./img/news.png" alt="Fasilitas" style="width: 20vw;
-    height: 35vh; border-top-left-radius: 35px; border-bottom-left-radius: 35px;">
+    height: 37vh; border-top-left-radius: 35px; border-bottom-left-radius: 35px;">
                     </div>
                     <div class="col-8" style="padding: 25px">
                         <h2>News/Article Headline <br> SENSATIONAL </h2>                
@@ -198,11 +200,11 @@
                 </div>    
             </div>
 
-            <div class="card" style="border-radius: 35px; margin-bottom: 20px">
+            <div class="card c-new" style="border-radius: 35px; margin-bottom: 20px">
                 <div class="row">
                     <div class="col-4">
                         <img src="./img/news.png" alt="Fasilitas" style="width: 20vw;
-    height: 35vh; border-top-left-radius: 35px; border-bottom-left-radius: 35px;">
+    height: 37vh; border-top-left-radius: 35px; border-bottom-left-radius: 35px;">
                     </div>
                     <div class="col-8" style="padding: 25px">
                         <h2>News/Article Headline <br> SENSATIONAL </h2>                
@@ -232,22 +234,19 @@
             <center>
             <div class="row">
                 <div class="col-sm-4">
-                    <div class="card" style="width: 20vw;
-    height: 50vh;">
+                    <div class="card" style="width: 20vw; margin: 20px;">
                         <img src="./img/social.png" alt="Fasilitas">
                     </div>
                 </div>
 
                 <div class="col-sm-4">
-                    <div class="card" style="width: 20vw;
-    height: 50vh;">
+                    <div class="card" style="width: 20vw; margin: 20px;">
                         <img src="./img/social.png" alt="Fasilitas">
                     </div>
                 </div>
 
                 <div class="col-sm-4">
-                    <div class="card" style="width: 20vw;
-    height: 50vh;">
+                    <div class="card" style="width: 20vw; margin: 20px;">
                         <img src="./img/social.png" alt="Fasilitas">
                     </div>
                 </div>
@@ -255,29 +254,26 @@
 
             <div class="row">
                 <div class="col-sm-4">
-                    <div class="card" style="width: 20vw;
-    height: 50vh;">
+                    <div class="card" style="width: 20vw; margin: 20px;">
                         <img src="./img/social.png" alt="Fasilitas">
                     </div>
                 </div>
 
                 <div class="col-sm-4">
-                    <div class="card" style="width: 20vw;
-    height: 50vh;">
+                    <div class="card" style="width: 20vw; margin: 20px;">
                         <img src="./img/social.png" alt="Fasilitas">
                     </div>
                 </div>
 
                 <div class="col-sm-4">
-                    <div class="card" style="width: 20vw;
-    height: 50vh;">
+                    <div class="card" style="width: 20vw; margin: 20px;">
                         <img src="./img/social.png" alt="Fasilitas">
                     </div>
                 </div>
             </div>
             </center>
             <center>
-                <a href="#">Follow us on @PT.Unifarma</a>
+                <a href="#" style="color: #818FEC;">Follow us on @PT.Unifarma</a>
             </center>    
         </div>
     </body>

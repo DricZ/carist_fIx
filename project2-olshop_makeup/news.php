@@ -37,8 +37,8 @@
                     <img src="<?=$img?>" style="width: 20vw; height: 30vh; border-radius: 20px; object-fit: cover;">
                 </div>
                 <div class="col-md-8">
-                <h3><?=$title?></h3>
-                <?=$news?>
+                    <h3><?=$title?></h3>
+                    <?=$news?>
                 </div>
             </div>
             <?php
@@ -46,7 +46,7 @@
                 }
             ?>
         </div>
-        
+        </div>
         
     </body>
 

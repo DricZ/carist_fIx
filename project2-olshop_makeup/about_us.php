@@ -28,7 +28,7 @@
             </p>
         </div>
 
-        <img style="position: absolute; width: 30vw; height:40vh ;right: 0; top: 110%" src="./img/Produksi.jpg" >
+        <img style="position: absolute; width: 30vw; height:40vh ;right: 0; top: 100%" src="./img/Produksi.jpg" >
 
         <div class="container-fluid" style="background-color: #2B388F;">>
             <div class="row p-5">
@@ -68,15 +68,17 @@
 
         <hr/>
 
-        <div class="container p-5 text-center">
+        <div class="container p-4 text-center">
             <div class="row">
-                <div class="col-4 text-center">
+                <div class="col-3">
+                </div>
+                <div class="col-2 text-center">
                     <img class="logo-footer" style="width: 150px" src="./img/Logo-Halal-PNG-Terbaru.png">
                 </div>
-                <div class="col-4 text-center">
+                <div class="col-2 text-center">
                     <img class="logo-footer" style="width: 150px" src="./img/gmp-quality-logo-029EAE8B9B-seeklogo.com-removebg-preview.png">
                 </div>
-                <div class="col-4 text-center">
+                <div class="col-2 text-center">
                     <img class="logo-footer" style="width: 150px" src="./img/LOGO_BPOM-e1611338664504.png">
                 </div>
             </div>

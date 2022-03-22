@@ -28,18 +28,18 @@
                             <li>More Information</li>
                         </ul>
                     </div>    
-                    <div class="row">
-                        <button type="button" class="btn btn-2">Whatsapp</button>
+                    <div class="row find-us" >
+                        <button type="button" class="btn btn-2"><b>Whatsapp</b></button>
                     </div>
                 </div>
                 <div class="col">
                     <h5>Find Us on Our Socials</h5>
-                    <div class="row m-2">
-                        <button type="button" class="btn btn-2">Youtube</button>
+                    <div class="row find-us">
+                        <button type="button" class="btn btn-2"><b>Youtube</b></button>
                     </div>
 
-                    <div class="row m-2">
-                        <button type="button" class="btn btn-2">Instagram</button>
+                    <div class="row find-us">
+                        <button type="button" class="btn btn-2"><b>Instagram</b></button>
                     </div>
 
                     
