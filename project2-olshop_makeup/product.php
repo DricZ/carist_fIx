@@ -1,6 +1,10 @@
 <?php
         require_once 'include.php';
         require_once 'header.php';
+        require "admin/sys/connect.php";
+
+        $sql = "SELECT * FROM product";
+        $result = $conn->query($sql);
 ?>
 
 <!DOCTYPE html>
