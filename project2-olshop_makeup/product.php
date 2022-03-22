@@ -111,6 +111,9 @@
                     <a class="dalem" href="?filter=Primaderma">Primaderma</a>
                     <a class="dalem" href="?filter=Hydrosnail">Hydrosnail</a>
                     <a class="dalem" href="?filter=Solasense">Solasense</a>
+                    <a class="dalem" href="?filter=Kaneira">Kaneira</a>
+                    <a class="dalem" href="?filter=Beaulash">Beaulash</a>
+                    <a class="dalem" href="?filter=Skinisse">Skinisse</a>
                 </div>
             </div>
 

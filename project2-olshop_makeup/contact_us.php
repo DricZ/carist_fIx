@@ -29,7 +29,7 @@
                         </ul>
                     </div>    
                     <div class="row find-us" >
-                        <button type="button" class="btn btn-2"><b>Whatsapp</b></button>
+                        <button type="button" class="btn btn-2" onclick="window.location.href='wa.me/6281328367388'"><b>Whatsapp</b></button>
                     </div>
                 </div>
                 <div class="col">
@@ -39,7 +39,7 @@
                     </div>
 
                     <div class="row find-us">
-                        <button type="button" class="btn btn-2"><b>Instagram</b></button>
+                        <button type="button" class="btn btn-2" onclick="window.location.href='instagram.com/ufi.indonesia'"><b>Instagram</b></button>
                     </div>
 
                     
