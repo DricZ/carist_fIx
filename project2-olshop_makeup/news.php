@@ -35,13 +35,13 @@
                         $phpdate = strtotime($upload_date);
                         $date = date('l, d F Y', $phpdate);
             ?>
-            <div class="row">
+            <div class="row" style="margin-bottom: 30px;">
                 <div class="col-md-4">
                     <img src="<?=$img?>" style="width: 20vw; height: 30vh; border-radius: 20px; object-fit: cover;">
                 </div>
                 <div class="col-md-8">
                     <h3><?=$title?></h3>
-                    <p><?=$news?></b></p>
+                    <p><?=$news?></p>
                     <p><?=$date?></p>
                 </div>
             </div>

@@ -208,10 +208,10 @@
                 <div class="row">
                     <div class="col-4">
                         <img src="<?=$img?>" alt="Fasilitas" style="width: 20vw;
-    height: 37vh; border-top-left-radius: 35px; border-bottom-left-radius: 35px;">
+    height: 35vh; border-top-left-radius: 35px; border-bottom-left-radius: 35px;">
                     </div>
                     <div class="col-8" style="padding: 25px">
-                        <h2><?=$title?> <br> SENSATIONAL </h2>                
+                        <h3><?=$title?></h3>                
                         <p><?=$news?></b></p>
                         <p><?=$date?></p>
                     </div>
