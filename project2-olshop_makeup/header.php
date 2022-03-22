@@ -59,7 +59,7 @@
     </head>
 
     <body>
-        <div class="container-fluid header">
+        <div class="container-fluid header" style="background-color: white">
 
             <!-- HEADER -->
             <div class="row">

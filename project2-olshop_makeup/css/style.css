@@ -1,4 +1,5 @@
-body{
+html,body {
+    height: 100%;
     font-family: 'Inter';
 }
 
@@ -15,12 +16,13 @@ hr{
 .sidebar {
     margin: 0;
     padding: 0;
-    width: 18vw;
-    background-color: #2B388F;
+    width: 19vw;
+    /* background-color: #2B388F; */
     position: absolute;
-    height: 100vh;
-    overflow: auto;
-    margin-top: -15px;
+    /* -webkit-transform: translateY(100%);  */
+    /* transform: translateY(100%); */
+    /* margin-top: -15px; */
+    height:100vh;
 }
   
 /* Sidebar links */
@@ -45,7 +47,7 @@ hr{
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 div.content {
-    margin-left: 280px;
+    margin-left: 20vw;
     padding: 1px 16px;
 }
 
