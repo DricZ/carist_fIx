@@ -2,14 +2,46 @@
         require_once 'include.php';
         require_once 'header.php';
         require "admin/sys/connect.php";
+        $product_per_page = 16;
         
 
-        $sql = "SELECT * FROM product LIMIT 16";
+        $sql = "SELECT * FROM product";
+        // Get Total Product Number
+        $temp_result = $conn->query($sql);
+        $total_product = $temp_result->num_rows;
+        $total_page = ceil($total_product/$product_per_page);
+        //echo $total_product;
+        //echo $total_page;
+
         if(isset($_GET['filter'])){
             $filter = $_GET['filter'];
-            echo "    Category: ".$filter;
+            // Get Category ID
+            $sql2 = "SELECT * FROM category_list WHERE nama='$filter'";
+            $result2 = $conn->query($sql2);
+            
+
+            if ($result2->num_rows > 0) {
+                if($row = $result2->fetch_assoc()) {
+                    $category_id = $row['id'];
+                }
+            }
+            //echo "Category: ".$filter."($category_id)";
+
+            $sql .= " LEFT JOIN category ON product.id = category.product_id WHERE category.category_id = $category_id";
         }
+
+        if(isset($_GET['page'])){
+            $page = $_GET['page'];
+            $param1 = ($page-1)*$product_per_page;
+            $sql .= " LIMIT";
+            $sql .= " $param1, $product_per_page";
+        }else{
+            $page = 1;
+            $sql .= " LIMIT 16";
+        }
+
         $result = $conn->query($sql);
+        
 
         
                 // //Display
@@ -56,7 +88,7 @@
                     <a onclick="openbar('bar2')" class="">Based on SKIN TYPE</a>
                     <div id="bar2" hidden>
                         <a class="dalem" href="?filter=All Skin Type">All Skin Type</a>
-                        <a class="dalem" href="?filter=Normal">Normal</a>
+                        <a class="dalem" href="?filter=Normal Skin Type">Normal</a>
                         <a class="dalem" href="?filter=Dry Skin">Dry Skin</a>
                         <a class="dalem" href="?filter=Oily Skin">Oily Skin</a>
                         <a class="dalem" href="?filter=Sensitive Skin">Sensitive Skin</a>
@@ -64,7 +96,7 @@
 
                     <a onclick="openbar('bar3')" class="">Based on SKIN CONDITION</a>
                     <div id="bar3" hidden>
-                        <a class="dalem" href="?filter=Normal">Normal</a>
+                        <a class="dalem" href="?filter=Normal Skin Condition">Normal</a>
                         <a class="dalem" href="?filter=Kusam">Kusam</a>
                         <a class="dalem" href="?filter=Berjerawat">Berjerawat</a>
                         <a class="dalem" href="?filter=Aging">Aging</a>
@@ -153,11 +185,30 @@
                             <div class="card produk-p" onclick="openProduk('<?=$nama?>')">
                                 <img src="<?=$path?>" alt="<?=$img?>">
                                 <center class="judul pr"><?=$nama?></center>
-                                <center><p><i>Best Seller, Alfacid</i></p></center>
+                                <center><p><i><?=$category?></i></p></center>
                             </div>
                         </div>
-                        <?php
+                        <?php  
                                 }
+                                //Page Bar
+                                echo "<div class='row'></div>";
+                                echo "<div class='col-md-4'></div>";
+                                echo "<div class='col-md-4'><center>";
+                                for($i=1;$i<=$total_page;$i++){
+                                    if($i == $page){
+                                        echo "$i  ";
+                                    }else{
+                                        echo "<a href='?page=$i'>$i</a>  ";
+                                    }
+                                }
+                                echo "</center></div>";
+                            }else{
+                                echo "<div style='padding-top: 15%'>";
+                                echo "<center><h1>No Data</h1></center>";
+                                for($i=0;$i<20;$i++){
+                                    echo "<br>";
+                                }
+                                echo "</div>";
                             }
                         ?>
                     </div>
