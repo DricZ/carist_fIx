@@ -259,6 +259,12 @@ div.content {
     height: 40vh
 }
 
+.megathronz-news{
+    background-size: 100%;
+    background-position: center;
+    height: 60vh
+}
+
 .ig{
     width: 20vw; 
     margin: 20px;
@@ -340,6 +346,9 @@ div.content {
     color: #818FEC;
 }
 
+.row-news:hover{
+    transition: all .2s ease-in-out;
+}
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media only screen and (max-width: 1000px) {
