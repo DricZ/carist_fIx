@@ -6,7 +6,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>UFI</title>
+        <title>PT. United Farmatic Indonesia</title>
 
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
