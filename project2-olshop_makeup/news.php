@@ -35,7 +35,7 @@
                         $phpdate = strtotime($upload_date);
                         $date = date('l, d F Y', $phpdate);
             ?>
-            <div class="row" style="margin-bottom: 30px;">
+            <div class="row row-news" onclick="buka()" style="margin-bottom: 30px;">
                 <div class="col-md-4">
                     <img src="<?=$img?>" style="width: 20vw; height: 30vh; border-radius: 20px; object-fit: cover;">
                 </div>
@@ -52,6 +52,11 @@
         </div>
         </div>
         
+        <script>
+            function buka(){
+                window.location.href = "news-detail.php"
+            }
+        </script>
     </body>
 
     <!-- FOOTER -->
