@@ -94,7 +94,7 @@
                             </div>
                         </div>
 
-                        <div class="row" style="margin-top: -50px">
+                        <div class="row" style="margin-top: -40px">
                             <div class="col-sm-12" >
                                 <div class="collapse navbar-collapse navbar-expand-sm justify-content-center">
                                     <ul class="navbar-nav">
