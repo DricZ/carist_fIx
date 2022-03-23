@@ -185,7 +185,7 @@
                             <div class="card produk-p" onclick="openProduk('<?=$nama?>')">
                                 <img src="<?=$path?>" alt="<?=$img?>">
                                 <center class="judul pr"><?=$nama?></center>
-                                <center><p><i>Best Seller, Alfacid</i></p></center>
+                                <center><p><i><?=$category?></i></p></center>
                             </div>
                         </div>
                         <?php  
