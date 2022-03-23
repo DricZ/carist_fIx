@@ -278,7 +278,7 @@
         </div>
 
         <div class="container pb-1 text-center m-index">
-            <h3 class="ub">OUR BRANDS</h3>
+            <h5 class="ub">OUR BRANDS</h5>
             <div class="row">
                 <div class="col-3 text-center">
                     <img class="logo-footer-a" src="./img/Alfacid.png">
@@ -347,7 +347,7 @@
         <!-- PRODUCTS -->
         <div class="container product m-index">
             <div class="row products-text">
-                <center><h2 class="judul"><b>Products</b></h2></center>
+                <center><h5 class="judul"><b>Products</b></h5></center>
             </div>
 
             <div class="row">
@@ -429,7 +429,7 @@
         <!-- SOSIALS -->
         <div class="container isi m-index">
             <div class="row products-text">
-                <center ><h2 class="judul"><b>SOCIALS</b></h2></center>
+                <center ><h5 class="judul"><b>SOCIALS</b></h5></center>
             </div>
 
             <center>

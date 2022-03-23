@@ -215,6 +215,7 @@ div.content {
 
 .judul{
     color:#818FEC;
+    font-family:'Merriweather'
 }
 
 .btn-2{
@@ -335,11 +336,10 @@ div.content {
 
 .ub{
     padding-bottom: 50px;
+    font-family: 'Merriweather';
+    color: #818FEC;
 }
 
-.products-text{
-    /* padding: 20px; */
-}
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media only screen and (max-width: 1000px) {
