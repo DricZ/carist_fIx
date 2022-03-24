@@ -6,12 +6,7 @@
         
 
         $sql = "SELECT * FROM product";
-        // Get Total Product Number
-        $temp_result = $conn->query($sql);
-        $total_product = $temp_result->num_rows;
-        $total_page = ceil($total_product/$product_per_page);
-        //echo $total_product;
-        //echo $total_page;
+        
 
         if(isset($_GET['filter'])){
             $filter = $_GET['filter'];
@@ -29,6 +24,15 @@
 
             $sql .= " LEFT JOIN category ON product.id = category.product_id WHERE category.category_id = $category_id";
         }
+
+        
+
+        // Get Total Product Number
+        $temp_result = $conn->query($sql);
+        $total_product = $temp_result->num_rows;
+        $total_page = ceil($total_product/$product_per_page);
+        //echo $total_product;
+        //echo $total_page;
 
         if(isset($_GET['page'])){
             $page = $_GET['page'];
@@ -194,12 +198,35 @@
                                 echo "<div class='row'></div>";
                                 echo "<div class='col-md-4'></div>";
                                 echo "<div class='col-md-4'><center>";
-                                for($i=1;$i<=$total_page;$i++){
+                                $jumlah_no = 3;
+                                //Grouping
+                                if($page%3 == 0){
+                                    $group = $page/$jumlah_no;
+                                }else{
+                                    $group = floor($page/$jumlah_no) + 1;
+                                }
+                                //Start Number
+                                $start = ($group-1)*3+1;
+                                $end = $start+($jumlah_no-1);
+                                if($end > $total_page){
+                                    $end = $total_page;
+                                }
+                                // Panah Kiri
+                                if($start > $jumlah_no){
+                                    $preview = $start-1;
+                                    echo "<a href='?page=$preview'>< </a>  ";
+                                }
+                                for($i=$start;$i<=$end;$i++){
                                     if($i == $page){
                                         echo "$i  ";
                                     }else{
                                         echo "<a href='?page=$i'>$i</a>  ";
                                     }
+                                }
+                                //Panah Kanan
+                                if($end < $total_page){
+                                    $preview = $end+1;
+                                    echo "<a href='?page=$preview'>> </a>  ";
                                 }
                                 echo "</center></div>";
                             }else{

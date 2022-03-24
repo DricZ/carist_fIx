@@ -242,6 +242,7 @@
                 if ($result->num_rows > 0) {
                     // output data of each row
                     while($row = $result->fetch_assoc()) {
+                        $id = $row['id'];
                         $title = $row['title'];
                         $img = "img/news/".$row['img'];
                         $wrap_limit = 500;
@@ -252,7 +253,7 @@
                         $date = date('l, d F Y', $phpdate);
             ?>
 
-            <div class="card c-news" style="border-radius: 35px; margin-bottom: 20px">
+            <div class="card c-news" style="border-radius: 35px; margin-bottom: 20px" onclick="buka(<?=$id?>)">
                 <div class="row">
                     <div class="col-4">
                         <img src="<?=$img?>" alt="Fasilitas" style="width: 25vw; height: 100%; border-top-left-radius: 35px; border-bottom-left-radius: 35px;">
@@ -283,6 +284,7 @@
                 if ($result->num_rows > 0) {
                     // output data of each row
                     while($row = $result->fetch_assoc()) {
+                        $id = $row['id'];
                         $title = $row['title'];
                         $img = "img/news/".$row['img'];
                         $wrap_limit = 500;
@@ -293,7 +295,7 @@
                         $date = date('l, d F Y', $phpdate);
             ?>
 
-            <div class="card c-news" style="border-radius: 35px; margin-bottom: 20px; height: 15vh;">
+            <div class="card c-news" style="border-radius: 35px; margin-bottom: 20px; height: 15vh;" onclick="buka(<?=$id?>)">
                 <div class="row">
                     <div class="col-4">
                         <img src="<?=$img?>" alt="Fasilitas" style="width: 25vw; height: 15vh; border-top-left-radius: 35px; border-bottom-left-radius: 35px;">
@@ -320,6 +322,13 @@
      <script 
             src="https://cdn2.woxo.tech/a.js#623bd783fdafa80021c480e2" 
             async data-usrc>
+    </script>
+
+    <!-- NEWS -->
+    <script>
+        function buka(id){
+            window.location.href = "news-detail.php?id=" + id;
+        }
     </script>
 
     <!-- FOOTER -->
