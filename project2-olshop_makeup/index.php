@@ -19,11 +19,11 @@
 
     <!-- DESKTOP VIEW -->
     <body>
-        <div class="container-fluid banner d-index">
+        <div class="container-fluid banner ">
             
         </div>
 
-        <div class="container pb-1 text-center d-index">
+        <div class="container pb-1 text-center ">
             <h3 class="ub">OUR BRANDS</h3>
             <div class="row">
                 <div class="col-3 text-center">
@@ -55,9 +55,9 @@
             </div>
         </div>
 
-        <hr class="d-index"/>
+        <hr class=""/>
 
-        <div id="banner" class="carousel slide d-index" data-bs-ride="carousel">
+        <div id="banner" class="carousel slide " data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#banner" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#banner" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -88,10 +88,10 @@
             </div>
         </div>
 
-        <hr class="d-index"/>
+        <hr class=""/>
 
         <!-- PRODUCTS -->
-        <div class="container product d-index">
+        <div class="container product ">
             <div class="row products-text">
                 <center><h2 class="judul"><b>Products</b></h2></center>
             </div>
@@ -103,7 +103,7 @@
                 <!-- The slideshow/carousel -->
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <div class="row">
+                            <div class="row" style="justify-content: center;">
                                 <div class="card p ">
                                     <img class="card-img-top product" src="./img/PRODUK/Alfacid AHA _ BHA pore serum.jpg" alt="Fasilitas">
                                     <center class="judul pr">Nama Produk</center>
@@ -119,14 +119,14 @@
                                     <center class="judul pr">Nama Produk</center>
                                 </div>
 
-                                <div class="card p">
+                                <div class="card p d-index">
                                     <img class="card-img-top product" src="./img/PRODUK/Alfacid Pro Peel 20.jpg" alt="Fasilitas">
                                     <center class="judul pr">Nama Produk</center>
                                 </div>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <div class="row">
+                            <div class="row" style="justify-content: center;">
                                 <div class="card p ">
                                     <img class="card-img-top product" src="./img/PRODUK/Alfacid AHA _ BHA pore serum.jpg" alt="Fasilitas">
                                     <center class="judul pr">Nama Produk</center>
@@ -142,14 +142,14 @@
                                     <center class="judul pr">Nama Produk</center>
                                 </div>
 
-                                <div class="card p">
+                                <div class="card p d-index">
                                     <img class="card-img-top product" src="./img/PRODUK/Alfacid Pro Peel 20.jpg" alt="Fasilitas">
                                     <center class="judul pr">Nama Produk</center>
                                 </div>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <div class="row">
+                            <div class="row" style="justify-content: center;">
                                 <div class="card p ">
                                     <img class="card-img-top product" src="./img/PRODUK/Alfacid AHA _ BHA pore serum.jpg" alt="Fasilitas">
                                     <center class="judul pr">Nama Produk</center>
@@ -165,7 +165,7 @@
                                     <center class="judul pr">Nama Produk</center>
                                 </div>
 
-                                <div class="card p">
+                                <div class="card p d-index">
                                     <img class="card-img-top product" src="./img/PRODUK/Alfacid Pro Peel 20.jpg" alt="Fasilitas">
                                     <center class="judul pr">Nama Produk</center>
                                 </div>
@@ -193,10 +193,10 @@
             
         </div>
 
-        <hr class="d-index"/>
+        <hr class=""/>
 
         <!-- SOSIALS -->
-        <div class="container isi d-index">
+        <div class="container isi ">
             <div class="row products-text" style="padding: 20px">
                 <center ><h2 class="judul"><b>SOCIALS</b></h2></center>
             </div>
@@ -228,7 +228,7 @@
             </center> -->
         </div>
 
-        <hr class="d-index"/>
+        <hr class=""/>
 
         <!-- NEWS -->
         <div class="container news d-index">
@@ -272,200 +272,6 @@
             
         </div>
 
-        
-    </body>
-
-    <!-- MOBILE VIEW -->
-    <body>
-        <div class="container-fluid banner m-index">
-            
-        </div>
-
-        <div class="container pb-1 text-center m-index">
-            <h5 class="ub">OUR BRANDS</h5>
-            <div class="row">
-                <div class="col-3 text-center">
-                    <img class="logo-footer-a" src="./img/Alfacid.png">
-                </div>
-                <div class="col-3 text-center">
-                    <img class="logo-footer-a" src="./img/SolaSense.png">
-                </div>
-                <div class="col-3 text-center">
-                    <img class="logo-footer-a" src="./img/logo primaderma.png">
-                </div>
-                <div class="col-3 text-center">
-                    <img class="logo-footer-a" src="./img/Hydrosnail.png">
-                </div>
-            </div>
-
-            <div class="row mb-5">
-                <div class="col-4 text-center">
-                    <img class="logo-footer-b1" src="./img/Kaneira.png">
-                </div>
-
-                <div class="col-4 text-center">
-                    <img class="logo-footer-b2" src="./img/Beaulash Logo-02.png">
-                </div>
-
-                <div class="col-4 text-center">
-                    <img class="logo-footer-b3" src="./img/Skinesse.png">
-                </div>
-            </div>
-        </div>
-
-        <hr class="m-index"/>
-
-        <div id="banner" class="carousel slide m-index" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#banner" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#banner" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#banner" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#banner" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="container text-left b1">
-                        <!-- <button type="button" class="button-active shop btn-br" value="SHOP" onclick="">SHOP</button> -->
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="container text-left b2">
-                    </div>                        
-                </div>
-
-                <div class="carousel-item">
-                    <div class="container text-left b3">
-                    </div>                        
-                </div>
-
-                <div class="carousel-item">
-                    <div class="container text-left b3">
-                    </div>                        
-                </div>
-            </div>
-        </div>
-
-        <hr class="m-index"/>
-
-        <!-- PRODUCTS -->
-        <div class="container product m-index">
-            <div class="row products-text">
-                <center><h5 class="judul"><b>Products</b></h5></center>
-            </div>
-
-            <div class="row">
-                <!-- Carousel -->
-                <div id="products" class="carousel slide" data-bs-ride="carousel">
-
-                <!-- The slideshow/carousel -->
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row justify-content-center">
-                                <div class="col-4 card p ">
-                                    <img class="card-img-top product" src="./img/PRODUK/Alfacid AHA _ BHA pore serum.jpg" alt="Fasilitas">
-                                    <center class="judul pr">Nama Produk</center>
-                                </div>
-
-                                <div class="col-4 card p">
-                                    <img class="card-img-top product" src="./img/PRODUK/Alfacid Face Toner.jpg" alt="Fasilitas">
-                                    <center class="judul pr">Nama Produk</center>
-                                </div>
-
-                                <div class="col-4 card p">
-                                    <img class="card-img-top product" src="./img/PRODUK/Alfacid Face Toner.jpg" alt="Fasilitas">
-                                    <center class="judul pr">Nama Produk</center>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row justify-content-center">
-                                <div class="col-4 card p ">
-                                    <img class="card-img-top product" src="./img/PRODUK/Alfacid AHA _ BHA pore serum.jpg" alt="Fasilitas">
-                                    <center class="judul pr">Nama Produk</center>
-                                </div>
-
-                                <div class="col-4 card p">
-                                    <img class="card-img-top product" src="./img/PRODUK/Alfacid Face Toner.jpg" alt="Fasilitas">
-                                    <center class="judul pr">Nama Produk</center>
-                                </div>
-
-                                <div class="col-4 card p">
-                                    <img class="card-img-top product" src="./img/PRODUK/Alfacid Face Toner.jpg" alt="Fasilitas">
-                                    <center class="judul pr">Nama Produk</center>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row justify-content-center">
-                                <div class="col-4 card p ">
-                                    <img class="card-img-top product" src="./img/PRODUK/Alfacid AHA _ BHA pore serum.jpg" alt="Fasilitas">
-                                    <center class="judul pr">Nama Produk</center>
-                                </div>
-
-                                <div class="col-4 card p">
-                                    <img class="card-img-top product" src="./img/PRODUK/Alfacid Face Toner.jpg" alt="Fasilitas">
-                                    <center class="judul pr">Nama Produk</center>
-                                </div>
-
-                                <div class="col-4 card p">
-                                    <img class="card-img-top product" src="./img/PRODUK/Alfacid Face Toner.jpg" alt="Fasilitas">
-                                    <center class="judul pr">Nama Produk</center>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <center>
-                    <button type="button" class="button-active btn-2" value="SHOP" onclick="">VIEW ALL PRODUCTS</button>
-
-                </center>
-            </div>
-            
-        </div>
-
-        <hr class="m-index"/>
-
-        <!-- SOSIALS -->
-        <div class="container isi m-index">
-            <div class="row products-text">
-                <center ><h5 class="judul"><b>SOCIALS</b></h5></center>
-            </div>
-
-            <div
-            loading="lazy"
-            data-mc-src="131f7f8b-4572-46ef-b523-847b4d662a37#instagram"></div>
-            
-            <!-- <center>
-            <div class="row">
-                <div class="col-4">
-                    <div class="card ig">
-                        <img src="./img/social.png" alt="Fasilitas">
-                    </div>
-                </div>
-
-                <div class="col-4">
-                    <div class="card ig">
-                        <img src="./img/social.png" alt="Fasilitas">
-                    </div>
-                </div>
-
-                <div class="col-4">
-                    <div class="card ig">
-                        <img src="./img/social.png" alt="Fasilitas">
-                    </div>
-                </div>
-            </div>    
-            </center> -->
-        </div>
-
-        <hr class="m-index"/>
-
-        <!-- NEWS -->
         <div class="container news m-index">
             <div class="row products-text" style="margin-bottom: 20px">
                 <center ><p class="judul"><b>News</b></p></center>
@@ -506,6 +312,8 @@
             ?>
             
         </div>
+
+        
     </body>
 
      <!-- API IG -->
