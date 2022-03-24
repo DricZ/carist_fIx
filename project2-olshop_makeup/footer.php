@@ -111,15 +111,16 @@
         <h5 style="margin-top: 50px; color: white">Ikuti berita dan update kami</h5>
 
         <div class="row ft-mobile mb-5" style="width: 85%; margin-top: 30px">
-            <form action="/admin/sys/save_email.php" method="post">
+            
                 <div class="input-group">
-                    <input type="email" class="form-control" id="email" placeholder="Write email here..." name="email" style="height: 55px">
-                    <div class="input-group-append">
-                        <button type="submit" class="" style="width: 55px; height: 55px; background-color: #818FEC;">
-                            <span class="carousel-control-next-icon" style="color:#2B388F"></span>
-                        </button>
+                    <form action="./admin/sys/save_email.php" method="post">
+                        <input type="email" class="form-control" id="email" placeholder="Write email here..." name="email" style="height: 55px">
+                        <div class="input-group-append">
+                            <button type="submit" style="width: 55px; height: 55px; background-color: #818FEC;">
+                                <span class="carousel-control-next-icon" style="color:#2B388F"></span>
+                            </button>
+                        </div>
                     </div>
-                </div>
             </form>
         </div>
         

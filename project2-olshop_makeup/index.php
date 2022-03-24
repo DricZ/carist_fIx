@@ -432,6 +432,15 @@
                 <center ><h5 class="judul"><b>SOCIALS</b></h5></center>
             </div>
 
+            <div
+            loading="lazy"
+            data-mc-src="131f7f8b-4572-46ef-b523-847b4d662a37#instagram"></div>
+                    
+            <script 
+            src="https://cdn2.woxo.tech/a.js#623bd783fdafa80021c480e2" 
+            async data-usrc>
+            </script>
+
             <center>
             <div class="row">
                 <div class="col-4">
