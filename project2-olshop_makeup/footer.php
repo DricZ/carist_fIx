@@ -52,7 +52,7 @@
 
         <div class="col-4 justify-content-right" style="">
             <p style="color:white; float:right; font-size: 24px">Ikuti berita dan update kami</p>
-            <form action="#">
+            <form action="./admin/sys/save_email.php" method="post">
                 <div class="input-group" style="width: 20vw; float: right;">
                     <input type="email" class="form-control" id="email" placeholder="Write email here..." name="email" style="height: 55px">
                     <div class="input-group-append">
@@ -112,15 +112,15 @@
 
         <div class="row ft-mobile mb-5" style="width: 85%; margin-top: 30px">
             
-                <div class="input-group">
-                    <form action="./admin/sys/save_email.php" method="post">
-                        <input type="email" class="form-control" id="email" placeholder="Write email here..." name="email" style="height: 55px">
-                        <div class="input-group-append">
-                            <button type="submit" style="width: 55px; height: 55px; background-color: #818FEC;">
-                                <span class="carousel-control-next-icon" style="color:#2B388F"></span>
-                            </button>
-                        </div>
+            <div class="input-group">
+                <form action="./admin/sys/save_email.php" method="post">
+                    <input type="email" class="form-control" id="email" placeholder="Write email here..." name="email" style="height: 55px">
+                    <div class="input-group-append">
+                        <button type="submit" style="width: 55px; height: 55px; background-color: #818FEC;">
+                            <span class="carousel-control-next-icon" style="color:#2B388F"></span>
+                        </button>
                     </div>
+                </div>
             </form>
         </div>
         
