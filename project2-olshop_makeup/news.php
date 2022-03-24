@@ -26,6 +26,7 @@
                 if ($result->num_rows > 0) {
                     // output data of each row
                     while($row = $result->fetch_assoc()) {
+                        $id = $row['id'];
                         $title = $row['title'];
                         $img = "img/news/".$row['img'];
                         $wrap_limit = 500;
@@ -35,7 +36,7 @@
                         $phpdate = strtotime($upload_date);
                         $date = date('l, d F Y', $phpdate);
             ?>
-            <div class="row row-news" onclick="buka()" style="margin-bottom: 30px;">
+            <div class="row row-news" onclick="buka(<?=$id?>)" style="margin-bottom: 30px;">
                 <div class="col-md-4">
                     <img src="<?=$img?>" style="width: 20vw; height: 30vh; border-radius: 20px; object-fit: cover;">
                 </div>
@@ -53,8 +54,8 @@
         </div>
         
         <script>
-            function buka(){
-                window.location.href = "news-detail.php"
+            function buka(id){
+                window.location.href = "news-detail.php?id=" + id;
             }
         </script>
     </body>

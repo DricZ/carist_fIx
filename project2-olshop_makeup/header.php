@@ -80,7 +80,7 @@
                     
                     <!-- LOGO -->
                     <div class="col-sm-2 divMobile">
-                        <img class="logo kiri" src="./img/logo UFI.png" alt="PT. United Farmatic Indonesia">
+                        <img class="logo kiri" src="./img/Logo_UFI.png" alt="PT. United Farmatic Indonesia">
                     </div>
                     
                     <!-- HOME PRODUCT DLL -->
