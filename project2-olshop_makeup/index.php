@@ -201,7 +201,11 @@
                 <center ><h2 class="judul"><b>SOCIALS</b></h2></center>
             </div>
 
-            <center>
+            <div 
+            loading="lazy"
+            data-mc-src="131f7f8b-4572-46ef-b523-847b4d662a37#instagram"></div>
+
+            <!-- <center>
             <div class="row">
                 <div class="col-sm-4">
                     <div class="card ig">
@@ -221,7 +225,7 @@
                     </div>
                 </div>
             </div>    
-            </center>
+            </center> -->
         </div>
 
         <hr class="d-index"/>
@@ -435,13 +439,8 @@
             <div
             loading="lazy"
             data-mc-src="131f7f8b-4572-46ef-b523-847b4d662a37#instagram"></div>
-                    
-            <script 
-            src="https://cdn2.woxo.tech/a.js#623bd783fdafa80021c480e2" 
-            async data-usrc>
-            </script>
-
-            <center>
+            
+            <!-- <center>
             <div class="row">
                 <div class="col-4">
                     <div class="card ig">
@@ -461,7 +460,7 @@
                     </div>
                 </div>
             </div>    
-            </center>
+            </center> -->
         </div>
 
         <hr class="m-index"/>
@@ -507,9 +506,13 @@
             ?>
             
         </div>
-
-        
     </body>
+
+     <!-- API IG -->
+     <script 
+            src="https://cdn2.woxo.tech/a.js#623bd783fdafa80021c480e2" 
+            async data-usrc>
+    </script>
 
     <!-- FOOTER -->
     <?php
