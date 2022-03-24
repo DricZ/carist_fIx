@@ -16,10 +16,10 @@
         error_reporting( E_ALL );    
         $from = "system@unitedfarmaticindonesia.com";    
         $to = "$email";
-        $subject = "Terimakasih telah subscribe";
+        $subject = "Terimakasih telah subscribe ke PT.United Farmatic Indonesia";
         $message = "Email anda $email telah terdaftar di server kami, terimakasih";
         $headers = "From:" . $from;
-        $headers .= 'Cc: joshuayordana8@gmail.com' . "\r\n";
+        $headers .= 'Cc: system@unitedfarmaticindonesia.com' . "\r\n";
         mail($to,$subject,$message, $headers);
         echo "Pesan email sudah terkirim.";
     }
