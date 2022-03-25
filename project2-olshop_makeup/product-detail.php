@@ -118,7 +118,7 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="row" style="justify-content: center;">
-                                <div class="card" style="border: 0; width: 100%; margin-bottom: 25px">
+                                <div class="card" style="border: 0; width: 70%; margin-bottom: 25px">
                                     <img class="card-img-top product" src="<?=$path?>" alt="Produk">
                                     <center class="judul pr"><?=$nama?></center>
                                 </div>
@@ -127,7 +127,7 @@
 
                         <div class="carousel-item">
                             <div class="row" style="justify-content: center;">
-                                <div class="card"  style="border: 0; width: 100%; margin-bottom: 25px">
+                                <div class="card"  style="border: 0; width: 70%; margin-bottom: 25px">
                                     <img class="card-img-top product" src="<?=$path?>" alt="Produk">
                                     <center class="judul pr"><?=$nama?></center>
                                 </div>
@@ -136,6 +136,36 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="row m-produk mt-5">
+                <p style="font-weight: 900; font-family: 'Merriweather'; font-size: 24px"><b><?=$nama?></b></p>
+                    <p style="font-size: 16px">
+                        <?=$deskripsi?>
+                    </p><br>
+
+                    <a style="font-weight: 600; font-size: 16px" onclick="enlarge('ing1', 'ingi1')">
+                        Ingredients
+                        <i class="fa-solid fa-angle-right" id="ingi1"></i>
+                    </a>
+                    <p style="font-size: 16px" id="ing1" hidden>
+                        <?=$kandungan?>
+                    </p>
+                    <br><br>
+
+                    <a style="font-weight: 600; font-size: 16px" onclick="enlarge('cp1', 'cpi1')">
+                        Cara penggunaan
+                        <i class="fa-solid fa-angle-right" id="cpi1"></i>
+                    </a>
+                    <p style="font-size: 16px" id="cp1" hidden>
+                        <?=$cara_pakai?>
+                    </p><br>
+
+                    <hr/>
+
+                    <p style="font-size: 16px">
+                        NO BPOM: <?=$bpom?>
+                    </p>
             </div>
 
         </div>
