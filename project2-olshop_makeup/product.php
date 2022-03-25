@@ -8,7 +8,7 @@
         $sql = "SELECT * FROM product";
         
 
-        if(isset($_GET['filter'])){
+        if(isset($_GET['filter']) && $_GET['filter'] != "none"){
             $filter = $_GET['filter'];
             // Get Category ID
             $sql2 = "SELECT * FROM category_list WHERE nama='$filter'";
@@ -23,6 +23,8 @@
             //echo "Category: ".$filter."($category_id)";
 
             $sql .= " LEFT JOIN category ON product.id = category.product_id WHERE category.category_id = $category_id";
+        }else{
+            $filter = "none";
         }
 
         
@@ -214,19 +216,19 @@
                                 // Panah Kiri
                                 if($start > $jumlah_no){
                                     $preview = $start-1;
-                                    echo "<a href='?page=$preview'>< </a>  ";
+                                    echo "<a href='?filter=$filter&page=$preview'>< </a>  ";
                                 }
                                 for($i=$start;$i<=$end;$i++){
                                     if($i == $page){
                                         echo "$i  ";
                                     }else{
-                                        echo "<a href='?page=$i'>$i</a>  ";
+                                        echo "<a href='?filter=$filter&page=$i'>$i</a>  ";
                                     }
                                 }
                                 //Panah Kanan
                                 if($end < $total_page){
                                     $preview = $end+1;
-                                    echo "<a href='?page=$preview'>> </a>  ";
+                                    echo "<a href='?filter=$filter&page=$preview'>> </a>  ";
                                 }
                                 echo "</center></div>";
                             }else{
