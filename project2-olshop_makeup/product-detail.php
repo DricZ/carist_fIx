@@ -50,7 +50,34 @@
     </head>
 
     <body>
-        <hr/>
+        <div class="container-fluid m-product pd-mb p-2" style="background-color: #2B388F;align-items: center;
+    display: flex;">
+            <ul class="nav m-product">
+                <li class="nav-item">
+                    <a class="nav-link nav-product" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-product disabled" style="color: white;" href="#">></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-product" href="#">PRODUCT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-product disabled" style="color: white;" href="#">></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-product" href="#">PRODUCT SERIES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-product disabled" style="color: white;" href="#">></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-product" href="#">ANU</a>
+                </li>
+            </ul>
+        </div>
+
+        <hr class="d-index"/>
         
         <div class="container" style="">
             <div class="row d-index">
