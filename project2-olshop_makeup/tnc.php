@@ -61,12 +61,6 @@
                 dengan cara perentasan (hacking), password mining, dan/atau cara lainnya.<br>
                 </p>
             </div>
-
-            <div class="row mt-4 mb-4">
-                <center>
-                    <button type="button" class="button-active btn-br" value="contact-us" onclick="">Contact Us</button>
-                </center>
-            </div>
         </div>
 
         

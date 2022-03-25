@@ -18,7 +18,7 @@
             <div class="contact row justify-content-center">
                 <div class="col-12 mt-2"><a style="color: white" class="yess" target="_blank" href="#" style="text-decoration: none;">FAQ</a>
                 </div>
-                <div class="col-12 mt-2"><a style="color: white" class="yess" target="_blank" href="#" style="text-decoration: none;">Terms & Conditions</a>
+                <div class="col-12 mt-2"><a style="color: white" class="yess" target="_blank" href="tnc.php" style="text-decoration: none;">Terms & Conditions</a>
                 </div>
             </div>    
         </div>
@@ -74,7 +74,7 @@
             <div class="contact row justify-content-center">
                 <div class="col-12 mt-2"><a style="color: white" class="yess" target="_blank" href="#" style="text-decoration: none;">FAQ</a>
                 </div>
-                <div class="col-12 mt-2"><a style="color: white" class="yess" target="_blank" href="#" style="text-decoration: none;">Terms & Conditions</a>
+                <div class="col-12 mt-2"><a style="color: white" class="yess" target="_blank" href="tnc.php" style="text-decoration: none;">Terms & Conditions</a>
                 </div>
             </div>    
         </div>
