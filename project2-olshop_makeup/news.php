@@ -42,7 +42,7 @@
                 </div>
                 <div class="col-md-8">
                     <h3><?=$title?></h3>
-                    <p><?=$news?></p>
+                    <p><?=$news." read more"?></p>
                     <p><?=$date?></p>
                 </div>
             </div>
