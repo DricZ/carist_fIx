@@ -20,7 +20,7 @@
             <h2>Terms and Condition</h2>
             <div class="row mt-4 mb-4">
                 <h4><b>KEWAJIBAN PENGUNJUNG</b></h4>
-                <p>
+                <p style="text-align:justify; width: 90vw">
                 Pengunjung website primaderma harus tunduk pada hukum dan peraturan perundangan dalam
                 wilayah Republik Indonesia.<br>
                 Anda dilarang untuk memuat atau meneruskan melalui website primaderma materi atau hal lainnya
@@ -47,8 +47,9 @@
                 atau perangkat keras komputer dan/atau peralatan komunikasi, dan/atau
                 memperbolehkan penggunaan komputer dan/atau jaringan komputer yang tidak sah.<br>
                 </p>
+
                 <h4><b>Dalam penggunaan website Primaderma. Anda setuju untuk :</b></h4>
-                <p>
+                <p style="text-align:justify; width: 90vw">
                 - Memberikan informasi yang akurat, baru dan lengkap tentang diri Anda saat
                 mengisi formulir pendaftaran pada website Primaderma.<br>
                 - Menjaga dan secara berkala memperbarui informasi tentang diri Anda dan
