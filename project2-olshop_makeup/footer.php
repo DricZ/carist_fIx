@@ -7,6 +7,31 @@
     width: 50px;
     position: relative;
 }
+
+
+.custom-search {
+  position: relative;
+  width: 300px;
+}
+.custom-search-input {
+  width: 100%;
+  padding: 10px 100px 10px 20px; 
+  line-height: 1;
+  box-sizing: border-box;
+  outline: none;
+  border-radius: 0;
+}
+.custom-search-botton {
+  position: absolute;
+  right: 3px; 
+  top: 3px;
+  bottom: 3px;
+  outline: none;
+  margin: 0;
+  padding: 0 10px;
+  z-index: 2;
+  border: 0;
+}
 </style>
 
 <footer id="contactus" class="contain py-4 px-5 ft-desktop" style="z-index:2000; background-color:#2B388F">
@@ -25,8 +50,12 @@
         <div class="col-3 mt-2 mb-1">
             <h5 style="color:white; font-family: 'Merriweather'" >FIND US</h5>
             <div class="menu row">
-                <div class="col-1 mt-2 m-1"><a class="" target="_blank" href="#" style="text-decoration: none;"><i class="fab fa-instagram pr-1" style="color: white; font-size: 17pt;"></i></a></div>
-                <div class="col-2 mt-2 m-1 mb-4"><a class="" target="_blank" href="#" style="text-decoration: none;"><i class="fab fa-facebook-f pr-1" style="color: white; font-size: 17pt; border: 1px white"></i></a></div>
+                <div class="col-1 mt-2 m-1">
+                    <a class="" target="_blank" href="#" style="text-decoration: none;"><i class="fab fa-instagram pr-1" style="color: white; font-size: 17pt;"></i></a>
+                </div>
+                <div class="col-2 m-1 mb-4" style="margin-top: 5px !important">
+                <a class="" target="_blank" href="#" style="text-decoration: none;"><img src="./img/whatsapp.png" style="width: 65%;"></a>                
+                </div>
             </div>
 
             <div class="menu row" style="width: 85%">
@@ -51,17 +80,18 @@
         </div>
 
         <div class="col-4 justify-content-right" style="">
-            <p style="color:white; float:right; font-size: 24px">Ikuti berita dan update kami</p>
-            <form action="./admin/sys/save_email.php" method="post">
-                <div class="input-group" style="width: 20vw; float: right;">
-                    <input type="email" class="form-control" id="email" placeholder="Write email here..." name="email" style="height: 55px">
-                    <div class="input-group-append">
-                        <button class="" style="width: 55px; height: 55px; background-color: #818FEC;">
-                            <span class="carousel-control-next-icon" style="color:#2B388F"></span>
-                        </button>
+            <div class="row justify-content-right">
+                <p style="color:white; float:right; font-size: 20px; text-align: right;">Ikuti berita dan update kami</p>
+            </div>
+            <div class="row justify-content-right" >
+                <form action="./admin/sys/save_email.php" style="justify-content: right;" method="post">
+                    <div class="input-group " style="width: 17vw; float: right; ">
+                        <input type="email" class="form-control custom-search-input" id="email" placeholder="Write email here..." name="email" style="height: 55px">      
+                        <button class="next-icon1 custom-search-botton" style="width: 55px; height: 50px;">
+                        </button>  
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
 </footer>
@@ -85,10 +115,10 @@
 
         <div class="row" style="justify-content: center;">
             <div class="col-2 mt-2">
-                <i class="fab fa-instagram pr-1" style="color: white; font-size: 30pt;"></i></a>
+                <a class="" target="_blank" href="#" style="text-decoration: none;"><i class="fab fa-instagram pr-1" style="color: white; font-size: 30pt;"></i></a>
             </div>
             <div class="col-2 mt-2">
-                <i class="fab fa-facebook-f pr-1" style="color: white; font-size: 30pt; border: 1px white"></i></a>
+                <a class="" target="_blank" href="#" style="text-decoration: none;"><img src="./img/whatsapp.png" style="width: 10vw;"></a>
             </div>    
         </div>
 
@@ -116,8 +146,8 @@
                 <form action="./admin/sys/save_email.php" method="post">
                     <input type="email" class="form-control" id="email" placeholder="Write email here..." name="email" style="height: 55px">
                     <div class="input-group-append">
-                        <button type="submit" style="width: 55px; height: 55px; background-color: #818FEC;">
-                            <span class="carousel-control-next-icon" style="color:#2B388F"></span>
+                        <button type="submit" style="width: 55px; height: 50px; background-color: #818FEC;">
+                            <span class="next-icon1"></span>
                         </button>
                     </div>
                 </div>

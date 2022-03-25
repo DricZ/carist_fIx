@@ -19,57 +19,46 @@
         <div class="container-fluid megathronz" style="background-image: url('./img/gp.jpg'); ">
             
         </div>
-        <div class="container">
-            <h3>PT. UNITED FARMATIC INDONESIA</h3>
-            <p style="text-align: justify; width: 35vw;">
-            PT. United Farmatic Indonesia (UFI) berlokasi di Wonoayu, Sidoarjo, Provinsi Jawa Timur. PT. UFI adalah perusahaan manufaktur yang bergerak di bidang farmasi dan telah berdiri sejak tahun 2014 dan telah memiliki sertifikasi CPOB (Cara Pembuatan Obat yang Baik), sertifikasi Halal dari LPPOM MUI. <br>
-            PT. United Farmatic Indonesia memproduksi produk dengan brand Primaderma yang didistribusikan untuk kalangan professional baik dokter estetik, spesialis, klinik dan rumah sakit. <br>
-            Dalam mengembang misi, PT. UFI terus melangkah kedepan dengan perkembangan inovasi produk yang ditunjang fasilitas teknologi yang memenuhi Good Manufacturing Practice (GMP) dengan standart International dan instrument quality control yang baru dan maju untuk mencapai standart produk berkualitas
-            </p>
-        </div>
-
-        <img style="position: absolute; width: 30vw; height:40vh ;right: 0; top: 100%" src="./img/Produksi.jpg" >
-
-        <div class="container-fluid" style="background-color: #2B388F;">>
-            <div class="row p-5">
-                <div class="col-4">
-                </div>
-
-                <div class="col-4" style="color: white">
-                    <h3>Visi Misi</h3>
-                    <p>
-                    PT. United Farmatic Indonesia memproduksi produk dengan brand Primaderma yang didistribusikan untuk kalangan professional baik dokter estetik, spesialis, klinik dan rumah sakit.<br>
+        <div class="container" style="padding-right: 0; padding-left: 0;">
+            <div class="row" style="width: 100%;">
+                <div class="col-6" style="width: 46%;">
+                    <h2 class="judul_au">PT. UNITED FARMATIC INDONESIA</h2>
+                    <p class="isi_au" style="text-align: justify;">
+                    PT. United Farmatic Indonesia (UFI) berlokasi di Wonoayu, Sidoarjo, Provinsi Jawa Timur. PT. UFI adalah perusahaan manufaktur yang bergerak di bidang farmasi dan telah berdiri sejak tahun 2014 dan telah memiliki sertifikasi CPOB (Cara Pembuatan Obat yang Baik), sertifikasi Halal dari LPPOM MUI. <br>
+                    PT. United Farmatic Indonesia memproduksi produk dengan brand Primaderma yang didistribusikan untuk kalangan professional baik dokter estetik, spesialis, klinik dan rumah sakit. <br>
                     Dalam mengembang misi, PT. UFI terus melangkah kedepan dengan perkembangan inovasi produk yang ditunjang fasilitas teknologi yang memenuhi Good Manufacturing Practice (GMP) dengan standart International dan instrument quality control yang baru dan maju untuk mencapai standart produk berkualitas
                     </p>
                 </div>
 
-                <div class="col-4">
+                <div class="col-6" style="margin-left: 50px;">
+                    <span class="helper"></span><img src="./img/opsi produksi1.jpg" style="width: 100%">
                 </div>
             </div>
         </div>
 
-        <div class="container pb-1 text-center">
-            <h3 style="padding-bottom: 50px;">Our Brands</h3>
-            <div class="row">
-                <div class="col-3 text-center">
-                    <img class="logo-footer" style="width: 150px" src="./img/Alfacid.png">
+        <div class="container-fluid" style="background-color: #2B388F; height: 60vh;">
+            <div class="row center" style="height: 100%;">
+                <div class="col-6" style="width: 40%; margin-left: 70px;">
+                    <span class="helper"></span><img src="./img/opsi produksi.jpg" style="width: 100%">
                 </div>
-                <div class="col-3 text-center">
-                    <img class="logo-footer" style="width: 150px" src="./img/SolaSense.png">
+
+                <div class="col-6" style="color: white;     margin-left: 50px;
+    margin-right: 100px;
+    width: 45%;">
+                    
+                    <h2 class="judul_au">Visi Misi</h2>
+                    <p class="isi_au" style="text-align: justify;">
+                    PT. United Farmatic Indonesia memproduksi produk dengan brand Primaderma yang didistribusikan untuk kalangan professional baik dokter estetik, spesialis, klinik dan rumah sakit.
+                    Dalam mengembang misi, PT. UFI terus melangkah kedepan dengan perkembangan inovasi produk yang ditunjang fasilitas teknologi yang memenuhi Good Manufacturing Practice (GMP) dengan standart International dan instrument quality control yang baru dan maju untuk mencapai standart produk berkualitas
+                    </p>
                 </div>
-                <div class="col-3 text-center">
-                    <img class="logo-footer" style="width: 150px" src="./img/logo primaderma.png">
-                </div>
-                <div class="col-3 text-center">
-                    <img class="logo-footer" style="width: 150px" src="./img/Hydrosnail.png">
-                </div>
+
+                
             </div>
         </div>
 
-        <hr/>
-
-        <div class="container p-4 text-center">
-            <div class="row">
+        <div class="container p-4 text-center mt-5 mb-5">
+            <div class="row mb-5">
                 <div class="col-3">
                 </div>
                 <div class="col-2 text-center">
@@ -82,7 +71,44 @@
                     <img class="logo-footer" style="width: 150px" src="./img/LOGO_BPOM-e1611338664504.png">
                 </div>
             </div>
+            <div class="row">
+                <center>
+                    <h4 style="margin-top: 30px; font-family: Merriweather; font-size: 40px;">Mengapa PT. United Farmatic Indonesia</h4>
+                </center>
+            </div>
         </div>
+
+        <div class="container-fluid about_us_banner aub1">
+            <div class="container-fluid aubblock">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="center textau">Team Research & Development yang Kompeten</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid about_us_banner aub2">
+            <div class="container-fluid aubblock">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="center textau">Kualitas Produk Terbaik</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid about_us_banner aub3">
+            <div class="container-fluid aubblock">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="center textau">Standar Mutu Produk yang Tinggi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
         
     </body>
 

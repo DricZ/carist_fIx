@@ -29,28 +29,41 @@
                         $id = $row['id'];
                         $title = $row['title'];
                         $img = "img/news/".$row['img'];
-                        $wrap_limit = 500;
+                        $wrap_limit = 300;
                         $news = $row['news'];
                         $news = strlen($news) > $wrap_limit ? substr($news,0,$wrap_limit)."..." : $news;
                         $upload_date = $row['upload_date'];
                         $phpdate = strtotime($upload_date);
                         $date = date('l, d F Y', $phpdate);
             ?>
-            <div class="row row-news" onclick="buka(<?=$id?>)" style="margin-bottom: 30px;">
-                <div class="col-md-4">
-                    <img src="<?=$img?>" style="width: 20vw; height: 30vh; border-radius: 20px; object-fit: cover;">
+            <div class="row row-news mt-5" onclick="buka(<?=$id?>)" style="margin-bottom: 30px; width: 110%">
+                <div class="col-md-5">
+                    <img src="<?=$img?>" style="height: 45vh; border-radius: 5px; object-fit: cover;">
                 </div>
-                <div class="col-md-8">
-                    <h3><?=$title?></h3>
-                    <p><?=$news?></p>
-                    <p><?=$date?></p>
+                <div class="col-md-7">
+                    <h3 style="font-family: 'Merriweather'"><b><?=$title?></b></h3>
+                    <p style="font-size: 16px"><?=$news?></p><br>
+                    <p style="font-size: 16px; font-weight: normal"><?=$date?></p>
                 </div>
             </div>
+
+            <hr/>
             <?php
                     }
                 }
             ?>
-        </div>
+
+            
+            
+            </div>
+
+                <ul class="pagination justify-content-center">
+                    <li class="page-item" ><a class="page-link" href="#"><</a></li>
+                    <li class="page-item active" ><a class="page-link" href="#">1</a></li>
+                    <li class="page-item" ><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">></a></li>
+                </ul>
         </div>
         
         <script>

@@ -43,96 +43,49 @@
         
         <div class="container">
             <center>
-                <h2><b><?=$title?></b></h2><br>
-                <!-- <h4><b>Subtitle Here: Put Here<b></h4><br><br>
-                <p>
-                    <b>By Admin</b><br>
-                </p> -->
+                <h2 style="font-family: 'Merriweather';"><b><?=$title?></b></h2><br>
+                <h4 style="font-weight: 600">Subtitle Here: Put Here</h4><br><br>
+                <p style="font-weight: 700">
+                    By Admin<br>
+                </p>
                 <h5><b><?=$date?><b></h5><br><br>
             </center>
 
-            <p style="text-align:justify; width: 50vw">
+            <p style="text-align:justify; width: 50vw; font-weight: 400;">
                 <?=$news?>
             </p>
         </div>
         
         <hr/>
 
-        <div class="container">
+        <div class="container-fluid">
             <center>
-                <h5><b>Read More</b></h5>
+                <h3 class="judul" style="font-family: Merriweather; font-weight: 700; color: #2B388F; margin-top: 50px; margin-bottom: 50px"><b>Read More</b></h3>
                 
-                <div class="row">
-
-                    <!-- Carousel -->
-                    <div id="products" class="carousel slide" data-bs-ride="carousel">
-
-                    <!-- The slideshow/carousel -->
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="row justify-content-center">
-                                    <div class="col-4 card p ">
-                                        <img class="card-img-top product" src="./img/PRODUK/Alfacid AHA _ BHA pore serum.jpg" alt="Fasilitas">
-                                        <center class="judul pr">Nama Produk</center>
-                                    </div>
-
-                                    <div class="col-4 card p">
-                                        <img class="card-img-top product" src="./img/PRODUK/Alfacid Face Toner.jpg" alt="Fasilitas">
-                                        <center class="judul pr">Nama Produk</center>
-                                    </div>
-
-                                    <div class="col-4 card p">
-                                        <img class="card-img-top product" src="./img/PRODUK/Alfacid Face Toner.jpg" alt="Fasilitas">
-                                        <center class="judul pr">Nama Produk</center>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="row justify-content-center">
-                                    <div class="col-4 card p ">
-                                        <img class="card-img-top product" src="./img/PRODUK/Alfacid AHA _ BHA pore serum.jpg" alt="Fasilitas">
-                                        <center class="judul pr">Nama Produk</center>
-                                    </div>
-
-                                    <div class="col-4 card p">
-                                        <img class="card-img-top product" src="./img/PRODUK/Alfacid Face Toner.jpg" alt="Fasilitas">
-                                        <center class="judul pr">Nama Produk</center>
-                                    </div>
-
-                                    <div class="col-4 card p">
-                                        <img class="card-img-top product" src="./img/PRODUK/Alfacid Face Toner.jpg" alt="Fasilitas">
-                                        <center class="judul pr">Nama Produk</center>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="row justify-content-center">
-                                    <div class="col-4 card p ">
-                                        <img class="card-img-top product" src="./img/PRODUK/Alfacid AHA _ BHA pore serum.jpg" alt="Fasilitas">
-                                        <center class="judul pr">Nama Produk</center>
-                                    </div>
-
-                                    <div class="col-4 card p">
-                                        <img class="card-img-top product" src="./img/PRODUK/Alfacid Face Toner.jpg" alt="Fasilitas">
-                                        <center class="judul pr">Nama Produk</center>
-                                    </div>
-
-                                    <div class="col-4 card p">
-                                        <img class="card-img-top product" src="./img/PRODUK/Alfacid Face Toner.jpg" alt="Fasilitas">
-                                        <center class="judul pr">Nama Produk</center>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="row" style="justify-content: center;">
+                    <div class="card card-newsd" style="border: 0">
+                        <img class="card-img-top newsdimg" src="./img/gp.jpg" alt="Fasilitas">
+                        <center class="isi-nd">Suggestion Headline Here</center>
+                        <center class="isi-nd-a">By Author Name</center>
                     </div>
-                </div>
 
-                <div class="row">
-                    <center>
-                        <button type="button" class="button-active btn-2" value="SHOP" onclick="">VIEW ALL PRODUCTS</button>
+                    <div class="card card-newsd" style="border: 0">
+                        <img class="card-img-top newsdimg" src="./img/produksi.jpg" alt="Fasilitas">
+                        <center class="isi-nd">Suggestion Headline Here</center>
+                        <center class="isi-nd-a">By Author Name</center>
+                    </div>
 
-                    </center>
+                    <div class="card card-newsd" style="border: 0">
+                        <img class="card-img-top newsdimg" src="./img/QC_2.jpg" alt="Fasilitas">
+                        <center class="isi-nd">Suggestion Headline Here</center>
+                        <center class="isi-nd-a">By Author Name</center>
+                    </div>
+
+                    <div class="card card-newsd" style="border: 0">
+                        <img class="card-img-top newsdimg" src="./img/marketing 1.jpg" alt="Fasilitas">
+                        <center class="isi-nd">Suggestion Headline Here</center>
+                        <center class="isi-nd-a">By Author Name</center>
+                    </div>
                 </div>
                 
             </div>

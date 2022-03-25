@@ -19,38 +19,37 @@
 
     <!-- DESKTOP VIEW -->
     <body>
-        <div class="container-fluid banner ">
-            
+        <div class="container-fluid banner1 ">
         </div>
 
         <div class="container pb-1 text-center ">
-            <h3 class="ub">OUR BRANDS</h3>
+            <h3 class="ub"><b>OUR BRANDS</b></h3>
             <div class="row">
                 <div class="col-3 text-center">
-                    <img class="logo-footer-a" src="./img/Alfacid.png">
+                    <span class="helper"></span><img class="logo-footer-a" src="./img/Alfacid.png">
                 </div>
                 <div class="col-3 text-center">
-                    <img class="logo-footer-a" src="./img/SolaSense.png">
+                    <span class="helper"></span><img class="logo-footer-a" src="./img/SolaSense.png">
                 </div>
                 <div class="col-3 text-center">
-                    <img class="logo-footer-a" src="./img/logo primaderma.png">
+                    <span class="helper"></span><img class="logo-footer-a" src="./img/logo primaderma.png">
                 </div>
                 <div class="col-3 text-center">
-                    <img class="logo-footer-a" src="./img/Hydrosnail.png">
+                    <span class="helper"></span><img class="logo-footer-a" src="./img/Hydrosnail.png">
                 </div>
             </div>
 
-            <div class="row mb-5">
+            <div class="row mb-5" style="margin-top: 70px;">
                 <div class="col-4 text-center">
-                    <img class="logo-footer-b1" src="./img/Kaneira.png">
+                    <span class="helper"></span><img class="logo-footer-b1" src="./img/Kaneira.png">
                 </div>
 
                 <div class="col-4 text-center">
-                    <img class="logo-footer-b2" src="./img/Beaulash Logo-02.png">
+                    <span class="helper"></span><img class="logo-footer-b2" src="./img/Beaulash Logo-02.png">
                 </div>
 
                 <div class="col-4 text-center">
-                    <img class="logo-footer-b3" src="./img/Skinesse.png">
+                    <span class="helper"></span><img class="logo-footer-b3" src="./img/Skinesse.png">
                 </div>
             </div>
         </div>
@@ -104,22 +103,22 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="row" style="justify-content: center;">
-                                <div class="card p ">
+                                <div class="card p" style="border: 0">
                                     <img class="card-img-top product" src="./img/PRODUK/Alfacid AHA _ BHA pore serum.jpg" alt="Fasilitas">
                                     <center class="judul pr">Nama Produk</center>
                                 </div>
 
-                                <div class="card p">
+                                <div class="card p" style="border: 0">
                                     <img class="card-img-top product" src="./img/PRODUK/Alfacid Face Toner.jpg" alt="Fasilitas">
                                     <center class="judul pr">Nama Produk</center>
                                 </div>
 
-                                <div class="card p">
+                                <div class="card p" style="border: 0">
                                     <img class="card-img-top product" src="./img/PRODUK/Alfacid Face Wash.jpg" alt="Fasilitas">
                                     <center class="judul pr">Nama Produk</center>
                                 </div>
 
-                                <div class="card p d-index">
+                                <div class="card p d-index" style="border: 0">
                                     <img class="card-img-top product" src="./img/PRODUK/Alfacid Pro Peel 20.jpg" alt="Fasilitas">
                                     <center class="judul pr">Nama Produk</center>
                                 </div>
@@ -127,22 +126,22 @@
                         </div>
                         <div class="carousel-item">
                             <div class="row" style="justify-content: center;">
-                                <div class="card p ">
+                                <div class="card p" style="border: 0">
                                     <img class="card-img-top product" src="./img/PRODUK/Alfacid AHA _ BHA pore serum.jpg" alt="Fasilitas">
                                     <center class="judul pr">Nama Produk</center>
                                 </div>
 
-                                <div class="card p">
+                                <div class="card p" style="border: 0">
                                     <img class="card-img-top product" src="./img/PRODUK/Alfacid Face Toner.jpg" alt="Fasilitas">
                                     <center class="judul pr">Nama Produk</center>
                                 </div>
 
-                                <div class="card p">
+                                <div class="card p" style="border: 0">
                                     <img class="card-img-top product" src="./img/PRODUK/Alfacid Face Wash.jpg" alt="Fasilitas">
                                     <center class="judul pr">Nama Produk</center>
                                 </div>
 
-                                <div class="card p d-index">
+                                <div class="card p d-index" style="border: 0">
                                     <img class="card-img-top product" src="./img/PRODUK/Alfacid Pro Peel 20.jpg" alt="Fasilitas">
                                     <center class="judul pr">Nama Produk</center>
                                 </div>
@@ -150,22 +149,22 @@
                         </div>
                         <div class="carousel-item">
                             <div class="row" style="justify-content: center;">
-                                <div class="card p ">
+                                <div class="card p" style="border: 0">
                                     <img class="card-img-top product" src="./img/PRODUK/Alfacid AHA _ BHA pore serum.jpg" alt="Fasilitas">
                                     <center class="judul pr">Nama Produk</center>
                                 </div>
 
-                                <div class="card p">
+                                <div class="card p" style="border: 0">
                                     <img class="card-img-top product" src="./img/PRODUK/Alfacid Face Toner.jpg" alt="Fasilitas">
                                     <center class="judul pr">Nama Produk</center>
                                 </div>
 
-                                <div class="card p">
+                                <div class="card p" style="border: 0">
                                     <img class="card-img-top product" src="./img/PRODUK/Alfacid Face Wash.jpg" alt="Fasilitas">
                                     <center class="judul pr">Nama Produk</center>
                                 </div>
 
-                                <div class="card p d-index">
+                                <div class="card p d-index" style="border: 0">
                                     <img class="card-img-top product" src="./img/PRODUK/Alfacid Pro Peel 20.jpg" alt="Fasilitas">
                                     <center class="judul pr">Nama Produk</center>
                                 </div>
@@ -186,7 +185,7 @@
 
             <div class="row">
                 <center>
-                    <button type="button" class="button-active btn-2" value="SHOP" onclick="" style="margin: 50px;">VIEW ALL PRODUCTS</button>
+                    <button type="button" class="button-active btn-2" value="SHOP" onclick="" style="margin: 50px;"><b>VIEW ALL PRODUCTS</b></button>
 
                 </center>
             </div>
@@ -245,7 +244,7 @@
                         $id = $row['id'];
                         $title = $row['title'];
                         $img = "img/news/".$row['img'];
-                        $wrap_limit = 500;
+                        $wrap_limit = 300;
                         $news = $row['news'];
                         $news = strlen($news) > $wrap_limit ? substr($news,0,$wrap_limit)."..." : $news;
                         $upload_date = $row['upload_date'];
@@ -253,15 +252,21 @@
                         $date = date('l, d F Y', $phpdate);
             ?>
 
-            <div class="card c-news" style="border-radius: 35px; margin-bottom: 20px" onclick="buka(<?=$id?>)">
+            <div class="card" style="margin-bottom: 20px; border: 0" onclick="buka(<?=$id?>)">
                 <div class="row">
-                    <div class="col-4">
-                        <img src="<?=$img?>" alt="Fasilitas" style="width: 25vw; height: 100%; border-top-left-radius: 35px; border-bottom-left-radius: 35px;">
+                    <div class="col-5">
+                        <img src="<?=$img?>" alt="Fasilitas" style="width: 30vw; border-top-left-radius: 35px; border-bottom-left-radius: 35px;">
                     </div>
-                    <div class="col-8" style="padding: 25px">
-                        <h3><?=$title?></h3>                
-                        <p><?=$news?></b></p>
-                        <p><?=$date?></p>
+                    <div class="col-7" style="padding: 25px; border-width: 2px; 
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px; 
+    border-color: #2B388F;
+    border-style:solid; 
+    margin-left: -3vw !important;
+    width: 60%;">
+                        <h3 style="font-weight:600"><?=$title?></h3>                
+                        <p style="font-weight:400"><?=$news?></b></p>
+                        <p style="font-weight:600"><?=$date?></p>
                     </div>
                 </div>    
             </div>
@@ -287,7 +292,7 @@
                         $id = $row['id'];
                         $title = $row['title'];
                         $img = "img/news/".$row['img'];
-                        $wrap_limit = 500;
+                        $wrap_limit = 300;
                         $news = $row['news'];
                         $news = strlen($news) > $wrap_limit ? substr($news,0,$wrap_limit)."..." : $news;
                         $upload_date = $row['upload_date'];
@@ -295,14 +300,14 @@
                         $date = date('l, d F Y', $phpdate);
             ?>
 
-            <div class="card c-news" style="border-radius: 35px; margin-bottom: 20px; height: 15vh;" onclick="buka(<?=$id?>)">
+            <div class="card" style="" onclick="buka(<?=$id?>)">
                 <div class="row">
                     <div class="col-4">
-                        <img src="<?=$img?>" alt="Fasilitas" style="width: 25vw; height: 15vh; border-top-left-radius: 35px; border-bottom-left-radius: 35px;">
+                        <img src="<?=$img?>" alt="Fasilitas" style="width: 25vw; height: 15vh; border-top-left-radius: 30px; border-bottom-left-radius: 30px;">
                     </div>
                     <div class="col-8" style="padding: 20px">
-                        <p style="font-size: 6px"><b><?=$title?></b></p>                
-                        <p style="font-size: 4px"><?=$news?></b></p>
+                        <p style="font-size: 6px"><b><?=$title?></b></p><br>             
+                        <p style="font-size: 4px"><?=$news?></b></p><br>
                         <p style="font-size: 4px"><?=$date?></p>
                     </div>
                 </div>    

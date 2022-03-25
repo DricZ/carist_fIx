@@ -12,11 +12,16 @@
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <link href="./css/style.css" rel="stylesheet">
 
+        <style>
+            html,body {
+                height: 100%;
+            }
+        </style>
     </head>
 
     <body>
         <hr/>
-        <div class="container">
+        <!-- <div class="container">
             <h2>We Are Hiring</h2>
             <div class="row mt-4 mb-4">
                 <div class="col-5">
@@ -47,7 +52,7 @@
                     <button type="button" class="button-active btn-br" value="contact-us" onclick="">Contact Us</button>
                 </center>
             </div>
-        </div>
+        </div> -->
 
         
     </body>

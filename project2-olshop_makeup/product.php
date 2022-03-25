@@ -81,15 +81,15 @@
             <div class="row">
                 <!-- The sidebar -->
                 <div class="col-4 sidebar">
-                    <h3 style="color: white; margin: 20px; margin-top: 40px">Category</h3>
+                    <p style="color: white; margin: 20px; margin-top: 40px; font-weight: 600; MARGIN-LEFT: 15px; font-size: 24px">Category</p>
 
-                    <a onclick="openbar('bar1')" class="">Based on PRODUCT HIGHLIGHT</a>
+                    <a onclick="openbar('bar1', 'bar2', 'bar3', 'bar4', 'bar5', 'bar6', 'bar7')" class="bb">BASED ON PRODUCT HIGHLIGHT</a>
                     <div id="bar1" hidden>
                         <a class="dalem" href="?filter=Best Seller / Recomendation">Best Seller / Recomendation</a>
                         <a class="dalem" href="?filter=New Arrival">New Arrival</a>
                     </div>
 
-                    <a onclick="openbar('bar2')" class="">Based on SKIN TYPE</a>
+                    <a onclick="openbar('bar2', 'bar1', 'bar3', 'bar4', 'bar5', 'bar6', 'bar7')" class="bb">BASED ON SKIN TYPE</a>
                     <div id="bar2" hidden>
                         <a class="dalem" href="?filter=All Skin Type">All Skin Type</a>
                         <a class="dalem" href="?filter=Normal Skin Type">Normal</a>
@@ -98,7 +98,7 @@
                         <a class="dalem" href="?filter=Sensitive Skin">Sensitive Skin</a>
                     </div>
 
-                    <a onclick="openbar('bar3')" class="">Based on SKIN CONDITION</a>
+                    <a onclick="openbar('bar3', 'bar2', 'bar1', 'bar4', 'bar5', 'bar6', 'bar7')" class="bb">BASED ON SKIN CONDITION</a>
                     <div id="bar3" hidden>
                         <a class="dalem" href="?filter=Normal Skin Condition">Normal</a>
                         <a class="dalem" href="?filter=Kusam">Kusam</a>
@@ -108,7 +108,7 @@
                         <a class="dalem" href="?filter=Inflamasi">Inflamasi</a>
                     </div>
 
-                    <a onclick="openbar('bar4')" class="">Based on ACNE SEVERITY</a>
+                    <a onclick="openbar('bar4', 'bar2', 'bar3', 'bar1', 'bar5', 'bar6', 'bar7')" class="bb">BASED ON ACNE SEVERITY</a>
                     <div id="bar4" hidden>
                         <a class="dalem" href="?filter=All Condition">All Condition</a>
                         <a class="dalem" href="?filter=Komedo">Komedo</a>
@@ -117,7 +117,7 @@
                         <a class="dalem" href="?filter=Nodule (Severe)">Nodule (Severe)</a>
                     </div>
 
-                    <a onclick="openbar('bar5')" class="">Based on PRODUCT TYPE</a>
+                    <a onclick="openbar('bar5', 'bar2', 'bar3', 'bar4', 'bar1', 'bar6', 'bar7')" class="bb">BASED ON PRODUCT TYPE</a>
                     <div id="bar5" hidden>
                         <a class="dalem" href="?filter=Face Wash">Face Wash</a>
                         <a class="dalem" href="?filter=Face Cleanser">Face Cleanser</a>
@@ -132,7 +132,7 @@
                         <a class="dalem" href="?filter=Decorative">Decorative</a>
                     </div>
 
-                    <a onclick="openbar('bar6')" class="">Based on FUNCTION</a>
+                    <a onclick="openbar('bar6', 'bar2', 'bar3', 'bar4', 'bar5', 'bar1', 'bar7')" class="bb">BASED ON FUNCTION</a>
                     <div id="bar6" hidden>
                         <a class="dalem" href="?filter=Sunscreen">Sunscreen</a>
                         <a class="dalem" href="?filter=Moisturizer">Moisturizer</a>
@@ -143,7 +143,7 @@
                         <a class="dalem" href="?filter=Conditioning">Conditioning</a>
                     </div>
 
-                    <a onclick="openbar('bar7')" class="">Based on BRAND</a>
+                    <a onclick="openbar('bar7', 'bar2', 'bar3', 'bar4', 'bar5', 'bar6', 'bar1')" class="bb">BASED ON BRAND</a>
                     <div id="bar7" hidden>
                         <a class="dalem" href="?filter=Alfacid">Alfacid</a>
                         <a class="dalem" href="?filter=Primaderma">Primaderma</a>
@@ -195,9 +195,7 @@
                         <?php  
                                 }
                                 //Page Bar
-                                echo "<div class='row'></div>";
-                                echo "<div class='col-md-4'></div>";
-                                echo "<div class='col-md-4'><center>";
+                                echo "<ul class='pagination justify-content-center' style='margin:20px 0'>";
                                 $jumlah_no = 3;
                                 //Grouping
                                 if($page%3 == 0){
@@ -214,19 +212,19 @@
                                 // Panah Kiri
                                 if($start > $jumlah_no){
                                     $preview = $start-1;
-                                    echo "<a href='?page=$preview'>< </a>  ";
+                                    echo "<li class='page-item'><a class='page-link' href='?page=$preview'>< </a>  ";
                                 }
                                 for($i=$start;$i<=$end;$i++){
                                     if($i == $page){
-                                        echo "$i  ";
+                                        echo "<li class='page-item'><a class='page-link' href='?page=$i'>$i</a>  ";
                                     }else{
-                                        echo "<a href='?page=$i'>$i</a>  ";
+                                        echo "<li class='page-item'><a class='page-link' href='?page=$i'>$i</a>  ";
                                     }
                                 }
                                 //Panah Kanan
                                 if($end < $total_page){
                                     $preview = $end+1;
-                                    echo "<a href='?page=$preview'>> </a>  ";
+                                    echo "<li class='page-item'><a class='page-link' href='?page=$preview'>> </a>  ";
                                 }
                                 echo "</center></div>";
                             }else{
@@ -244,12 +242,24 @@
             </div>
         </div>
         <script>
-        function openbar(id) {
-            var x = document.getElementById(id);
-            if (x.hasAttribute('hidden')) {
-                x.removeAttribute('hidden');
+        function openbar(id1, id2, id3, id4, id5, id6, id7) {
+            var a = document.getElementById(id1);
+            var b = document.getElementById(id2);
+            var c = document.getElementById(id3);
+            var d = document.getElementById(id4);
+            var e = document.getElementById(id5);
+            var f = document.getElementById(id6);
+            var g = document.getElementById(id7);
+            if (a.hasAttribute('hidden')) {
+                a.removeAttribute('hidden');
+                b.setAttribute('hidden', 'hidden');
+                c.setAttribute('hidden', 'hidden');
+                d.setAttribute('hidden', 'hidden');
+                e.setAttribute('hidden', 'hidden');
+                f.setAttribute('hidden', 'hidden');
+                g.setAttribute('hidden', 'hidden');
             } else {
-                x.setAttribute('hidden', 'hidden');
+                a.setAttribute('hidden', 'hidden');
             }
         }
 

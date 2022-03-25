@@ -12,6 +12,11 @@
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <link href="./css/style.css" rel="stylesheet">
 
+        <style>
+            html,body {
+                height: 100%;
+            }
+        </style>
     </head>
 
     <body>
@@ -19,7 +24,7 @@
         <div class="container">
             <div class="row row-cols-md-5 row-cols-1">
                 <div class="col">
-                    <h5>Contact Us For Free</h5>
+                    <h5 style="margin-bottom: 20px;">Contact Us For Free</h5>
                     <div class="contact row justify-content-center">
                         <ul>
                             <li>Skin Consultant</li>
@@ -28,12 +33,13 @@
                             <li>More Information</li>
                         </ul>
                     </div>    
-                    <div class="row find-us" >
-                        <button type="button" class="btn btn-2" onclick="window.location.href='wa.me/6281328367388'"><b>Whatsapp</b></button>
-                    </div>
+                </div>
+                <div class="col find-us" style="margin-left: 5vw;">
+                    <a onclick="window.location.href='wa.me/6281328367388'"><img src="./img/wa.png" style="width: 170%;
+    margin: -8vw; margin-bottom: -18vw;"></a>
                 </div>
                 <div class="col">
-                    <h5>Find Us on Our Socials</h5>
+                    <h5 style="margin-bottom: 20px;">Find Us on Our Socials</h5>
                     <div class="row find-us">
                         <button type="button" class="btn btn-2"><b>Youtube</b></button>
                     </div>

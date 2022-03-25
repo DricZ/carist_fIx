@@ -94,28 +94,28 @@
                             </div>
                         </div>
 
-                        <div class="row" style="margin-top: -40px">
+                        <div class="row" style="margin-top: -30px">
                             <div class="col-sm-12" >
                                 <div class="collapse navbar-collapse navbar-expand-sm justify-content-center">
                                     <ul class="navbar-nav">
-                                        <li class="nav-item nav-hd">
-                                            <a class="nav-link" href="index.php"><b class="nav-color">HOME</b></a>
+                                        <li class="nav-item">
+                                            <a class="nav-link nav-hd" href="index.php"><b class="nav-color">HOME</b></a>
                                         </li>
 
                                         <li class="nav-item">
-                                            <a class="nav-link nav-hd" href="product.php"><b class="nav-color">PRODUCT</b></a>
+                                            <a class="nav-link nav-hd" style="margin-left: 20px" href="product.php"><b class="nav-color">PRODUCT</b></a>
                                         </li>
 
                                         <li class="nav-item">
-                                            <a class="nav-link nav-hd" href="about_us.php"><b class="nav-color">ABOUT US</b></a>
+                                            <a class="nav-link nav-hd" style="margin-left: 20px" href="about_us.php"><b class="nav-color">ABOUT US</b></a>
                                         </li>
 
                                         <li class="nav-item">
-                                            <a class="nav-link nav-hd" href="news.php"><b class="nav-color">NEWS</b></a>
+                                            <a class="nav-link nav-hd" style="margin-left: 20px" href="news.php"><b class="nav-color">NEWS</b></a>
                                         </li>
 
                                         <li class="nav-item">
-                                            <a class="nav-link nav-hd" href="career.php"><b class="nav-color">CAREER</b></a>
+                                            <a class="nav-link nav-hd" style="margin-left: 20px" href="career.php"><b class="nav-color">CAREER</b></a>
                                         </li>
 
                                         <li class="nav-item">
