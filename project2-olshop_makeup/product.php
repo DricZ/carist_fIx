@@ -3,6 +3,7 @@
         require_once 'header.php';
         require "admin/sys/connect.php";
         $product_per_page = 16;
+        $sidebar = false;
         
 
         $sql = "SELECT * FROM product";
@@ -10,19 +11,43 @@
 
         if(isset($_GET['filter']) && $_GET['filter'] != "none"){
             $filter = $_GET['filter'];
-            // Get Category ID
-            $sql2 = "SELECT * FROM category_list WHERE nama='$filter'";
-            $result2 = $conn->query($sql2);
-            
+            if($filter == "BASED ON PRODUCT HIGHLIGHT" || $filter == "BASED ON SKIN TYPE"
+                || $filter == "BASED ON SKIN CONDITION" || $filter == "BASED ON ACNE SEVERITY"
+                || $filter == "BASED ON PRODUCT TYPE" || $filter == "BASED ON FUNCTION"
+                || $filter == "BASED ON BRAND"){
+                    $sidebar = true;
+                    //nothing
+                    if($filter == "BASED ON PRODUCT HIGHLIGHT"){
+                        $sql2 = "SELECT * FROM category_list WHERE nama='Best Seller / Recomendation' OR nama='New Arrival'";
+                    }
+                    // Get Category ID
+                    
+                    $result2 = $conn->query($sql2);
+                    
 
-            if ($result2->num_rows > 0) {
-                if($row = $result2->fetch_assoc()) {
-                    $category_id = $row['id'];
+                    if ($result2->num_rows > 0) {
+                        if($row = $result2->fetch_assoc()) {
+                            $category_id = $row['id'];
+                        }
+                    }
+                    //echo "Category: ".$filter."($category_id)";
+
+                    $sql .= " LEFT JOIN category ON product.id = category.product_id WHERE category.category_id = $category_id";
+            }else{
+                // Get Category ID
+                $sql2 = "SELECT * FROM category_list WHERE nama='$filter'";
+                $result2 = $conn->query($sql2);
+                
+
+                if ($result2->num_rows > 0) {
+                    if($row = $result2->fetch_assoc()) {
+                        $category_id = $row['id'];
+                    }
                 }
-            }
-            //echo "Category: ".$filter."($category_id)";
+                //echo "Category: ".$filter."($category_id)";
 
-            $sql .= " LEFT JOIN category ON product.id = category.product_id WHERE category.category_id = $category_id";
+                $sql .= " LEFT JOIN category ON product.id = category.product_id WHERE category.category_id = $category_id";
+            }
         }else{
             $filter = "none";
         }
@@ -94,7 +119,7 @@
                     <a class="nav-link nav-product disabled" style="color: white;" href="#">></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-product" href="#">PRODUCT SERIES</a>
+                    <a class="nav-link nav-product" href="#"><?=$category?></a>
                 </li>
             </ul>
         </div>
@@ -106,13 +131,13 @@
                 <div class="col-4 sidebar d-index">
                     <p style="color: white; margin: 20px; margin-top: 40px; font-weight: 600; MARGIN-LEFT: 15px; font-size: 24px">Category</p>
 
-                    <a onclick="openbar('bar1', 'bar2', 'bar3', 'bar4', 'bar5', 'bar6', 'bar7')" class="bb">BASED ON PRODUCT HIGHLIGHT</a>
+                    <a onclick="openbar('BASED ON PRODUCT HIGHLIGHT', 'bar1', 'bar2', 'bar3', 'bar4', 'bar5', 'bar6', 'bar7')" class="bb">BASED ON PRODUCT HIGHLIGHT</a>
                     <div id="bar1" hidden>
                         <a class="dalem" href="?filter=Best Seller / Recomendation">Best Seller / Recomendation</a>
                         <a class="dalem" href="?filter=New Arrival">New Arrival</a>
                     </div>
 
-                    <a onclick="openbar('bar2', 'bar1', 'bar3', 'bar4', 'bar5', 'bar6', 'bar7')" class="bb">BASED ON SKIN TYPE</a>
+                    <a onclick="openbar('BASED ON SKIN TYPE', 'bar2', 'bar1', 'bar3', 'bar4', 'bar5', 'bar6', 'bar7')" class="bb">BASED ON SKIN TYPE</a>
                     <div id="bar2" hidden>
                         <a class="dalem" href="?filter=All Skin Type">All Skin Type</a>
                         <a class="dalem" href="?filter=Normal Skin Type">Normal</a>
@@ -121,7 +146,7 @@
                         <a class="dalem" href="?filter=Sensitive Skin">Sensitive Skin</a>
                     </div>
 
-                    <a onclick="openbar('bar3', 'bar2', 'bar1', 'bar4', 'bar5', 'bar6', 'bar7')" class="bb">BASED ON SKIN CONDITION</a>
+                    <a onclick="openbar('BASED ON SKIN CONDITION', 'bar3', 'bar2', 'bar1', 'bar4', 'bar5', 'bar6', 'bar7')" class="bb">BASED ON SKIN CONDITION</a>
                     <div id="bar3" hidden>
                         <a class="dalem" href="?filter=Normal Skin Condition">Normal</a>
                         <a class="dalem" href="?filter=Kusam">Kusam</a>
@@ -131,7 +156,7 @@
                         <a class="dalem" href="?filter=Inflamasi">Inflamasi</a>
                     </div>
 
-                    <a onclick="openbar('bar4', 'bar2', 'bar3', 'bar1', 'bar5', 'bar6', 'bar7')" class="bb">BASED ON ACNE SEVERITY</a>
+                    <a onclick="openbar('BASED ON ACNE SEVERITY', 'bar4', 'bar2', 'bar3', 'bar1', 'bar5', 'bar6', 'bar7')" class="bb">BASED ON ACNE SEVERITY</a>
                     <div id="bar4" hidden>
                         <a class="dalem" href="?filter=All Condition">All Condition</a>
                         <a class="dalem" href="?filter=Komedo">Komedo</a>
@@ -140,7 +165,7 @@
                         <a class="dalem" href="?filter=Nodule (Severe)">Nodule (Severe)</a>
                     </div>
 
-                    <a onclick="openbar('bar5', 'bar2', 'bar3', 'bar4', 'bar1', 'bar6', 'bar7')" class="bb">BASED ON PRODUCT TYPE</a>
+                    <a onclick="openbar('BASED ON PRODUCT TYPE', 'bar5', 'bar2', 'bar3', 'bar4', 'bar1', 'bar6', 'bar7')" class="bb">BASED ON PRODUCT TYPE</a>
                     <div id="bar5" hidden>
                         <a class="dalem" href="?filter=Face Wash">Face Wash</a>
                         <a class="dalem" href="?filter=Face Cleanser">Face Cleanser</a>
@@ -155,7 +180,7 @@
                         <a class="dalem" href="?filter=Decorative">Decorative</a>
                     </div>
 
-                    <a onclick="openbar('bar6', 'bar2', 'bar3', 'bar4', 'bar5', 'bar1', 'bar7')" class="bb">BASED ON FUNCTION</a>
+                    <a onclick="openbar('BASED ON FUNCTION', 'bar6', 'bar2', 'bar3', 'bar4', 'bar5', 'bar1', 'bar7')" class="bb">BASED ON FUNCTION</a>
                     <div id="bar6" hidden>
                         <a class="dalem" href="?filter=Sunscreen">Sunscreen</a>
                         <a class="dalem" href="?filter=Moisturizer">Moisturizer</a>
@@ -166,7 +191,7 @@
                         <a class="dalem" href="?filter=Conditioning">Conditioning</a>
                     </div>
 
-                    <a onclick="openbar('bar7', 'bar2', 'bar3', 'bar4', 'bar5', 'bar6', 'bar1')" class="bb">BASED ON BRAND</a>
+                    <a onclick="openbar('BASED ON BRAND', 'bar7', 'bar2', 'bar3', 'bar4', 'bar5', 'bar6', 'bar1')" class="bb">BASED ON BRAND</a>
                     <div id="bar7" hidden>
                         <a class="dalem" href="?filter=Alfacid">Alfacid</a>
                         <a class="dalem" href="?filter=Primaderma">Primaderma</a>
@@ -210,7 +235,7 @@
                                             // output data of each row
                                             while($row2 = $result2->fetch_assoc()) {
                                                 $temp = $row2['nama'];
-                                                echo "<a href='?=category=$temp' style='color:black;'>$temp, </a>";
+                                                echo "<a href='?filter=$temp' style='color:black;'>$temp, </a>";
                                                 //$category = $category . $temp . ", ";
                                             }
                                         }
@@ -354,7 +379,9 @@
         </div> -->
 
         <script>
-        function openbar(id1, id2, id3, id4, id5, id6, id7) {
+        function openbar(param, id1, id2, id3, id4, id5, id6, id7) {
+            let link = 'product.php?filter=' + param;
+            window.location.href = link;
             var a = document.getElementById(id1);
             var b = document.getElementById(id2);
             var c = document.getElementById(id3);
@@ -379,6 +406,33 @@
             let link = 'product-detail.php?name=' + nama;
             window.location.href = link;
         }
+
+        var selected = $("a:contains('<?=$filter?>')");
+        <?php
+            if ($sidebar){
+        ?>
+            selected.css("background-color", "white");
+            selected.css("color", "black");
+            selected.next().removeAttr("hidden");
+            //console.log(selected.next().get(0));
+            var id1 = $("#bar1");
+            var id2 = $("#bar2");
+            var id3 = $("#bar3");
+            var id4 = $("#bar4");
+            var id5 = $("#bar5");
+            var id6 = $("#bar6");
+            var id7 = $("#bar7");
+
+        <?php
+            }else{
+        ?>
+            var prev = selected.prevUntil("a").removeAttr("hidden");
+            console.log(prev.get(0));
+        <?php
+            }
+        ?>
+        
+
         </script>
 
     </body>

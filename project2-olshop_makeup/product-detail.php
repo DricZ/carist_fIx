@@ -71,7 +71,7 @@
                     <a class="nav-link nav-product disabled" style="color: white;" href="#">></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-product" href="#">ANU</a>
+                    <a class="nav-link nav-product" href="#">Anu</a>
                 </li>
             </ul>
         </div>
