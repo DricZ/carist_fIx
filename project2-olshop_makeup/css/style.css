@@ -559,6 +559,10 @@ div.content {
         position: relative;
     }
 
+    .d-produk{
+        display: none;
+    }
+
     .product-row-1{
         display: flex;
         justify-content: center;
