@@ -174,24 +174,27 @@
                                     $cara_pakai = $row['cara_pakai'];
                                     $bpom = $row['bpom'];
                                     $category = "";
-                    
-                                    //Search Category
-                                    $sql2 = "SELECT category.category_id AS category_id, category_list.nama FROM category LEFT JOIN category_list ON category.category_id = category_list.id WHERE product_id = '$id'";
-                                    $result2 = $conn->query($sql2);
-                    
-                                    if ($result2->num_rows > 0) {
-                                        // output data of each row
-                                        while($row2 = $result2->fetch_assoc()) {
-                                            $temp = $row2['nama'];
-                                            $category = $category . $temp . ", ";
-                                        }
-                                    }
                         ?>
                         <div class="col-md-3">
-                            <div class="card produk-p" onclick="openProduk('<?=$nama?>')">
-                                <img src="<?=$path?>" alt="<?=$img?>">
-                                <center class="judul pr"><?=$nama?></center>
-                                <center><p><i><?=$category?></i></p></center>
+                            <div class="card produk-p">
+                                <img src="<?=$path?>" alt="<?=$img?>" onclick="openProduk('<?=$nama?>')">
+                                <center class="judul pr"><a href="product-detail.php?name=<?=$nama?>" style='color:black;'><b><?=$nama?></b></a></center>
+                                <center><p><i>
+                                    <?php
+                                        //Search Category
+                                        $sql2 = "SELECT category.category_id AS category_id, category_list.nama FROM category LEFT JOIN category_list ON category.category_id = category_list.id WHERE product_id = '$id'";
+                                        $result2 = $conn->query($sql2);
+                        
+                                        if ($result2->num_rows > 0) {
+                                            // output data of each row
+                                            while($row2 = $result2->fetch_assoc()) {
+                                                $temp = $row2['nama'];
+                                                echo "<a href='?=category=$temp' style='color:black;'>$temp, </a>";
+                                                //$category = $category . $temp . ", ";
+                                            }
+                                        }
+                                    ?>
+                                </i></p></center>
                             </div>
                         </div>
                         <?php  

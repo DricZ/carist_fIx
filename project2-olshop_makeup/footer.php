@@ -51,10 +51,10 @@
             <h5 style="color:white; font-family: 'Merriweather'" >FIND US</h5>
             <div class="menu row">
                 <div class="col-1 mt-2 m-1">
-                    <a class="" target="_blank" href="#" style="text-decoration: none;"><i class="fab fa-instagram pr-1" style="color: white; font-size: 17pt;"></i></a>
+                    <a class="" target="_blank" href="https://www.instagram.com/ufi.indonesia/" style="text-decoration: none;"><i class="fab fa-instagram pr-1" style="color: white; font-size: 17pt;"></i></a>
                 </div>
                 <div class="col-2 m-1 mb-4" style="margin-top: 5px !important">
-                <a class="" target="_blank" href="#" style="text-decoration: none;"><img src="./img/whatsapp.png" style="width: 65%;"></a>                
+                <a class="" target="_blank" href="https://wa.me/6281328367388" style="text-decoration: none;"><img src="./img/whatsapp.png" style="width: 65%;"></a>                
                 </div>
             </div>
 
@@ -115,10 +115,10 @@
 
         <div class="row" style="justify-content: center;">
             <div class="col-2 mt-2">
-                <a class="" target="_blank" href="#" style="text-decoration: none;"><i class="fab fa-instagram pr-1" style="color: white; font-size: 30pt;"></i></a>
+                <a class="" target="_blank" href="https://www.instagram.com/ufi.indonesia/" style="text-decoration: none;"><i class="fab fa-instagram pr-1" style="color: white; font-size: 30pt;"></i></a>
             </div>
             <div class="col-2 mt-2">
-                <a class="" target="_blank" href="#" style="text-decoration: none;"><img src="./img/whatsapp.png" style="width: 10vw;"></a>
+                <a class="" target="_blank" href="https://wa.me/6281328367388" style="text-decoration: none;"><img src="./img/whatsapp.png" style="width: 10vw;"></a>
             </div>    
         </div>
 

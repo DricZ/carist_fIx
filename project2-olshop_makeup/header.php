@@ -99,7 +99,7 @@
                                 <div class="collapse navbar-collapse navbar-expand-sm justify-content-center">
                                     <ul class="navbar-nav">
                                         <li class="nav-item">
-                                            <a class="nav-link nav-hd" href="index.php"><b class="nav-color">HOME</b></a>
+                                            <a class="nav-link nav-hd" href="./"><b class="nav-color">HOME</b></a>
                                         </li>
 
                                         <li class="nav-item">

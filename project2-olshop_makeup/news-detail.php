@@ -44,11 +44,8 @@
         <div class="container">
             <center>
                 <h2 style="font-family: 'Merriweather';"><b><?=$title?></b></h2><br>
-                <h4 style="font-weight: 600">Subtitle Here: Put Here</h4><br><br>
-                <p style="font-weight: 700">
-                    By Admin<br>
-                </p>
-                <h5><b><?=$date?><b></h5><br><br>
+                <!-- <h4 style="font-weight: 600">Subtitle Here: Put Here</h4><br><br> -->
+                <p style="font-weight: 700"><?=$date?></p><br><br>
             </center>
 
             <p style="text-align:justify; width: 50vw; font-weight: 400;">
@@ -79,7 +76,7 @@
                         $phpdate = strtotime($upload_date);
                         $date = date('l, d F Y', $phpdate);
             ?>
-                    <div class="card card-newsd" style="border: 0">
+                    <div class="card card-newsd" style="border: 0" onclick="buka(<?=$id?>)">
                         <img class="card-img-top newsdimg" src="<?=$img?>" alt="Fasilitas">
                         <center class="isi-nd"><?=$title?></center>
                         <center class="isi-nd-a"><?=$date?></center>
@@ -97,6 +94,12 @@
         </div>
         
     </body>
+
+    <script>
+        function buka(id){
+            window.location.href = "news-detail.php?id=" + id;
+        }
+    </script>
 
     <!-- FOOTER -->
     <?php
