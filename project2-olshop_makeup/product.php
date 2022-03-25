@@ -78,11 +78,33 @@
 
     <body>
         <hr class="d-index"/>
-        <div class="container-fluid d-index" style="background-color: #2B388F; margin-top: -15px;">
+
+        <div class="container-fluid m-product pd-mb p-2" style="background-color: #2B388F;align-items: center;
+    display: flex;">
+            <ul class="nav m-product">
+                <li class="nav-item">
+                    <a class="nav-link nav-product" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-product disabled" style="color: white;" href="#">></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-product" href="#">PRODUCT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-product disabled" style="color: white;" href="#">></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-product" href="#">PRODUCT SERIES</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="container-fluid anu2" style="">
             
-            <div class="row">
+            <div class="row product-row-1">
                 <!-- The sidebar -->
-                <div class="col-4 sidebar">
+                <div class="col-4 sidebar d-index">
                     <p style="color: white; margin: 20px; margin-top: 40px; font-weight: 600; MARGIN-LEFT: 15px; font-size: 24px">Category</p>
 
                     <a onclick="openbar('bar1', 'bar2', 'bar3', 'bar4', 'bar5', 'bar6', 'bar7')" class="bb">BASED ON PRODUCT HIGHLIGHT</a>
@@ -158,7 +180,7 @@
                 </div>
 
                 <!-- Page content -->
-                <div class="col-8 content" style="background-color: white; width: 80%;"> 
+                <div class="col-8 content product-pp"> 
                     <div class="row">
                         <?php
                             if ($result->num_rows > 0) {
@@ -175,11 +197,11 @@
                                     $bpom = $row['bpom'];
                                     $category = "";
                         ?>
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-product-1">
                             <div class="card produk-p">
                                 <img src="<?=$path?>" alt="<?=$img?>" onclick="openProduk('<?=$nama?>')">
-                                <center class="judul pr"><a href="product-detail.php?name=<?=$nama?>" style='color:black;'><b><?=$nama?></b></a></center>
-                                <center><p><i>
+                                <center class="pr"><a href="product-detail.php?name=<?=$nama?>" style='color:black; font-weight: 600; font-size: 16px'><?=$nama?></a></center>
+                                <center><p class="d-index" style="font-size: 16px"><i>
                                     <?php
                                         //Search Category
                                         $sql2 = "SELECT category.category_id AS category_id, category_list.nama FROM category LEFT JOIN category_list ON category.category_id = category_list.id WHERE product_id = '$id'";
@@ -247,106 +269,12 @@
             </div>
         </div>
 
-        <div class="container-fluid m-product pd-mb p-2" style="background-color: #2B388F;align-items: center;
-    display: flex;">
-            <ul class="nav m-product">
-                <li class="nav-item">
-                    <a class="nav-link nav-product" href="#">HOME</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-product disabled" style="color: white;" href="#">></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-product" href="#">PRODUCT</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-product disabled" style="color: white;" href="#">></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-product" href="#">PRODUCT SERIES</a>
-                </li>
-            </ul>
-        </div>
+        
 
-        <!-- <div class="container-fluid m-index" style="background-color: #2B388F; margin-top: -15px;">
+        <!-- <div class="container-fluid m-index" style="">
             
             <div class="row">
-                <div class="col-4 sidebar">
-                    <p style="color: white; margin: 20px; margin-top: 40px; font-weight: 600; MARGIN-LEFT: 15px; font-size: 24px">Category</p>
-
-                    <a onclick="openbar('bar1', 'bar2', 'bar3', 'bar4', 'bar5', 'bar6', 'bar7')" class="bb">BASED ON PRODUCT HIGHLIGHT</a>
-                    <div id="bar1" hidden>
-                        <a class="dalem" href="?filter=Best Seller / Recomendation">Best Seller / Recomendation</a>
-                        <a class="dalem" href="?filter=New Arrival">New Arrival</a>
-                    </div>
-
-                    <a onclick="openbar('bar2', 'bar1', 'bar3', 'bar4', 'bar5', 'bar6', 'bar7')" class="bb">BASED ON SKIN TYPE</a>
-                    <div id="bar2" hidden>
-                        <a class="dalem" href="?filter=All Skin Type">All Skin Type</a>
-                        <a class="dalem" href="?filter=Normal Skin Type">Normal</a>
-                        <a class="dalem" href="?filter=Dry Skin">Dry Skin</a>
-                        <a class="dalem" href="?filter=Oily Skin">Oily Skin</a>
-                        <a class="dalem" href="?filter=Sensitive Skin">Sensitive Skin</a>
-                    </div>
-
-                    <a onclick="openbar('bar3', 'bar2', 'bar1', 'bar4', 'bar5', 'bar6', 'bar7')" class="bb">BASED ON SKIN CONDITION</a>
-                    <div id="bar3" hidden>
-                        <a class="dalem" href="?filter=Normal Skin Condition">Normal</a>
-                        <a class="dalem" href="?filter=Kusam">Kusam</a>
-                        <a class="dalem" href="?filter=Berjerawat">Berjerawat</a>
-                        <a class="dalem" href="?filter=Aging">Aging</a>
-                        <a class="dalem" href="?filter=Kering">Kering</a>
-                        <a class="dalem" href="?filter=Inflamasi">Inflamasi</a>
-                    </div>
-
-                    <a onclick="openbar('bar4', 'bar2', 'bar3', 'bar1', 'bar5', 'bar6', 'bar7')" class="bb">BASED ON ACNE SEVERITY</a>
-                    <div id="bar4" hidden>
-                        <a class="dalem" href="?filter=All Condition">All Condition</a>
-                        <a class="dalem" href="?filter=Komedo">Komedo</a>
-                        <a class="dalem" href="?filter=Papule (light)">Papule (light)</a>
-                        <a class="dalem" href="?filter=Pustule (Medium)">Pustule (Medium)</a>
-                        <a class="dalem" href="?filter=Nodule (Severe)">Nodule (Severe)</a>
-                    </div>
-
-                    <a onclick="openbar('bar5', 'bar2', 'bar3', 'bar4', 'bar1', 'bar6', 'bar7')" class="bb">BASED ON PRODUCT TYPE</a>
-                    <div id="bar5" hidden>
-                        <a class="dalem" href="?filter=Face Wash">Face Wash</a>
-                        <a class="dalem" href="?filter=Face Cleanser">Face Cleanser</a>
-                        <a class="dalem" href="?filter=Face Toner">Face Toner</a>
-                        <a class="dalem" href="?filter=Serum">Serum</a>
-                        <a class="dalem" href="?filter=Cream">Cream</a>
-                        <a class="dalem" href="?filter=Gel">Gel</a>
-                        <a class="dalem" href="?filter=Lotion">Lotion</a>
-                        <a class="dalem" href="?filter=Body Care">Body Care</a>
-                        <a class="dalem" href="?filter=Neutralizing">Neutralizing</a>
-                        <a class="dalem" href="?filter=Peeling">Peeling</a>
-                        <a class="dalem" href="?filter=Decorative">Decorative</a>
-                    </div>
-
-                    <a onclick="openbar('bar6', 'bar2', 'bar3', 'bar4', 'bar5', 'bar1', 'bar7')" class="bb">BASED ON FUNCTION</a>
-                    <div id="bar6" hidden>
-                        <a class="dalem" href="?filter=Sunscreen">Sunscreen</a>
-                        <a class="dalem" href="?filter=Moisturizer">Moisturizer</a>
-                        <a class="dalem" href="?filter=Brightening">Brightening</a>
-                        <a class="dalem" href="?filter=Acne Care">Acne Care</a>
-                        <a class="dalem" href="?filter=Anti Aging">Anti Aging</a>
-                        <a class="dalem" href="?filter=Nutritive">Nutritive</a>
-                        <a class="dalem" href="?filter=Conditioning">Conditioning</a>
-                    </div>
-
-                    <a onclick="openbar('bar7', 'bar2', 'bar3', 'bar4', 'bar5', 'bar6', 'bar1')" class="bb">BASED ON BRAND</a>
-                    <div id="bar7" hidden>
-                        <a class="dalem" href="?filter=Alfacid">Alfacid</a>
-                        <a class="dalem" href="?filter=Primaderma">Primaderma</a>
-                        <a class="dalem" href="?filter=Hydrosnail">Hydrosnail</a>
-                        <a class="dalem" href="?filter=Solasense">Solasense</a>
-                        <a class="dalem" href="?filter=Kaneira">Kaneira</a>
-                        <a class="dalem" href="?filter=Beaulash">Beaulash</a>
-                        <a class="dalem" href="?filter=Skinisse">Skinisse</a>
-                    </div>
-                </div>
-
-                <div class="col-8 content" style="background-color: white; width: 80%;"> 
+                <div class="col- content" style="background-color: white; width: 80%;"> 
                     <div class="row">
                         <?php
                             if ($result->num_rows > 0) {

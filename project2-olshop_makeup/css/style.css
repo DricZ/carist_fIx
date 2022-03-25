@@ -537,12 +537,41 @@ div.content {
     display: none;
 }
 
+.anu2{
+    background-color: #2B388F; 
+    margin-top: -15px;
+}
+
+.product-pp{
+    background-color: white; 
+    width: 80%;
+}
+
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media only screen and (max-width: 1000px) {
     .sidebar {
         width: 100%;
         height: auto;
         position: relative;
+    }
+
+    .product-row-1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .product-pp{
+        width: 100%;
+    }
+
+    .col-product-1{
+        width: 50%;
+    }
+
+    .anu2{
+        background-color: white; 
+        margin-top: 0;
     }
 
     .sidebar a {float: left;}
