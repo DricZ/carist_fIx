@@ -218,7 +218,7 @@
                                 }
                                 for($i=$start;$i<=$end;$i++){
                                     if($i == $page){
-                                        echo "<li class='page-item active'><a class='page-link' href='?page=$i'>$i</a></li>  ";
+                                        echo "<li class='page-item active'><a class='page-link' href='?filter=$filter&page=$i'>$i</a></li>  ";
                                     }else{
                                         echo "<li class='page-item'><a class='page-link' href='?filter=$filter&page=$i'>$i</a></li>  ";
                                     }
