@@ -54,12 +54,12 @@
                     <a class="" target="_blank" href="https://www.instagram.com/ufi.indonesia/" style="text-decoration: none;"><i class="fab fa-instagram pr-1" style="color: white; font-size: 17pt;"></i></a>
                 </div>
                 <div class="col-2 m-1 mb-4" style="margin-top: 5px !important">
-                <a class="" target="_blank" href="https://wa.me/6281328367388" style="text-decoration: none;"><img src="./img/whatsapp.png" style="width: 65%;"></a>                
+                <a class="" target="_blank" href="https://wa.me/6281328367388" style="text-decoration: none;"><img src="./img/whatsapp.png" style="width: 1.5vw;"></a>                
                 </div>
             </div>
 
             <div class="menu row" style="width: 85%">
-                <div class="card mt-1 p-2" style="">
+                <div class="card mt-1 p-2" style="width: 15vw">
                     <div class="row">
                         <div class="col-4 text-center">
                             <img class="logo-footer" src="./img/Logo-Halal-PNG-Terbaru.png">
@@ -114,15 +114,15 @@
         </div>
 
         <div class="row" style="justify-content: center;">
-            <div class="col-2 mt-2">
-                <a class="" target="_blank" href="https://www.instagram.com/ufi.indonesia/" style="text-decoration: none;"><i class="fab fa-instagram pr-1" style="color: white; font-size: 30pt;"></i></a>
+            <div class="col-1 mt-2 m-1">
+                <a class="" target="_blank" href="https://www.instagram.com/ufi.indonesia/" style="text-decoration: none;"><i class="fab fa-instagram pr-1" style="color: white; font-size: 17pt;"></i></a>
             </div>
-            <div class="col-2 mt-2">
-                <a class="" target="_blank" href="https://wa.me/6281328367388" style="text-decoration: none;"><img src="./img/whatsapp.png" style="width: 10vw;"></a>
+            <div class="col-2 m-1 mb-4" style="margin-top: 5px !important">
+                <a class="" target="_blank" href="https://wa.me/6281328367388" style="text-decoration: none;"><img src="./img/whatsapp.png" style="width: 5vw;"></a>                
             </div>    
         </div>
 
-        <div class="row ft-mobile" style="width: 85%; margin-top: 80px">
+        <div class="row ft-mobile" style="width: 85%; margin-top: 60px;">
             <div class="card mt-1 p-2" style="border-radius: 10px">
                 <div class="row">
                     <div class="col-4 text-center">
@@ -138,20 +138,19 @@
             </div>
         </div>
 
-        <h5 style="margin-top: 50px; color: white">Ikuti berita dan update kami</h5>
-
-        <div class="row ft-mobile mb-5" style="width: 85%; margin-top: 30px">
-            
-            <div class="input-group">
-                <form action="./admin/sys/save_email.php" method="post">
-                    <input type="email" class="form-control" id="email" placeholder="Write email here..." name="email" style="height: 55px">
-                    <div class="input-group-append">
-                        <button type="submit" style="width: 55px; height: 50px; background-color: #818FEC;">
-                            <span class="next-icon1"></span>
-                        </button>
+        <div class="col-4 justify-content-right mt-4" style="width: 100%">
+            <div class="row justify-content-right">
+                <p style="color:white; float:right; font-size: 20px;">Ikuti berita dan update kami</p>
+            </div>
+            <div class="row justify-content-right" >
+                <form action="./admin/sys/save_email.php" style="justify-content: right;" method="post">
+                    <div class="input-group " style="">
+                        <input type="email" class="form-control custom-search-input" id="email" placeholder="Write email here..." name="email" style="height: 55px">      
+                        <button class="next-icon1 custom-search-botton" style="width: 55px; height: 50px;">
+                        </button>  
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
         
     </center>

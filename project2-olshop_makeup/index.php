@@ -39,8 +39,8 @@
                 </div>
             </div>
 
-            <div class="row mb-5" style="margin-top: 70px;">
-                <div class="col-4 text-center">
+            <div class="row mb-5 ob-bawah">
+                <div class="col-4 text-left">
                     <span class="helper"></span><img class="logo-footer-b1" src="./img/Kaneira.png">
                 </div>
 
@@ -48,7 +48,7 @@
                     <span class="helper"></span><img class="logo-footer-b2" src="./img/Beaulash Logo-02.png">
                 </div>
 
-                <div class="col-4 text-center">
+                <div class="col-4 text-right">
                     <span class="helper"></span><img class="logo-footer-b3" src="./img/Skinesse.png">
                 </div>
             </div>
@@ -282,16 +282,14 @@
 
             <div class="card" style="margin-bottom: 20px; border: 0" onclick="buka(<?=$id?>)">
                 <div class="row">
-                    <div class="col-5">
-                        <img src="<?=$img?>" alt="Fasilitas" style="width: 30vw; border-top-left-radius: 35px; border-bottom-left-radius: 35px;">
+                    <div class="col-5 right p-0">
+                        <img src="<?=$img?>" alt="Fasilitas" style="width: 100%; border-top-left-radius: 35px; border-bottom-left-radius: 35px;">
                     </div>
                     <div class="col-7" style="padding: 25px; border-width: 2px; 
     border-top-right-radius: 35px;
     border-bottom-right-radius: 35px; 
     border-color: #2B388F;
-    border-style:solid; 
-    margin-left: -3vw !important;
-    width: 60%;">
+    border-style:solid;">
                         <h3 style="font-weight:600"><?=$title?></h3>                
                         <p style="font-weight:400"><?=$news?></b></p>
                         <p style="font-weight:600"><?=$date?></p>
@@ -306,7 +304,7 @@
             
         </div>
 
-        <div class="container news m-index">
+        <div class="container-fluid news m-index">
             <div class="row products-text" style="margin-bottom: 20px">
                 <center ><p class="judul"><b>News</b></p></center>
             </div>

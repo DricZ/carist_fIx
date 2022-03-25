@@ -21,7 +21,7 @@
     <body>
         <hr/>
         
-        <div class="container" style="">
+        <div class="container-fluid" style="">
             <?php
                 if ($result->num_rows > 0) {
                     // output data of each row
@@ -37,12 +37,12 @@
                         $date = date('l, d F Y', $phpdate);
             ?>
             <div class="row row-news mt-5" onclick="buka(<?=$id?>)" style="margin-bottom: 30px; width: 110%">
-                <div class="col-md-5">
-                    <img src="<?=$img?>" style="height: 45vh; border-radius: 5px; object-fit: cover;">
+                <div class="col-md-5 right">
+                    <img src="<?=$img?>" style="width: 70%; border-radius: 5px; object-fit: cover;">
                 </div>
 
                 <!-- aslie 7 -->
-                <div class="col-md-8">
+                <div class="col-md-5">
                     <h3 style="font-family: 'Merriweather'"><b><?=$title?></b></h3>
                     <p style="font-size: 16px"><?=$news." read more"?></p><br>
                     <p style="font-size: 16px; font-weight: normal"><?=$date?></p>

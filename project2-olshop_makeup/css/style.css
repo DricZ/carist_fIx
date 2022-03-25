@@ -480,7 +480,7 @@ div.content {
 
 .logo-footer-b1{
     width: 70%;
-    margin-right: 7vw;
+    /* margin-right: 7vw; */
     margin-top: -5px;
 }
 
@@ -493,7 +493,13 @@ div.content {
 .logo-footer-b3{
     vertical-align: middle;
     width: 70%;
-    margin-left: 7vw;
+    /* margin-left: 7vw; */
+}
+
+.right{
+    display: flex;
+    justify-content: right;
+    align-items: center;
 }
 
 .ub{
@@ -512,6 +518,25 @@ div.content {
     vertical-align: middle;
 }
 
+.ob-bawah{
+    margin-top: 5vw;
+}
+
+.pd-mb{
+    height: 10vh;
+}
+
+.nav-product{
+    font-weight: 700;
+    font-size: 10px;
+    padding: 5px;
+    color: white;
+}
+
+.m-product{
+    display: none;
+}
+
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media only screen and (max-width: 1000px) {
     .sidebar {
@@ -519,6 +544,7 @@ div.content {
         height: auto;
         position: relative;
     }
+
     .sidebar a {float: left;}
     div.content {margin-left: 0;}
 
@@ -567,7 +593,7 @@ div.content {
         display: block;
     }
 
-    .banner {
+    .banner1 {
         background-image: url(../img/gp.jpg);
         background-size: 100%;
         background-position: center;
@@ -612,6 +638,10 @@ div.content {
         width: 25vw;
         margin: 0px;
         margin-top: 15px;
+    }
+
+    .m-product{
+        display: flex;
     }
 }
 

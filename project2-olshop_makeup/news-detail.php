@@ -76,7 +76,7 @@
                         $phpdate = strtotime($upload_date);
                         $date = date('l, d F Y', $phpdate);
             ?>
-                    <div class="card card-newsd" style="border: 0" onclick="buka(<?=$id?>)">
+                    <div class="card card-newsd" style="border: 0; align-items: center;" onclick="buka(<?=$id?>)">
                         <img class="card-img-top newsdimg" src="<?=$img?>" alt="Fasilitas">
                         <center class="isi-nd"><?=$title?></center>
                         <center class="isi-nd-a"><?=$date?></center>
