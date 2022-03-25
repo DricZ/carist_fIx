@@ -40,9 +40,11 @@
                 <div class="col-md-5">
                     <img src="<?=$img?>" style="height: 45vh; border-radius: 5px; object-fit: cover;">
                 </div>
-                <div class="col-md-7">
+
+                <!-- aslie 7 -->
+                <div class="col-md-8">
                     <h3 style="font-family: 'Merriweather'"><b><?=$title?></b></h3>
-                    <p style="font-size: 16px"><?=$news?></p><br>
+                    <p style="font-size: 16px"><?=$news." read more"?></p><br>
                     <p style="font-size: 16px; font-weight: normal"><?=$date?></p>
                 </div>
             </div>

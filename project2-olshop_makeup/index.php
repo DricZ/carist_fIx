@@ -103,73 +103,101 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="row" style="justify-content: center;">
-                                <div class="card p" style="border: 0">
-                                    <img class="card-img-top product" src="./img/PRODUK/Alfacid AHA _ BHA pore serum.jpg" alt="Fasilitas">
-                                    <center class="judul pr">Nama Produk</center>
-                                </div>
+                            <?php
+                                $sql = "SELECT * FROM product";
+                                $filter = "Best Seller / Recomendation";
+                                // Get Category ID
+                                $sql2 = "SELECT * FROM category_list WHERE nama='$filter'";
+                                $result2 = $conn->query($sql2);
+                                
 
-                                <div class="card p" style="border: 0">
-                                    <img class="card-img-top product" src="./img/PRODUK/Alfacid Face Toner.jpg" alt="Fasilitas">
-                                    <center class="judul pr">Nama Produk</center>
-                                </div>
+                                if ($result2->num_rows > 0) {
+                                    if($row = $result2->fetch_assoc()) {
+                                        $category_id = $row['id'];
+                                    }
+                                }
+                                //echo "Category: ".$filter."($category_id)";
 
-                                <div class="card p" style="border: 0">
-                                    <img class="card-img-top product" src="./img/PRODUK/Alfacid Face Wash.jpg" alt="Fasilitas">
-                                    <center class="judul pr">Nama Produk</center>
-                                </div>
+                                $sql .= " LEFT JOIN category ON product.id = category.product_id WHERE category.category_id = $category_id";
+                                $sql .= " LIMIT 4";
+                                $result = $conn->query($sql);
 
-                                <div class="card p d-index" style="border: 0">
-                                    <img class="card-img-top product" src="./img/PRODUK/Alfacid Pro Peel 20.jpg" alt="Fasilitas">
-                                    <center class="judul pr">Nama Produk</center>
+                                if ($result->num_rows > 0) {
+                                    // output data of each row
+                                    while($row = $result->fetch_assoc()) {
+                                        $id = $row['id'];
+                                        $relative = "./img/PRODUK/";
+                                        $img = $row['img'];
+                                        $path = $relative . $img;
+                                        $nama = $row['nama'];
+                                        $deskripsi = $row['deskripsi'];
+                                        $kandungan = $row['kandungan'];
+                                        $cara_pakai = $row['cara_pakai'];
+                                        $bpom = $row['bpom'];
+                                        $category = "";
+                            ?>
+                                <div class="card p " style="border: 0">
+                                    <img class="card-img-top product" src="<?=$path?>" alt="Produk">
+                                    <center class="judul pr"><?=$nama?></center>
                                 </div>
+                            <?php
+                                    }
+                                }
+                            ?>
                             </div>
                         </div>
+                        <?php
+                            for($i = 1; $i<3; $i++){
+                        ?>
                         <div class="carousel-item">
                             <div class="row" style="justify-content: center;">
-                                <div class="card p" style="border: 0">
-                                    <img class="card-img-top product" src="./img/PRODUK/Alfacid AHA _ BHA pore serum.jpg" alt="Fasilitas">
-                                    <center class="judul pr">Nama Produk</center>
-                                </div>
+                            <?php
+                                $sql = "SELECT * FROM product";
+                                $filter = "Best Seller / Recomendation";
+                                // Get Category ID
+                                $sql2 = "SELECT * FROM category_list WHERE nama='$filter'";
+                                $result2 = $conn->query($sql2);
+                                
 
-                                <div class="card p" style="border: 0">
-                                    <img class="card-img-top product" src="./img/PRODUK/Alfacid Face Toner.jpg" alt="Fasilitas">
-                                    <center class="judul pr">Nama Produk</center>
-                                </div>
+                                if ($result2->num_rows > 0) {
+                                    if($row = $result2->fetch_assoc()) {
+                                        $category_id = $row['id'];
+                                    }
+                                }
+                                //echo "Category: ".$filter."($category_id)";
 
-                                <div class="card p" style="border: 0">
-                                    <img class="card-img-top product" src="./img/PRODUK/Alfacid Face Wash.jpg" alt="Fasilitas">
-                                    <center class="judul pr">Nama Produk</center>
-                                </div>
+                                $sql .= " LEFT JOIN category ON product.id = category.product_id WHERE category.category_id = $category_id";
+                                $start = $i*4;
+                                $sql .= " LIMIT $start, 4";
+                                $result = $conn->query($sql);
 
-                                <div class="card p d-index" style="border: 0">
-                                    <img class="card-img-top product" src="./img/PRODUK/Alfacid Pro Peel 20.jpg" alt="Fasilitas">
-                                    <center class="judul pr">Nama Produk</center>
+                                if ($result->num_rows > 0) {
+                                    // output data of each row
+                                    while($row = $result->fetch_assoc()) {
+                                        $id = $row['id'];
+                                        $relative = "./img/PRODUK/";
+                                        $img = $row['img'];
+                                        $path = $relative . $img;
+                                        $nama = $row['nama'];
+                                        $deskripsi = $row['deskripsi'];
+                                        $kandungan = $row['kandungan'];
+                                        $cara_pakai = $row['cara_pakai'];
+                                        $bpom = $row['bpom'];
+                                        $category = "";
+                            ?>
+                                <div class="card p "  style="border: 0">
+                                    <img class="card-img-top product" src="<?=$path?>" alt="Produk">
+                                    <center class="judul pr"><?=$nama?></center>
                                 </div>
+                            <?php
+                                    }
+                                }
+                            ?>
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <div class="row" style="justify-content: center;">
-                                <div class="card p" style="border: 0">
-                                    <img class="card-img-top product" src="./img/PRODUK/Alfacid AHA _ BHA pore serum.jpg" alt="Fasilitas">
-                                    <center class="judul pr">Nama Produk</center>
-                                </div>
-
-                                <div class="card p" style="border: 0">
-                                    <img class="card-img-top product" src="./img/PRODUK/Alfacid Face Toner.jpg" alt="Fasilitas">
-                                    <center class="judul pr">Nama Produk</center>
-                                </div>
-
-                                <div class="card p" style="border: 0">
-                                    <img class="card-img-top product" src="./img/PRODUK/Alfacid Face Wash.jpg" alt="Fasilitas">
-                                    <center class="judul pr">Nama Produk</center>
-                                </div>
-
-                                <div class="card p d-index" style="border: 0">
-                                    <img class="card-img-top product" src="./img/PRODUK/Alfacid Pro Peel 20.jpg" alt="Fasilitas">
-                                    <center class="judul pr">Nama Produk</center>
-                                </div>
-                            </div>
-                        </div>
+                        <?php
+                            }
+                        ?>
                     </div>
 
                 <!-- Left and right controls/icons -->
@@ -236,7 +264,7 @@
             </div>
 
             <?php
-                $sql = "SELECT * FROM news";
+                $sql = "SELECT * FROM news LIMIT 1";
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
                     // output data of each row
@@ -284,7 +312,7 @@
             </div>
 
             <?php
-                $sql = "SELECT * FROM news";
+                $sql = "SELECT * FROM news LIMIT 1";
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
                     // output data of each row
