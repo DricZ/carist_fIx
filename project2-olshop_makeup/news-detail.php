@@ -63,29 +63,32 @@
                 <h3 class="judul" style="font-family: Merriweather; font-weight: 700; color: #2B388F; margin-top: 50px; margin-bottom: 50px"><b>Read More</b></h3>
                 
                 <div class="row" style="justify-content: center;">
+                <?php
+                $sql = "SELECT * FROM news LIMIT 4";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                        $id = $row['id'];
+                        $title = $row['title'];
+                        $img = "img/news/".$row['img'];
+                        $wrap_limit = 300;
+                        $news = $row['news'];
+                        $news = strlen($news) > $wrap_limit ? substr($news,0,$wrap_limit)."..." : $news;
+                        $upload_date = $row['upload_date'];
+                        $phpdate = strtotime($upload_date);
+                        $date = date('l, d F Y', $phpdate);
+            ?>
                     <div class="card card-newsd" style="border: 0">
-                        <img class="card-img-top newsdimg" src="./img/gp.jpg" alt="Fasilitas">
-                        <center class="isi-nd">Suggestion Headline Here</center>
-                        <center class="isi-nd-a">By Author Name</center>
+                        <img class="card-img-top newsdimg" src="<?=$img?>" alt="Fasilitas">
+                        <center class="isi-nd"><?=$title?></center>
+                        <center class="isi-nd-a"><?=$date?></center>
                     </div>
+            <?php
+                    }
+                }
+            ?>
 
-                    <div class="card card-newsd" style="border: 0">
-                        <img class="card-img-top newsdimg" src="./img/produksi.jpg" alt="Fasilitas">
-                        <center class="isi-nd">Suggestion Headline Here</center>
-                        <center class="isi-nd-a">By Author Name</center>
-                    </div>
-
-                    <div class="card card-newsd" style="border: 0">
-                        <img class="card-img-top newsdimg" src="./img/QC_2.jpg" alt="Fasilitas">
-                        <center class="isi-nd">Suggestion Headline Here</center>
-                        <center class="isi-nd-a">By Author Name</center>
-                    </div>
-
-                    <div class="card card-newsd" style="border: 0">
-                        <img class="card-img-top newsdimg" src="./img/marketing 1.jpg" alt="Fasilitas">
-                        <center class="isi-nd">Suggestion Headline Here</center>
-                        <center class="isi-nd-a">By Author Name</center>
-                    </div>
                 </div>
                 
             </div>
