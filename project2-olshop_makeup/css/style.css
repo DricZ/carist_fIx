@@ -547,6 +547,10 @@ div.content {
     width: 80%;
 }
 
+.d-produk{
+    display: flex;
+}
+
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media only screen and (max-width: 1000px) {
     .sidebar {

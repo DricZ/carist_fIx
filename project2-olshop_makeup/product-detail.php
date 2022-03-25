@@ -79,7 +79,7 @@
         <hr class="d-index"/>
         
         <div class="container" style="">
-            <div class="row d-index">
+            <div class="row d-produk">
                 <div class="col-4">
                     <center>
                         <div class="row">
