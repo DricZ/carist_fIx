@@ -21,7 +21,7 @@
         </div>
         <div class="container" style="padding-right: 0; padding-left: 0;">
             <div class="row" style="width: 100%;">
-                <div class="col-6" style="width: 46%;">
+                <div class="col-6 col-au-1">
                     <h2 class="judul_au">PT. UNITED FARMATIC INDONESIA</h2>
                     <p class="isi_au" style="text-align: justify;">
                     PT. United Farmatic Indonesia (UFI) berlokasi di Wonoayu, Sidoarjo, Provinsi Jawa Timur. PT. UFI adalah perusahaan manufaktur yang bergerak di bidang farmasi dan telah berdiri sejak tahun 2014 dan telah memiliki sertifikasi CPOB (Cara Pembuatan Obat yang Baik), sertifikasi Halal dari LPPOM MUI. <br>

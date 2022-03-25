@@ -1,6 +1,6 @@
 <?php
         require_once 'include.php';
-        require_once 'header.php';
+        require_once 'header-pp.php';
         require "admin/sys/connect.php";
         $product_per_page = 16;
         
