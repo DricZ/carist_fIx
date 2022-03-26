@@ -138,14 +138,17 @@ div.content {
 
 .aub1{
     background-image: url('.././img/QC_2.jpg'); 
+    background-repeat: no-repeat;
 }
 
 .aub2{
     background-image: url('.././img/opsi produksi.jpg'); 
+    background-repeat: no-repeat;
 }
 
 .aub3{
     background-image: url('.././img/Gudang.jpg'); 
+    background-repeat: no-repeat;
 }
 
 /* CAROUSEL PROMO */
@@ -180,8 +183,9 @@ div.content {
     background-size: 100%;
     background-position: center;
     width: 100vw;
-    height: 70vh;
+    height: 75vh;
     max-width: 100vw;
+    background-repeat: no-repeat;
 }
 
 .b2{
@@ -189,8 +193,9 @@ div.content {
     background-size: 100%;
     background-position: center;
     width: 100vw;
-    height: 70vh;
+    height: 75vh;
     max-width: 100vw;
+    background-repeat: no-repeat;
 }
 
 .b3{
@@ -198,8 +203,9 @@ div.content {
     background-size: 100%;
     background-position: center;
     width: 100vw;
-    height: 70vh;
+    height: 75vh;
     max-width: 100vw;
+    background-repeat: no-repeat;
 }
 
 .btn-br{
@@ -272,7 +278,6 @@ div.content {
 
 .newsdimg{
     width: 319.19px;
-    height: 212px;
     border-radius: 10px;
     margin-bottom: 30px;
 }
@@ -438,11 +443,15 @@ div.content {
 .produk-p{
     margin: 20px;
     border: 0;
+    
+}
+
+.hoverable{
     will-change: transform;
     transition: transform 450ms;
 }
 
-.produk-p:hover{
+.hoverable:hover{
     transition: transform 125ms;
     transform: translateY(-10px);
 }
@@ -480,6 +489,7 @@ div.content {
     background-size: 100%;
     background-position: center;
     height: 75vh;
+    background-repeat: no-repeat;
 }
 
 .m-index{
@@ -504,7 +514,7 @@ div.content {
 .logo-footer-b2{
     vertical-align: middle;
     width: 100%;
-    margin-top: 15px;
+    /* margin-top: 15px; */
 }
 
 .logo-footer-b3{
@@ -578,12 +588,105 @@ div.content {
     margin-bottom: 0;
 }
 
+.au-m3{
+    margin-left: 50px;
+    margin-right: 100px;
+    width: 45%;
+}
+
+.page-link{
+    border: 0;
+    color: black;
+    font-family: Merriweather;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.page-link:hover{
+    color: #2B388F;
+}
+
+.page-link:focus{
+    box-shadow: none;
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #2B388F;
+    background-color: white;
+}
+
+.apa2{
+    height: 60vh;
+}
+
+
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media only screen and (max-width: 1000px) {
     .sidebar {
         width: 100%;
         height: auto;
         position: relative;
+    }
+
+    .apa2{
+        height: 70vh;
+    }
+
+    .find-us {
+        margin-right: 60px;
+        margin-left: 70px;
+        margin-bottom: 10px;
+    }
+
+    .mb-pp1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .au-m1{
+        padding:20px;
+        width: 100%;
+        margin: 0
+    }
+
+    .au-m3{
+        padding:30px;
+        width: 100%;
+        margin: 0
+    }
+
+    .megathronz-news{
+        height: 35vh;
+    }
+
+    .newsdimg{
+        width: 35vw;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    .isi-nd-a {
+        font-size: 10px;
+        font-weight: 400;
+        margin-bottom: 100px;
+    }
+
+    .card-newsd {
+        width: 25%;
+        margin: 30px;
+        padding: 0;
+    }
+
+    .isi-nd {
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .au-m2{
+        display:none;
     }
 
     .col-au-1{
@@ -610,6 +713,8 @@ div.content {
 
     .col-product-1{
         width: 50%;
+        margin: 0;
+        margin-top: 20px;
     }
 
     .anu2{
@@ -669,7 +774,7 @@ div.content {
         background-image: url(../img/gp.jpg);
         background-size: 100%;
         background-position: center;
-        height: 15vh;
+        height: 25vh;
     }
 
     .ub{
@@ -677,15 +782,15 @@ div.content {
     }
 
     .b1{
-        height: 15vh;
+        height: 20vh;
     }
     
     .b2{
-        height: 15vh;
+        height: 20vh;
     }
     
     .b3{
-        height: 15vh;
+        height: 20vh;
     }
 
     .products-text{

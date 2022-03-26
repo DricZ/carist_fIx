@@ -40,6 +40,37 @@
                         $sql2 = "SELECT * FROM category_list WHERE nama='Alfacid' OR nama='Primaderma' OR nama='Hydrosnail'
                                     OR nama='Solasense' OR nama='Kaneira' OR nama='Beaulash' OR nama='Skinisse'";
                     }
+
+                    else if($filter == "BASED ON SKIN TYPE"){
+                        $sql2 = "SELECT * FROM category_list WHERE nama='All Skin Type' OR nama='Normal' OR nama='Dry Skin'
+                         OR nama='Oily Skin' OR nama='Sensitive Skin'";
+                    }
+
+                    else if($filter == "BASED ON SKIN CONDITION"){
+                        $sql2 = "SELECT * FROM category_list WHERE nama='Normal' OR nama='Kusam' OR nama='Berjerawat'
+                         OR nama='Aging' OR nama='Kering' OR nama='Inflamasi'";
+                    }
+
+                    else if($filter == "BASED ON ACNE SEVERITY"){
+                        $sql2 = "SELECT * FROM category_list WHERE nama='All Condition' OR nama='Komedo' OR nama='Papule (light)'
+                         OR nama='Pustule (Medium)' OR nama='Nodule (Severe)'";
+                    }
+
+                    else if($filter == "BASED ON PRODUCT TYPE"){
+                        $sql2 = "SELECT * FROM category_list WHERE nama='Face Wash' OR nama='Face Cleanser' OR nama='Face Toner'
+                         OR nama='Serum' OR nama='Cream' OR nama='Gel' OR nama='Lotion' OR nama='Body Care' OR nama='Neutralizing' OR nama='Peeling' OR nama='Decorative'";
+                    }
+
+                    else if($filter == "BASED ON FUNCTION"){
+                        $sql2 = "SELECT * FROM category_list WHERE nama='Sunscreen' OR nama='Moisturizer' OR nama='Brightening'
+                         OR nama='Acne Care' OR nama='Anti Aging' OR nama='Nutritive' OR nama='Conditioning'";
+                    }
+
+                    else if($filter == "BASED ON BRAND"){
+                        $sql2 = "SELECT * FROM category_list WHERE nama='Alfacid' OR nama='Primaderma' OR nama='Hydrosnail'
+                         OR nama='Solasense' OR nama='Kaneira' OR nama='Beaulash' OR nama='Skinisse'";
+                    }
+
                     // Get Category ID
                     
                     $result2 = $conn->query($sql2);
@@ -103,22 +134,6 @@
         }
 
         $result = $conn->query($sql);
-        
-        
-        
-                // //Display
-                // echo "<tr>";
-                // echo "<td>$id</td>";
-                // echo "<td><img src='$path' width='200'></td>";
-                // echo "<td><b>$nama</b></td>";
-                // echo "<td style='white-space: pre-line'>$deskripsi</td>";
-                // echo "<td style='white-space: pre-line'>$kandungan</td>";
-                // echo "<td style='white-space: pre-line'>$cara_pakai</td>";
-                // echo "<td>$bpom</td>";
-                // echo "<td>$category</td>";
-                // echo "</tr>";
-                
-            
 ?>
 
 <!DOCTYPE html>
@@ -267,8 +282,8 @@
                 </script>
 
                 <!-- Page content -->
-                <div class="col-8 content product-pp"> 
-                    <div class="row">
+                <div class="col-8 content product-pp "> 
+                    <div class="row mb-pp1" style="">
                         <?php
                             if ($result->num_rows > 0) {
                                 // output data of each row
@@ -286,9 +301,9 @@
                         ?>
                         <div class="col-md-3 col-product-1">
                             <div class="card produk-p">
-                                <img src="<?=$path?>" alt="<?=$img?>" onclick="openProduk('<?=$nama?>')">
-                                <center class="pr"><a href="product-detail.php?name=<?=$nama?>" style='color:black; font-weight: 600; font-size: 16px'><?=$nama?></a></center>
-                                <center><p class="d-index" style="font-size: 16px"><i>
+                                <img class="hoverable" src="<?=$path?>" alt="<?=$img?>" onclick="openProduk('<?=$nama?>')">
+                                <center class="pr hoverable"><a href="product-detail.php?name=<?=$nama?>" style='color:black; font-weight: 600; font-size: 16px; text-decoration: underline;'><?=$nama?></a></center>
+                                <center><p class="d-index hoverable" style="font-size: 16px"><i>
                                     <?php
                                         //Search Category
                                         $sql2 = "SELECT category.category_id AS category_id, category_list.nama FROM category LEFT JOIN category_list ON category.category_id = category_list.id WHERE product_id = '$id'";
@@ -298,7 +313,91 @@
                                             // output data of each row
                                             while($row2 = $result2->fetch_assoc()) {
                                                 $temp = $row2['nama'];
-                                                echo "<a href='?filter=$temp' style='color:black;'>$temp, </a>";
+                                                echo "<a href='?filter=$temp' style='color:black;text-decoration: underline;'>$temp, </a>";
+                                                //$category = $category . $temp . ", ";
+                                            }
+                                        }
+                                    ?>
+                                </i></p></center>
+                            </div>
+                        </div>
+                        <?php  
+                                }
+                                //Page Bar
+                                echo "<ul class='pagination justify-content-center' style='margin:20px 0; padding: 0'>";
+                                $jumlah_no = 3;
+                                //Grouping
+                                if($page%3 == 0){
+                                    $group = $page/$jumlah_no;
+                                }else{
+                                    $group = floor($page/$jumlah_no) + 1;
+                                }
+                                //Start Number
+                                $start = ($group-1)*3+1;
+                                $end = $start+($jumlah_no-1);
+                                if($end > $total_page){
+                                    $end = $total_page;
+                                }
+                                // Panah Kiri
+                                if($start > $jumlah_no){
+                                    $preview = $start-1;
+                                    echo "<li class='page-item'><a class='page-link' href='?filter=$filter&page=$preview'><img src='./img/back.png' style='width: 10px; height: 20px'> </a></li>  ";
+                                }
+                                for($i=$start;$i<=$end;$i++){
+                                    if($i == $page){
+                                        echo "<li class='page-item active'><a class='page-link' href='?filter=$filter&page=$i'>$i</a></li>  ";
+                                    }else{
+                                        echo "<li class='page-item'><a class='page-link' href='?filter=$filter&page=$i'>$i</a></li>  ";
+                                    }
+                                }
+                                //Panah Kanan
+                                if($end < $total_page){
+                                    $preview = $end+1;
+                                    echo "<li class='page-item'><a class='page-link' href='?filter=$filter&page=$preview'><img src='./img/next1.svg' style='width: 20px; height: 20px'> </a></li> ";
+                                }
+                                echo "</ul>";
+                            }else{
+                                echo "<div style='padding-top: 15%'>";
+                                echo "<center><h1>No Data</h1></center>";
+                                for($i=0;$i<20;$i++){
+                                    echo "<br>";
+                                }
+                                echo "</div>";
+                            }
+                        ?>
+                    </div>
+
+                    <!-- <div class="row center m-produk" style="display: flex">
+                        <?php
+                            if ($result->num_rows > 0) {
+                                // output data of each row
+                                while($row = $result->fetch_assoc()) {
+                                    $id = $row['id'];
+                                    $relative = "./img/PRODUK/";
+                                    $img = $row['img'];
+                                    $path = $relative . $img;
+                                    $nama = $row['nama'];
+                                    $deskripsi = $row['deskripsi'];
+                                    $kandungan = $row['kandungan'];
+                                    $cara_pakai = $row['cara_pakai'];
+                                    $bpom = $row['bpom'];
+                                    $category = "";
+                        ?>
+                        <div class="col-md-3 col-product-1">
+                            <div class="card produk-p">
+                                <img class="hoverable" src="<?=$path?>" alt="<?=$img?>" onclick="openProduk('<?=$nama?>')">
+                                <center class="pr hoverable"><a href="product-detail.php?name=<?=$nama?>" style='color:black; font-weight: 600; font-size: 16px; text-decoration: underline;'><?=$nama?></a></center>
+                                <center><p class="d-index hoverable" style="font-size: 16px"><i>
+                                    <?php
+                                        //Search Category
+                                        $sql2 = "SELECT category.category_id AS category_id, category_list.nama FROM category LEFT JOIN category_list ON category.category_id = category_list.id WHERE product_id = '$id'";
+                                        $result2 = $conn->query($sql2);
+                        
+                                        if ($result2->num_rows > 0) {
+                                            // output data of each row
+                                            while($row2 = $result2->fetch_assoc()) {
+                                                $temp = $row2['nama'];
+                                                echo "<a href='?filter=$temp' style='color:black;text-decoration: underline;'>$temp, </a>";
                                                 //$category = $category . $temp . ", ";
                                             }
                                         }
@@ -350,96 +449,11 @@
                                 echo "</div>";
                             }
                         ?>
-                    </div>
+                    </div> -->
                 </div>
 
             </div>
         </div>
-
-        
-
-        <!-- <div class="container-fluid m-index" style="">
-            
-            <div class="row">
-                <div class="col- content" style="background-color: white; width: 80%;"> 
-                    <div class="row">
-                        <?php
-                            if ($result->num_rows > 0) {
-                                while($row = $result->fetch_assoc()) {
-                                    $id = $row['id'];
-                                    $relative = "./img/PRODUK/";
-                                    $img = $row['img'];
-                                    $path = $relative . $img;
-                                    $nama = $row['nama'];
-                                    $deskripsi = $row['deskripsi'];
-                                    $kandungan = $row['kandungan'];
-                                    $cara_pakai = $row['cara_pakai'];
-                                    $bpom = $row['bpom'];
-                                    $category = "";
-                        ?>
-                        <div class="col-md-3">
-                            <div class="card produk-p">
-                                <img src="<?=$path?>" alt="<?=$img?>" onclick="openProduk('<?=$nama?>')">
-                                <center class="judul pr"><a href="product-detail.php?name=<?=$nama?>" style='color:black;'><b><?=$nama?></b></a></center>
-                                <center><p><i>
-                                    <?php
-                                        $sql2 = "SELECT category.category_id AS category_id, category_list.nama FROM category LEFT JOIN category_list ON category.category_id = category_list.id WHERE product_id = '$id'";
-                                        $result2 = $conn->query($sql2);
-                        
-                                        if ($result2->num_rows > 0) {
-                                            while($row2 = $result2->fetch_assoc()) {
-                                                $temp = $row2['nama'];
-                                                echo "<a href='?=category=$temp' style='color:black;'>$temp, </a>";
-                                            }
-                                        }
-                                    ?>
-                                </i></p></center>
-                            </div>
-                        </div>
-                        <?php  
-                                }
-                                echo "<ul class='pagination justify-content-center' style='margin:20px 0'>";
-                                $jumlah_no = 3;
-                                if($page%3 == 0){
-                                    $group = $page/$jumlah_no;
-                                }else{
-                                    $group = floor($page/$jumlah_no) + 1;
-                                }
-                                $start = ($group-1)*3+1;
-                                $end = $start+($jumlah_no-1);
-                                if($end > $total_page){
-                                    $end = $total_page;
-                                }
-                                if($start > $jumlah_no){
-                                    $preview = $start-1;
-                                    echo "<li class='page-item'><a class='page-link' href='?filter=$filter&page=$preview'>< </a></li>  ";
-                                }
-                                for($i=$start;$i<=$end;$i++){
-                                    if($i == $page){
-                                        echo "<li class='page-item active'><a class='page-link' href='?filter=$filter&page=$i'>$i</a></li>  ";
-                                    }else{
-                                        echo "<li class='page-item'><a class='page-link' href='?filter=$filter&page=$i'>$i</a></li>  ";
-                                    }
-                                }
-                                if($end < $total_page){
-                                    $preview = $end+1;
-                                    echo "<li class='page-item'><a class='page-link' href='?filter=$filter&page=$preview'>> </a></li> ";
-                                }
-                                echo "</ul>";
-                            }else{
-                                echo "<div style='padding-top: 15%'>";
-                                echo "<center><h1>No Data</h1></center>";
-                                for($i=0;$i<20;$i++){
-                                    echo "<br>";
-                                }
-                                echo "</div>";
-                            }
-                        ?>
-                    </div>
-                </div>
-
-            </div>
-        </div> -->
 
         <script>
         function openbar(param, id1, id2, id3, id4, id5, id6, id7) {

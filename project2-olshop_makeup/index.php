@@ -136,7 +136,7 @@
                                         $bpom = $row['bpom'];
                                         $category = "";
                             ?>
-                                <div class="card p " style="border: 0">
+                                <div class="card p d-index" style="border: 0">
                                     <img class="card-img-top product" src="<?=$path?>" alt="Produk">
                                     <center class="judul pr"><?=$nama?></center>
                                 </div>
@@ -213,7 +213,7 @@
 
             <div class="row">
                 <center>
-                    <button type="button" class="button-active btn-2" value="SHOP" onclick="" style="margin: 50px;"><b>VIEW ALL PRODUCTS</b></button>
+                    <button type="button" class="button-active btn-2" value="SHOP" onclick="bukap()" style="margin: 50px;"><b>VIEW ALL PRODUCTS</b></button>
 
                 </center>
             </div>
@@ -280,7 +280,7 @@
                         $date = date('l, d F Y', $phpdate);
             ?>
 
-            <div class="card" style="margin-bottom: 20px; border: 0" onclick="buka(<?=$id?>)">
+            <div class="card d-index" style="margin-bottom: 20px; border: 0" onclick="buka(<?=$id?>)">
                 <div class="row">
                     <div class="col-5 right p-0">
                         <img src="<?=$img?>" alt="Fasilitas" style="width: 100%; border-top-left-radius: 35px; border-bottom-left-radius: 35px;">
@@ -294,7 +294,7 @@
                         <p style="font-weight:400"><?=$news?></b></p>
                         <p style="font-weight:600"><?=$date?></p>
                     </div>
-                </div>    
+                </div>  
             </div>
             
             <?php
@@ -306,7 +306,7 @@
 
         <div class="container-fluid news m-index">
             <div class="row products-text" style="margin-bottom: 20px">
-                <center ><p class="judul"><b>News</b></p></center>
+                <center ><h2 class="judul"><b>News</b></h2></center>
             </div>
 
             <?php
@@ -326,17 +326,21 @@
                         $date = date('l, d F Y', $phpdate);
             ?>
 
-            <div class="card" style="" onclick="buka(<?=$id?>)">
+            <div class="card news" style="margin-bottom: 20px; border: 0" onclick="buka(<?=$id?>)">
                 <div class="row">
-                    <div class="col-4">
-                        <img src="<?=$img?>" alt="Fasilitas" style="width: 25vw; height: 15vh; border-top-left-radius: 30px; border-bottom-left-radius: 30px;">
+                    <div class="col-12 center p-0">
+                        <img src="<?=$img?>" alt="Fasilitas" style="width: 100%;">
                     </div>
-                    <div class="col-8" style="padding: 20px">
-                        <p style="font-size: 6px"><b><?=$title?></b></p><br>             
-                        <p style="font-size: 4px"><?=$news?></b></p><br>
-                        <p style="font-size: 4px"><?=$date?></p>
+                    
+                </div> 
+                
+                <div class="row">
+                    <div class="col-12" style="padding: 50px;">
+                        <h3 style="font-weight:600"><?=$title?></h3>                
+                        <p style="font-weight:400"><?=$news?></b></p>
+                        <p style="font-weight:600"><?=$date?></p>
                     </div>
-                </div>    
+                </div>
             </div>
             
             <?php
@@ -359,6 +363,10 @@
     <script>
         function buka(id){
             window.location.href = "news-detail.php?id=" + id;
+        }
+
+        function bukap(id){
+            window.location.href = "product.php";
         }
     </script>
 

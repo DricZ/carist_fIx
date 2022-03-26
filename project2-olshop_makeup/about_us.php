@@ -16,11 +16,11 @@
 
     <body>
         <hr style="margin-bottom: 0;" />
-        <div class="container-fluid megathronz" style="background-image: url('./img/gp.jpg'); ">
+        <div class="container-fluid megathronz" style="background-image: url('./img/gp.jpg'); background-repeat:no-repeat ">
             
         </div>
         <div class="container" style="padding-right: 0; padding-left: 0;">
-            <div class="row" style="width: 100%;">
+            <div class="row au-m1" style="width: 100%;">
                 <div class="col-6 col-au-1">
                     <h2 class="judul_au">PT. UNITED FARMATIC INDONESIA</h2>
                     <p class="isi_au" style="text-align: justify;">
@@ -30,21 +30,19 @@
                     </p>
                 </div>
 
-                <div class="col-6" style="margin-left: 50px;">
+                <div class="col-6 au-m2" style="margin-left: 50px;">
                     <span class="helper"></span><img src="./img/opsi produksi1.jpg" style="width: 100%">
                 </div>
             </div>
         </div>
 
-        <div class="container-fluid" style="background-color: #2B388F; height: 60vh;">
+        <div class="container-fluid apa2" style="background-color: #2B388F;">
             <div class="row center" style="height: 100%;">
-                <div class="col-6" style="width: 40%; margin-left: 70px;">
+                <div class="col-6 au-m2" style="width: 40%; margin-left: 70px;">
                     <span class="helper"></span><img src="./img/opsi produksi.jpg" style="width: 100%">
                 </div>
 
-                <div class="col-6" style="color: white;     margin-left: 50px;
-    margin-right: 100px;
-    width: 45%;">
+                <div class="col-6 au-m3" style="color: white;">
                     
                     <h2 class="judul_au">Visi Misi</h2>
                     <p class="isi_au" style="text-align: justify;">
@@ -58,7 +56,7 @@
         </div>
 
         <div class="container p-4 text-center mt-5 mb-5">
-            <div class="row mb-5">
+            <div class="row mb-5 d-produk">
                 <div class="col-3">
                 </div>
                 <div class="col-2 text-center">
@@ -68,6 +66,24 @@
                     <img class="logo-footer" style="width: 150px" src="./img/gmp-quality-logo-029EAE8B9B-seeklogo.com-removebg-preview.png">
                 </div>
                 <div class="col-2 text-center">
+                    <img class="logo-footer" style="width: 150px" src="./img/LOGO_BPOM-e1611338664504.png">
+                </div>
+            </div>
+
+            <div class="row m-index m-3 center">
+                <div class="col-12 text-center">
+                    <img class="logo-footer" style="width: 150px" src="./img/Logo-Halal-PNG-Terbaru.png">
+                </div>
+            </div>
+
+            <div class="row m-index m-3 center">
+                <div class="col-12 text-center">
+                    <img class="logo-footer" style="width: 150px" src="./img/gmp-quality-logo-029EAE8B9B-seeklogo.com-removebg-preview.png">
+                </div>
+            </div>
+
+            <div class="row m-index m-3 center">
+                <div class="col-12 text-center">
                     <img class="logo-footer" style="width: 150px" src="./img/LOGO_BPOM-e1611338664504.png">
                 </div>
             </div>

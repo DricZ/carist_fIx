@@ -147,38 +147,61 @@
         <!-- MOBILE VIEW -->
         <nav class="navbar navbar-expand-lg navbar-light nav-mv">
             <div class="container-fluid">
-                <button style="border: 0" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon" style="width: 25px"></span>
-                </button>
-                <a class="navbar-brand" href="#" style="width: 75%"><img class="mv" src="./img/Artboard 1 copy.png" alt="PT. United Farmatic Indonesia"></a>
+                <div class="row">
+                    <button style="    border: 0;
+    width: 10%;
+    padding: 0;
+    margin-left: 10px;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon" style="width: 25px"></span>
+                    </button>
+                    <a class="navbar-brand" href="#" style="width: 20%;
+    padding: 0;"><img class="mv" src="./img/Logo_UFI.png" alt="PT. United Farmatic Indonesia"></a>
+
+                    <div class="col-sm-3" style="display: flex;
+                        align-items: center;
+                        width: 60%;
+                        padding: 0;
+                        justify-content: center;">
+                        <div class="input-group">
+                            <div id="navbar-search-autocomplete" class="form-outline" style="height: 0; width: 80%">
+                                <input type="search" id="form1" class="form-control anu3" placeholder="Find products, series,...">
+                            </div>
+                            <button type="button" class="btn btn-primary search-icon">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                        
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item nav-hd">
+                                <a class="nav-link" href="index.php"><b class="nav-color">HOME</b></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link nav-hd" href="product.php"><b class="nav-color">PRODUCT</b></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link nav-hd" href="about_us.php"><b class="nav-color">ABOUT US</b></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link nav-hd" href="news.php"><b class="nav-color">NEWS</b></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link nav-hd" href="career.php"><b class="nav-color">CAREER</b></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link nav-hd" href="contact_us.php"><b class="nav-color">CONTACT US</b></a>
+                            </li>
+                        </ul>
+                    </div>
+
                     
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav">
-                        <li class="nav-item nav-hd">
-                            <a class="nav-link" href="index.php"><b class="nav-color">HOME</b></a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link nav-hd" href="product.php"><b class="nav-color">PRODUCT</b></a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link nav-hd" href="about_us.php"><b class="nav-color">ABOUT US</b></a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link nav-hd" href="news.php"><b class="nav-color">NEWS</b></a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link nav-hd" href="career.php"><b class="nav-color">CAREER</b></a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link nav-hd" href="contact_us.php"><b class="nav-color">CONTACT US</b></a>
-                        </li>
-                    </ul>
-                </div>
+                </div> 
             </div>
         </nav>
         

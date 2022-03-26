@@ -37,12 +37,22 @@
                         $date = date('l, d F Y', $phpdate);
             ?>
             <div class="row row-news mt-5" onclick="buka(<?=$id?>)" style="margin-bottom: 30px; width: 110%">
-                <div class="col-md-5 right">
+                <div class="col-md-5 right d-index">
                     <img src="<?=$img?>" style="width: 70%; border-radius: 5px; object-fit: cover;">
                 </div>
 
+                <div class="col-md-5 p-0 m-index">
+                    <img src="<?=$img?>" style="width: 100%; object-fit: cover;">
+                </div>
+
                 <!-- aslie 7 -->
-                <div class="col-md-5">
+                <div class="col-md-5 d-index">
+                    <h3 style="font-family: 'Merriweather'"><b><?=$title?></b></h3>
+                    <p style="font-size: 16px"><?=$news." read more"?></p><br>
+                    <p style="font-size: 16px; font-weight: normal"><?=$date?></p>
+                </div>
+
+                <div class="col-md-5 m-index p-5">
                     <h3 style="font-family: 'Merriweather'"><b><?=$title?></b></h3>
                     <p style="font-size: 16px"><?=$news." read more"?></p><br>
                     <p style="font-size: 16px; font-weight: normal"><?=$date?></p>
@@ -60,11 +70,11 @@
             </div>
 
                 <ul class="pagination justify-content-center">
-                    <li class="page-item" ><a class="page-link" href="#"><</a></li>
+                    <li class="page-item" ><a class="page-link" href="#"><img src='./img/back.png' style='width: 10px; height: 20px'></a></li>
                     <li class="page-item active" ><a class="page-link" href="#">1</a></li>
                     <li class="page-item" ><a class="page-link" href="#">2</a></li>
                     <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">></a></li>
+                    <li class="page-item"><a class="page-link" href="#"><img src='./img/next1.svg' style='width: 20px; height: 20px'></a></li>
                 </ul>
         </div>
         
