@@ -119,11 +119,12 @@
                                 //echo "Category: ".$filter."($category_id)";
 
                                 $sql .= " LEFT JOIN category ON product.id = category.product_id WHERE category.category_id = $category_id";
-                                $sql .= " LIMIT 4";
+                                $sql .= " LIMIT 6";
                                 $result = $conn->query($sql);
 
                                 if ($result->num_rows > 0) {
                                     // output data of each row
+                                    $counter = 1;
                                     while($row = $result->fetch_assoc()) {
                                         $id = $row['id'];
                                         $relative = "./img/PRODUK/";
@@ -136,11 +137,15 @@
                                         $bpom = $row['bpom'];
                                         $category = "";
                             ?>
-                                <div class="card p d-index" style="border: 0">
+                                <div class="card p d-index prod<?=$counter?>" style="border: 0">
                                     <img class="card-img-top product" src="<?=$path?>" alt="Produk">
                                     <center class="judul pr"><?=$nama?></center>
                                 </div>
                             <?php
+                                        $counter++;
+                                        if($counter > 3){
+                                            $counter -= 3;
+                                        }
                                     }
                                 }
                             ?>
@@ -167,8 +172,8 @@
                                 //echo "Category: ".$filter."($category_id)";
 
                                 $sql .= " LEFT JOIN category ON product.id = category.product_id WHERE category.category_id = $category_id";
-                                $start = $i*4;
-                                $sql .= " LIMIT $start, 4";
+                                $start = $i*6;
+                                $sql .= " LIMIT $start, 6";
                                 $result = $conn->query($sql);
 
                                 if ($result->num_rows > 0) {
@@ -185,11 +190,15 @@
                                         $bpom = $row['bpom'];
                                         $category = "";
                             ?>
-                                <div class="card p "  style="border: 0">
+                                <div class="card p prod<?=$counter?>"  style="border: 0">
                                     <img class="card-img-top product" src="<?=$path?>" alt="Produk">
                                     <center class="judul pr"><?=$nama?></center>
                                 </div>
                             <?php
+                                        $counter++;
+                                        if($counter > 3){
+                                            $counter -= 3;
+                                        }
                                     }
                                 }
                             ?>
