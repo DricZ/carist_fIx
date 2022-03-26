@@ -100,7 +100,7 @@
                 <div id="products" class="carousel slide" data-bs-ride="carousel">
 
                 <!-- The slideshow/carousel DESKTOP -->
-                    <div class="carousel-inner">
+                    <div class="carousel-inner d-produk">
                         <div class="carousel-item active">
                             <div class="row" style="justify-content: center;">
                             <?php
@@ -200,17 +200,20 @@
                         ?>
                     </div>
                 <!-- Left and right controls/icons -->
-                <button class="carousel-control-prev pct-l" type="button" data-bs-target="#products" data-bs-slide="prev" style="margin: 20px">
+                <button class="carousel-control-prev pct-l d-produk" type="button" data-bs-target="#products" data-bs-slide="prev" style="margin: 20px">
                     <span class="carousel-control-prev-icon"></span>
                     </button>
 
-                    <button class="carousel-control-next pct-r" type="button" data-bs-target="#products" data-bs-slide="next" style="margin: 20px">
+                    <button class="carousel-control-next pct-r d-produk" type="button" data-bs-target="#products" data-bs-slide="next" style="margin: 20px">
                     <span class="carousel-control-next-icon"></span>
                     </button>
                 </div>
 
+                <!-- Carousel -->
+                <div id="products2" class="carousel slide" data-bs-ride="carousel">
+
                 <!-- The slideshow/carousel MOBILE -->
-                <div class="carousel-inner">
+                    <div class="carousel-inner m-product">
                         <div class="carousel-item active">
                             <div class="row" style="justify-content: center;">
                             <?php
@@ -246,7 +249,7 @@
                                         $bpom = $row['bpom'];
                                         $category = "";
                             ?>
-                                <div class="card p d-index" style="border: 0">
+                                <div class="card p" style="border: 0">
                                     <img class="card-img-top product" src="<?=$path?>" alt="Produk">
                                     <center class="judul pr"><?=$nama?></center>
                                 </div>
@@ -309,13 +312,12 @@
                             }
                         ?>
                     </div>
-
                 <!-- Left and right controls/icons -->
-                    <button class="carousel-control-prev pct-l" type="button" data-bs-target="#products" data-bs-slide="prev" style="margin: 20px">
+                <button class="carousel-control-prev pct-l m-product" type="button" data-bs-target="#products2" data-bs-slide="prev" style="margin: 20px">
                     <span class="carousel-control-prev-icon"></span>
                     </button>
 
-                    <button class="carousel-control-next pct-r" type="button" data-bs-target="#products" data-bs-slide="next" style="margin: 20px">
+                    <button class="carousel-control-next pct-r m-product" type="button" data-bs-target="#products2" data-bs-slide="next" style="margin: 20px">
                     <span class="carousel-control-next-icon"></span>
                     </button>
                 </div>
