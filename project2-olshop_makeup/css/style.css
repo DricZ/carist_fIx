@@ -596,6 +596,12 @@ div.content {
         position: relative;
     }
 
+    .find-us {
+        margin-right: 60px;
+        margin-left: 70px;
+        margin-bottom: 10px;
+    }
+
     .au-m1{
         padding:20px;
         width: 100%;
