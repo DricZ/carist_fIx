@@ -56,7 +56,7 @@
         </div>
 
         <div class="container p-4 text-center mt-5 mb-5">
-            <div class="row mb-5">
+            <div class="row mb-5 d-index">
                 <div class="col-3">
                 </div>
                 <div class="col-2 text-center">
@@ -66,6 +66,24 @@
                     <img class="logo-footer" style="width: 150px" src="./img/gmp-quality-logo-029EAE8B9B-seeklogo.com-removebg-preview.png">
                 </div>
                 <div class="col-2 text-center">
+                    <img class="logo-footer" style="width: 150px" src="./img/LOGO_BPOM-e1611338664504.png">
+                </div>
+            </div>
+
+            <div class="row m-index m-3 center">
+                <div class="col-12 text-center">
+                    <img class="logo-footer" style="width: 150px" src="./img/Logo-Halal-PNG-Terbaru.png">
+                </div>
+            </div>
+
+            <div class="row m-index m-3 center">
+                <div class="col-12 text-center">
+                    <img class="logo-footer" style="width: 150px" src="./img/gmp-quality-logo-029EAE8B9B-seeklogo.com-removebg-preview.png">
+                </div>
+            </div>
+
+            <div class="row m-index m-3 center">
+                <div class="col-12 text-center">
                     <img class="logo-footer" style="width: 150px" src="./img/LOGO_BPOM-e1611338664504.png">
                 </div>
             </div>
