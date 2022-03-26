@@ -162,12 +162,18 @@
                 <li class="nav-item">
                     <a class="nav-link nav-product" href="#">PRODUCT</a>
                 </li>
+                <?php
+                    if(isset($_GET['filter'])){
+                ?>
                 <li class="nav-item">
                     <a class="nav-link nav-product disabled" style="color: white;" href="#">></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-product" href="#"><?=$category?></a>
+                    <a class="nav-link nav-product" href="#" id="mobile"><?=$filter?></a>
                 </li>
+                <?php
+                    }
+                ?>
             </ul>
         </div>
 
@@ -252,7 +258,7 @@
 
                 <!-- Sidebar Jadi Putih -->
                 <script>
-                    var selected = $("a:contains('<?=$filter?>'):first");
+                    var selected = $("a:contains('<?=$filter?>'):first:not(#mobile)");
                     <?php
                         if ($sidebar){
                     ?>

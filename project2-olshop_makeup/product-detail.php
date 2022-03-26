@@ -53,25 +53,25 @@
         <div class="container-fluid m-product pd-mb p-2" style="background-color: #2B388F;align-items: center;">
             <ul class="nav m-product m-index">
                 <li class="nav-item">
-                    <a class="nav-link nav-product" href="#">HOME</a>
+                    <a class="nav-link nav-product" href="./">HOME</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link nav-product disabled" style="color: white;" href="#">></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-product" href="#">PRODUCT</a>
+                    <a class="nav-link nav-product" href="product.php">PRODUCT</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link nav-product disabled" style="color: white;" href="#">></a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link nav-product" href="#">PRODUCT SERIES</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link nav-product disabled" style="color: white;" href="#">></a>
-                </li>
+                </li> -->
                 <li class="nav-item">
-                    <a class="nav-link nav-product" href="#">Anu</a>
+                    <a class="nav-link nav-product" href="#"><?=$nama?></a>
                 </li>
             </ul>
         </div>
