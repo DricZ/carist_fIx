@@ -438,11 +438,15 @@ div.content {
 .produk-p{
     margin: 20px;
     border: 0;
+    
+}
+
+.hoverable{
     will-change: transform;
     transition: transform 450ms;
 }
 
-.produk-p:hover{
+.hoverable:hover{
     transition: transform 125ms;
     transform: translateY(-10px);
 }

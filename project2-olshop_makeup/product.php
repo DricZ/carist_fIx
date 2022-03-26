@@ -20,6 +20,37 @@
                     if($filter == "BASED ON PRODUCT HIGHLIGHT"){
                         $sql2 = "SELECT * FROM category_list WHERE nama='Best Seller / Recomendation' OR nama='New Arrival'";
                     }
+
+                    else if($filter == "BASED ON SKIN TYPE"){
+                        $sql2 = "SELECT * FROM category_list WHERE nama='All Skin Type' OR nama='Normal' OR nama='Dry Skin'
+                         OR nama='Oily Skin' OR nama='Sensitive Skin'";
+                    }
+
+                    else if($filter == "BASED ON SKIN CONDITION"){
+                        $sql2 = "SELECT * FROM category_list WHERE nama='Normal' OR nama='Kusam' OR nama='Berjerawat'
+                         OR nama='Aging' OR nama='Kering' OR nama='Inflamasi'";
+                    }
+
+                    else if($filter == "BASED ON ACNE SEVERITY"){
+                        $sql2 = "SELECT * FROM category_list WHERE nama='All Condition' OR nama='Komedo' OR nama='Papule (light)'
+                         OR nama='Pustule (Medium)' OR nama='Nodule (Severe)'";
+                    }
+
+                    else if($filter == "BASED ON PRODUCT TYPE"){
+                        $sql2 = "SELECT * FROM category_list WHERE nama='Face Wash' OR nama='Face Cleanser' OR nama='Face Toner'
+                         OR nama='Serum' OR nama='Cream' OR nama='Gel' OR nama='Lotion' OR nama='Body Care' OR nama='Neutralizing' OR nama='Peeling' OR nama='Decorative'";
+                    }
+
+                    else if($filter == "BASED ON FUNCTION"){
+                        $sql2 = "SELECT * FROM category_list WHERE nama='Sunscreen' OR nama='Moisturizer' OR nama='Brightening'
+                         OR nama='Acne Care' OR nama='Anti Aging' OR nama='Nutritive' OR nama='Conditioning'";
+                    }
+
+                    else if($filter == "BASED ON BRAND"){
+                        $sql2 = "SELECT * FROM category_list WHERE nama='Alfacid' OR nama='Primaderma' OR nama='Hydrosnail'
+                         OR nama='Solasense' OR nama='Kaneira' OR nama='Beaulash' OR nama='Skinisse'";
+                    }
+
                     // Get Category ID
                     
                     $result2 = $conn->query($sql2);
@@ -72,22 +103,6 @@
         }
 
         $result = $conn->query($sql);
-        
-        
-        
-                // //Display
-                // echo "<tr>";
-                // echo "<td>$id</td>";
-                // echo "<td><img src='$path' width='200'></td>";
-                // echo "<td><b>$nama</b></td>";
-                // echo "<td style='white-space: pre-line'>$deskripsi</td>";
-                // echo "<td style='white-space: pre-line'>$kandungan</td>";
-                // echo "<td style='white-space: pre-line'>$cara_pakai</td>";
-                // echo "<td>$bpom</td>";
-                // echo "<td>$category</td>";
-                // echo "</tr>";
-                
-            
 ?>
 
 <!DOCTYPE html>
@@ -223,9 +238,9 @@
                         ?>
                         <div class="col-md-3 col-product-1">
                             <div class="card produk-p">
-                                <img src="<?=$path?>" alt="<?=$img?>" onclick="openProduk('<?=$nama?>')">
-                                <center class="pr"><a href="product-detail.php?name=<?=$nama?>" style='color:black; font-weight: 600; font-size: 16px'><?=$nama?></a></center>
-                                <center><p class="d-index" style="font-size: 16px"><i>
+                                <img class="hoverable" src="<?=$path?>" alt="<?=$img?>" onclick="openProduk('<?=$nama?>')">
+                                <center class="pr hoverable"><a href="product-detail.php?name=<?=$nama?>" style='color:black; font-weight: 600; font-size: 16px; text-decoration: underline;'><?=$nama?></a></center>
+                                <center><p class="d-index hoverable" style="font-size: 16px"><i>
                                     <?php
                                         //Search Category
                                         $sql2 = "SELECT category.category_id AS category_id, category_list.nama FROM category LEFT JOIN category_list ON category.category_id = category_list.id WHERE product_id = '$id'";
@@ -235,7 +250,7 @@
                                             // output data of each row
                                             while($row2 = $result2->fetch_assoc()) {
                                                 $temp = $row2['nama'];
-                                                echo "<a href='?filter=$temp' style='color:black;'>$temp, </a>";
+                                                echo "<a href='?filter=$temp' style='color:black;text-decoration: underline;'>$temp, </a>";
                                                 //$category = $category . $temp . ", ";
                                             }
                                         }

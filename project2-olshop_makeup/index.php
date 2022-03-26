@@ -213,7 +213,7 @@
 
             <div class="row">
                 <center>
-                    <button type="button" class="button-active btn-2" value="SHOP" onclick="" style="margin: 50px;"><b>VIEW ALL PRODUCTS</b></button>
+                    <button type="button" class="button-active btn-2" value="SHOP" onclick="bukap()" style="margin: 50px;"><b>VIEW ALL PRODUCTS</b></button>
 
                 </center>
             </div>
@@ -359,6 +359,10 @@
     <script>
         function buka(id){
             window.location.href = "news-detail.php?id=" + id;
+        }
+
+        function bukap(id){
+            window.location.href = "product.php";
         }
     </script>
 
