@@ -587,6 +587,10 @@ div.content {
     width: 45%;
 }
 
+anu4{
+    display: none;
+}
+
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media only screen and (max-width: 1000px) {
@@ -600,6 +604,12 @@ div.content {
         margin-right: 60px;
         margin-left: 70px;
         margin-bottom: 10px;
+    }
+
+    .mb-pp1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .au-m1{
@@ -670,6 +680,8 @@ div.content {
 
     .col-product-1{
         width: 50%;
+        margin: 0;
+        margin-top: 20px;
     }
 
     .anu2{

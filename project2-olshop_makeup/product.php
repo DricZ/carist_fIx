@@ -277,8 +277,8 @@
                 </script>
 
                 <!-- Page content -->
-                <div class="col-8 content product-pp"> 
-                    <div class="row">
+                <div class="col-8 content product-pp "> 
+                    <div class="row mb-pp1" style="">
                         <?php
                             if ($result->num_rows > 0) {
                                 // output data of each row
@@ -361,20 +361,11 @@
                             }
                         ?>
                     </div>
-                </div>
 
-            </div>
-        </div>
-
-        
-
-        <!-- <div class="container-fluid m-index" style="">
-            
-            <div class="row">
-                <div class="col- content" style="background-color: white; width: 80%;"> 
-                    <div class="row">
+                    <!-- <div class="row center m-produk" style="display: flex">
                         <?php
                             if ($result->num_rows > 0) {
+                                // output data of each row
                                 while($row = $result->fetch_assoc()) {
                                     $id = $row['id'];
                                     $relative = "./img/PRODUK/";
@@ -387,19 +378,22 @@
                                     $bpom = $row['bpom'];
                                     $category = "";
                         ?>
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-product-1">
                             <div class="card produk-p">
-                                <img src="<?=$path?>" alt="<?=$img?>" onclick="openProduk('<?=$nama?>')">
-                                <center class="judul pr"><a href="product-detail.php?name=<?=$nama?>" style='color:black;'><b><?=$nama?></b></a></center>
-                                <center><p><i>
+                                <img class="hoverable" src="<?=$path?>" alt="<?=$img?>" onclick="openProduk('<?=$nama?>')">
+                                <center class="pr hoverable"><a href="product-detail.php?name=<?=$nama?>" style='color:black; font-weight: 600; font-size: 16px; text-decoration: underline;'><?=$nama?></a></center>
+                                <center><p class="d-index hoverable" style="font-size: 16px"><i>
                                     <?php
+                                        //Search Category
                                         $sql2 = "SELECT category.category_id AS category_id, category_list.nama FROM category LEFT JOIN category_list ON category.category_id = category_list.id WHERE product_id = '$id'";
                                         $result2 = $conn->query($sql2);
                         
                                         if ($result2->num_rows > 0) {
+                                            // output data of each row
                                             while($row2 = $result2->fetch_assoc()) {
                                                 $temp = $row2['nama'];
-                                                echo "<a href='?=category=$temp' style='color:black;'>$temp, </a>";
+                                                echo "<a href='?filter=$temp' style='color:black;text-decoration: underline;'>$temp, </a>";
+                                                //$category = $category . $temp . ", ";
                                             }
                                         }
                                     ?>
@@ -408,18 +402,22 @@
                         </div>
                         <?php  
                                 }
+                                //Page Bar
                                 echo "<ul class='pagination justify-content-center' style='margin:20px 0'>";
                                 $jumlah_no = 3;
+                                //Grouping
                                 if($page%3 == 0){
                                     $group = $page/$jumlah_no;
                                 }else{
                                     $group = floor($page/$jumlah_no) + 1;
                                 }
+                                //Start Number
                                 $start = ($group-1)*3+1;
                                 $end = $start+($jumlah_no-1);
                                 if($end > $total_page){
                                     $end = $total_page;
                                 }
+                                // Panah Kiri
                                 if($start > $jumlah_no){
                                     $preview = $start-1;
                                     echo "<li class='page-item'><a class='page-link' href='?filter=$filter&page=$preview'>< </a></li>  ";
@@ -431,6 +429,7 @@
                                         echo "<li class='page-item'><a class='page-link' href='?filter=$filter&page=$i'>$i</a></li>  ";
                                     }
                                 }
+                                //Panah Kanan
                                 if($end < $total_page){
                                     $preview = $end+1;
                                     echo "<li class='page-item'><a class='page-link' href='?filter=$filter&page=$preview'>> </a></li> ";
@@ -445,11 +444,11 @@
                                 echo "</div>";
                             }
                         ?>
-                    </div>
+                    </div> -->
                 </div>
 
             </div>
-        </div> -->
+        </div>
 
         <script>
         function openbar(param, id1, id2, id3, id4, id5, id6, id7) {
