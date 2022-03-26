@@ -319,7 +319,7 @@
                         <?php  
                                 }
                                 //Page Bar
-                                echo "<ul class='pagination justify-content-center' style='margin:20px 0'>";
+                                echo "<ul class='pagination justify-content-center' style='margin:20px 0; padding: 0'>";
                                 $jumlah_no = 3;
                                 //Grouping
                                 if($page%3 == 0){

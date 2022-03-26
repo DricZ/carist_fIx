@@ -39,7 +39,7 @@
     margin: -8vw; margin-bottom: -18vw;"></a>
                 </div>
 
-                <div class="col center m-index" style="height: 25vh; display: flex;">
+                <div class="col center m-product" style="height: 25vh;">
                     <a onclick="window.location.href='https://wa.me/6281328367388'"><img src="./img/wa.png" style="width: 100%;"></a>
                 </div>
 
@@ -53,7 +53,7 @@
                         <button type="button" class="btn btn-2" onclick="window.location.href='https://www.instagram.com/ufi.indonesia/'"><b>Instagram</b></button>
                     </div>
 
-                    <div class="row find-us center m-index" style="display:flex">
+                    <div class="row find-us center m-product" style="">
                         <button type="button" class="btn btn-2" onclick="window.location.href='https://www.instagram.com/ufi.indonesia/'"><b>Instagram</b></button>
                     </div>
 

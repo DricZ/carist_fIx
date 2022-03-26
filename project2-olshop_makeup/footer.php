@@ -102,9 +102,9 @@
         <div class="row ft-mobile mb-5 mt-3">
             <h5 style="color:white; font-family: 'Merriweather'">Contact Us</h5>
             <div class="contact row justify-content-center">
-                <div class="col-12 mt-2"><a style="color: white" class="yess" target="_blank" href="faq.php" style="text-decoration: none;">FAQ</a>
+                <div class="col-12 mt-2"><a style="color: white" class="yess" href="faq.php" style="text-decoration: none;">FAQ</a>
                 </div>
-                <div class="col-12 mt-2"><a style="color: white" class="yess" target="_blank" href="tnc.php" style="text-decoration: none;">Terms & Conditions</a>
+                <div class="col-12 mt-2"><a style="color: white" class="yess" href="tnc.php" style="text-decoration: none;">Terms & Conditions</a>
                 </div>
             </div>    
         </div>

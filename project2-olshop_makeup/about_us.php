@@ -16,7 +16,7 @@
 
     <body>
         <hr style="margin-bottom: 0;" />
-        <div class="container-fluid megathronz" style="background-image: url('./img/gp.jpg'); ">
+        <div class="container-fluid megathronz" style="background-image: url('./img/gp.jpg'); background-repeat:no-repeat ">
             
         </div>
         <div class="container" style="padding-right: 0; padding-left: 0;">

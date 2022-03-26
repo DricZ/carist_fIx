@@ -138,14 +138,17 @@ div.content {
 
 .aub1{
     background-image: url('.././img/QC_2.jpg'); 
+    background-repeat: no-repeat;
 }
 
 .aub2{
     background-image: url('.././img/opsi produksi.jpg'); 
+    background-repeat: no-repeat;
 }
 
 .aub3{
     background-image: url('.././img/Gudang.jpg'); 
+    background-repeat: no-repeat;
 }
 
 /* CAROUSEL PROMO */
@@ -180,8 +183,9 @@ div.content {
     background-size: 100%;
     background-position: center;
     width: 100vw;
-    height: 70vh;
+    height: 75vh;
     max-width: 100vw;
+    background-repeat: no-repeat;
 }
 
 .b2{
@@ -189,8 +193,9 @@ div.content {
     background-size: 100%;
     background-position: center;
     width: 100vw;
-    height: 70vh;
+    height: 75vh;
     max-width: 100vw;
+    background-repeat: no-repeat;
 }
 
 .b3{
@@ -198,8 +203,9 @@ div.content {
     background-size: 100%;
     background-position: center;
     width: 100vw;
-    height: 70vh;
+    height: 75vh;
     max-width: 100vw;
+    background-repeat: no-repeat;
 }
 
 .btn-br{
@@ -483,6 +489,7 @@ div.content {
     background-size: 100%;
     background-position: center;
     height: 75vh;
+    background-repeat: no-repeat;
 }
 
 .m-index{
@@ -507,7 +514,7 @@ div.content {
 .logo-footer-b2{
     vertical-align: middle;
     width: 100%;
-    margin-top: 15px;
+    /* margin-top: 15px; */
 }
 
 .logo-footer-b3{
@@ -767,7 +774,7 @@ div.content {
         background-image: url(../img/gp.jpg);
         background-size: 100%;
         background-position: center;
-        height: 15vh;
+        height: 25vh;
     }
 
     .ub{
@@ -775,15 +782,15 @@ div.content {
     }
 
     .b1{
-        height: 15vh;
+        height: 20vh;
     }
     
     .b2{
-        height: 15vh;
+        height: 20vh;
     }
     
     .b3{
-        height: 15vh;
+        height: 20vh;
     }
 
     .products-text{

@@ -36,7 +36,7 @@
 
     <body>
         <hr style="margin-bottom: 0;" />
-        <div class="container-fluid megathronz-news" style="background-image: url('<?=$img?>'); ">   
+        <div class="container-fluid megathronz-news" style="background-image: url('<?=$img?>'); background-repeat:no-repeat ">   
         </div>
         <p><i style="margin: 20px; opacity: 0.8">Picture Credit/description</i></p>
         

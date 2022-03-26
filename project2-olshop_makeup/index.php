@@ -306,7 +306,7 @@
 
         <div class="container-fluid news m-index">
             <div class="row products-text" style="margin-bottom: 20px">
-                <center ><p class="judul"><b>News</b></p></center>
+                <center ><h2 class="judul"><b>News</b></h2></center>
             </div>
 
             <?php
