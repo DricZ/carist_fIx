@@ -258,14 +258,14 @@
 
                 <!-- Sidebar Jadi Putih -->
                 <script>
-                    var selected = $("a:contains('<?=$filter?>'):first:not(#mobile)");
+                    var selected = $("a:contains('<?=$filter?>')");
                     <?php
                         if ($sidebar){
                     ?>
                         selected.css("background-color", "white");
                         selected.css("color", "black");
                         selected.next().removeAttr("hidden");
-                        //console.log(selected.next().get(0));
+                        console.log(selected.get(0));
                         var id1 = $("#bar1");
                         var id2 = $("#bar2");
                         var id3 = $("#bar3");
