@@ -609,6 +609,10 @@ div.content {
     background-color: white;
 }
 
+.apa2{
+    height: 60vh;
+}
+
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media only screen and (max-width: 1000px) {
@@ -616,6 +620,10 @@ div.content {
         width: 100%;
         height: auto;
         position: relative;
+    }
+
+    .apa2{
+        height: 70vh;
     }
 
     .find-us {

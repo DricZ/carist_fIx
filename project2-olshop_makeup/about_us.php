@@ -36,7 +36,7 @@
             </div>
         </div>
 
-        <div class="container-fluid" style="background-color: #2B388F; height: 60vh;">
+        <div class="container-fluid apa2" style="background-color: #2B388F;">
             <div class="row center" style="height: 100%;">
                 <div class="col-6 au-m2" style="width: 40%; margin-left: 70px;">
                     <span class="helper"></span><img src="./img/opsi produksi.jpg" style="width: 100%">
@@ -56,7 +56,7 @@
         </div>
 
         <div class="container p-4 text-center mt-5 mb-5">
-            <div class="row mb-5 d-index">
+            <div class="row mb-5 d-produk">
                 <div class="col-3">
                 </div>
                 <div class="col-2 text-center">
