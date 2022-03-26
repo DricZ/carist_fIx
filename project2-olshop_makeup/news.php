@@ -37,22 +37,22 @@
                         $date = date('l, d F Y', $phpdate);
             ?>
             <div class="row row-news mt-5" onclick="buka(<?=$id?>)" style="margin-bottom: 30px; width: 110%">
-                <div class="col-md-5 right d-produk">
+                <div class="col-md-5 right d-index">
                     <img src="<?=$img?>" style="width: 70%; border-radius: 5px; object-fit: cover;">
                 </div>
 
-                <div class="col-md-5 p-0 m-produk">
+                <div class="col-md-5 p-0 m-index">
                     <img src="<?=$img?>" style="width: 100%; object-fit: cover;">
                 </div>
 
                 <!-- aslie 7 -->
-                <div class="col-md-5 d-produk">
+                <div class="col-md-5 d-index">
                     <h3 style="font-family: 'Merriweather'"><b><?=$title?></b></h3>
                     <p style="font-size: 16px"><?=$news." read more"?></p><br>
                     <p style="font-size: 16px; font-weight: normal"><?=$date?></p>
                 </div>
 
-                <div class="col-md-5 m-peoduk p-5">
+                <div class="col-md-5 m-index p-5">
                     <h3 style="font-family: 'Merriweather'"><b><?=$title?></b></h3>
                     <p style="font-size: 16px"><?=$news." read more"?></p><br>
                     <p style="font-size: 16px; font-weight: normal"><?=$date?></p>
