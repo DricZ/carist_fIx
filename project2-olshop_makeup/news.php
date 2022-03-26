@@ -5,6 +5,12 @@
 
         $sql = "SELECT * FROM news";
         $result = $conn->query($sql);
+        if(isset($_GET['page'])){
+            $page = $_GET['page'];
+        }else{
+            $page = 1;
+        }
+        $total_page = ceil(($result->num_rows)/8);
 ?>
 
 <!DOCTYPE html>
@@ -69,13 +75,48 @@
             
             </div>
 
-                <ul class="pagination justify-content-center">
+                <!-- <ul class="pagination justify-content-center">
                     <li class="page-item" ><a class="page-link" href="#"><img src='./img/back.png' style='width: 10px; height: 20px'></a></li>
                     <li class="page-item active" ><a class="page-link" href="#">1</a></li>
                     <li class="page-item" ><a class="page-link" href="#">2</a></li>
                     <li class="page-item"><a class="page-link" href="#">3</a></li>
                     <li class="page-item"><a class="page-link" href="#"><img src='./img/next1.svg' style='width: 20px; height: 20px'></a></li>
-                </ul>
+                </ul> -->
+                <?php
+                    //Page Bar
+                    echo "<ul class='pagination justify-content-center' style='margin:20px 0'>";
+                    $jumlah_no = 3;
+                    //Grouping
+                    if($page%3 == 0){
+                        $group = $page/$jumlah_no;
+                    }else{
+                        $group = floor($page/$jumlah_no) + 1;
+                    }
+                    //Start Number
+                    $start = ($group-1)*3+1;
+                    $end = $start+($jumlah_no-1);
+                    if($end > $total_page){
+                        $end = $total_page;
+                    }
+                    // Panah Kiri
+                    if($start > $jumlah_no){
+                        $preview = $start-1;
+                        echo "<li class='page-item'><a class='page-link' href='?page=$preview'>< </a></li>  ";
+                    }
+                    for($i=$start;$i<=$end;$i++){
+                        if($i == $page){
+                            echo "<li class='page-item active'><a class='page-link' href='?page=$i'>$i</a></li>  ";
+                        }else{
+                            echo "<li class='page-item'><a class='page-link' href='?page=$i'>$i</a></li>  ";
+                        }
+                    }
+                    //Panah Kanan
+                    if($end < $total_page){
+                        $preview = $end+1;
+                        echo "<li class='page-item'><a class='page-link' href='?page=$preview'>> </a></li> ";
+                    }
+                    echo "</ul>";
+                ?>
         </div>
         
         <script>
