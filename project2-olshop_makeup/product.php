@@ -166,7 +166,7 @@
                     <a onclick="openbar('BASED ON SKIN TYPE', 'bar2', 'bar1', 'bar3', 'bar4', 'bar5', 'bar6', 'bar7')" class="bb">BASED ON SKIN TYPE</a>
                     <div id="bar2" hidden>
                         <a class="dalem" href="?filter=All Skin Type">All Skin Type</a>
-                        <a class="dalem" href="?filter=Normal Skin Type">Normal</a>
+                        <a class="dalem" href="?filter=Normal Skin Type">Normal Skin Type</a>
                         <a class="dalem" href="?filter=Dry Skin">Dry Skin</a>
                         <a class="dalem" href="?filter=Oily Skin">Oily Skin</a>
                         <a class="dalem" href="?filter=Sensitive Skin">Sensitive Skin</a>
@@ -174,7 +174,7 @@
 
                     <a onclick="openbar('BASED ON SKIN CONDITION', 'bar3', 'bar2', 'bar1', 'bar4', 'bar5', 'bar6', 'bar7')" class="bb">BASED ON SKIN CONDITION</a>
                     <div id="bar3" hidden>
-                        <a class="dalem" href="?filter=Normal Skin Condition">Normal</a>
+                        <a class="dalem" href="?filter=Normal Skin Condition">Normal Skin Condition</a>
                         <a class="dalem" href="?filter=Kusam">Kusam</a>
                         <a class="dalem" href="?filter=Berjerawat">Berjerawat</a>
                         <a class="dalem" href="?filter=Aging">Aging</a>
