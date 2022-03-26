@@ -15,10 +15,30 @@
                 || $filter == "BASED ON SKIN CONDITION" || $filter == "BASED ON ACNE SEVERITY"
                 || $filter == "BASED ON PRODUCT TYPE" || $filter == "BASED ON FUNCTION"
                 || $filter == "BASED ON BRAND"){
+                    $category_array = array();
                     $sidebar = true;
                     //nothing
                     if($filter == "BASED ON PRODUCT HIGHLIGHT"){
                         $sql2 = "SELECT * FROM category_list WHERE nama='Best Seller / Recomendation' OR nama='New Arrival'";
+                    }else if($filter == "BASED ON SKIN TYPE"){
+                        $sql2 = "SELECT * FROM category_list WHERE nama='All Skin Type' OR nama='Normal Skin Type' OR nama='Dry Skin'
+                                    OR nama='Oily Skin' OR nama='Sensitive Skin'";
+                    }else if($filter == "BASED ON SKIN CONDITION"){
+                        $sql2 = "SELECT * FROM category_list WHERE nama='Normal Skin Condition' OR nama='Kusam' OR nama='Berjerawat'
+                                    OR nama='Aging' OR nama='Kering' OR nama='Inflamasi'";
+                    }else if($filter == "BASED ON ACNE SEVERITY"){
+                        $sql2 = "SELECT * FROM category_list WHERE nama='All Condition' OR nama='Komedo' OR nama='Papule (light)'
+                                    OR nama='Pustule (Medium)' OR nama='Nodule (Severe)'";
+                    }else if($filter == "BASED ON PRODUCT TYPE"){
+                        $sql2 = "SELECT * FROM category_list WHERE nama='Face Wash' OR nama='Face Cleanser' OR nama='Face Toner'
+                                    OR nama='Serum' OR nama='Cream' OR nama='Gel' OR nama='Lotion' OR nama='Body Care' OR nama='Neutralizing'
+                                    OR nama='Peeling' OR nama='Decorative'";
+                    }else if($filter == "BASED ON FUNCTION"){
+                        $sql2 = "SELECT * FROM category_list WHERE nama='Sunscreen' OR nama='Moisturizer' OR nama='Brightening'
+                                    OR nama='Acne Care' OR nama='Anti Aging' OR nama='Nutritive' OR nama='Conditioning'";
+                    }else if($filter == "BASED ON BRAND"){
+                        $sql2 = "SELECT * FROM category_list WHERE nama='Alfacid' OR nama='Primaderma' OR nama='Hydrosnail'
+                                    OR nama='Solasense' OR nama='Kaneira' OR nama='Beaulash' OR nama='Skinisse'";
                     }
                     // Get Category ID
                     
@@ -26,13 +46,19 @@
                     
 
                     if ($result2->num_rows > 0) {
-                        if($row = $result2->fetch_assoc()) {
+                        while($row = $result2->fetch_assoc()) {
                             $category_id = $row['id'];
+                            array_push($category_array, $row['id']);
                         }
                     }
                     //echo "Category: ".$filter."($category_id)";
 
-                    $sql .= " LEFT JOIN category ON product.id = category.product_id WHERE category.category_id = $category_id";
+                    $sql .= " LEFT JOIN category ON product.id = category.product_id WHERE category.category_id = $category_array[0]";
+                    if(count($category_array) > 1){
+                        for ($i=1; $i<count($category_array); $i++){
+                            $sql .= " OR category.category_id = $category_array[$i]";
+                        }
+                    }
             }else{
                 // Get Category ID
                 $sql2 = "SELECT * FROM category_list WHERE nama='$filter'";
@@ -202,6 +228,38 @@
                         <a class="dalem" href="?filter=Skinisse">Skinisse</a>
                     </div>
                 </div>
+
+                <!-- Sidebar Jadi Putih -->
+                <script>
+                    var selected = $("a:contains('<?=$filter?>'):first");
+                    <?php
+                        if ($sidebar){
+                    ?>
+                        selected.css("background-color", "white");
+                        selected.css("color", "black");
+                        selected.next().removeAttr("hidden");
+                        //console.log(selected.next().get(0));
+                        var id1 = $("#bar1");
+                        var id2 = $("#bar2");
+                        var id3 = $("#bar3");
+                        var id4 = $("#bar4");
+                        var id5 = $("#bar5");
+                        var id6 = $("#bar6");
+                        var id7 = $("#bar7");
+
+                    <?php
+                        }else{
+                    ?>
+                        var parent = selected.parent();
+                        parent.removeAttr("hidden");
+                        //parent.prev().css("background-color", "white");
+                        //parent.prev().css("color", "black");
+                        selected.css("background-color", "white");
+                        selected.css("color", "black");
+                    <?php
+                        }
+                    ?>
+                </script>
 
                 <!-- Page content -->
                 <div class="col-8 content product-pp"> 
@@ -406,31 +464,6 @@
             let link = 'product-detail.php?name=' + nama;
             window.location.href = link;
         }
-
-        var selected = $("a:contains('<?=$filter?>')");
-        <?php
-            if ($sidebar){
-        ?>
-            selected.css("background-color", "white");
-            selected.css("color", "black");
-            selected.next().removeAttr("hidden");
-            //console.log(selected.next().get(0));
-            var id1 = $("#bar1");
-            var id2 = $("#bar2");
-            var id3 = $("#bar3");
-            var id4 = $("#bar4");
-            var id5 = $("#bar5");
-            var id6 = $("#bar6");
-            var id7 = $("#bar7");
-
-        <?php
-            }else{
-        ?>
-            var prev = selected.prevUntil("a").removeAttr("hidden");
-            console.log(prev.get(0));
-        <?php
-            }
-        ?>
         
 
         </script>
