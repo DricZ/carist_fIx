@@ -99,8 +99,8 @@
                 <!-- Carousel -->
                 <div id="products" class="carousel slide" data-bs-ride="carousel">
 
-                <!-- The slideshow/carousel -->
-                    <div class="carousel-inner">
+                <!-- The slideshow/carousel DESKTOP -->
+                    <div class="carousel-inner d-produk">
                         <div class="carousel-item active">
                             <div class="row" style="justify-content: center;">
                             <?php
@@ -199,13 +199,125 @@
                             }
                         ?>
                     </div>
-
                 <!-- Left and right controls/icons -->
-                    <button class="carousel-control-prev pct-l" type="button" data-bs-target="#products" data-bs-slide="prev" style="margin: 20px">
+                <button class="carousel-control-prev pct-l d-produk" type="button" data-bs-target="#products" data-bs-slide="prev" style="margin: 20px">
                     <span class="carousel-control-prev-icon"></span>
                     </button>
 
-                    <button class="carousel-control-next pct-r" type="button" data-bs-target="#products" data-bs-slide="next" style="margin: 20px">
+                    <button class="carousel-control-next pct-r d-produk" type="button" data-bs-target="#products" data-bs-slide="next" style="margin: 20px">
+                    <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+
+                <!-- Carousel -->
+                <div id="products2" class="carousel slide" data-bs-ride="carousel">
+
+                <!-- The slideshow/carousel MOBILE -->
+                    <div class="carousel-inner m-product">
+                        <div class="carousel-item active">
+                            <div class="row" style="justify-content: center;">
+                            <?php
+                                $sql = "SELECT * FROM product";
+                                $filter = "Best Seller / Recomendation";
+                                // Get Category ID
+                                $sql2 = "SELECT * FROM category_list WHERE nama='$filter'";
+                                $result2 = $conn->query($sql2);
+                                
+
+                                if ($result2->num_rows > 0) {
+                                    if($row = $result2->fetch_assoc()) {
+                                        $category_id = $row['id'];
+                                    }
+                                }
+                                //echo "Category: ".$filter."($category_id)";
+
+                                $sql .= " LEFT JOIN category ON product.id = category.product_id WHERE category.category_id = $category_id";
+                                $sql .= " LIMIT 2";
+                                $result = $conn->query($sql);
+
+                                if ($result->num_rows > 0) {
+                                    // output data of each row
+                                    while($row = $result->fetch_assoc()) {
+                                        $id = $row['id'];
+                                        $relative = "./img/PRODUK/";
+                                        $img = $row['img'];
+                                        $path = $relative . $img;
+                                        $nama = $row['nama'];
+                                        $deskripsi = $row['deskripsi'];
+                                        $kandungan = $row['kandungan'];
+                                        $cara_pakai = $row['cara_pakai'];
+                                        $bpom = $row['bpom'];
+                                        $category = "";
+                            ?>
+                                <div class="card p" style="border: 0">
+                                    <img class="card-img-top product" src="<?=$path?>" alt="Produk">
+                                    <center class="judul pr"><?=$nama?></center>
+                                </div>
+                            <?php
+                                    }
+                                }
+                            ?>
+                            </div>
+                        </div>
+                        <?php
+                            for($i = 1; $i<5; $i++){
+                        ?>
+                        <div class="carousel-item">
+                            <div class="row" style="justify-content: center;">
+                            <?php
+                                $sql = "SELECT * FROM product";
+                                $filter = "Best Seller / Recomendation";
+                                // Get Category ID
+                                $sql2 = "SELECT * FROM category_list WHERE nama='$filter'";
+                                $result2 = $conn->query($sql2);
+                                
+
+                                if ($result2->num_rows > 0) {
+                                    if($row = $result2->fetch_assoc()) {
+                                        $category_id = $row['id'];
+                                    }
+                                }
+                                //echo "Category: ".$filter."($category_id)";
+
+                                $sql .= " LEFT JOIN category ON product.id = category.product_id WHERE category.category_id = $category_id";
+                                $start = $i*2;
+                                $sql .= " LIMIT $start, 2";
+                                $result = $conn->query($sql);
+
+                                if ($result->num_rows > 0) {
+                                    // output data of each row
+                                    while($row = $result->fetch_assoc()) {
+                                        $id = $row['id'];
+                                        $relative = "./img/PRODUK/";
+                                        $img = $row['img'];
+                                        $path = $relative . $img;
+                                        $nama = $row['nama'];
+                                        $deskripsi = $row['deskripsi'];
+                                        $kandungan = $row['kandungan'];
+                                        $cara_pakai = $row['cara_pakai'];
+                                        $bpom = $row['bpom'];
+                                        $category = "";
+                            ?>
+                                <div class="card p "  style="border: 0">
+                                    <img class="card-img-top product" src="<?=$path?>" alt="Produk">
+                                    <center class="judul pr"><?=$nama?></center>
+                                </div>
+                            <?php
+                                    }
+                                }
+                            ?>
+                            </div>
+                        </div>
+                        <?php
+                            }
+                        ?>
+                    </div>
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev pct-l m-product" type="button" data-bs-target="#products2" data-bs-slide="prev" style="margin: 20px">
+                    <span class="carousel-control-prev-icon"></span>
+                    </button>
+
+                    <button class="carousel-control-next pct-r m-product" type="button" data-bs-target="#products2" data-bs-slide="next" style="margin: 20px">
                     <span class="carousel-control-next-icon"></span>
                     </button>
                 </div>
