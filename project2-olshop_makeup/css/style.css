@@ -456,6 +456,25 @@ div.content {
     transform: translateY(-10px);
 }
 
+/*effect-underline*/
+a.hoverable1:hover {
+    text-decoration: underline;
+}
+
+.hoverable2{
+    color:black;
+}
+
+.hoverable2:hover{
+    color:#2B388F;
+}
+
+a.effect-underline:hover:after {
+  opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
 .p-foto{
     width: 70%;
     margin-bottom: 20px;

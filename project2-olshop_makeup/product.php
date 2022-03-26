@@ -308,9 +308,9 @@
                         ?>
                         <div class="col-md-3 col-product-1">
                             <div class="card produk-p">
-                                <img class="hoverable" src="<?=$path?>" alt="<?=$img?>" onclick="openProduk('<?=$nama?>')">
-                                <center class="pr hoverable"><a href="product-detail.php?name=<?=$nama?>" style='color:black; font-weight: 600; font-size: 16px; text-decoration: underline;'><?=$nama?></a></center>
-                                <center><p class="d-index hoverable" style="font-size: 16px"><i>
+                                <img class="" src="<?=$path?>" alt="<?=$img?>" onclick="openProduk('<?=$nama?>')">
+                                <center class="pr hoverable2"><a class="hoverable2" href="product-detail.php?name=<?=$nama?>" style='font-weight: 600; font-size: 16px;'><?=$nama?></a></center>
+                                <center><p class="d-index " style="font-size: 16px;color:#a0a0a0"><i>
                                     <?php
                                         //Search Category
                                         $sql2 = "SELECT category.category_id AS category_id, category_list.nama FROM category LEFT JOIN category_list ON category.category_id = category_list.id WHERE product_id = '$id'";
@@ -320,7 +320,7 @@
                                             // output data of each row
                                             while($row2 = $result2->fetch_assoc()) {
                                                 $temp = $row2['nama'];
-                                                echo "<a href='?filter=$temp' style='color:black;text-decoration: underline;'>$temp, </a>";
+                                                echo "<a class='hoverable1' href='?filter=$temp' style='color:#a0a0a0;'>$temp</a>, ";
                                                 //$category = $category . $temp . ", ";
                                             }
                                         }
@@ -404,7 +404,7 @@
                                             // output data of each row
                                             while($row2 = $result2->fetch_assoc()) {
                                                 $temp = $row2['nama'];
-                                                echo "<a href='?filter=$temp' style='color:black;text-decoration: underline;'>$temp, </a>";
+                                                echo "<a style='hoverable' href='?filter=$temp' style='color:black;'>$temp, </a>";
                                                 //$category = $category . $temp . ", ";
                                             }
                                         }

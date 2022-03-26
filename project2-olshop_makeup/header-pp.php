@@ -9,6 +9,7 @@
         <title>PT. United Farmatic Indonesia</title>
 
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <link rel="icon" href="./img/Logo_UFI.png" type="image/x-icon">
 
         <style>
             .container{
