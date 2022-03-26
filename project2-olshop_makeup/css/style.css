@@ -272,7 +272,6 @@ div.content {
 
 .newsdimg{
     width: 319.19px;
-    height: 212px;
     border-radius: 10px;
     margin-bottom: 30px;
 }
@@ -588,6 +587,7 @@ div.content {
     width: 45%;
 }
 
+
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media only screen and (max-width: 1000px) {
     .sidebar {
@@ -606,6 +606,34 @@ div.content {
         padding:30px;
         width: 100%;
         margin: 0
+    }
+
+    .megathronz-news{
+        height: 35vh;
+    }
+
+    .newsdimg{
+        width: 35vw;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    .isi-nd-a {
+        font-size: 10px;
+        font-weight: 400;
+        margin-bottom: 100px;
+    }
+
+    .card-newsd {
+        width: 25%;
+        margin: 30px;
+        padding: 0;
+    }
+
+    .isi-nd {
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 10px;
     }
 
     .au-m2{

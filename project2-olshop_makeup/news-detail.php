@@ -48,7 +48,11 @@
                 <p style="font-weight: 700"><?=$date?></p><br><br>
             </center>
 
-            <p style="text-align:justify; width: 50vw; font-weight: 400;">
+            <p class="d-index" style="text-align:justify; width: 50vw; font-weight: 400;">
+                <?=$news?>
+            </p>
+
+            <p class="m-index" style="text-align:justify; font-weight: 400;">
                 <?=$news?>
             </p>
         </div>
