@@ -11,6 +11,7 @@
 
         if(isset($_GET['filter']) && $_GET['filter'] != "none"){
             $filter = $_GET['filter'];
+            //JIKA SIDEBAR DIPILIH
             if($filter == "BASED ON PRODUCT HIGHLIGHT" || $filter == "BASED ON SKIN TYPE"
                 || $filter == "BASED ON SKIN CONDITION" || $filter == "BASED ON ACNE SEVERITY"
                 || $filter == "BASED ON PRODUCT TYPE" || $filter == "BASED ON FUNCTION"

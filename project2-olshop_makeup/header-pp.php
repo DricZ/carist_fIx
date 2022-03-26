@@ -129,16 +129,16 @@
                     </div>
 
                     <div class="col-sm-3" style="display:flex; align-items: end;">
-                        <form method="GET">
+                        <form method="GET" action="">
                             <div class="input-group">
                                 <div id="navbar-search-autocomplete" class="form-outline" style="height: 0; width: 80%">
-                                    <input type="search" id="form1" class="form-control anu3" placeholder="Find products, series,...">
+                                    <input type="search" name= "search" id="form1" class="form-control anu3" placeholder="Find products, series,...">
                                 </div>
                                 <button type="submit" class="btn btn-primary search-icon">
                                     <i class="fas fa-search"></i>
                                 </button>
                             </div>
-                            
+                        </form> 
                     </div> 
                 </div>
             </div>    
