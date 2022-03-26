@@ -78,6 +78,11 @@
             $filter = "none";
         }
 
+        if(isset($_GET['search']) && $_GET['search'] != "none"){
+            $search = $_GET['search'];
+            $sql = "SELECT * FROM product WHERE nama LIKE '%$search%'";
+        }
+
         
 
         // Get Total Product Number
