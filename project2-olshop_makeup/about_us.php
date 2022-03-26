@@ -20,7 +20,7 @@
             
         </div>
         <div class="container" style="padding-right: 0; padding-left: 0;">
-            <div class="row" style="width: 100%;">
+            <div class="row au-m1" style="width: 100%;">
                 <div class="col-6 col-au-1">
                     <h2 class="judul_au">PT. UNITED FARMATIC INDONESIA</h2>
                     <p class="isi_au" style="text-align: justify;">
@@ -30,7 +30,7 @@
                     </p>
                 </div>
 
-                <div class="col-6" style="margin-left: 50px;">
+                <div class="col-6 au-m2" style="margin-left: 50px;">
                     <span class="helper"></span><img src="./img/opsi produksi1.jpg" style="width: 100%">
                 </div>
             </div>
@@ -38,13 +38,11 @@
 
         <div class="container-fluid" style="background-color: #2B388F; height: 60vh;">
             <div class="row center" style="height: 100%;">
-                <div class="col-6" style="width: 40%; margin-left: 70px;">
+                <div class="col-6 au-m2" style="width: 40%; margin-left: 70px;">
                     <span class="helper"></span><img src="./img/opsi produksi.jpg" style="width: 100%">
                 </div>
 
-                <div class="col-6" style="color: white;     margin-left: 50px;
-    margin-right: 100px;
-    width: 45%;">
+                <div class="col-6 au-m3" style="color: white;">
                     
                     <h2 class="judul_au">Visi Misi</h2>
                     <p class="isi_au" style="text-align: justify;">

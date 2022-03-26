@@ -582,12 +582,34 @@ div.content {
     margin-bottom: 0;
 }
 
+.au-m3{
+    margin-left: 50px;
+    margin-right: 100px;
+    width: 45%;
+}
+
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media only screen and (max-width: 1000px) {
     .sidebar {
         width: 100%;
         height: auto;
         position: relative;
+    }
+
+    .au-m1{
+        padding:20px;
+        width: 100%;
+        margin: 0
+    }
+
+    .au-m3{
+        padding:30px;
+        width: 100%;
+        margin: 0
+    }
+
+    .au-m2{
+        display:none;
     }
 
     .col-au-1{
