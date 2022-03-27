@@ -163,7 +163,7 @@
                     <a class="nav-link nav-product" href="#">PRODUCT</a>
                 </li>
                 <?php
-                    if(isset($_GET['filter'])){
+                    if(isset($_GET['filter']) && $_GET['filter'] != "none"){
                 ?>
                 <li class="nav-item">
                     <a class="nav-link nav-product disabled" style="color: white;" href="#">></a>
