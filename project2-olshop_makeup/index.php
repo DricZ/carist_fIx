@@ -137,8 +137,8 @@
                                         $category = "";
                             ?>
                                 <div class="card p d-index" style="border: 0">
-                                    <img class="card-img-top product" src="<?=$path?>" alt="Produk">
-                                    <center class="judul pr"><?=$nama?></center>
+                                    <a href="product-detail.php?name=<?=$nama?>"><img class="card-img-top product" src="<?=$path?>" alt="Produk"></a>
+                                    <center class="judul pr"><a href="product-detail.php?name=<?=$nama?>"><?=$nama?></a></center>
                                 </div>
                             <?php
                                     }
@@ -186,8 +186,8 @@
                                         $category = "";
                             ?>
                                 <div class="card p "  style="border: 0">
-                                    <img class="card-img-top product" src="<?=$path?>" alt="Produk">
-                                    <center class="judul pr"><?=$nama?></center>
+                                    <a href="product-detail.php?name=<?=$nama?>"><img class="card-img-top product" src="<?=$path?>" alt="Produk"></a>
+                                    <center class="judul pr"><a href="product-detail.php?name=<?=$nama?>"><?=$nama?></a></center>
                                 </div>
                             <?php
                                     }
@@ -250,8 +250,8 @@
                                         $category = "";
                             ?>
                                 <div class="card p" style="border: 0">
-                                    <img class="card-img-top product" src="<?=$path?>" alt="Produk">
-                                    <center class="judul pr"><?=$nama?></center>
+                                    <a href="product-detail.php?name=<?=$nama?>"><img class="card-img-top product" src="<?=$path?>" alt="Produk"></a>
+                                    <center class="judul pr"><a href="product-detail.php?name=<?=$nama?>"><?=$nama?></a></center>
                                 </div>
                             <?php
                                     }
@@ -299,8 +299,8 @@
                                         $category = "";
                             ?>
                                 <div class="card p "  style="border: 0">
-                                    <img class="card-img-top product" src="<?=$path?>" alt="Produk">
-                                    <center class="judul pr"><?=$nama?></center>
+                                    <a href="product-detail.php?name=<?=$nama?>"><img class="card-img-top product" src="<?=$path?>" alt="Produk"></a>
+                                    <center class="judul pr"><a href="product-detail.php?name=<?=$nama?>"><?=$nama?></a></center>
                                 </div>
                             <?php
                                     }

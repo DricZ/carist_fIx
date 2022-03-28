@@ -130,7 +130,7 @@
                     </div>
 
                     <div class="col-sm-3" style="display:flex; align-items: end;">
-                        <form method="GET" action="">
+                        <form method="GET" action="" autocomplete="off">
                             <div class="input-group">
                                 <div id="navbar-search-autocomplete" class="form-outline" style="height: 0; width: 80%">
                                     <input type="search" name="search" id="form1" class="form-control anu3" placeholder="Find products, series,...">
@@ -163,7 +163,7 @@
                         width: 60%;
                         padding: 0;
                         justify-content: center;">
-                        <form method="GET" action="">
+                        <form method="GET" action="" autocomplete="off">
                             <div class="input-group">
                                 <div id="navbar-search-autocomplete" class="form-outline" style="height: 0; width: 80%">
                                     <input type="search" id="form1" name="search" class="form-control anu3" placeholder="Find products, series,...">
