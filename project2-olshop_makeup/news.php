@@ -42,7 +42,7 @@
                         $phpdate = strtotime($upload_date);
                         $date = date('l, d F Y', $phpdate);
             ?>
-            <div class="row row-news mt-5" onclick="buka(<?=$id?>)" style="margin-bottom: 30px; width: 110%">
+            <div class="row row-news mt-5" onclick="buka(<?=$id?>)" style="margin-bottom: 30px; width: 110%; cursor: pointer;">
                 <div class="col-md-5 right d-index">
                     <img src="<?=$img?>" style="width: 70%; border-radius: 5px; object-fit: cover;">
                 </div>

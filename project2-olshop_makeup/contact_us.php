@@ -36,7 +36,7 @@
                 </div>
                 <div class="col find-us d-index" style="margin-left: 5vw;">
                     <a onclick="window.location.href='https://wa.me/6281328367388'"><img src="./img/wa.png" style="width: 170%;
-    margin: -8vw; margin-bottom: -18vw;"></a>
+    margin: -8vw; margin-bottom: -18vw; cursor: pointer;"></a>
                 </div>
 
                 <div class="col center m-product" style="height: 25vh;">

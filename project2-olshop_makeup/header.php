@@ -81,13 +81,13 @@
                     
                     <!-- LOGO -->
                     <div class="col-sm-2 divMobile">
-                        <img class="logo kiri" src="./img/Logo_UFI.png" alt="PT. United Farmatic Indonesia">
+                        <img class="logo kiri" onClick="window.location.href = 'index.php';" style="cursor: pointer;" style="cursor: pointer;" style="cursor: pointer;" style="cursor: pointer;" src="./img/Logo_UFI.png" alt="PT. United Farmatic Indonesia">
                     </div>
                     
                     <!-- HOME PRODUCT DLL -->
                     <div class="col-sm-6">
                         <div class="row">
-                            <div class="col-sm-12">
+                            <div class="col-sm-12" onClick="window.location.href = 'index.php';" style="cursor: pointer;" style="cursor: pointer;" style="cursor: pointer;" style="cursor: pointer;" style="cursor: pointer;">
                                     <center>
                                         <img class="logo tengah" src="./img/Nama PT.png" alt="PT. United Farmatic Indonesia" style="z-index: -1;">
                                         <img class="mobile" src="./img/Artboard 1 copy.png" alt="PT. United Farmatic Indonesia">
@@ -142,7 +142,7 @@
                 <button style="border: 0" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon" style="width: 25px"></span>
                 </button>
-                <a class="navbar-brand" href="#" style="width: 75%"><img class="mv" src="./img/Artboard 1 copy.png" alt="PT. United Farmatic Indonesia"></a>
+                <a class="navbar-brand" href="#" style="width: 75%"><img onClick="window.location.href = 'index.php';" style="cursor: pointer;" style="cursor: pointer;" style="cursor: pointer;" style="cursor: pointer;" class="mv" src="./img/Artboard 1 copy.png" alt="PT. United Farmatic Indonesia"></a>
                     
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav">

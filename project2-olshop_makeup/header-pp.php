@@ -80,17 +80,18 @@
                     </div>
                     
                     <!-- LOGO -->
-                    <div class="col-sm-2 divMobile">
+                    <div class="col-sm-2 divMobile" onClick="window.location.href = 'index.php';" style="cursor: pointer;" style="cursor: pointer;">
                         <img class="logo kiri" src="./img/Logo_UFI.png" alt="PT. United Farmatic Indonesia">
                     </div>
                     
                     <!-- HOME PRODUCT DLL -->
                     <div class="col-sm-6">
                         <div class="row">
-                            <div class="col-sm-12">
+                            <div class="col-sm-12" onClick="window.location.href = 'index.php';" style="cursor: pointer;"
+onClick="window.location.href = 'index.php';" style="cursor: pointer;">
                                     <center>
-                                        <img class="logo tengah" src="./img/Nama PT.png" alt="PT. United Farmatic Indonesia" style="z-index: -1;">
-                                        <img class="mobile" src="./img/Artboard 1 copy.png" alt="PT. United Farmatic Indonesia">
+                                        <img class="logo tengah" style="cursor: pointer;" src="./img/Nama PT.png" alt="PT. United Farmatic Indonesia" style="z-index: -1;">
+                                        <img class="mobile" style="cursor: pointer;" src="./img/Artboard 1 copy.png" alt="PT. United Farmatic Indonesia">
                                     </center>
                             </div>
                         </div>
@@ -156,7 +157,7 @@
                         <span class="navbar-toggler-icon" style="width: 25px"></span>
                     </button>
                     <a class="navbar-brand" href="#" style="width: 20%;
-    padding: 0;"><img class="mv" src="./img/Logo_UFI.png" alt="PT. United Farmatic Indonesia"></a>
+    padding: 0;"><img class="mv" onClick="window.location.href = 'index.php';" style="cursor: pointer;" style="cursor: pointer;" src="./img/Logo_UFI.png" alt="PT. United Farmatic Indonesia"></a>
 
                     <div class="col-sm-3" style="display: flex;
                         align-items: center;

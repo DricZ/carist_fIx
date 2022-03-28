@@ -392,7 +392,7 @@
                         $date = date('l, d F Y', $phpdate);
             ?>
 
-            <div class="card d-index" style="margin-bottom: 20px; border: 0" onclick="buka(<?=$id?>)">
+            <div class="card d-index" style="margin-bottom: 20px; border: 0; cursor: pointer;" onclick="buka(<?=$id?>)">
                 <div class="row">
                     <div class="col-5 right p-0">
                         <img src="<?=$img?>" alt="Fasilitas" style="width: 100%; border-top-left-radius: 35px; border-bottom-left-radius: 35px;">
