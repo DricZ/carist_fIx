@@ -151,30 +151,102 @@
     <body>
         <hr class="d-index"/>
 
+        
         <div class="container-fluid m-product pd-mb p-2" style="background-color: #2B388F;align-items: center;">
-            <ul class="nav m-product">
-                <li class="nav-item">
-                    <a class="nav-link nav-product" href="#">HOME</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-product disabled" style="color: white;" href="#">></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-product" href="#">PRODUCT</a>
-                </li>
-                <?php
-                    if(isset($_GET['filter']) && $_GET['filter'] != "none"){
-                ?>
-                <li class="nav-item">
-                    <a class="nav-link nav-product disabled" style="color: white;" href="#">></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-product" href="#" id="mobile"><?=$filter?></a>
-                </li>
-                <?php
-                    }
-                ?>
-            </ul>
+            <div class="row" style="width: 100%;height: 100%;padding-left: 20px;">
+                <ul class="col nav m-product" style="    align-items: center;">
+                    <li class="nav-item">
+                        <a class="nav-link nav-product" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-product disabled" style="color: white;" href="#">></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-product" href="#">PRODUCT</a>
+                    </li>
+                    <?php
+                        if(isset($_GET['filter']) && $_GET['filter'] != "none"){
+                    ?>
+                    <li class="nav-item">
+                        <a class="nav-link nav-product disabled" style="color: white; background-color:transparent" href="#">></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-product" style="background-color:transparent" href="#" id="mobile"><?=$filter?></a>
+                    </li>
+                    <?php
+                        }
+                    ?>
+                </ul>
+
+                <div class="col" style="width: 100%;
+    text-align: right;
+    vertical-align: middle;
+    display: contents;">
+                    <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" style="width: 10%; height: 100%; background-color: transparent;border: 0; margin-right: 10px;">
+                        <img id="imgfilter" src="./img/filter-svgrepo-com.svg">
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><p class="dropdown-header bb" style="color: black;">CATEGORY</p></li>
+                        <li><p class="dropdown-header bb" style="font-weight: 700; color: black;">BASED ON PRODUCT HIGHLIGHT</p></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Best Seller / Recomendation</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">New Arrival</a></li><br>
+
+                        <li><p class="dropdown-header bb" style="font-weight: 700; color: black;">BASED ON SKIN TYPE</p></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">All Skin Type</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Normal Skin Type</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Dry Skin</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Oily Skin</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Sensitive Skin</a></li><br>
+
+                        <li><p class="dropdown-header bb" style="font-weight: 700; color: black;">BASED ON SKIN CONDITION</p></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Normal Skin Condition</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Kusam</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Berjerawat</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Aging</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Kering</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Inflamasi</a></li><br>
+
+                        <li><p class="dropdown-header bb" style="font-weight: 700; color: black;">BASED ON ACNE SEVERITY</p></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">All Condition</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Komedo</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Papule (light)</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Pustule (Medium)</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Nodule (Severe)</a></li><br>
+
+                        <li><p class="dropdown-header bb" style="font-weight: 700; color: black;">BASED ON PRODUCT TYPE</p></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Face Wash</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Face Cleanser</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Face Toner</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Serum</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Cream</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Gel</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Lotion</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Body Care</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Neutralizing</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Peeling</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Decorative</a></li><br>
+
+                        <li><p class="dropdown-header bb" style="font-weight: 700; color: black;">BASED ON FUNCTION</p></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Sunscreen</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Moisturizer</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Brightening</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Acne Care</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Anti Aging</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Nutritive</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Conditioning</a></li><br>
+
+                        <li><p class="dropdown-header bb" style="font-weight: 700; color: black;">BASED ON BRAND</p></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Alfacid</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Primaderma</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Hydrosnail</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Solasense</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Kaneira</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Beaulash</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="#">Skinisse</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <div class="container-fluid anu2" style="">
@@ -490,7 +562,6 @@
             let link = 'product-detail.php?name=' + nama;
             window.location.href = link;
         }
-        
 
         </script>
 

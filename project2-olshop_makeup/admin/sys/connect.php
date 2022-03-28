@@ -1,8 +1,8 @@
 <?php
-    //$servername = "localhost";
-    //$username = "root";
-    //$password = "";
-    //$dbname = "ufi";
+    // $servername = "localhost";
+    // $username = "root";
+    // $password = "";
+    // $dbname = "ufi";
 
     $servername = "srv36.niagahoster.com";
     $username = "u4028980_admin";

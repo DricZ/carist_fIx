@@ -469,6 +469,10 @@ a.hoverable1:hover {
     color:#2B388F;
 }
 
+.dropdown-toggle::after {
+    color: white;
+}
+
 a.effect-underline:hover:after {
   opacity: 1;
 	-webkit-transform: scale(1);

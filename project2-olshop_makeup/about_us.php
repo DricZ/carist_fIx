@@ -39,7 +39,7 @@
         <div class="container-fluid apa2" style="background-color: #2B388F;">
             <div class="row center" style="height: 100%;">
                 <div class="col-6 au-m2" style="width: 40%; margin-left: 70px;">
-                    <span class="helper"></span><img src="./img/opsi produksi.jpg" style="width: 100%">
+                    <span class="helper"></span><img src="./img/Marketing.jpg" style="width: 100%">
                 </div>
 
                 <div class="col-6 au-m3" style="color: white;">
