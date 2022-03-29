@@ -7,5 +7,5 @@ session_unset();
 session_destroy();
 
 // Back to Login Page
-header("Location: ./login.php");
+header("Location: ./index.php");
 ?>
