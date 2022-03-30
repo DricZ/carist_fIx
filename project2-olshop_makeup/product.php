@@ -504,8 +504,8 @@
                                     $end = $total_page;
                                 }
                                 // Panah Kiri
-                                if($start > $jumlah_no){
-                                    $preview = $start-1;
+                                if($page > 1){
+                                    $preview = $page-1;
                                     echo "<li class='page-item'><a class='page-link' href='?filter=$filter&page=$preview'>< </a></li>  ";
                                 }
                                 for($i=$start;$i<=$end;$i++){
@@ -517,7 +517,7 @@
                                 }
                                 //Panah Kanan
                                 if($end < $total_page){
-                                    $preview = $end+1;
+                                    $preview = $page+1;
                                     echo "<li class='page-item'><a class='page-link' href='?filter=$filter&page=$preview'>> </a></li> ";
                                 }
                                 echo "</ul>";
