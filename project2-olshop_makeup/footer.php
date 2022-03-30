@@ -144,7 +144,7 @@
             </div>
             <div class="row justify-content-right" >
                 <form action="./admin/sys/save_email.php" style="justify-content: right;" method="post">
-                    <div class="input-group " style="">
+                    <div class="input-group " style="width: 265px">
                         <input type="email" class="form-control custom-search-input" id="email" placeholder="Write email here..." name="email" style="height: 55px">      
                         <button class="next-icon1 custom-search-botton" style="width: 55px; height: 50px;">
                         </button>  
