@@ -383,8 +383,8 @@
                         <div class="col-md-3 col-product-1">
                             <div class="card produk-p">
                                 <a href="product-detail.php?name=<?=$nama?>"><img class="" style="width: 100%" src="<?=$path?>" alt="<?=$img?>"></a>
-                                <center class="pr hoverable2"><a class="hoverable2" href="product-detail.php?name=<?=$nama?>" style='font-weight: 600; font-size: 8px;'><?=$nama?></a></center>
-                                <center><p class="" style="font-size: 8px;color:#a0a0a0"><i>
+                                <center class="pr hoverable2 anu10"><a class="hoverable2" href="product-detail.php?name=<?=$nama?>" style='font-weight: 600; '><?=$nama?></a></center>
+                                <center><p class="anu10" style="color:#a0a0a0"><i>
                                     <?php
                                         //Search Category
                                         $sql2 = "SELECT category.category_id AS category_id, category_list.nama FROM category LEFT JOIN category_list ON category.category_id = category_list.id WHERE product_id = '$id'";
