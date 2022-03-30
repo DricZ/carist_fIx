@@ -32,7 +32,7 @@
                         $sql2 = "SELECT * FROM category_list WHERE nama='Normal Skin Condition' OR nama='Kusam' OR nama='Berjerawat'
                                     OR nama='Aging' OR nama='Kering' OR nama='Inflamasi'";
                     }else if($filter == "BASED ON ACNE SEVERITY"){
-                        $sql2 = "SELECT * FROM category_list WHERE nama='All Condition' OR nama='Komedo' OR nama='Papule (light)'
+                        $sql2 = "SELECT * FROM category_list WHERE nama='All Condition' OR nama='Komedo' OR nama='Papule (Light)'
                                     OR nama='Pustule (Medium)' OR nama='Nodule (Severe)'";
                     }else if($filter == "BASED ON PRODUCT TYPE"){
                         $sql2 = "SELECT * FROM category_list WHERE nama='Face Wash' OR nama='Face Cleanser' OR nama='Face Toner'
@@ -194,7 +194,7 @@
                     <div id="bar4" hidden>
                         <a class="dalem" href="?filter=All Condition">All Condition</a>
                         <a class="dalem" href="?filter=Komedo">Komedo</a>
-                        <a class="dalem" href="?filter=Papule (light)">Papule (light)</a>
+                        <a class="dalem" href="?filter=Papule (Light)">Papule (light)</a>
                         <a class="dalem" href="?filter=Pustule (Medium)">Pustule (Medium)</a>
                         <a class="dalem" href="?filter=Nodule (Severe)">Nodule (Severe)</a>
                     </div>
@@ -326,7 +326,7 @@
                         <li><p class="dropdown-header bb" style="font-weight: 700; color: black;">BASED ON ACNE SEVERITY</p></li>
                         <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="?filter=All Condition">All Condition</a></li>
                         <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="?filter=Komedo">Komedo</a></li>
-                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="?filter=Papule (light)">Papule (light)</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="?filter=Papule (Light)">Papule (light)</a></li>
                         <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="?filter=Pustule (Medium)">Pustule (Medium)</a></li>
                         <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="?filter=Nodule (Severe)">Nodule (Severe)</a></li><br>
 
@@ -395,11 +395,20 @@
                                         $result2 = $conn->query($sql2);
                         
                                         if ($result2->num_rows > 0) {
+                                            $count = $result2->num_rows;
                                             // output data of each row
+                                            $x = 1;
                                             while($row2 = $result2->fetch_assoc()) {
                                                 $temp = $row2['nama'];
-                                                echo "<a class='hoverable1' href='?filter=$temp' style='color:#a0a0a0;'>$temp</a>, ";
+                                                if($x == $count){
+                                                    echo "<a class='hoverable1' href='?filter=$temp' style='color:#a0a0a0;'>$temp</a> ";
+                                                }else{
+                                                    echo "<a class='hoverable1' href='?filter=$temp' style='color:#a0a0a0;'>$temp</a>, ";
+                                                }
+                                                //echo $count;
+                                                //echo $x;
                                                 //$category = $category . $temp . ", ";
+                                                $x++;
                                             }
                                         }
                                     ?>
