@@ -306,7 +306,7 @@
     text-align: right;
     vertical-align: middle;
     display: contents;">
-                    <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" style="width: 7%; height: 100%; background-color: transparent;border: 0; margin-right: 10px;">
+                    <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" style="width: 6%; height: 100%; background-color: transparent;border: 0; margin-right: 10px;">
                         <img id="imgfilter" src="./img/filter-svgrepo-com.svg">
                     </button>
                     <ul class="dropdown-menu">
