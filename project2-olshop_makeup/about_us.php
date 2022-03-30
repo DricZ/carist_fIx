@@ -93,7 +93,7 @@
             </div>
         </div>
 
-        <div class="container p-4 text-center mt-5 mb-5">
+        <div class="container p-4 text-center mt-3">
             <div class="row mb-5 d-produk">
                 <div class="col-3">
                 </div>
@@ -108,7 +108,7 @@
                 </div>
             </div>
 
-            <div class="row m-index m-3 center">
+            <div class="row m-index m-3  center">
                 <div class="col-12 text-center">
                     <img class="logo-footer" style="width: 150px" src="./img/Logo-Halal-PNG-Terbaru.png">
                 </div>
@@ -127,7 +127,7 @@
             </div>
             <div class="row">
                 <center>
-                    <h4 class="mengapa" style="margin-top: 30px; font-family: Merriweather;">Mengapa PT. United Farmatic Indonesia</h4>
+                    <h4 class="mengapa" style="margin-top: 50px; font-family: Merriweather;">Mengapa PT. United Farmatic Indonesia</h4>
                 </center>
             </div>
         </div>
