@@ -17,20 +17,20 @@
     <body>
         <hr/>
         <div class="container" style="padding-bottom: 0">
-            <h2><b style="font-family: 'Merriweather';">Frequently Asked Questions</b></h2>
+            <h3><b style="font-family: 'Merriweather';">Frequently Asked Questions</b></h3>
             <div class="row mt-4 mb-4">
-                <p style="text-align:justify;">
+                <p class="anu15" style="text-align:justify;">
                     &emsp;<b>1. Apakah PT. United Farmatic Indonesia memiliki sertifikat HALAL ?</b><br>
                     &emsp;&emsp;Ya, perusahaan kami telah memiliki sertifikat halal
                 </p>
 
-                <p style="text-align:justify;">
+                <p class="anu15" style="text-align:justify;">
                     &emsp;<b>2. Apakah produk – produk dari PT. United Farmatic Indonesia sudah BPOM ?</b><br>
                     &emsp;&emsp;Ya, produk - produk yang dikeluarkan oleh PT. United Farmatic Indoneisa telah lulus
                     BPOM
                 </p>
 
-                <p style="text-align:justify;">
+                <p class="anu15" style="text-align:justify;">
                     &emsp;<b>3. Apakah PT. United Farmatic Indonesia mengikuti standar GMP (Good Manufacturing
                     Practice)?</b><br>
                     &emsp;&emsp;Ya, perusahaan kami menggunakan standar CPOB ( Cara Pembuatan Obat Yang Baik )
@@ -38,7 +38,7 @@
                     kualitas yang tinggi pula
                 </p>
 
-                <p style="text-align:justify;">
+                <p class="anu15" style="text-align:justify;">
                     &emsp;<b>4. Bagaimana saya bisa memesan layanan PT. United Farmatic Indonesia ?</b><br>
                     &emsp;&emsp;Untuk informasi mengenai produk dan pelayanan kami dapat menghubungi whatsapp di
                     0813 28367388

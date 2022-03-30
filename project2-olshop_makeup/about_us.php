@@ -127,16 +127,16 @@
             </div>
             <div class="row">
                 <center>
-                    <h4 style="margin-top: 30px; font-family: Merriweather; font-size: 40px;">Mengapa PT. United Farmatic Indonesia</h4>
+                    <h4 class="mengapa" style="margin-top: 30px; font-family: Merriweather;">Mengapa PT. United Farmatic Indonesia</h4>
                 </center>
             </div>
         </div>
 
         <div class="container-fluid about_us_banner aub1">
             <div class="container-fluid aubblock">
-                <div class="row">
-                    <div class="col-md-12">
-                        <p class="center textau">Team Research & Development yang Kompeten</p>
+                <div class="row" style="height: 100%">
+                    <div class="col-md-12" style="height: 100%">
+                        <p class="center textau" style="height: 100%">Team Research & Development yang Kompeten</p>
                     </div>
                 </div>
             </div>
@@ -144,9 +144,9 @@
 
         <div class="container-fluid about_us_banner aub2">
             <div class="container-fluid aubblock">
-                <div class="row">
-                    <div class="col-md-12">
-                        <p class="center textau">Kualitas Produk Terbaik</p>
+                <div class="row" style="height: 100%">
+                    <div class="col-md-12" style="height: 100%">
+                        <p class="center textau" style="height: 100%">Kualitas Produk Terbaik</p>
                     </div>
                 </div>
             </div>
@@ -154,9 +154,9 @@
 
         <div class="container-fluid about_us_banner aub3">
             <div class="container-fluid aubblock">
-                <div class="row">
-                    <div class="col-md-12">
-                        <p class="center textau">Standar Mutu Produk yang Tinggi</p>
+                <div class="row" style="height: 100%">
+                    <div class="col-md-12" style="height: 100%">
+                        <p class="center textau" style="height: 100%">Standar Mutu Produk yang Tinggi</p>
                     </div>
                 </div>
             </div>

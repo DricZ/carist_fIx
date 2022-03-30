@@ -130,6 +130,10 @@ div.content {
     color: black;
 }
 
+.mengapa{
+    font-size: 40px;
+}
+
 .aubblock:hover{
     background-color: black; 
     opacity: 0.5;
@@ -417,7 +421,7 @@ div.content {
 
 .pr{
     margin: 10px;
-    font-size: 8px;
+    font-size: 15px;
 }
 
 .c-news{
@@ -672,9 +676,26 @@ a.effect-underline:hover:after {
         position: relative;
     }
 
+    .anu15{
+        font-size: 13px;
+    }
+
+    .mengapa{
+        font-size: 15px;
+    }
+
+    .pr{
+        margin: 10px;
+        font-size: 8px;
+    }
+
     .anu11{
         width: 5px; 
         height: 10px
+    }
+
+    .about_us_banner{
+        height: 25vh; 
     }
 
     .anu12{
