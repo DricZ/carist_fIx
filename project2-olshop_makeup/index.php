@@ -147,7 +147,7 @@
                             </div>
                         </div>
                         <?php
-                            for($i = 1; $i<3; $i++){
+                            for($i = 1; $i<2; $i++){
                         ?>
                         <div class="carousel-item">
                             <div class="row" style="justify-content: center;">
