@@ -38,7 +38,6 @@
         <hr style="margin-bottom: 0;" />
         <div class="container-fluid megathronz-news" style="background-image: url('<?=$img?>'); background-repeat:no-repeat ">   
         </div>
-        <p><i style="margin: 20px; opacity: 0.8">Picture Credit/description</i></p>
         
         
         <div class="container">
@@ -52,7 +51,7 @@
                 <?=$news?>
             </p>
 
-            <p class="m-index" style="text-align:justify; font-weight: 400;">
+            <p class="m-index" style="text-align:left; font-weight: 400;">
                 <?=$news?>
             </p>
         </div>

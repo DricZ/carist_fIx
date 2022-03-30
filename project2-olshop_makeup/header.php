@@ -144,7 +144,7 @@
                 </button>
                 <a class="navbar-brand" href="#" style="width: 75%"><img onClick="window.location.href = 'index.php';" style="cursor: pointer;" style="cursor: pointer;" style="cursor: pointer;" style="cursor: pointer;" class="mv" src="./img/Artboard 1 copy.png" alt="PT. United Farmatic Indonesia"></a>
                     
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="border: 0; box-shadow:none">
                     <ul class="navbar-nav">
                         <li class="nav-item nav-hd">
                             <a class="nav-link" href="index.php"><b class="nav-color">HOME</b></a>

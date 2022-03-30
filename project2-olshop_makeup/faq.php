@@ -16,8 +16,8 @@
 
     <body>
         <hr/>
-        <div class="container">
-            <h2><b>Frequently Asked Questions</b></h2>
+        <div class="container" style="padding-bottom: 0">
+            <h2><b style="font-family: 'Merriweather';">Frequently Asked Questions</b></h2>
             <div class="row mt-4 mb-4">
                 <p style="text-align:justify;">
                     &emsp;<b>1. Apakah PT. United Farmatic Indonesia memiliki sertifikat HALAL ?</b><br>

@@ -283,15 +283,15 @@ div.content {
 }
 
 .isi-nd{
-    font-size: 24px;
+    font-size: 15px;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
 .isi-nd-a{
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 400;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 /* PRODUCT */
@@ -407,11 +407,16 @@ div.content {
 
 .btn-2:hover{
     background-color: #D1C6FA;
-    border: 0;
+    border-color: #D1C6FA;
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
 }
 
 .pr{
     margin: 10px;
+    font-size: 8px;
 }
 
 .c-news{
@@ -654,6 +659,21 @@ a.effect-underline:hover:after {
 
     .apa2{
         height: 70vh;
+    }
+
+    .textau{
+        color: white;
+        height: 50vh;
+        font-size: 15px;
+        font-family: 'Merriweather';
+    }
+
+    .page-link{
+        border: 0;
+        color: black;
+        font-family: Merriweather;
+        font-weight: 700;
+        font-size: 10px;
     }
 
     .find-us {

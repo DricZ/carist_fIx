@@ -325,7 +325,7 @@
 
             <div class="row">
                 <center>
-                    <button type="button" class="button-active btn-2" value="SHOP" onclick="bukap()" style="margin: 50px;"><b>VIEW ALL PRODUCTS</b></button>
+                    <button type="button" class="button-active btn-2 hoverable" value="SHOP" onclick="bukap()" style="margin: 50px;"><b>VIEW ALL PRODUCTS</b></button>
 
                 </center>
             </div>

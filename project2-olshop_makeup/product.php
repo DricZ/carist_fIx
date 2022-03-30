@@ -269,13 +269,13 @@
             <div class="row" style="width: 100%;height: 100%;padding-left: 20px;">
                 <ul class="col nav m-product" style="    align-items: center;">
                     <li class="nav-item">
-                        <a class="nav-link nav-product" href="./">HOME</a>
+                        <a class="nav-link nav-product" href="./">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-product disabled" style="color: white;" href="#">></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-product" href="product.php">PRODUCT</a>
+                        <a class="nav-link nav-product" href="product.php">Product</a>
                     </li>
                     <?php
                         if(isset($_GET['filter']) && $_GET['filter'] != "none"){
@@ -295,7 +295,7 @@
     text-align: right;
     vertical-align: middle;
     display: contents;">
-                    <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" style="width: 10%; height: 100%; background-color: transparent;border: 0; margin-right: 10px;">
+                    <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" style="width: 8%; height: 100%; background-color: transparent;border: 0; margin-right: 10px;">
                         <img id="imgfilter" src="./img/filter-svgrepo-com.svg">
                     </button>
                     <ul class="dropdown-menu">
@@ -383,8 +383,8 @@
                         <div class="col-md-3 col-product-1">
                             <div class="card produk-p">
                                 <a href="product-detail.php?name=<?=$nama?>"><img class="" style="width: 100%" src="<?=$path?>" alt="<?=$img?>"></a>
-                                <center class="pr hoverable2"><a class="hoverable2" href="product-detail.php?name=<?=$nama?>" style='font-weight: 600; font-size: 16px;'><?=$nama?></a></center>
-                                <center><p class="" style="font-size: 16px;color:#a0a0a0"><i>
+                                <center class="pr hoverable2"><a class="hoverable2" href="product-detail.php?name=<?=$nama?>" style='font-weight: 600; font-size: 8px;'><?=$nama?></a></center>
+                                <center><p class="" style="font-size: 8px;color:#a0a0a0"><i>
                                     <?php
                                         //Search Category
                                         $sql2 = "SELECT category.category_id AS category_id, category_list.nama FROM category LEFT JOIN category_list ON category.category_id = category_list.id WHERE product_id = '$id'";
@@ -434,7 +434,7 @@
                                 //Panah Kanan
                                 if($end < $total_page){
                                     $preview = $end+1;
-                                    echo "<li class='page-item'><a class='page-link' href='?filter=$filter&page=$preview'><img src='./img/next1.svg' style='width: 20px; height: 20px'> </a></li> ";
+                                    echo "<li class='page-item'><a class='page-link' href='?filter=$filter&page=$preview'><img src='./img/next1.svg' style='width: 10px; height: 10px'> </a></li> ";
                                 }
                                 echo "</ul>";
                             }else{

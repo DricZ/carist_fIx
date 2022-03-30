@@ -130,7 +130,7 @@ onClick="window.location.href = 'index.php';" style="cursor: pointer;">
                         </div>
                     </div>
 
-                    <div class="col-sm-3" style="display:flex; align-items: end;">
+                    <div class="col-sm-3 right" style="display:flex; align-items: end;">
                         <form method="GET" action="" autocomplete="off">
                             <div class="input-group">
                                 <div id="navbar-search-autocomplete" class="form-outline" style="height: 0; width: 80%">
@@ -176,7 +176,7 @@ onClick="window.location.href = 'index.php';" style="cursor: pointer;">
                         </form>
                     </div>
                         
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="border: 0">
                         <ul class="navbar-nav">
                             <li class="nav-item nav-hd">
                                 <a class="nav-link" href="index.php"><b class="nav-color">HOME</b></a>
