@@ -422,7 +422,7 @@
                                 // Panah Kiri
                                 if($page > 1){
                                     $preview = $page-1;
-                                    echo "<li class='page-item'><a class='page-link' href='?filter=$filter&page=$preview'><img src='./img/back.png' style='width: 10px; height: 10px'> </a></li>  ";
+                                    echo "<li class='page-item'><a class='page-link' href='?filter=$filter&page=$preview'><img src='./img/back.png' style='width: 5px; height: 20px'> </a></li>  ";
                                 }
                                 for($i=$start;$i<=$end;$i++){
                                     if($i == $page){
