@@ -384,7 +384,7 @@
                         $id = $row['id'];
                         $title = $row['title'];
                         $img = "img/news/".$row['img'];
-                        $wrap_limit = 300;
+                        $wrap_limit = 600;
                         $news = $row['news'];
                         $news = strlen($news) > $wrap_limit ? substr($news,0,$wrap_limit)."..." : $news;
                         $upload_date = $row['upload_date'];
