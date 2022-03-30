@@ -150,6 +150,13 @@
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <link href="./css/style.css" rel="stylesheet">
 
+        <style>
+            .dropdown-menu {
+                overflow: hidden;
+                overflow-y: auto;
+                max-height: calc(100vh - 150px);
+            }
+        </style>
     </head>
 
     <body>
