@@ -47,6 +47,12 @@
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <link href="./css/style.css" rel="stylesheet">
 
+        <style>
+            html,body {
+                height: 100%;
+            }
+        </style>
+
     </head>
 
     <body>
