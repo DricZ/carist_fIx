@@ -652,6 +652,16 @@ a.effect-underline:hover:after {
     font-size: 16px;
 }
 
+.anu11{
+    width: 10px; 
+    height: 20px
+}
+
+.anu12{
+    width: 20px; 
+    height: 20px
+}
+
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media only screen and (max-width: 1000px) {
@@ -659,6 +669,16 @@ a.effect-underline:hover:after {
         width: 100%;
         height: auto;
         position: relative;
+    }
+
+    .anu11{
+        width: 5px; 
+        height: 10px
+    }
+
+    .anu12{
+        width: 10px; 
+        height: 10px
     }
 
     .anu10{
