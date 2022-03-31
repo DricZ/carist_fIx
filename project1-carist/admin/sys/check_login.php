@@ -16,7 +16,7 @@
         $_SESSION["name"] = $row["name"];
         header("Location: ../dashboard.php");
     } else {
-        header("Location: ../login.php?wrong=true");
+        header("Location: ../?wrong=true");
     }
     $conn->close();
     
