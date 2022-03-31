@@ -24,11 +24,6 @@
 </head>
 
 <body class="bg-gradient-primary">
-    <?php
-    if(isset($_GET["wrong"])){
-        echo "Wrong Password";
-    }
-    ?>
 
     <div class="container">
 
@@ -46,6 +41,11 @@
                                 <div class="p-5">
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                        <?php
+                                            if(isset($_GET["wrong"])){
+                                                echo "<div class='text-danger'>Wrong Password! Please try again!</div><br>";
+                                            }
+                                        ?>
                                     </div>
                                     <form class="user" method="post" action="sys/check_login.php">
                                         <div class="form-group">
