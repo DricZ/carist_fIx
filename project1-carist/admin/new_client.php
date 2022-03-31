@@ -2,7 +2,7 @@
     session_start();
     require "./sys/check_integrity.php";
     if(!$valid){
-        header("Location: ./login.php");
+        header("Location: ./index.php");
     }
 
     echo "<h1>New Client</h1>";
