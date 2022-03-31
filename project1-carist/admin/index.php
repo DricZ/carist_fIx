@@ -13,7 +13,7 @@
     <title>Carist Admin - Login</title>
 
     <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/fontawesome-free/css/all.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
@@ -37,7 +37,9 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body style="background-color: #34c0b2">
+
+    <button onclick="window.location.href = '.././'" class="btn btn-primary position-absolute" style="top: 30px; left: 30px; border-radius: 100%; width: 60px; height: 60px"><img src="./img/back.svg" style="width: 15px;"></button>
 
     <div class="container" style="height: 100vh;
     align-items: center;
