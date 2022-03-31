@@ -25,6 +25,12 @@
 
     <title>SB Admin 2 - Blank</title>
 
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
@@ -33,6 +39,8 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    
 
 </head>
 
@@ -373,7 +381,7 @@
                                 $client_name = $row["name"];
                                 $client_logo = $row["client_logo"];
                                 $visit = $row["visit"];
-                                //echo "<h3>$client_name <button>+</button></h3>";
+                                echo "<h3>$client_name</h3>";
 
                                 //Search All Task with that client ID
                                 $sql2 = "SELECT * FROM task WHERE client_id = $client_id";// AND contentwriter_id = $my_id";
@@ -384,15 +392,96 @@
                                         $task_id = $row2["task_id"];
                                         $content_no = $row2["content_no"];
                                         $content_type = $row2["content_type"];
+                                        $main_topic = $row2["main_topic"];
+                                        $sub_topic = $row2["sub_topic"];
+                                        $concept = $row2["concept"];
+                                        $ref_link = $row2["ref_link"];
+                                        $notes = $row2["content_notes"];
                                         $display_name = strtoupper($content_type . " " . $content_no);
-                                        echo "<b>$display_name</b><br>";
-                                        echo "Main Topic: <input type='text' name='main_topic'><br>";
-                                        echo "Sub Topic: <input type='text' name='sub_topic'><br>";
-                                        echo "Concept: <input type='text' name='concept'><br>";
-                                        echo "Link Referensi: <input type='text' name='ref_link'><br>";
-                                        echo "Notes: <textarea name='notes' rows='10' cols='30'></textarea><br>";
-                                        echo "<button>Submit</button><br><br>";
+                                        $section_id = strtolower("task".$task_id);
+                                        if($main_topic != ""){
+                                            $fieldset = "disabled";
+                                        }else{
+                                            $fieldset = "";
+                                        }
+                                        echo "<a class='nav-link collapsed' href='#' data-toggle='collapse' data-target='#$section_id'
+                                                aria-expanded='true' aria-controls='$section_id'>
+                                                <i class='fa fa-plus-square'></i>
+                                                <span><b>$display_name</b></span>
+                                            </a>";
+                                        // echo"<div id='$section_id' class='collapse'>
+                                        //         <div class='bg-gray-200 py-2 collapse-inner rounded' style='padding: 2%; padding-top: 100px'>
+                                        //             <form method='post' action='sys/submit_contentwriter.php'>
+                                        //                 <fieldset>
+                                        //                     <h5>Submit For $display_name (#$section_id) ContentWriter</h5>
+                                        //                     <input type='hidden' name='task_id' value='$task_id'>
+                                        //                     Main Topic: <input type='text' class='form-control' name='main_topic' value='$main_topic' required><br>
+                                        //                     Sub Topic: <input type='text' class='form-control' name='sub_topic' value='$sub_topic'><br>
+                                        //                     Concept: <input type='text' class='form-control' name='concept' value='$concept'><br>
+                                        //                     Link Referensi: <input type='text'  class='form-control' name='ref_link' value='$ref_link'><br>
+                                        //                     Notes: <textarea name='notes' rows='10' cols='30' class='form-control' value='$notes'></textarea><br>
+                                        //                     <button class='btn btn-primary'>Submit</button>
+                                        //                 </fieldset>
+                                        //             </form>
+                                        //         </div>
+                                        //     </div>";
+                                        echo"<div id='$section_id' class='collapse'>
+                                            <div class='bg-gray-200 py-2 collapse-inner rounded' style='padding: 2%; padding-top: 100px'>
+                                                <form method='post' action='sys/submit_designer.php' enctype='multipart/form-data'>
+                                                    <fieldset>
+                                                        <h5>Submit For $display_name (#$section_id) Designer</h5>
+                                                        <div class='row'>
+                                                            <div class='col-sm-6'>
+                                                                Main Topic: $main_topic<br>
+                                                                Sub Topic: $sub_topic<br>
+                                                                Concept: $concept<br>
+                                                                Link Referensi: <a href='$ref_link' target='_blank'>$ref_link</a><br>
+                                                                Notes: $notes<br>
+                                                            </div>
+                                                            <div class='col-sm-6'>
+                                                                <input type='hidden' name='task_id' value='$task_id'>
+                                                                Design 1 : <input type='file' name='design1' id='design1' class='form-control'><br>
+                                                                Design 2 : <input type='file' name='design2' id='design2' class='form-control'><br>
+                                                                Design 3 : <input type='file' name='design3' id='design3' class='form-control'><br>
+                                                                Design 4 : <input type='file' name='design4' id='design4' class='form-control'><br>
+                                                                Design 5 : <input type='file' name='design5' id='design5' class='form-control'><br><br>
+                                                                <button class='btn btn-primary'>Submit</button>
+                                                            </div>
+                                                        </div>
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                        </div>";
+                                        // echo"<div id='$section_id' class='collapse'>
+                                        //     <div class='bg-gray-200 py-2 collapse-inner rounded' style='padding: 2%; padding-top: 100px'>
+                                        //         <form method='post' action='sys/submit_designer.php' enctype='multipart/form-data'>
+                                        //             <fieldset>
+                                        //                 <h5>Submit For $display_name (#$section_id) Designer</h5>
+                                        //                 <div class='row'>
+                                        //                     <div class='col-sm-6'>
+                                        //                         Main Topic: $main_topic<br>
+                                        //                         Sub Topic: $sub_topic<br>
+                                        //                         Concept: $concept<br>
+                                        //                         Link Referensi: <a href='$ref_link' target='_blank'>$ref_link</a><br>
+                                        //                         Notes: $notes<br>
+                                        //                     </div>
+                                        //                     <div class='col-sm-6'>
+                                        //                         <input type='hidden' name='task_id' value='$task_id'>
+                                        //                         Design 1 : <input type='file' name='design1' id='design'><br>
+                                        //                         Design 2 : <input type='file' name='design2' id='design'><br>
+                                        //                         Design 3 : <input type='file' name='design3' id='design'><br>
+                                        //                         Design 4 : <input type='file' name='design4' id='design'><br>
+                                        //                         Design 5 : <input type='file' name='design5' id='design'><br>
+                                        //                         <button class='btn btn-primary'>Submit</button>
+                                        //                     </div>
+                                        //                 </div>
+                                        //             </fieldset>
+                                        //         </form>
+                                        //     </div>
+                                        // </div>";
                                     }
+                                }else{
+                                    echo "<h6>No Task</h6>";
                                 }
                             }
                         }
