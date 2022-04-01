@@ -12,7 +12,7 @@
 
     var_dump($_POST);
 
-    $sql = "UPDATE task SET main_topic='$main_topic', sub_topic='$sub_topic', concept='$concept', ref_link='$ref_link', content_notes='$notes', contentwriter_submitdate=CURDATE() WHERE task_id=$task_id";
+    $sql = "UPDATE task SET caption='$caption', hashtag='$hashtag' copywriter_submitdate=CURDATE(), copywriter_status='review' WHERE task_id=$task_id";
 
     if ($conn->query($sql) === TRUE) {
         echo "Record updated successfully";

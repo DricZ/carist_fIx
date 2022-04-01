@@ -473,7 +473,7 @@
                                         //ECHO COPY WRITER
                                         echo"<div id='$section_id' class='collapse'>
                                             <div class='bg-gray-200 py-2 collapse-inner rounded' style='padding: 2%; padding-top: 100px'>
-                                                <form method='post' action='sys/' enctype='multipart/form-data'>
+                                                <form method='post' action='sys/submit_copywriter.php' enctype='multipart/form-data'>
                                                     <fieldset>
                                                         <div class='row'>
                                                             <h5>Submit For $display_name (#$section_id) CopyWriter</h5>
