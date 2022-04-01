@@ -403,6 +403,8 @@
                                         $design3 = $relative . $row2["design_3"];
                                         $design4 = $relative . $row2["design_4"];
                                         $design5 = $relative . $row2["design_5"];
+                                        $caption = $row2["caption"];
+                                        $hashtag = $row2["hashtag"];
                                         $display_name = strtoupper($content_type . " " . $content_no);
                                         $section_id = strtolower("task".$task_id);
                                         if($main_topic != ""){
@@ -500,10 +502,11 @@
                                                                 Notes: $notes<br>
                                                             </div>
                                                             <div class='col-sm-3'>
-                                                                Caption: <br><textarea name='caption' rows='10' cols='30' class='form-control'></textarea><br>
+                                                                <input type='hidden' name='task_id' value='$task_id'>
+                                                                Caption: <br><textarea name='caption' rows='10' cols='30' class='form-control'>$caption</textarea><br>
                                                             </div>
                                                             <div class='col-sm-3'>
-                                                                Hashtag: <br><textarea name='hashtag' rows='10' cols='30' class='form-control'></textarea><br>
+                                                                Hashtag: <br><textarea name='hashtag' rows='10' cols='30' class='form-control'>$hashtag</textarea><br>
                                                                 <div class='d-grid gap-2 d-md-flex justify-content-md-end'><button class='btn btn-primary'>Submit</button></div>
                                                             </div>
                                                         </div>
