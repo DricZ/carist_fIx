@@ -7,11 +7,8 @@
     require "connect.php";
 
     $task_id = $_POST['task_id'];
-    $main_topic = $_POST['main_topic'];
-    $sub_topic = $_POST['sub_topic'];
-    $concept = $_POST['concept'];
-    $ref_link = $_POST['ref_link'];
-    $notes = $_POST['notes'];
+    $caption = $_POST['caption'];
+    $hashtag = $_POST['hashtag'];
 
     var_dump($_POST);
 

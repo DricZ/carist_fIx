@@ -397,6 +397,12 @@
                                         $concept = $row2["concept"];
                                         $ref_link = $row2["ref_link"];
                                         $notes = $row2["content_notes"];
+                                        $relative = "./drive/design/";
+                                        $design1 = $relative . $row2["design_1"];
+                                        $design2 = $relative . $row2["design_2"];
+                                        $design3 = $relative . $row2["design_3"];
+                                        $design4 = $relative . $row2["design_4"];
+                                        $design5 = $relative . $row2["design_5"];
                                         $display_name = strtoupper($content_type . " " . $content_no);
                                         $section_id = strtolower("task".$task_id);
                                         if($main_topic != ""){
@@ -409,27 +415,39 @@
                                                 <i class='fa fa-plus-square'></i>
                                                 <span><b>$display_name</b></span>
                                             </a>";
-                                        // echo"<div id='$section_id' class='collapse'>
-                                        //         <div class='bg-gray-200 py-2 collapse-inner rounded' style='padding: 2%; padding-top: 100px'>
-                                        //             <form method='post' action='sys/submit_contentwriter.php'>
-                                        //                 <fieldset>
-                                        //                     <h5>Submit For $display_name (#$section_id) ContentWriter</h5>
-                                        //                     <input type='hidden' name='task_id' value='$task_id'>
-                                        //                     Main Topic: <input type='text' class='form-control' name='main_topic' value='$main_topic' required><br>
-                                        //                     Sub Topic: <input type='text' class='form-control' name='sub_topic' value='$sub_topic'><br>
-                                        //                     Concept: <input type='text' class='form-control' name='concept' value='$concept'><br>
-                                        //                     Link Referensi: <input type='text'  class='form-control' name='ref_link' value='$ref_link'><br>
-                                        //                     Notes: <textarea name='notes' rows='10' cols='30' class='form-control' value='$notes'></textarea><br>
-                                        //                     <button class='btn btn-primary'>Submit</button>
-                                        //                 </fieldset>
-                                        //             </form>
-                                        //         </div>
-                                        //     </div>";
+                                        //ECHO CONTENTWRITER
+                                        echo"<div id='$section_id' class='collapse'>
+                                                <div class='bg-gray-200 py-2 collapse-inner rounded' style='padding: 2%; padding-top: 100px'>
+                                                    <form method='post' action='sys/submit_contentwriter.php'>
+                                                        <fieldset>
+                                                            <div class='row'>
+                                                                <h5>Submit For $display_name (#$section_id) ContentWriter</h5>
+                                                            </div>
+                                                            <div class='row'>
+                                                                <div class='col-sm-6'>
+                                                                    <input type='hidden' name='task_id' value='$task_id'>
+                                                                    Main Topic: <input type='text' class='form-control' name='main_topic' value='$main_topic' required><br>
+                                                                    Sub Topic: <input type='text' class='form-control' name='sub_topic' value='$sub_topic'><br>
+                                                                    Concept: <input type='text' class='form-control' name='concept' value='$concept'><br>
+                                                                    Link Referensi: <input type='text'  class='form-control' name='ref_link' value='$ref_link'><br>
+                                                                </div>
+                                                                <div class='col-sm-6'>
+                                                                    Notes: <textarea name='notes' rows='10' cols='30' class='form-control'>$notes</textarea><br>
+                                                                    <div class='d-grid gap-2 d-md-flex justify-content-md-end'><button class='btn btn-primary'>Submit</button></div>
+                                                                </div>
+                                                            </div>
+                                                        </fieldset>
+                                                    </form>
+                                                </div>
+                                            </div>";
+                                        //ECHO DESIGNER
                                         echo"<div id='$section_id' class='collapse'>
                                             <div class='bg-gray-200 py-2 collapse-inner rounded' style='padding: 2%; padding-top: 100px'>
                                                 <form method='post' action='sys/submit_designer.php' enctype='multipart/form-data'>
                                                     <fieldset>
-                                                        <h5>Submit For $display_name (#$section_id) Designer</h5>
+                                                        <div class='row'>
+                                                            <h5>Submit For $display_name (#$section_id) Designer</h5>
+                                                        </div>
                                                         <div class='row'>
                                                             <div class='col-sm-6'>
                                                                 Main Topic: $main_topic<br>
@@ -445,40 +463,54 @@
                                                                 Design 3 : <input type='file' name='design3' id='design3' class='form-control'><br>
                                                                 Design 4 : <input type='file' name='design4' id='design4' class='form-control'><br>
                                                                 Design 5 : <input type='file' name='design5' id='design5' class='form-control'><br><br>
-                                                                <button class='btn btn-primary'>Submit</button>
+                                                                <div class='d-grid gap-2 d-md-flex justify-content-md-end'><button class='btn btn-primary'>Submit</button></div>
                                                             </div>
                                                         </div>
                                                     </fieldset>
                                                 </form>
                                             </div>
                                         </div>";
-                                        // echo"<div id='$section_id' class='collapse'>
-                                        //     <div class='bg-gray-200 py-2 collapse-inner rounded' style='padding: 2%; padding-top: 100px'>
-                                        //         <form method='post' action='sys/submit_designer.php' enctype='multipart/form-data'>
-                                        //             <fieldset>
-                                        //                 <h5>Submit For $display_name (#$section_id) Designer</h5>
-                                        //                 <div class='row'>
-                                        //                     <div class='col-sm-6'>
-                                        //                         Main Topic: $main_topic<br>
-                                        //                         Sub Topic: $sub_topic<br>
-                                        //                         Concept: $concept<br>
-                                        //                         Link Referensi: <a href='$ref_link' target='_blank'>$ref_link</a><br>
-                                        //                         Notes: $notes<br>
-                                        //                     </div>
-                                        //                     <div class='col-sm-6'>
-                                        //                         <input type='hidden' name='task_id' value='$task_id'>
-                                        //                         Design 1 : <input type='file' name='design1' id='design'><br>
-                                        //                         Design 2 : <input type='file' name='design2' id='design'><br>
-                                        //                         Design 3 : <input type='file' name='design3' id='design'><br>
-                                        //                         Design 4 : <input type='file' name='design4' id='design'><br>
-                                        //                         Design 5 : <input type='file' name='design5' id='design'><br>
-                                        //                         <button class='btn btn-primary'>Submit</button>
-                                        //                     </div>
-                                        //                 </div>
-                                        //             </fieldset>
-                                        //         </form>
-                                        //     </div>
-                                        // </div>";
+                                        //ECHO COPY WRITER
+                                        echo"<div id='$section_id' class='collapse'>
+                                            <div class='bg-gray-200 py-2 collapse-inner rounded' style='padding: 2%; padding-top: 100px'>
+                                                <form method='post' action='sys/' enctype='multipart/form-data'>
+                                                    <fieldset>
+                                                        <div class='row'>
+                                                            <h5>Submit For $display_name (#$section_id) CopyWriter</h5>
+                                                        </div>
+                                                        <div class='row'>
+                                                            <div class='col-sm-3'>
+                                                                Design 1<br>
+                                                                <img src='$design1' style='max-width: 100%' alt='No Image'><br>
+                                                                Design 2<br>
+                                                                <img src='$design2' style='max-width: 100%' alt='No Image'><br>
+                                                                Design 3<br>
+                                                                <img src='$design3' style='max-width: 100%' alt='No Image'><br>
+                                                                Design 4<br>
+                                                                <img src='$design4' style='max-width: 100%' alt='No Image'><br>
+                                                                Design 5<br>
+                                                                <img src='$design5' style='max-width: 100%' alt='No Image'><br>
+                                                            </div>
+                                                            <div class='col-sm-3'>
+                                                                <h6>Description:</h6>
+                                                                Main Topic: $main_topic<br>
+                                                                Sub Topic: $sub_topic<br>
+                                                                Concept: $concept<br>
+                                                                Link Referensi: <a href='$ref_link' target='_blank'>$ref_link</a><br>
+                                                                Notes: $notes<br>
+                                                            </div>
+                                                            <div class='col-sm-3'>
+                                                                Caption: <br><textarea name='caption' rows='10' cols='30' class='form-control'></textarea><br>
+                                                            </div>
+                                                            <div class='col-sm-3'>
+                                                                Hashtag: <br><textarea name='hashtag' rows='10' cols='30' class='form-control'></textarea><br>
+                                                                <div class='d-grid gap-2 d-md-flex justify-content-md-end'><button class='btn btn-primary'>Submit</button></div>
+                                                            </div>
+                                                        </div>
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                        </div>";
                                     }
                                 }else{
                                     echo "<h6>No Task</h6>";

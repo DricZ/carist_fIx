@@ -51,13 +51,13 @@
 
             // Check if $uploadOk is set to 0 by an error
             if ($uploadOk == 0) {
-                echo "Sorry, your file was not uploaded.";
+                echo "Sorry, your file was not uploaded.<br>";
             // if everything is ok, try to upload file
             } else {
                 if (move_uploaded_file($_FILES["design$i"]["tmp_name"], $target_file)) {
                     echo "The file ". htmlspecialchars( basename( $_FILES["design$i"]["name"])). " has been uploaded.";
                     //SAVE TO DATABASE
-                    $sql = "UPDATE task SET design_$i='$rename_file' WHERE task_id=$task_id";
+                    $sql = "UPDATE task SET design_$i='$rename_file', designer_submitdate=CURDATE() WHERE task_id=$task_id";
 
                     if ($conn->query($sql) === TRUE) {
                         //echo "Record $i updated successfully";
