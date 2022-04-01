@@ -445,14 +445,14 @@
                                                         </div>
                                                         <div class='col-sm-2'>
                                                         <form method='post' action='sys/' enctype='multipart/form-data'>
-                                                            <div class='d-grid gap-3'><button class='btn btn-warning'>Revision</button></div>
+                                                            <div class='d-grid gap-3'><button class='btn btn-danger'>Move</button></div><br>
                                                         </form>
                                                         </div>
                                                         <div class='col-sm-2'>
-                                                            <div class='d-grid gap-3'><button class='btn btn-success'>Approve</button></div>
+                                                            <div class='d-grid gap-3'><button class='btn btn-warning'>Revision</button></div><br>
                                                         </div>
                                                         <div class='col-sm-2'>
-                                                            <div class='d-grid gap-3'><button class='btn btn-danger'>Move</button></div>
+                                                            <div class='d-grid gap-3'><button class='btn btn-success'>Approve</button></div><br>
                                                         </div>
                                                     </div>
                                                 </fieldset>
