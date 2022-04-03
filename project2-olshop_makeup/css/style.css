@@ -282,7 +282,7 @@ div.content {
 }
 
 .newsdimg{
-    width: 319.19px;
+    width: 20vw;
     border-radius: 10px;
     margin-bottom: 30px;
 }
@@ -302,9 +302,9 @@ div.content {
 /* PRODUCT */
 
 .p{
-    width: 20%;
-    margin: 31px;
-    padding: 10px;
+    width: 13vw;
+    margin: 30px;
+    margin-bottom: 0;
 }
 
 .pct-l{
@@ -767,7 +767,7 @@ a.effect-underline:hover:after {
     }
 
     .newsdimg{
-        width: 35vw;
+        width: 30vw;
         border-radius: 10px;
         margin-bottom: 20px;
     }

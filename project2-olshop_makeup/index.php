@@ -395,15 +395,11 @@
             <div class="card d-index" style="margin-bottom: 20px; border: 0; cursor: pointer;" onclick="buka(<?=$id?>)">
                 <div class="row">
                     <div class="col-5 right p-0">
-                        <img src="<?=$img?>" alt="Fasilitas" style="width: 100%; border-top-left-radius: 35px; border-bottom-left-radius: 35px;">
+                        <img src="<?=$img?>" alt="Fasilitas" style="height: 375px;width: 100%; border-top-left-radius: 35px; border-bottom-left-radius: 35px;">
                     </div>
-                    <div class="col-7" style="padding: 25px; border-width: 2px; 
-    border-top-right-radius: 35px;
-    border-bottom-right-radius: 35px; 
-    border-color: #2B388F;
-    border-style:solid;">
+                    <div class="col-7" style="height: 375px; padding: 25px; border-width: 2px;border-top-right-radius: 35px; border-bottom-right-radius: 35px;  border-color: #2B388F; border-style:solid; ">
                         <h3 style="font-weight:600"><?=$title?></h3>                
-                        <p style="font-weight:400"><?=$news?></b></p>
+                        <p style="font-weight:400; font-size: 1vw;"><?=$news?></b></p>
                         <p style="font-weight:600"><?=$date?></p>
                     </div>
                 </div>  
