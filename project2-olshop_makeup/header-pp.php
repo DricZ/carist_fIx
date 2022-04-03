@@ -173,10 +173,9 @@
                     </div>
                     
                     <!-- HOME PRODUCT DLL -->
-                    <div class="col-sm-6">
+                    <div class="col-12 divMobile" style="margin-top: -10vw;">
                         <div class="row">
-                            <div class="col-sm-12" onClick="window.location.href = 'index.php';" style="cursor: pointer;"
-onClick="window.location.href = 'index.php';" style="cursor: pointer;">
+                            <div class="col-sm-12" onClick="window.location.href = 'index.php';" style="cursor: pointer;" onClick="window.location.href = 'index.php';" style="cursor: pointer;">
                                     <center>
                                         <img class="logo tengah" style="cursor: pointer;" src="./img/Nama PT.png" alt="PT. United Farmatic Indonesia" style="z-index: -1;">
                                         <img class="mobile" style="cursor: pointer;" src="./img/Artboard 1 copy.png" alt="PT. United Farmatic Indonesia">
@@ -216,20 +215,22 @@ onClick="window.location.href = 'index.php';" style="cursor: pointer;">
                                 
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-sm-3 right" style="display:flex; align-items: end;">
-                        <form method="GET" action="" autocomplete="off">
-                            <div class="input-group">
-                                <div id="navbar-search-autocomplete" class="form-outline autocomplete" style="height: 0; width: 80%">
-                                    <input type="text" name="search" id="form1" class="form-control anu3" placeholder="Find products, series,...">
-                                </div>
-                                <button type="submit" class="btn btn-primary search-icon">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                            </div>
-                        </form> 
-                    </div> 
+                        <div class="row right">
+                            <div class="col-sm-3 right" style="display:flex; align-items: end;">
+                                <form method="GET" action="" autocomplete="off">
+                                    <div class="input-group">
+                                        <div id="navbar-search-autocomplete" class="form-outline autocomplete" style="height: 0; width: 80%">
+                                            <input type="text" name="search" id="form1" class="form-control anu3" placeholder="Find products, series,...">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary search-icon">
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                    </div>
+                                </form> 
+                            </div> 
+                        </div>
+                    </div>
                 </div>
             </div>    
         </nav>
@@ -238,14 +239,10 @@ onClick="window.location.href = 'index.php';" style="cursor: pointer;">
         <nav class="navbar navbar-expand-lg navbar-light nav-mv">
             <div class="container-fluid">
                 <div class="row">
-                    <button style="    border: 0;
-    width: 10%;
-    padding: 0;
-    margin-left: 10px;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button style="border: 0;width: 10%;padding: 0;margin-left: 10px;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon" style="width: 25px"></span>
                     </button>
-                    <a class="navbar-brand" href="#" style="width: 20%;
-    padding: 0;"><img class="mv" onClick="window.location.href = 'index.php';" style="cursor: pointer;" style="cursor: pointer;" src="./img/Logo_UFI.png" alt="PT. United Farmatic Indonesia"></a>
+                    <a class="navbar-brand" href="#" style="width: 20%;padding: 0;"><img class="mv" onClick="window.location.href = 'index.php';" style="cursor: pointer;" style="cursor: pointer;" src="./img/Logo_UFI.png" alt="PT. United Farmatic Indonesia"></a>
 
                     <div class="col-sm-3" style="display: flex;
                         align-items: center;

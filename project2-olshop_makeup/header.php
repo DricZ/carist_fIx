@@ -57,11 +57,7 @@
                 margin-right: 10px;
             }
 
-            .nav-mv{
-                margin: 30px; 
-                margin-left: 0;
-                display: none;
-            }
+            
 
         </style>
     </head>
@@ -85,7 +81,7 @@
                     </div>
                     
                     <!-- HOME PRODUCT DLL -->
-                    <div class="col-sm-6">
+                    <div class="col-sm-12 divMobile" style="margin-top: -10vw">
                         <div class="row">
                             <div class="col-sm-12" onClick="window.location.href = 'index.php';" style="cursor: pointer;" style="cursor: pointer;" style="cursor: pointer;" style="cursor: pointer;" style="cursor: pointer;">
                                     <center>
@@ -137,41 +133,55 @@
         </nav>
 
         <!-- MOBILE VIEW -->
-        <nav class="navbar navbar-expand-lg navbar-light nav-mv">
+        <nav class="navbar navbar-expand-lg navbar-light nav-mv" style="margin: 0">
             <div class="container-fluid">
-                <button style="border: 0" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon" style="width: 25px"></span>
-                </button>
-                <a class="navbar-brand" href="#" style="width: 75%"><img onClick="window.location.href = 'index.php';" style="cursor: pointer;" style="cursor: pointer;" style="cursor: pointer;" style="cursor: pointer;" class="mv" src="./img/Artboard 1 copy.png" alt="PT. United Farmatic Indonesia"></a>
-                    
-                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="border: 0; box-shadow:none">
-                    <ul class="navbar-nav">
-                        <li class="nav-item nav-hd">
-                            <a class="nav-link" href="index.php"><b class="nav-color">HOME</b></a>
-                        </li>
+                <div class="row">
+                    <div class="col-2" style="margin-top: 25px">
+                        <button style="border: 0; box-shadow: none" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon" style="width: 25px"></span>
+                        </button>
+                        <!-- <a class="navbar-brand" href="#" style="width: 75%;"><img onClick="window.location.href = 'index.php';" style="cursor: pointer;" class="mv" src="./img/Artboard 1 copy.png" alt="PT. United Farmatic Indonesia"></a> -->
+                            
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="border: 0; box-shadow:none; width: 150px; margin-top: 25px;">
+                            <ul class="navbar-nav">
+                                <li class="nav-item nav-hd">
+                                    <a class="nav-link" href="index.php"><b class="nav-color">HOME</b></a>
+                                </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link nav-hd" href="product.php"><b class="nav-color">PRODUCT</b></a>
-                        </li>
+                                <li class="nav-item">
+                                    <a class="nav-link nav-hd" href="product.php"><b class="nav-color">PRODUCT</b></a>
+                                </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link nav-hd" href="about_us.php"><b class="nav-color">ABOUT US</b></a>
-                        </li>
+                                <li class="nav-item">
+                                    <a class="nav-link nav-hd" href="about_us.php"><b class="nav-color">ABOUT US</b></a>
+                                </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link nav-hd" href="news.php"><b class="nav-color">NEWS</b></a>
-                        </li>
+                                <li class="nav-item">
+                                    <a class="nav-link nav-hd" href="news.php"><b class="nav-color">NEWS</b></a>
+                                </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link nav-hd" href="career.php"><b class="nav-color">CAREER</b></a>
-                        </li>
+                                <li class="nav-item">
+                                    <a class="nav-link nav-hd" href="career.php"><b class="nav-color">CAREER</b></a>
+                                </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link nav-hd" href="contact_us.php"><b class="nav-color">CONTACT US</b></a>
-                        </li>
-                    </ul>
+                                <li class="nav-item">
+                                    <a class="nav-link nav-hd" href="contact_us.php"><b class="nav-color">CONTACT US</b></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-10" style="height: 100%">
+                    <center>
+                        <img style="width: 85%; margin-left: -60px;" onClick="window.location.href = 'index.php';" class="mobile" src="./img/Artboard 1 copy.png" alt="PT. United Farmatic Indonesia">
+                    </center>
+                    </div>
                 </div>
+
+                
             </div>
+
+            
         </nav>
         
 

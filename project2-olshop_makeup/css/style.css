@@ -667,6 +667,12 @@ a.effect-underline:hover:after {
     height: 20px
 }
 
+.nav-mv{
+    margin: 30px; 
+    margin-left: 0;
+    display: none;
+}
+
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media only screen and (max-width: 1000px) {
