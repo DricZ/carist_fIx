@@ -165,8 +165,8 @@
                 </form>
             </div>
             
-            <div class="signup" method="post" action="sys/check_signup.php">
-                <form>
+            <div class="signup">
+                <form method="post" action="sys/signup.php">
                     <label for="chk" aria-hidden="true">Sign up</label>
                     <input type="text" name="name" placeholder="Name" required="">
                     <input type="text" name="username" placeholder="Username" required="">
