@@ -15,7 +15,7 @@
 
     //Input ke Database
     $sql = "INSERT INTO user (username, pass, name, status)
-    VALUES ($username, $password, 'pending')";
+    VALUES ($username, $password, $name, 'pending')";
     if ($conn->query($sql) === TRUE) {
         //echo "New record created successfully";
         //Redirect Back
