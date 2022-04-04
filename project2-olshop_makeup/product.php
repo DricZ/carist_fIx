@@ -378,7 +378,7 @@
         </div>
 
                 <!-- Page content -->
-                <div class="col-8 content product-pp " <?php if($total_product > 0 && $total_product <= 4){echo "style='height: 850px'";}  ?> > 
+                <div class="col-8 content product-pp " style='height: auto'> 
                     <div class="row mb-pp1" style="">
                         <?php
                             if ($result->num_rows > 0) {
@@ -429,7 +429,7 @@
                         <?php 
                                 }
                         ?>
-                        <div class="row" <?php if($total_product > 0 && $total_product <= 4){echo "style='height: 45vh'";} ?>>
+                        <div class="row d-index" <?php if($total_product > 0 && $total_product <= 4){echo "style='height: 20em'";} ?>>
                         </div>
                         <?php  
                                 //Page Bar
