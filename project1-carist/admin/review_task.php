@@ -7,6 +7,49 @@
     }
     $my_id = $_SESSION['userid'];
 
+    $contentwriter = array();
+    $designer = array();
+    $copywriter = array();
+
+    // Get Writer List
+    $sql = "SELECT * FROM user WHERE role1 = 'contentwriter' OR role2 = 'contentwriter'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            $user_id = $row['user_id'];
+            $name = $row['name'];
+            $contentwriter += ["$user_id" => "$name"];
+        }
+    }
+
+    // Get Designer List
+    $sql = "SELECT * FROM user WHERE role1 = 'designer' OR role2 = 'designer'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            $user_id = $row['user_id'];
+            $name = $row['name'];
+            $designer += ["$user_id" => "$name"];
+        }
+    }
+
+    // Get Copywriter List
+    $sql = "SELECT * FROM user WHERE role1 = 'copywriter' OR role2 = 'copywriter'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            $user_id = $row['user_id'];
+            $name = $row['name'];
+            $copywriter += ["$user_id" => "$name"];
+        }
+    }
+
 ?>
 
 
@@ -406,6 +449,19 @@
                                         $hashtag = $row2["hashtag"];
                                         $display_name = strtoupper($content_type . " " . $content_no);
                                         $section_id = strtolower("task".$task_id);
+                                        //Check Flow Step
+                                        $contentwriter_status = $row2["contentwriter_status"];
+                                        $designer_status = $row2["designer_status"];
+                                        $copywriter_status = $row2["copywriter_status"];
+                                        if($contentwriter_status == "review"){
+                                            $step = "contentwriter";
+                                        }
+                                        if($designer_status == "review"){
+                                            $step = "designer";
+                                        }
+                                        if($copywriter_status == "review"){
+                                            $step = "copywriter";
+                                        }
                                         echo "<a class='nav-link collapsed' href='#' data-toggle='collapse' data-target='#$section_id'
                                                 aria-expanded='true' aria-controls='$section_id'>
                                                 <i class='fa fa-plus-square'></i>
@@ -444,15 +500,13 @@
                                                             <hr>
                                                         </div>
                                                         <div class='col-sm-2'>
-                                                        <form method='post' action='sys/' enctype='multipart/form-data'>
-                                                            <div class='d-grid gap-3'><button class='btn btn-danger'>Move</button></div><br>
-                                                        </form>
+                                                            <div class='d-grid gap-3'><button class='btn btn-danger' data-bs-toggle='modal' data-bs-target='#moveModal' data-step='$step' data-taskid='$task_id'>Move</button></div><br>
                                                         </div>
                                                         <div class='col-sm-2'>
-                                                            <div class='d-grid gap-3'><button class='btn btn-warning'>Revision</button></div><br>
+                                                            <div class='d-grid gap-3'><button class='btn btn-warning' data-bs-toggle='modal' data-bs-target='#revisionModal' data-href='sys/revision_task.php?task_id=$task_id&step=$step'>Revision</button></div><br>
                                                         </div>
                                                         <div class='col-sm-2'>
-                                                            <div class='d-grid gap-3'><button class='btn btn-success'>Approve</button></div><br>
+                                                            <div class='d-grid gap-3'><button class='btn btn-success' data-bs-toggle='modal' data-bs-target='#approveModal' data-href='sys/approve_task.php?task_id=$task_id&step=$step'>Approve</button></div><br>
                                                         </div>
                                                     </div>
                                                 </fieldset>
@@ -510,6 +564,127 @@
         </div>
     </div>
 
+    <!-- Modal Approve -->
+    <div class="modal fade" id="approveModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Are you sure to APPROVE?</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                Select "Approve" below if you are sure to approve this task. Any approved task automatically go to next division!
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                <a class="btn btn-success btn-ok">Approve</a>
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Revision -->
+    <div class="modal fade" id="revisionModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Are you sure to give REVISION?</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                Select "Send Revision" below if you are sure to approve this task.
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                <a class="btn btn-warning btn-ok">Send Revision</a>
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Move -->
+    <div class="modal fade" id="moveModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Please select who will resume this task!</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form class="moveForm" method="get" action="sys/move_task.php">
+            <!-- Modal body -->
+            <div class="modal-body">
+                <input type='hidden' name='step' class='stepInput'>
+                <input type='hidden' name='task_id' class='taskidInput'>
+                <label for="moveto">Move to <span class='textPilih'>TASK STEP</span></label>: <br>
+                <select id="moveto" name="moveto" class="form-select" required>
+                    <?php
+                        //Get Writer List
+                        echo "<optgroup label='CONTENT WRITER'>";
+                        foreach($contentwriter as $id => $name){
+                            echo "<option value='$id' class='contentwriterSelect' disabled>";
+                            echo $name;
+                            echo "</option>";
+                        }
+                        if(empty($contentwriter)){
+                            echo "<option value='0' disabled>NO DATA</option>";
+                        }
+                        echo "</optgroup>";
+
+                        //Get Designer List
+                        echo "<optgroup label='DESIGNER'>";
+                        foreach($designer as $id => $name){
+                            echo "<option value='$id' class='designerSelect' disabled>";
+                            echo $name;
+                            echo "</option>";
+                        }
+                        if(empty($designer)){
+                            echo "<option value='0' disabled>NO DATA</option>";
+                        }
+                        echo "</optgroup>";
+
+                        //Get CopyWriter List
+                        echo "<optgroup label='COPY WRITER'>";
+                        foreach($copywriter as $id => $name){
+                            echo "<option value='$id' class='copywriterSelect' disabled>";
+                            echo $name;
+                            echo "</option>";
+                        }
+                        if(empty($copywriter)){
+                            echo "<option value='0' disabled>NO DATA</option>";
+                        }
+                        echo "</optgroup>";
+                    ?>
+                </select><br>
+                Select "Move" below if you are sure to move this task.
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-primary btn-ok">Move</button>
+            </div>
+            </form>
+
+            </div>
+        </div>
+    </div>
+
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -519,6 +694,25 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Modal Data Href -->
+    <script>
+        $('#approveModal').on('show.bs.modal', function(e) {
+            $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
+        });
+        $('#revisionModal').on('show.bs.modal', function(e) {
+            $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
+        });
+        $('#moveModal').on('show.bs.modal', function(e) {
+            var step = $(e.relatedTarget).data('step');
+            var classTarget = step + "Select";
+            console.log(classTarget);
+            $(this).find('.stepInput').attr('value', $(e.relatedTarget).data('step'));
+            $(this).find('.taskidInput').attr('value', $(e.relatedTarget).data('taskid'));
+            $(this).find("."+$(e.relatedTarget).data('step')+"Select").attr('disabled', false);
+            $(this).find('.textPilih').text(step);
+        });
+    </script>
 
 </body>
 
