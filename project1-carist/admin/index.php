@@ -12,17 +12,111 @@
 
     <title>Carist Admin - Login</title>
 
-    <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-
-    <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
     <style>
-        .login_oueter {
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height:100vh;
+            font-family: 'Jost', sans-serif;
+            background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+        }
+
+        .main{
+            width: 350px;
+            height: 500px;
+            /* background: red; */
+            overflow: hidden;
+            background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+
+            border-radius: 10px;
+            box-shadow: 5px 20px 50px #000
+        }
+
+        #chk{
+            display:none;
+        }
+
+        .login{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        label{
+            color: white;
+            font-size: 2.3em;
+            justify-content: center;
+            display: flex;
+            margin: 60px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: .5s ease-in-out;
+        }
+
+        input{
+            width: 60%;
+            height: 20px;
+            background: #e0dede;
+            justify-content: center;
+            display: flex;
+            margin: 20px auto;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+        }
+
+        button{
+            width: 60%;
+            height: 40px;
+            margin: 10px auto;
+            justify-content: center;
+            display: block;
+            color: #fff;
+            background: #573b8a;
+            font-size: 1em;
+            font-weight: bold;
+            margin-top: 20px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            transition: .2s ease-in;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background: #6d44b8;
+        }
+
+        .signup{
+            height: 460px;
+            background: #eee;
+            border-radius: 60% / 10%;
+            transform: translateY(-180px);
+            transition: .8s ease-in-out;
+        }
+
+        .signup label{
+            color: #573b8a;
+            transform: scale(.6);
+        }
+
+        #chk:checked ~ .signup{
+            transform: translateY(-500px);
+        }
+
+        #chk:checked ~ .signup label{
+            transform: scale(1);
+        }
+
+        #chk:checked ~ .login label{
+            transform: translateY(-45px) scale(0.8);
+        }
+
+        /* .login_oueter {
             width: 360px;
             max-width: 100%;
         }
@@ -32,12 +126,37 @@
         .logo_outer img{
             width:120px;
             margin-bottom: 40px;
-        }
+        } */
     </style>
 
 </head>
 
-<body style="background-color: #34c0b2">
+<body>
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+
+            <div class="login">
+                <form method="post" action="sys/check_login.php">
+                    <label for="chk" aria-hidden="true"><img src="./img/carist only cropped.png" style="width: 40%;"></label>
+                    <input type="text" name="username" placeholder="Username" required="">
+                    <input type="password" name="password" placeholder="Password" required="">
+                    <button>Login</button>
+                </form>
+            </div>
+            
+            <div class="signup">
+                <form>
+                    <label for="chk" aria-hidden="true">Sign up</label>
+                    <input type="text" name="username" placeholder="Username" required="">
+                    <input type="email" name="email" placeholder="Email" required="">
+                    <input type="password" name="password" placeholder="Password" required="">
+                    <button>Sign up</button>
+                </form>
+            </div>
+    </div>
+</body>
+
+<!-- <body style="background-color: #34c0b2">
 
     <button onclick="window.location.href = '.././'" class="btn btn-primary position-absolute" style="top: 30px; left: 30px; border-radius: 100%; width: 60px; height: 60px"><img src="./img/back.svg" style="width: 15px;"></button>
 
@@ -46,24 +165,21 @@
     display: flex;
     justify-content: center;">
 
-        <!-- Outer Row -->
         <div class="row justify-content-center" style="width: 100%;">
 
             <div class="col-xl-10 col-lg-12 col-md-9">
 
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
-                        <!-- Nested Row within Card Body -->
                         <div class="row">
-                            <!-- <div class="col-lg-6 d-none d-lg-block bg-login-image"></div> -->
                             <div class="col-lg-12">
                                 <div class="p-5">
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                         <?php
-                                            if(isset($_GET["wrong"])){
-                                                echo "<div class='text-danger'>Wrong Password! Please try again!</div><br>";
-                                            }
+                                            // if(isset($_GET["wrong"])){
+                                            //     echo "<div class='text-danger'>Wrong Password! Please try again!</div><br>";
+                                            // }
                                         ?>
                                     </div>
                                     <form class="user" method="post" action="sys/check_login.php">
@@ -94,21 +210,8 @@
                                         <button type="submit" class="btn btn-primary btn-user btn-block">
                                             Sign In
                                         </button>
-                                        <!-- <hr>
-                                        <a href="index.html" class="btn btn-google btn-user btn-block">
-                                            <i class="fab fa-google fa-fw"></i> Login with Google
-                                        </a>
-                                        <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                                            <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
-                                        </a> -->
+                                        
                                     </form>
-                                    <!-- <hr>
-                                    <div class="text-center">
-                                        <a class="small" type="reset">Reset!</a>
-                                    </div>
-                                    <div class="text-center">
-                                        <a class="small" href="register.html">Create an Account!</a>
-                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -120,34 +223,32 @@
         </div>
 
     </div>
+</body> -->
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+<script src="js/sb-admin-2.min.js"></script> -->
 
-    <script>
-        function password_show_hide() {
-            var x = document.getElementById("password");
-            var show_eye = document.getElementById("show_eye");
-            var hide_eye = document.getElementById("hide_eye");
-            show_eye.classList.remove("d-none");
-            if (x.type === "password") {
-                x.type = "text";
-                hide_eye.style.display = "none";
-                show_eye.style.display = "block";
-            } else {
-                x.type = "password";
-                hide_eye.style.display = "block";
-                show_eye.style.display = "none";
-            }
-        }
-    </script>
-</body>
+<script>
+    // function password_show_hide() {
+    //     var x = document.getElementById("password");
+    //     var show_eye = document.getElementById("show_eye");
+    //     var hide_eye = document.getElementById("hide_eye");
+    //     show_eye.classList.remove("d-none");
+    //     if (x.type === "password") {
+    //         x.type = "text";
+    //         hide_eye.style.display = "none";
+    //         show_eye.style.display = "block";
+    //     } else {
+    //         x.type = "password";
+    //         hide_eye.style.display = "block";
+    //         show_eye.style.display = "none";
+    //     }
+    // }
+</script>
+
 
 </html>
