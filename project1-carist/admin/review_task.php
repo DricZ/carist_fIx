@@ -635,7 +635,7 @@
                 <select id="moveto" name="moveto" class="form-select" required>
                     <?php
                         //Get Writer List
-                        echo "<optgroup label='CONTENT WRITER'>";
+                        echo "<optgroup class='contentwriterSelect' label='CONTENT WRITER'>";
                         foreach($contentwriter as $id => $name){
                             echo "<option value='$id' class='contentwriterSelect' disabled>";
                             echo $name;
@@ -647,7 +647,7 @@
                         echo "</optgroup>";
 
                         //Get Designer List
-                        echo "<optgroup label='DESIGNER'>";
+                        echo "<optgroup class='designerSelect' label='DESIGNER'>";
                         foreach($designer as $id => $name){
                             echo "<option value='$id' class='designerSelect' disabled>";
                             echo $name;
@@ -659,7 +659,7 @@
                         echo "</optgroup>";
 
                         //Get CopyWriter List
-                        echo "<optgroup label='COPY WRITER'>";
+                        echo "<optgroup class='copywriterSelect' label='COPY WRITER'>";
                         foreach($copywriter as $id => $name){
                             echo "<option value='$id' class='copywriterSelect' disabled>";
                             echo $name;
@@ -695,7 +695,7 @@
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
-    <!-- Modal Data Href -->
+    <!-- Modal Data -->
     <script>
         $('#approveModal').on('show.bs.modal', function(e) {
             $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
