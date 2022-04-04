@@ -15,6 +15,8 @@
     <!-- <link href="css/sb-admin-2.min.css" rel="stylesheet"> -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.css" rel="stylesheet">
 
+    <link rel="icon" type="image/x-icon" href="./img/carist only cropped.png" style="margin: -10px;">
+
     <style>
         body{
             margin: 0;
