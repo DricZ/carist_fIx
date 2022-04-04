@@ -156,6 +156,10 @@
                 overflow-y: auto;
                 max-height: calc(100vh - 150px);
             }
+
+            /* html,body {
+                height: 125%;
+            } */
         </style>
     </head>
 
@@ -374,7 +378,7 @@
         </div>
 
                 <!-- Page content -->
-                <div class="col-8 content product-pp "> 
+                <div class="col-8 content product-pp " style="height: 850px"> 
                     <div class="row mb-pp1" style="">
                         <?php
                             if ($result->num_rows > 0) {
@@ -422,8 +426,13 @@
                                 </i></p></center>
                             </div>
                         </div>
-                        <?php  
+                        <?php 
                                 }
+                        ?>
+
+                        <div class="row" style="height: 45vh">
+                        </div>
+                        <?php  
                                 //Page Bar
                                 echo "<ul class='pagination justify-content-center' style='margin:20px 0; padding: 0'>";
                                 $jumlah_no = 3;
