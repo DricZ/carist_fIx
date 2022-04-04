@@ -468,7 +468,7 @@
                             }else{
                                 echo "<div style='padding-top: 15%'>";
                                 echo "<center><h1>No Data</h1></center>";
-                                for($i=0;$i<20;$i++){
+                                for($i=0;$i<25;$i++){
                                     echo "<br>";
                                 }
                                 echo "</div>";
