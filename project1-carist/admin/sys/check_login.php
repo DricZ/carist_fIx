@@ -5,7 +5,7 @@
     $username = $_POST["username"];
     $password = $_POST["password"];
 
-    $sql = "SELECT * FROM user WHERE username='$username' AND pass='$password'";
+    $sql = "SELECT * FROM user WHERE username='$username' AND pass='$password' AND status != 'pending'";
     $result = $conn->query($sql);
 
     if($row = $result->fetch_assoc()) {
