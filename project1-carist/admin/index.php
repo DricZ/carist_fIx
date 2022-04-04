@@ -155,7 +155,7 @@
                         <div class="input-group-append">
                             <input type="password" id="password" name="password" class="form-control form-control-user"
                             id="exampleInputPassword" placeholder="Password" style="border-top-right-radius: 0; border-bottom-right-radius: 0; border-right: 0; margin-right: 0; margin-left: 60px; width: 50%;">
-                            <span class="input-group-text" onclick="password_show_hide();" style="border-top-left-radius: 0; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 0; border-left: 0; background-color: #e0dede; padding: 0.7rem; margin-top: 20px; border: 1px solid #e0dede; height: 16px; width: 11px;">
+                            <span class="input-group-text" onclick="password_show_hide('show_eye', 'hide_eye', 'password');" style="border-top-left-radius: 0; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 0; border-left: 0; background-color: #e0dede; padding: 0.7rem; margin-top: 20px; border: 1px solid #e0dede; height: 16px; width: 11px;">
                                 <i class="fas fa-eye d-none" id="show_eye"></i>
                                 <i class="fas fa-eye-slash" id="hide_eye"></i>
                             </span>
@@ -169,8 +169,15 @@
                 <form method="post" action="sys/signup.php">
                     <label for="chk" aria-hidden="true">Sign up</label>
                     <input type="text" name="name" placeholder="Name" required="">
-                    <input type="text" name="username" placeholder="Username" required="">
-                    <input type="password" name="password" placeholder="Password" required="">
+                    <input type="text" name="username" placeholder="Username" required="" style="margin-bottom: 0px;">
+                    <div class="input-group-append">
+                        <input type="password" id="password2" name="password" class="form-control form-control-user"
+                        id="exampleInputPassword" placeholder="Password" style="border-top-right-radius: 0; border-bottom-right-radius: 0; border-right: 0; margin-right: 0; margin-left: 60px; width: 50%;">
+                        <span class="input-group-text" onclick="password_show_hide('show_eye2', 'hide_eye2', 'password2');" style="border-top-left-radius: 0; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 0; border-left: 0; background-color: #e0dede; padding: 0.7rem; margin-top: 20px; border: 1px solid #e0dede; height: 16px; width: 11px;">
+                            <i class="fas fa-eye d-none" id="show_eye2"></i>
+                            <i class="fas fa-eye-slash" id="hide_eye2"></i>
+                        </span>
+                    </div>
                     <button>Sign up</button>
                 </form>
             </div>
@@ -254,10 +261,10 @@
 <script src="js/sb-admin-2.min.js"></script>
 
 <script>
-    function password_show_hide() {
-        var x = document.getElementById("password");
-        var show_eye = document.getElementById("show_eye");
-        var hide_eye = document.getElementById("hide_eye");
+    function password_show_hide(show, hide, password) {
+        var x = document.getElementById(password);
+        var show_eye = document.getElementById(show);
+        var hide_eye = document.getElementById(hide);
         show_eye.classList.remove("d-none");
         if (x.type === "password") {
             x.type = "text";
