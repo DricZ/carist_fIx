@@ -1,5 +1,27 @@
 <?php
+    session_start();
+    require "sys/connect.php";
+    require "./sys/check_integrity.php";
     require_once 'include.php';
+    if(!$valid){
+        header("Location: ./index.php");
+    }
+
+    // Get Writer List
+    $client = array();
+    $contentwriter = array();
+
+    $sql = "SELECT * FROM user WHERE role1 = 'contentwriter' OR role2 = 'contentwriter'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            $user_id = $row['user_id'];
+            $name = $row['name'];
+            $contentwriter += ["$user_id" => "$name"];
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -134,15 +156,211 @@
                         </div>
                     </div>
 
+                    <!-- Row Dashboard -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Progress List</h6>
+                                    <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                            aria-labelledby="dropdownMenuLink">
+                                            <div class="dropdown-header">Dropdown Header:</div>
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th>Client</th>
+                                                    <th>Feed (Completed)</th>
+                                                    <th>Story (Completed)</th>
+                                                    <th>Reels (Completed)</th>
+                                                    <th>TikTok (Completed)</th>
+                                                    <th>Visit</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                <?php
+                                                    $sql = "SELECT * FROM client";
+                                                    $result = $conn->query($sql);
+                                                    $total_client = $result->num_rows;
+
+                                                    if ($result->num_rows > 0) {
+                                                    // output data of each row
+                                                        while($row = $result->fetch_assoc()) {
+                                                            $client_id = $row["client_id"];
+                                                            $client_name = $row["name"];
+                                                            $client_logo = $row["client_logo"];
+                                                            $visit = $row["visit"];
+                                                            $client += ["$client_id" => "$client_name"];
+                                                            //Hitung jumlah feed, story untuk tiap client
+                                                            //Total Tasks
+                                                            //Feed
+                                                            $feed = 0;
+                                                            $sql2 = "SELECT COUNT(content_type) as feed
+                                                                    FROM task
+                                                                    WHERE content_type = 'feed' AND client_id = $client_id;";
+                                                            $result2 = $conn->query($sql2);
+                                                            if ($result2->num_rows > 0){
+                                                                while($row2 = $result2->fetch_assoc()) {
+                                                                    $feed = $row2['feed'];
+                                                                }
+                                                            }else{
+                                                                $feed = 'DATA NOT FOUND';
+                                                            }
+                                                            //Story
+                                                            $story = 0;
+                                                            $sql2 = "SELECT COUNT(content_type) as story
+                                                                    FROM task
+                                                                    WHERE content_type = 'story' AND client_id = $client_id;";
+                                                            $result2 = $conn->query($sql2);
+                                                            if ($result2->num_rows > 0){
+                                                                while($row2 = $result2->fetch_assoc()) {
+                                                                    $story = $row2['story'];
+                                                                }
+                                                            }else{
+                                                                $story = 'DATA NOT FOUND';
+                                                            }
+                                                            //Reels
+                                                            $reels = 0;
+                                                            $sql2 = "SELECT COUNT(content_type) as reels
+                                                                    FROM task
+                                                                    WHERE content_type = 'reels' AND client_id = $client_id;";
+                                                            $result2 = $conn->query($sql2);
+                                                            if ($result2->num_rows > 0){
+                                                                while($row2 = $result2->fetch_assoc()) {
+                                                                    $reels = $row2['reels'];
+                                                                }
+                                                            }else{
+                                                                $reels = 'DATA NOT FOUND';
+                                                            }
+                                                            //TikTok
+                                                            $tiktok = 0;
+                                                            $sql2 = "SELECT COUNT(content_type) as tiktok
+                                                                    FROM task
+                                                                    WHERE content_type = 'tiktok' AND client_id = $client_id;";
+                                                            $result2 = $conn->query($sql2);
+                                                            if ($result2->num_rows > 0){
+                                                                while($row2 = $result2->fetch_assoc()) {
+                                                                    $tiktok = $row2['tiktok'];
+                                                                }
+                                                            }else{
+                                                                $tiktok = 'DATA NOT FOUND';
+                                                            }
+                                                            //Done Tasks
+                                                            //Feed
+                                                            $feedDone = 0;
+                                                            $sql2 = "SELECT COUNT(content_type) as feed
+                                                                    FROM task
+                                                                    WHERE content_type = 'feed' AND client_id = $client_id AND copywriter_status = 'done';";
+                                                            $result2 = $conn->query($sql2);
+                                                            if ($result2->num_rows > 0){
+                                                                while($row2 = $result2->fetch_assoc()) {
+                                                                    $feedDone = $row2['feed'];
+                                                                }
+                                                            }else{
+                                                                $feedDone = 'DATA NOT FOUND';
+                                                            }
+                                                            //Story
+                                                            $storyDone = 0;
+                                                            $sql2 = "SELECT COUNT(content_type) as story
+                                                                    FROM task
+                                                                    WHERE content_type = 'story' AND client_id = $client_id  AND copywriter_status = 'done';";
+                                                            $result2 = $conn->query($sql2);
+                                                            if ($result2->num_rows > 0){
+                                                                while($row2 = $result2->fetch_assoc()) {
+                                                                    $storyDone = $row2['story'];
+                                                                }
+                                                            }else{
+                                                                $storyDone = 'DATA NOT FOUND';
+                                                            }
+                                                            //Reels
+                                                            $reelsDone = 0;
+                                                            $sql2 = "SELECT COUNT(content_type) as reels
+                                                                    FROM task
+                                                                    WHERE content_type = 'reels' AND client_id = $client_id;";
+                                                            $result2 = $conn->query($sql2);
+                                                            if ($result2->num_rows > 0){
+                                                                while($row2 = $result2->fetch_assoc()) {
+                                                                    $reelsDone = $row2['reels'];
+                                                                }
+                                                            }else{
+                                                                $reelsDone = 'DATA NOT FOUND';
+                                                            }
+                                                            //TikTok
+                                                            $tiktokDone = 0;
+                                                            $sql2 = "SELECT COUNT(content_type) as tiktok
+                                                                    FROM task
+                                                                    WHERE content_type = 'tiktok' AND client_id = $client_id;";
+                                                            $result2 = $conn->query($sql2);
+                                                            if ($result2->num_rows > 0){
+                                                                while($row2 = $result2->fetch_assoc()) {
+                                                                    $tiktokDone = $row2['tiktok'];
+                                                                }
+                                                            }else{
+                                                                $tiktokDone = 'DATA NOT FOUND';
+                                                            }
+
+                                                            //PRINT DATA
+                                                            echo "<tr>";
+                                                            echo "<td>$client_name</td>";
+                                                            echo "<td>$feedDone/$feed</td>";
+                                                            echo "<td>$storyDone/$story</td>";
+                                                            echo "<td>$reelsDone/$reels</td>";
+                                                            echo "<td>$tiktokDone/$tiktok</td>";
+                                                            if($visit == 1){
+                                                                echo "<td>Yes</td>";
+                                                            }else{
+                                                                echo "<td>No</td>";
+                                                            }
+                                                            echo "</tr>";
+                                                        }
+                                                    } else {
+                                                        echo "0 results";
+                                                    }
+                                                ?>
+                                                </tr>
+                                                <tfoot>
+                                                    <tr>
+                                                        <th>Total Client: <?=$total_client?></th>
+                                                        <th>Total Feed: 0</th>
+                                                        <th>Total Story: 0</th>
+                                                        <th>Total Reels: 0</th>
+                                                        <th>Total TikTok: 0</th>
+                                                        <th>Total Visit: 0</th>
+                                                    </tr>
+                                                </tfoot>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Content Row -->
 
                     <div class="row">
 
                         <!-- Area Chart -->
                         <div class="col-xl-8 col-lg-7">
-                            <div class="card shadow mb-4">
+                            <!-- <div class="card shadow mb-4"> -->
                                 <!-- Card Header - Dropdown -->
-                                <div
+                                <!-- <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
                                     <div class="dropdown no-arrow">
@@ -159,21 +377,21 @@
                                             <a class="dropdown-item" href="#">Something else here</a>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- Card Body -->
-                                <div class="card-body">
+                                <!-- <div class="card-body">
                                     <div class="chart-area">
                                         <canvas id="myAreaChart"></canvas>
                                     </div>
-                                </div>
-                            </div>
+                                </div> -->
+                            <!-- </div> -->
                         </div>
 
                         <!-- Pie Chart -->
                         <div class="col-xl-4 col-lg-5">
-                            <div class="card shadow mb-4">
+                            <!-- <div class="card shadow mb-4"> -->
                                 <!-- Card Header - Dropdown -->
-                                <div
+                                <!-- <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
                                     <div class="dropdown no-arrow">
@@ -190,9 +408,9 @@
                                             <a class="dropdown-item" href="#">Something else here</a>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- Card Body -->
-                                <div class="card-body">
+                                <!-- <div class="card-body">
                                     <div class="chart-pie pt-4 pb-2">
                                         <canvas id="myPieChart"></canvas>
                                     </div>
@@ -207,8 +425,8 @@
                                             <i class="fas fa-circle text-info"></i> Referral
                                         </span>
                                     </div>
-                                </div>
-                            </div>
+                                </div> -->
+                            <!-- </div> -->
                         </div>
                     </div>
 
@@ -219,7 +437,7 @@
                         <div class="col-lg-6 mb-4">
 
                             <!-- Project Card Example -->
-                            <div class="card shadow mb-4">
+                            <!-- <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
                                 </div>
@@ -255,10 +473,10 @@
                                             aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <!-- Color System -->
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div class="col-lg-6 mb-4">
                                     <div class="card bg-primary text-white shadow">
                                         <div class="card-body">
@@ -323,14 +541,14 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
                         </div>
 
                         <div class="col-lg-6 mb-4">
 
                             <!-- Illustrations -->
-                            <div class="card shadow mb-4">
+                            <!-- <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">Illustrations</h6>
                                 </div>
@@ -346,10 +564,10 @@
                                     <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on
                                         unDraw &rarr;</a>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <!-- Approach -->
-                            <div class="card shadow mb-4">
+                            <!-- <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
                                 </div>
@@ -360,7 +578,7 @@
                                     <p class="mb-0">Before working with this theme, you should become familiar with the
                                         Bootstrap framework, especially the utility classes.</p>
                                 </div>
-                            </div>
+                            </div> -->
 
                         </div>
                     </div>
