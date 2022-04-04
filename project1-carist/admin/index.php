@@ -12,6 +12,9 @@
 
     <title>Carist Admin - Login</title>
 
+    <!-- <link href="css/sb-admin-2.min.css" rel="stylesheet"> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.css" rel="stylesheet">
+
     <style>
         body{
             margin: 0;
@@ -22,6 +25,10 @@
             min-height:100vh;
             font-family: 'Jost', sans-serif;
             background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+        }
+
+        .input-group-append, .input-group-prepend {
+            display: flex;
         }
 
         .main{
@@ -116,6 +123,10 @@
             transform: translateY(-45px) scale(0.8);
         }
 
+        .d-none{
+            display:none;
+        }
+
         /* .login_oueter {
             width: 360px;
             max-width: 100%;
@@ -138,17 +149,27 @@
             <div class="login">
                 <form method="post" action="sys/check_login.php">
                     <label for="chk" aria-hidden="true"><img src="./img/carist only cropped.png" style="width: 40%;"></label>
-                    <input type="text" name="username" placeholder="Username" required="">
-                    <input type="password" name="password" placeholder="Password" required="">
+                    
+                        <input type="text" name="username" placeholder="Username" required="">
+                    <div class="form-group">
+                        <div class="input-group-append">
+                            <input type="password" id="password" name="password" class="form-control form-control-user"
+                            id="exampleInputPassword" placeholder="Password" style="border-top-right-radius: 0; border-bottom-right-radius: 0; border-right: 0; margin-right: 0; margin-left: 60px; width: 50%;">
+                            <span class="input-group-text" onclick="password_show_hide();" style="border-top-left-radius: 0; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 0; border-left: 0; background-color: #e0dede; padding: 0.7rem; margin-top: 20px; border: 1px solid #e0dede; height: 16px; width: 11px;">
+                                <i class="fas fa-eye d-none" id="show_eye"></i>
+                                <i class="fas fa-eye-slash" id="hide_eye"></i>
+                            </span>
+                        </div>
+                    </div>
                     <button>Login</button>
                 </form>
             </div>
             
-            <div class="signup">
+            <div class="signup" method="post" action="sys/check_signup.php">
                 <form>
                     <label for="chk" aria-hidden="true">Sign up</label>
+                    <input type="text" name="name" placeholder="Name" required="">
                     <input type="text" name="username" placeholder="Username" required="">
-                    <input type="email" name="email" placeholder="Email" required="">
                     <input type="password" name="password" placeholder="Password" required="">
                     <button>Sign up</button>
                 </form>
@@ -225,29 +246,29 @@
     </div>
 </body> -->
 
-<!-- <script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-<script src="js/sb-admin-2.min.js"></script> -->
+<script src="js/sb-admin-2.min.js"></script>
 
 <script>
-    // function password_show_hide() {
-    //     var x = document.getElementById("password");
-    //     var show_eye = document.getElementById("show_eye");
-    //     var hide_eye = document.getElementById("hide_eye");
-    //     show_eye.classList.remove("d-none");
-    //     if (x.type === "password") {
-    //         x.type = "text";
-    //         hide_eye.style.display = "none";
-    //         show_eye.style.display = "block";
-    //     } else {
-    //         x.type = "password";
-    //         hide_eye.style.display = "block";
-    //         show_eye.style.display = "none";
-    //     }
-    // }
+    function password_show_hide() {
+        var x = document.getElementById("password");
+        var show_eye = document.getElementById("show_eye");
+        var hide_eye = document.getElementById("hide_eye");
+        show_eye.classList.remove("d-none");
+        if (x.type === "password") {
+            x.type = "text";
+            hide_eye.style.display = "none";
+            show_eye.style.display = "block";
+        } else {
+            x.type = "password";
+            hide_eye.style.display = "block";
+            show_eye.style.display = "none";
+        }
+    }
 </script>
 
 
