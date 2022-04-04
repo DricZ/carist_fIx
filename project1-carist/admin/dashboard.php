@@ -1,8 +1,7 @@
 <?php
-    session_start();
+    require_once 'include.php';
     require "sys/connect.php";
     require "./sys/check_integrity.php";
-    require_once 'include.php';
     if(!$valid){
         header("Location: ./index.php");
     }
