@@ -55,7 +55,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">My Profile</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Pending User</h1>
 
                     <div class="row">
                         <div class="col-md-12">
@@ -120,6 +120,7 @@
                                                             echo "<a href='./sys/approve_user.php?id=$user_id&role=multimedia'><button type='submit' class='btn btn-warning'>Multimedia</button></a> ";
                                                             echo "<a href='./sys/approve_user.php?id=$user_id&role=contentcreator'><button type='submit' class='btn btn-warning'>Content Creator</button></a> ";
                                                             echo "<a href='./sys/approve_user.php?id=$user_id&role=it'><button type='submit' class='btn btn-warning'>IT</button></a> ";
+                                                            echo "<a href='./sys/approve_user.php?id=$user_id&role=marketing'><button type='submit' class='btn btn-warning'>Marketing</button></a> ";
                                                             echo "<a href='./sys/approve_user.php?id=$user_id&role=operational'><button type='submit' class='btn btn-danger'>Manager Operational</button></a> ";
                                                             echo "<a href='./sys/approve_user.php?id=$user_id&role=head'><button type='submit' class='btn btn-danger'>Head</button></a> ";
                                                             echo "</td>";
