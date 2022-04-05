@@ -1,5 +1,10 @@
 <?php
     require_once 'include.php';
+    require "sys/connect.php";
+    require "./sys/check_integrity.php";
+    if(!$valid){
+        header("Location: ./index.php");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">

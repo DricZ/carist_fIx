@@ -37,6 +37,13 @@
         <span>New Client</span></a>
 </li>
 
+<!-- Nav Item - Approve User -->
+<li class="nav-item active">
+    <a class="nav-link" href="pending_user.php">
+        <i class="fas fa-fw fa-check"></i>
+        <span>Approve User</span></a>
+</li>
+
 
 <!-- Divider -->
 <hr class="sidebar-divider">
@@ -46,7 +53,7 @@
 ?>
 
 <?php
-    if($operationalAccess){
+    if($operationalAccess || $adminAccess){
 ?>
 <!-- Heading -->
 <div class="sidebar-heading">
@@ -68,7 +75,7 @@
 ?>
 
 <?php
-    if($contentwriterAccess || $designerAccess || $copywriterAccess){
+    if($contentwriterAccess || $designerAccess || $copywriterAccess || $adminAccess){
 ?>
 
 <!-- Heading -->
