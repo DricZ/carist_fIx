@@ -117,6 +117,11 @@
                                                             echo "<a href='./sys/approve_user.php?id=$user_id&role=contentwriter'><button type='submit' class='btn btn-primary'>ContentWriter</button></a> ";
                                                             echo "<a href='./sys/approve_user.php?id=$user_id&role=designer'><button type='submit' class='btn btn-primary'>Designer</button></a> ";
                                                             echo "<a href='./sys/approve_user.php?id=$user_id&role=copywriter'><button type='submit' class='btn btn-primary'>CopyWriter</button></a> ";
+                                                            echo "<a href='./sys/approve_user.php?id=$user_id&role=multimedia'><button type='submit' class='btn btn-warning'>Multimedia</button></a> ";
+                                                            echo "<a href='./sys/approve_user.php?id=$user_id&role=contentcreator'><button type='submit' class='btn btn-warning'>Content Creator</button></a> ";
+                                                            echo "<a href='./sys/approve_user.php?id=$user_id&role=it'><button type='submit' class='btn btn-warning'>IT</button></a> ";
+                                                            echo "<a href='./sys/approve_user.php?id=$user_id&role=operational'><button type='submit' class='btn btn-danger'>Manager Operational</button></a> ";
+                                                            echo "<a href='./sys/approve_user.php?id=$user_id&role=head'><button type='submit' class='btn btn-danger'>Head</button></a> ";
                                                             echo "</td>";
                                                             echo "</tr>";
                                                         }
