@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -279,6 +278,11 @@
         }
     }
 </script>
-
+<?php
+    if(isset($_GET['alert'])){
+        $alert = $_GET['alert'];
+        echo "<script>alert('$alert');</script>";
+    }
+?>
 
 </html>
