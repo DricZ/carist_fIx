@@ -22,6 +22,9 @@
 <!-- Divider -->
 <hr class="sidebar-divider">
 
+<?php
+    if($adminAccess || $headAccess){
+?>
 <!-- Heading -->
 <div class="sidebar-heading">
     Admin
@@ -34,6 +37,22 @@
         <span>New Client</span></a>
 </li>
 
+
+<!-- Divider -->
+<hr class="sidebar-divider">
+
+<?php
+    }//Admin or Head End
+?>
+
+<?php
+    if($operationalAccess){
+?>
+<!-- Heading -->
+<div class="sidebar-heading">
+    Manager Operational
+</div>
+
 <!-- Nav Item - Review Task -->
 <li class="nav-item active">
     <a class="nav-link" href="review_task.php">
@@ -43,6 +62,14 @@
 
 <!-- Divider -->
 <hr class="sidebar-divider">
+
+<?php
+    }//Operational End
+?>
+
+<?php
+    if($contentwriterAccess || $designerAccess || $copywriterAccess){
+?>
 
 <!-- Heading -->
 <div class="sidebar-heading">
@@ -55,6 +82,13 @@
         <i class="fas fa-fw fa-tasks"></i>
         <span>My Task</span></a>
 </li>
+
+<!-- Divider -->
+<hr class="sidebar-divider d-none d-md-block">
+
+<?php
+    }//User
+?>
 
 <!-- Nav Item - Pages Collapse Menu -->
 <!-- <li class="nav-item">
@@ -133,9 +167,6 @@
         <i class="fas fa-fw fa-table"></i>
         <span>Tables</span></a>
 </li> -->
-
-<!-- Divider -->
-<hr class="sidebar-divider d-none d-md-block">
 
 <!-- Sidebar Toggler (Sidebar) -->
 <div class="text-center d-none d-md-inline">
