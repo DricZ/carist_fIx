@@ -252,7 +252,7 @@
                         <form method="GET" action="" autocomplete="off">
                             <div class="input-group">
                                 <div id="navbar-search-autocomplete" class="form-outline autocomplete" style="height: 0; width: 80%">
-                                    <input type="text" id="form1" name="search" class="form-control anu3" placeholder="Find products, series,...">
+                                    <input type="text" id="form2" name="search" class="form-control anu3" placeholder="Find products, series,...">
                                 </div>
                                 <button type="submit" class="btn btn-primary search-icon">
                                     <i class="fas fa-search"></i>
@@ -401,6 +401,7 @@
             console.log(products);
             /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
             autocomplete(document.getElementById("form1"), products);
+            autocomplete(document.getElementById("form2"), products);
             autocomplete(document.getElementById("category"), category);
         </script>
     </body>
