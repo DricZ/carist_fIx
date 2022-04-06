@@ -22,6 +22,14 @@
         }
     }
 
+    $sql = "SELECT * FROM user WHERE status='pending'";
+    $result = $conn->query($sql);
+    $pendingUser = $result->num_rows;
+
+    $sql = "SELECT * FROM user WHERE status='active' AND name NOT LIKE '%demo%'";
+    $result = $conn->query($sql);
+    $activeUser = $result->num_rows;
+
     
 ?>
 <!DOCTYPE html>
@@ -149,7 +157,7 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                                 Total Active User</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?=$activeUser?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-user fa-2x text-gray-300"></i>
@@ -167,7 +175,7 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                                 Pending User Requests</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?=$pendingUser?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-user-times fa-2x text-gray-300"></i>
@@ -374,9 +382,93 @@
                         </div>
                     </div>
 
+
+                    <!-- Assign Task -->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Assign Task</h6>
+                                    <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                            aria-labelledby="dropdownMenuLink">
+                                            <div class="dropdown-header">Dropdown Header:</div>
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                <form method="post" action="./sys/assign_copywriter.php">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            Pilih Client:
+                                            <select class="form-select" id="client" name="client">
+                                                <?php
+                                                    foreach($client as $client_id => $client_name){
+                                                        echo "<option value='$client_id'>";
+                                                        echo $client_name;
+                                                        echo "</option>";
+                                                    }
+                                                ?>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            Pilih ContentWriter:
+                                            <select class="form-select" id="contentwriter" name="contentwriter" required>
+                                                <?php
+                                                    //Get Writer List
+                                                    foreach($contentwriter as $id => $name){
+                                                        echo "<option value='$id'>";
+                                                        echo $name;
+                                                        echo "</option>";
+                                                    }
+                                                    if(empty($contentwriter)){
+                                                        echo "<option value='0'>NO DATA</option>";
+                                                    }
+                                                ?>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-xl-3">
+                                            Feed: <input type="number" class="form-control" name="feed" max="99" min="0" value="0">
+                                        </div>
+                                        <div class="col-xl-3">
+                                            Story: <input type="number" class="form-control" name="story" max="99" min="0" value="0">
+                                        </div>
+                                        <div class="col-xl-3">
+                                            Reels: <input type="number" class="form-control" name="reels" max="99" min="0" value="0">
+                                        </div>
+                                        <div class="col-xl-3">
+                                            TikTok: <input type="number" class="form-control" name="tiktok" max="99" min="0" value="0"><br>
+                                        </div>
+                                    </div>
+                                    <div class='d-grid gap-2 d-md-flex justify-content-md'>
+                                        <button type="submit" class='btn btn-primary'>Assign</button>
+                                    </div>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
 <?php
     }   //Admin End
 ?>
+
 
                     <!-- Content Row -->
 
@@ -668,6 +760,13 @@
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/datatables-demo.js"></script>
 
 </body>
 
