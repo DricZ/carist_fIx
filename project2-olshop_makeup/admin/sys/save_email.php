@@ -26,7 +26,7 @@
         }
     }
 
-    header("Location: ../../product.php");
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
     
 
 ?>

@@ -205,7 +205,7 @@
                     <div id="bar4" hidden>
                         <a class="dalem" href="?filter=All Condition">All Condition</a>
                         <a class="dalem" href="?filter=Komedo">Komedo</a>
-                        <a class="dalem" href="?filter=Papule (Light)">Papule (light)</a>
+                        <a class="dalem" href="?filter=Papule (Light)">Papule (Light)</a>
                         <a class="dalem" href="?filter=Pustule (Medium)">Pustule (Medium)</a>
                         <a class="dalem" href="?filter=Nodule (Severe)">Nodule (Severe)</a>
                     </div>
@@ -244,13 +244,13 @@
                         <a class="dalem" href="?filter=Solasense">Solasense</a>
                         <a class="dalem" href="?filter=Kaneira">Kaneira</a>
                         <a class="dalem" href="?filter=Beaulash">Beaulash</a>
-                        <a class="dalem" href="?filter=Skinisse">Skinisse</a>
+                        <a class="dalem" href="?filter=Skinesse">Skinesse</a>
                     </div>
                 </div>
 
                 <!-- Sidebar Jadi Putih -->
                 <script>
-                    var selected = $("a:contains('<?=$filter?>')");
+                    var selected = $("a:contains('<?=$filter?>')").filter(function() {return $(this).text() === "<?=$filter?>";});
                     <?php
                         if ($sidebar){
                     ?>
@@ -337,7 +337,7 @@
                         <li><p class="dropdown-header bb" style="font-weight: 700; color: black;">BASED ON ACNE SEVERITY</p></li>
                         <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="?filter=All Condition">All Condition</a></li>
                         <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="?filter=Komedo">Komedo</a></li>
-                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="?filter=Papule (Light)">Papule (light)</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="?filter=Papule (Light)">Papule (Light)</a></li>
                         <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="?filter=Pustule (Medium)">Pustule (Medium)</a></li>
                         <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="?filter=Nodule (Severe)">Nodule (Severe)</a></li><br>
 
@@ -370,7 +370,7 @@
                         <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="?filter=Solasense">Solasense</a></li>
                         <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="?filter=Kaneira">Kaneira</a></li>
                         <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="?filter=Beaulash">Beaulash</a></li>
-                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="?filter=Skinisse">Skinisse</a></li>
+                        <li><a class="dropdown-item dalem" style="color: black; font-weight:normal" href="?filter=Skinesse">Skinesse</a></li>
                         
                     </ul>
                 </div>
