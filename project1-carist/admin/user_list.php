@@ -24,7 +24,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Pending User</title>
+    <title>User List</title>
+
+    <!-- Custom styles for this page -->
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
 
@@ -55,14 +58,14 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Pending User</h1>
+                    <h1 class="h3 mb-4 text-gray-800">User List</h1>
 
                     <div class="row">
                         <div class="col-md-12">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Edit Profile</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">All User</h6>
                                     <!-- <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -87,12 +90,21 @@
                                                     <th>User ID</th>
                                                     <th>Username</th>
                                                     <th>Name</th>
+                                                    <th>Role 1</th>
+                                                    <th>Role 2</th>
+                                                    <th>Email</th>
+                                                    <th>Phone</th>
+                                                    <th>City</th>
+                                                    <th>Address</th>
+                                                    <th>Birthday</th>
+                                                    <th>Instagram</th>
+                                                    <th>TikTok</th>
                                                     <th>Accept as</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <?php
-                                                    $sql = "SELECT * FROM user WHERE status = 'pending'";
+                                                    $sql = "SELECT * FROM user WHERE name NOT LIKE '%demo%'";
                                                     $result = $conn->query($sql);
                                                     if ($result->num_rows > 0) {
                                                         // output data of each row
@@ -110,19 +122,31 @@
                                                             $birthday = $row['birthday'];
                                                             $instagram = $row['instagram'];
                                                             $tiktok = $row['tiktok'];
+                                                            $status = $row['status'];
                                                             echo "<td>$user_id</td>";
                                                             echo "<td>$username</td>";
                                                             echo "<td>$name</td>";
+                                                            echo "<td>$role1</td>";
+                                                            echo "<td>$role2</td>";
+                                                            echo "<td>$email</td>";
+                                                            echo "<td>$phone</td>";
+                                                            echo "<td>$city</td>";
+                                                            echo "<td>$address</td>";
+                                                            echo "<td>$birthday</td>";
+                                                            echo "<td>$instagram</td>";
+                                                            echo "<td>$tiktok</td>";
                                                             echo "<td>";
-                                                            echo "<a href='./sys/approve_user.php?id=$user_id&role=contentwriter'><button type='submit' class='btn btn-primary'>ContentWriter</button></a> ";
-                                                            echo "<a href='./sys/approve_user.php?id=$user_id&role=designer'><button type='submit' class='btn btn-primary'>Designer</button></a> ";
-                                                            echo "<a href='./sys/approve_user.php?id=$user_id&role=copywriter'><button type='submit' class='btn btn-primary'>CopyWriter</button></a> ";
-                                                            echo "<a href='./sys/approve_user.php?id=$user_id&role=multimedia'><button type='submit' class='btn btn-warning'>Multimedia</button></a> ";
-                                                            echo "<a href='./sys/approve_user.php?id=$user_id&role=contentcreator'><button type='submit' class='btn btn-warning'>Content Creator</button></a> ";
-                                                            echo "<a href='./sys/approve_user.php?id=$user_id&role=it'><button type='submit' class='btn btn-warning'>IT</button></a> ";
-                                                            echo "<a href='./sys/approve_user.php?id=$user_id&role=marketing'><button type='submit' class='btn btn-warning'>Marketing</button></a> ";
-                                                            echo "<a href='./sys/approve_user.php?id=$user_id&role=operational'><button type='submit' class='btn btn-danger'>Manager Operational</button></a> ";
-                                                            echo "<a href='./sys/approve_user.php?id=$user_id&role=head'><button type='submit' class='btn btn-danger'>Head</button></a> ";
+                                                            if($status == "pending"){
+                                                                echo "<a href='./sys/approve_user.php?id=$user_id&role=contentwriter'><button type='submit' class='btn btn-primary'>ContentWriter</button></a> ";
+                                                                echo "<a href='./sys/approve_user.php?id=$user_id&role=designer'><button type='submit' class='btn btn-primary'>Designer</button></a> ";
+                                                                echo "<a href='./sys/approve_user.php?id=$user_id&role=copywriter'><button type='submit' class='btn btn-primary'>CopyWriter</button></a> ";
+                                                                echo "<a href='./sys/approve_user.php?id=$user_id&role=multimedia'><button type='submit' class='btn btn-warning'>Multimedia</button></a> ";
+                                                                echo "<a href='./sys/approve_user.php?id=$user_id&role=contentcreator'><button type='submit' class='btn btn-warning'>Content Creator</button></a> ";
+                                                                echo "<a href='./sys/approve_user.php?id=$user_id&role=it'><button type='submit' class='btn btn-warning'>IT</button></a> ";
+                                                                echo "<a href='./sys/approve_user.php?id=$user_id&role=marketing'><button type='submit' class='btn btn-warning'>Marketing</button></a> ";
+                                                                echo "<a href='./sys/approve_user.php?id=$user_id&role=operational'><button type='submit' class='btn btn-danger'>Manager Operational</button></a> ";
+                                                                echo "<a href='./sys/approve_user.php?id=$user_id&role=head'><button type='submit' class='btn btn-danger'>Head</button></a> ";
+                                                            }
                                                             echo "</td>";
                                                             echo "</tr>";
                                                         }
@@ -189,6 +213,13 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/datatables-demo.js"></script>
 
     <!-- Modal Data -->
     <script>
