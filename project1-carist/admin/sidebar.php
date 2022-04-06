@@ -39,9 +39,9 @@
 
 <!-- Nav Item - Approve User -->
 <li class="nav-item active">
-    <a class="nav-link" href="pending_user.php">
-        <i class="fas fa-fw fa-check"></i>
-        <span>Approve User</span></a>
+    <a class="nav-link" href="user_list.php">
+        <i class="fas fa-fw fa-user"></i>
+        <span>User List</span></a>
 </li>
 
 
