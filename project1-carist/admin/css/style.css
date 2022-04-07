@@ -12,6 +12,12 @@ a {
   text-decoration: none;
 }
 
+.navnc{
+  height: 50px;
+  padding-top: 5px;
+  padding-left: 0;
+}
+
 /* -------------------------------- 
 
 Basic Style
@@ -138,7 +144,7 @@ Triangle breadcrumb
   }
   .cd-breadcrumb.triangle li > * {
     position: relative;
-    padding: 1em .8em 1em 2.5em;
+    /* padding: 1em .8em 1em 2.5em; */
     color: #2c3f4c;
     background-color: #edeff0;
     /* the border color is used to style its ::after pseudo-element */
@@ -147,11 +153,11 @@ Triangle breadcrumb
   .cd-breadcrumb.triangle li.current > * {
     /* selected step */
     color: #ffffff;
-    background-color: #96c03d;
-    border-color: #96c03d;
+    background-color:cadetblue;
+    border-color:cadetblue;
   }
   .cd-breadcrumb.triangle li:first-of-type > * {
-    padding-left: 1.6em;
+    /* padding-left: 1.6em; */
     border-radius: .25em 0 0 .25em;
   }
   .cd-breadcrumb.triangle li:last-of-type > * {
