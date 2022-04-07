@@ -43,14 +43,137 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <nav>
-                    <ol class="cd-breadcrumb triangle custom-icons">
-                        <li><a href="#0">Home</a></li>
-                        <li><a href="#0">Gallery</a></li>
-                        <li class="current"><em>Web</em></li>
-                        <li><em>Project</em></li>
+                <nav style="margin-bottom: 30px;">
+                    <ol class="cd-breadcrumb triangle custom-icons" style="justify-content:left; display:flex; margin-left: 35px;">
+                        <li class="current"><em class="navnc">Brand Information</em></li>
+                        <li><a class="navnc" href="#0">Invoice</a></li>
                     </ol>
                 </nav>
+
+                <div class="row">
+                    <div class="col-2">
+
+                    </div>
+
+                    <div class="col-5">
+                        <form class="">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-auto">
+                                    <label for="inputnama" class="col-form-label">Nama Brand: </label>
+                                </div>
+                                <div class="col-auto">
+                                    <input type="text" id="inputnama" class="form-control" required>
+                                </div>
+                            </div><br>
+
+                            <div class="row g-3 align-items-center">
+                                <div class="col-auto">
+                                    <label for="inputalamat" class="col-form-label">Alamat: </label>
+                                </div>
+                                <div class="col-auto">
+                                    <input type="text" id="inputalamat" class="form-control" required>
+                                </div>
+                            </div><br>
+
+                            <div class="row g-3 align-items-center">
+                                <div class="col-auto">
+                                    <label for="inputnohp" class="col-form-label">Nomor Handphone: </label>
+                                </div>
+                                <div class="col-auto">
+                                    <input type="text" id="inputnohp" class="form-control" required>
+                                </div>
+                            </div><br>
+
+                            <label for="tanggal" aria-hidden="true">Tanggal: </label>
+                            <div class="row" style="width: 70%;">
+                                <div class="col" style="display: flex; justify-content: center;">
+                                    From
+                                </div>
+
+                                <div class="col" style="display: flex; justify-content: center;">
+                                    To
+                                </div>
+                            </div>
+
+                            <div class="row" style="width: 70%;">
+                                <div class="col" style="display: flex; justify-content: center;">
+                                    <input type="date" name="tanggal" placeholder="tanggal" required="">
+                                </div>
+
+                                <div class="col" style="display: flex; justify-content: center;">
+                                    <input type="date" name="tanggal" placeholder="tanggal2" required="">
+                                </div>
+                            </div><br>
+                            
+                            <div class="row g-3 align-items-center">
+                                <div class="col-auto">
+                                    <label for="inputig" class="col-form-label">Instagram ID: </label>
+                                </div>
+                                <div class="col-auto">
+                                    <input type="text" id="inputig" class="form-control" required>
+                                </div>
+                            </div><br>
+
+                            <div class="row g-3 align-items-center">
+                                <div class="col-auto">
+                                    <label for="inputtt" class="col-form-label">Tiktok ID: </label>
+                                </div>
+                                <div class="col-auto">
+                                    <input type="text" id="inputtt" class="form-control" required>
+                                </div>
+                            </div><br>
+
+                            <div class="row g-3 align-items-center">
+                                <div class="col-auto">
+                                    <label for="inputmarkt" class="col-form-label">Marketing: </label>
+                                </div>
+                                <div class="col-6">
+                                    <select id="inputmarkt" class="form-select" required>
+                                        <option>Pilihan</option>
+                                        <option>Anu</option>
+                                    </select>
+                                </div>
+                            </div><br>
+
+                            <button type="submit" class="btn btn-primary" style="margin-bottom: 30px;">Submit</button>
+
+                        </form>
+                    </div>
+
+                    <div class="col-5">
+                        <form>
+                            <div class="row g-3 align-items-center">
+                                <div class="col-auto">
+                                    <label for="service" class="col-form-label">Service: </label>
+                                </div>
+                                <div class="col-6">
+                                    <select id="service" class="form-select" required>
+                                        <option>Pilihan</option>
+                                        <option>Anu</option>
+                                    </select>
+                                </div>
+                            </div><br>
+
+                            <div class="row g-3 align-items-center">
+                                <div class="col-auto">
+                                    <label for="price" class="col-form-label">Price: </label>
+                                </div>
+                                <div class="col-auto">
+                                    <input type="text" id="price" class="form-control" required>
+                                </div>
+                            </div><br>
+
+                            <div class="row g-3 align-items-center">
+                                <div class="col-auto">
+                                    <label for="notes" class="col-form-label">Notes: </label>
+                                </div>
+                                <div class="col-8">
+                                    <textarea type="text" id="notes" class="form-control"></textarea>
+                                </div>
+                            </div><br>
+                        </form>
+                    </div>
+                </div>
                 <!-- /.container-fluid -->
 
             </div>
