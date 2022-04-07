@@ -80,7 +80,7 @@
                     <div class="row">
                         <div class="col-3">
                             <div class="form-group" style="margin-left: 30px;">
-                                <label>Upload Logo</label>
+                                <label>Upload To</label>
                                 <div class="input-group">
                                     <span class="input-group-btn">
                                         <span class="btn btn-light btn-file">
