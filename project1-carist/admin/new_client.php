@@ -72,7 +72,7 @@
                 <nav style="margin-bottom: 30px;">
                     <ol class="cd-breadcrumb triangle custom-icons" style="justify-content:left; display:flex; margin-left: 35px;">
                         <li class="current"><em class="navnc">Brand Information</em></li>
-                        <li><a class="navnc" href="#0">Invoice</a></li>
+                        <li><a class="navnc" href="./new_client_inv.php">Invoice</a></li>
                     </ol>
                 </nav>
 

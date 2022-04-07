@@ -17,7 +17,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>New Client</title>
+    <title>New Client - Invoice</title>
+    
 </head>
 
 <body id="page-top">
@@ -45,133 +46,141 @@
                 <!-- Begin Page Content -->
                 <nav style="margin-bottom: 30px;">
                     <ol class="cd-breadcrumb triangle custom-icons" style="justify-content:left; display:flex; margin-left: 35px;">
-                        <li class="current"><em class="navnc">Brand Information</em></li>
-                        <li><a class="navnc" href="#0">Invoice</a></li>
+                        <li><a class="navnc" href="./new_client.php"><em class="navnc">Brand Information</em></a></li>
+                        <li class="current"><em class="navnc">Invoice</em></li>
                     </ol>
                 </nav>
 
-                <div class="row">
-                    <div class="col-2">
+                <div class="row" style="padding-left: 40px;padding-right: 40px;">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-2">
+                                <img src="./img/carist only cropped.png" style="width: 100px;">
+                            </div>
 
+                            <div class="col" style="display: table;">
+                                <div class="row" style="display: table-cell; vertical-align: bottom;">
+                                    <div class="col">
+                                        <p style="margin-bottom: 0; font-size:20px; font-weight: bold;">CARIST</p>
+                                        <p style="margin-bottom: 0; font-size:20px; font-weight: bold;">CORPORATION</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="col-5">
-                        <form class="">
-                            <div class="row g-3 align-items-center">
-                                <div class="col-auto">
-                                    <label for="inputnama" class="col-form-label">Nama Brand: </label>
-                                </div>
-                                <div class="col-auto">
-                                    <input type="text" id="inputnama" class="form-control" required>
-                                </div>
-                            </div><br>
+                    <div class="col" style="display: grid; justify-content: right; padding-right: 20px;">
+                        <div class="row" style="height: 5px;">
+                            <div class="col">
+                                <p style="text-align: right; font-size: 20px"><b>INVOICE</b></p>
+                            </div>
+                        </div>
 
-                            <div class="row g-3 align-items-center">
-                                <div class="col-auto">
-                                    <label for="inputalamat" class="col-form-label">Alamat: </label>
-                                </div>
-                                <div class="col-auto">
-                                    <input type="text" id="inputalamat" class="form-control" required>
-                                </div>
-                            </div><br>
+                        <div class="row">
+                            <div class="col">
+                                <p>1 January 2022</p>
+                            </div>
+                        </div>
+                    </div>
 
-                            <div class="row g-3 align-items-center">
-                                <div class="col-auto">
-                                    <label for="inputnohp" class="col-form-label">Nomor Handphone: </label>
-                                </div>
-                                <div class="col-auto">
-                                    <input type="text" id="inputnohp" class="form-control" required>
-                                </div>
-                            </div><br>
+                    <p style="margin: 0; margin-top: 20px">Waru, Sidoarjo</p>
+                    <p style="margin: 0;">61256</p>
+                    <div class="row">
+                        <div class="col">
+                            <p style="margin: 0;">+62 819 5152 001</p>
+                        </div>
+                        <div class="col" style="display: grid; justify-content: right; padding:0">
+                            <p style="margin: 0; text-align: right;">To: Nama Brand</p>
+                        </div>
+                    </div>
 
-                            <label for="tanggal" aria-hidden="true">Tanggal: </label>
-                            <div class="row" style="width: 70%;">
-                                <div class="col" style="display: flex; justify-content: center;">
-                                    From
+                    <div class="row" style="border: 2px solid;padding: 20px;margin-left: 10px; margin-top: 20px; width: 98%;">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-7">
+                                    <p>Social Media Management (Instagram)</p>
                                 </div>
 
-                                <div class="col" style="display: flex; justify-content: center;">
-                                    To
+                                <div class="col-2">
+
+                                </div>
+
+                                <div class="col-3">
+                                    <p style="text-align: right;">Rp. 3.000.000</p>
                                 </div>
                             </div>
 
-                            <div class="row" style="width: 70%;">
-                                <div class="col" style="display: flex; justify-content: center;">
-                                    <input type="date" name="tanggal" placeholder="tanggal" required="">
+                            <div class="row">
+                                <div class="col-7">
+                                    <p>Social Media Management (Instagram)</p>
                                 </div>
 
-                                <div class="col" style="display: flex; justify-content: center;">
-                                    <input type="date" name="tanggal" placeholder="tanggal2" required="">
-                                </div>
-                            </div><br>
-                            
-                            <div class="row g-3 align-items-center">
-                                <div class="col-auto">
-                                    <label for="inputig" class="col-form-label">Instagram ID: </label>
-                                </div>
-                                <div class="col-auto">
-                                    <input type="text" id="inputig" class="form-control" required>
-                                </div>
-                            </div><br>
+                                <div class="col-2">
 
-                            <div class="row g-3 align-items-center">
-                                <div class="col-auto">
-                                    <label for="inputtt" class="col-form-label">Tiktok ID: </label>
                                 </div>
-                                <div class="col-auto">
-                                    <input type="text" id="inputtt" class="form-control" required>
-                                </div>
-                            </div><br>
 
-                            <div class="row g-3 align-items-center">
-                                <div class="col-auto">
-                                    <label for="inputmarkt" class="col-form-label">Marketing: </label>
+                                <div class="col-3">
+                                    <p style="text-align: right;">Rp. 3.000.000</p>
                                 </div>
-                                <div class="col-6">
-                                    <select id="inputmarkt" class="form-select" required>
-                                        <option>Pilihan</option>
-                                        <option>Anu</option>
-                                    </select>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-7">
+                                    <p>Social Media Management (Instagram)</p>
                                 </div>
-                            </div><br>
 
-                            <button type="submit" class="btn btn-primary" style="margin-bottom: 30px;">Submit</button>
+                                <div class="col-2">
 
-                        </form>
+                                </div>
+
+                                <div class="col-3">
+                                    <p style="text-align: right;">Rp. 3.000.000</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-7">
+                                    <p>Social Media Management (Instagram)</p>
+                                </div>
+
+                                <div class="col-2">
+
+                                </div>
+
+                                <div class="col-3">
+                                    <p style="text-align: right;">Rp. 3.000.000</p>
+                                </div>
+                            </div>
+
+                            <hr/>
+
+                            <div class="row">
+                                <div class="col-7">
+
+                                </div>
+
+                                <div class="col-2">
+                                    <p style="text-align: right;">Total: </p>
+                                </div>
+
+                                <div class="col-3">
+                                    <p style="text-align: right;">Rp. 12.000.000</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="col-5">
-                        <form>
-                            <div class="row g-3 align-items-center">
-                                <div class="col-auto">
-                                    <label for="service" class="col-form-label">Service: </label>
-                                </div>
-                                <div class="col-6">
-                                    <select id="service" class="form-select" required>
-                                        <option>Pilihan</option>
-                                        <option>Anu</option>
-                                    </select>
-                                </div>
-                            </div><br>
+                    <div class="row g-3 align-items-center mb-2">
+                            <label for="notes" class="col-form-label">Notes: </label>
+                        <div class="col-4 mt-0">
+                            <textarea type="text" id="notes" rows="5" name="notes" class="form-control"></textarea>
+                        </div>
+                    </div>
 
-                            <div class="row g-3 align-items-center">
-                                <div class="col-auto">
-                                    <label for="price" class="col-form-label">Price: </label>
-                                </div>
-                                <div class="col-auto">
-                                    <input type="text" id="price" class="form-control" required>
-                                </div>
-                            </div><br>
-
-                            <div class="row g-3 align-items-center">
-                                <div class="col-auto">
-                                    <label for="notes" class="col-form-label">Notes: </label>
-                                </div>
-                                <div class="col-8">
-                                    <textarea type="text" id="notes" class="form-control"></textarea>
-                                </div>
-                            </div><br>
-                        </form>
+                    <div class="row mb-5" style="display: grid; justify-content: right;">
+                        <div class="col">
+                            <button class="btn btn-primary" type="submit">SEND</button>
+                        </div>
                     </div>
                 </div>
                 <!-- /.container-fluid -->
