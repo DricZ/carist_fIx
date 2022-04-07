@@ -18,7 +18,7 @@
     if ($conn->query($sql) === TRUE) {
         echo "Record updated successfully";
         //Redirect Back
-        header("Location: ../pending_user.php");
+        header("Location: ../user_list.php");
     } else {
         echo "Error updating record: " . $conn->error;
     }
