@@ -96,7 +96,7 @@
                         <div class="col-5">
                             <div class="row g-3 align-items-center">
                                 <div class="col-auto">
-                                    <label for="inputnama" class="col-form-label">Nama Brand: </label>
+                                    <label for="inputnama" class="col-form-label">Brand Name: </label>
                                 </div>
                                 <div class="col-auto">
                                     <input type="text" id="inputnama" name="client" class="form-control" required>
@@ -105,7 +105,7 @@
 
                             <div class="row g-3 align-items-center">
                                 <div class="col-auto">
-                                    <label for="inputalamat" class="col-form-label">Alamat: </label>
+                                    <label for="inputalamat" class="col-form-label">Address: </label>
                                 </div>
                                 <div class="col-auto">
                                     <input type="text" id="inputalamat" name="address" class="form-control" required>
@@ -114,14 +114,14 @@
 
                             <div class="row g-3 align-items-center">
                                 <div class="col-auto">
-                                    <label for="inputnohp" class="col-form-label">Nomor Handphone: </label>
+                                    <label for="inputnohp" class="col-form-label">Phone Number: </label>
                                 </div>
                                 <div class="col-auto">
                                     <input type="number" id="inputnohp" name="phone" class="form-control" required>
                                 </div>
                             </div><br>
 
-                            <label for="tanggal" aria-hidden="true">Tanggal: </label>
+                            <label for="tanggal" aria-hidden="true">Date: </label>
                             <div class="row" style="width: 70%;">
                                 <div class="col" style="display: flex; justify-content: center;">
                                     From
