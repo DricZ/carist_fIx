@@ -43,6 +43,10 @@
         #img-upload{
             width: 100%;
         }
+
+        .col-8{
+            padding: 0;
+        }
     </style>
 </head>
 
@@ -78,51 +82,44 @@
 
                 <form method="post" action="sys/add_client.php" enctype="multipart/form-data">
                     <div class="row">
-                        <div class="col-3">
-                            <div class="form-group" style="margin-left: 30px;">
-                                <label>Upload To</label>
-                                <div class="input-group">
-                                    <span class="input-group-btn">
-                                        <span class="btn btn-light btn-file">
-                                            Browse… <input type="file" name="logo" id="imgInp">
-                                        </span>
-                                    </span>
-                                    <input type="text" class="form-control" readonly required>
-                                </div>
+                        <div class="col-4">
+                            <div class="form-group" style="margin-left: 40px;padding-right: 20px;">
+                                <label class="form-label" for="customFile">Upload To</label>
+                                <input type="file" class="form-control" id="customFile" />
                                 <img id='img-upload'/>
                             </div>
                         </div>
 
-                        <div class="col-5">
+                        <div class="col-4">
                             <div class="row g-3 align-items-center">
-                                <div class="col-auto">
+                                <div class="col-3">
                                     <label for="inputnama" class="col-form-label">Brand Name: </label>
                                 </div>
-                                <div class="col-auto">
+                                <div class="col-8">
                                     <input type="text" id="inputnama" name="client" class="form-control" required>
                                 </div>
                             </div><br>
 
                             <div class="row g-3 align-items-center">
-                                <div class="col-auto">
+                                <div class="col-3">
                                     <label for="inputalamat" class="col-form-label">Address: </label>
                                 </div>
-                                <div class="col-auto">
+                                <div class="col-8">
                                     <input type="text" id="inputalamat" name="address" class="form-control" required>
                                 </div>
                             </div><br>
 
                             <div class="row g-3 align-items-center">
-                                <div class="col-auto">
+                                <div class="col-3">
                                     <label for="inputnohp" class="col-form-label">Phone Number: </label>
                                 </div>
-                                <div class="col-auto">
+                                <div class="col-8">
                                     <input type="number" id="inputnohp" name="phone" class="form-control" required>
                                 </div>
                             </div><br>
 
                             <label for="tanggal" aria-hidden="true">Date: </label>
-                            <div class="row" style="width: 70%;">
+                            <div class="row" style="width: 100%;">
                                 <div class="col" style="display: flex; justify-content: center;">
                                     From
                                 </div>
@@ -132,57 +129,57 @@
                                 </div>
                             </div>
 
-                            <div class="row" style="width: 70%;">
+                            <div class="row" style="width: 100%;">
                                 <div class="col" style="display: flex; justify-content: center;">
-                                    <input type="date" name="tanggal" name="from" placeholder="tanggal" required="">
+                                    <input type="date" class="form-control" name="tanggal" name="from" placeholder="tanggal" required="">
                                 </div>
 
                                 <div class="col" style="display: flex; justify-content: center;">
-                                    <input type="date" name="tanggal" name="to" placeholder="tanggal2" required="">
+                                    <input type="date" class="form-control" name="tanggal" name="to" placeholder="tanggal2" required="">
                                 </div>
                             </div><br>
                             
                             <div class="row g-3 align-items-center">
-                                <div class="col-auto">
+                                <div class="col-3">
                                     <label for="inputig" class="col-form-label">Instagram ID: </label>
                                 </div>
-                                <div class="col-auto">
+                                <div class="col-8">
                                     <input type="text" id="inputig" class="form-control" name="instagram">
                                 </div>
                             </div><br>
 
                             <div class="row g-3 align-items-center">
-                                <div class="col-auto">
+                                <div class="col-3">
                                     <label for="inputtt" class="col-form-label">Tiktok ID: </label>
                                 </div>
-                                <div class="col-auto">
+                                <div class="col-8">
                                     <input type="text" id="inputtt" class="form-control" name="tiktok">
                                 </div>
                             </div><br>
 
                             <div class="row g-3 align-items-center">
-                                <div class="col-auto">
+                                <div class="col-3">
                                     <label for="fb" class="col-form-label">Facebook: </label>
                                 </div>
-                                <div class="col-auto">
+                                <div class="col-8">
                                     <input type="text" id="fb" class="form-control" name="facebook">
                                 </div>
                             </div><br>
 
                             <div class="row g-3 align-items-center">
-                                <div class="col-auto">
+                                <div class="col-3">
                                     <label for="yt" class="col-form-label">Youtube: </label>
                                 </div>
-                                <div class="col-auto">
+                                <div class="col-8">
                                     <input type="text" id="yt" class="form-control" name="youtube">
                                 </div>
                             </div><br>
 
                             <div class="row g-3 align-items-center">
-                                <div class="col-auto">
+                                <div class="col-3">
                                     <label for="inputmarkt" class="col-form-label">Marketing: </label>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-8">
                                     <select id="inputmarkt" class="form-select" name="marketing" required>
                                         <option value="Head" selected>Head</option>
                                         <option value="1">Steven</option>
@@ -193,15 +190,15 @@
                                 </div>
                             </div><br>
 
-                            <button type="submit" class="btn btn-primary" style="margin-bottom: 30px;">Submit</button>
+                            <button type="submit" class="btn btn-primary" style="margin-bottom: 30px;width: 110px;">Submit</button>
                         </div>
 
                         <div class="col-4">
                             <div class="row g-3 align-items-center">
-                                <div class="col-auto">
+                                <div class="col-2">
                                     <label for="service" class="col-form-label">Service: </label>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-8">
                                     <select id="service" class="form-select" name="service" required >
                                         <option value="Service1" selected>Service1</option>
                                         <option value="Service2">Service2</option>
@@ -211,19 +208,19 @@
                             </div><br>
 
                             <div class="row g-3 align-items-center">
-                                <div class="col-auto">
+                                <div class="col-2">
                                     <label for="price" class="col-form-label">Price: </label>
                                 </div>
-                                <div class="col-auto">
+                                <div class="col-8">
                                     <input type="text" id="price" class="form-control" name="price" disabled value="1000000">
                                 </div>
                             </div><br>
 
                             <div class="row g-3 align-items-center">
-                                <div class="col-auto">
+                                <div class="col-2">
                                     <label for="visit" class="col-form-label">Visit: </label>
                                 </div>
-                                <div class="col-auto">
+                                <div class="col-8">
                                     <input class="form-check-input" type="checkbox" style="position: relative; margin-left: 0" name="visit" value="visit" id="visit">
                                 </div>
                             </div><br>
@@ -233,7 +230,7 @@
                                     <label for="notes" class="col-form-label">Notes: </label>
                                 </div>
                                 <div class="col-8">
-                                    <textarea type="text" id="notes" name="notes" class="form-control"></textarea>
+                                    <textarea type="text" id="notes" rows="4" name="notes" class="form-control"></textarea>
                                 </div>
                             </div><br>
                         </div>
@@ -332,7 +329,7 @@
 		    }
 		}
 
-		$("#imgInp").change(function(){
+		$("#customFile").change(function(){
 		    readURL(this);
 		}); 	
 	});
