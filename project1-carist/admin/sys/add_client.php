@@ -2,7 +2,7 @@
     session_start();
     require "./check_integrity.php";
     if(!$valid){
-        header("Location: ../login.php");
+        header("Location: ../");
     }
     require "connect.php";
 
