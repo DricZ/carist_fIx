@@ -287,13 +287,17 @@
 
             <!-- Modal body -->
             <div class="modal-body">
+                <form class="revisionForm" method="get" action="sys/revision_task.php">
+                <label for="comment">Notes:</label>
+                <textarea class="form-control" rows="5" id="comment" name="comment">A</textarea>
                 Select "Send Revision" below if you are sure to approve this task.
             </div>
 
             <!-- Modal footer -->
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
-                <a class="btn btn-warning btn-ok">Send Revision</a>
+                <button type="submit" class="btn btn-warning btn-ok">Send Revision</button>
+                </form>
             </div>
 
             </div>
