@@ -21,7 +21,7 @@
 </li>
 
 <li class="nav-item active">
-    <a class="nav-link" href="#">
+    <a class="nav-link" href="calendar.php">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Calendar</span>
     </a>
