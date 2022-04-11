@@ -26,7 +26,7 @@
     //$service = $_POST["service1"];    //tergantung jumlah services
 
     //Upload Client Logo untuk dapet link
-    $target_dir = "../storage/system/client_logo/";
+    $target_dir = "../drive/client_logo/";
     $target_file = $target_dir . basename($_FILES["logo"]["name"]);
     $basename = basename($_FILES["logo"]["name"]);
     $uploadOk = 1;
