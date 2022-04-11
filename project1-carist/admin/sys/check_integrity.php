@@ -31,4 +31,7 @@
     if($_SESSION['role1'] == "operational" || $_SESSION['role2'] == "operational"){
         $operationalAccess = true;
     }
+    if($_SESSION['role1'] == "marketing" || $_SESSION['role2'] == "marketing"){
+        $marketingAccess = true;
+    }
 ?>

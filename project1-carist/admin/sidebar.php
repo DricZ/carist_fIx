@@ -16,19 +16,63 @@
 <li class="nav-item active">
     <a class="nav-link" href="dashboard.php">
         <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Dashboard</span></a>
+        <span>Dashboard</span>
+    </a>
+</li>
+
+<li class="nav-item active">
+    <a class="nav-link" href="#">
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>Calendar</span>
+    </a>
 </li>
 
 <!-- Divider -->
 <hr class="sidebar-divider">
 
+<!-- ADMIN/HEAD PAGE -->
 <?php
     if($adminAccess || $headAccess){
 ?>
 <!-- Heading -->
 <div class="sidebar-heading">
-    Admin
+    Head
 </div>
+
+<li class="nav-item active">
+    <a class="nav-link" href="review_copywriter.php">
+        <i class="fas fa-fw fa-user"></i>
+        <span>Review Copywriter</span>
+    </a>
+</li>
+
+<li class="nav-item active">
+    <a class="nav-link" href="#">
+        <i class="fas fa-fw fa-user"></i>
+        <span>Design Staff Review</span>
+    </a>
+</li>
+
+<li class="nav-item active">
+    <a class="nav-link" href="#">
+        <i class="fas fa-fw fa-user"></i>
+        <span>Menu Design</span>
+    </a>
+</li>
+
+<li class="nav-item active">
+    <a class="nav-link" href="#">
+        <i class="fas fa-fw fa-user"></i>
+        <span>Laporan Keuangan</span>
+    </a>
+</li>
+
+<li class="nav-item active">
+    <a class="nav-link" href="#">
+        <i class="fas fa-fw fa-user"></i>
+        <span>Staff Report</span>
+    </a>
+</li>
 
 <!-- Nav Item - New Client -->
 <li class="nav-item active">
@@ -45,6 +89,8 @@
 </li>
 
 
+
+
 <!-- Divider -->
 <hr class="sidebar-divider">
 
@@ -52,6 +98,7 @@
     }//Admin or Head End
 ?>
 
+<!-- MANAGER OPERASIONAL -->
 <?php
     if($operationalAccess || $adminAccess){
 ?>
@@ -67,6 +114,8 @@
         <span>Review Task</span></a>
 </li>
 
+
+<!-- DESIGN -->
 <!-- Divider -->
 <hr class="sidebar-divider">
 
@@ -80,7 +129,33 @@
 
 <!-- Heading -->
 <div class="sidebar-heading">
-    User
+    <?php
+        if($designerAccess){
+    ?>
+            Designer
+    <?php
+        }
+        else if($contentwriterAccess){
+    ?>
+            Content Writer
+
+    <?php
+        }
+        else if($copywriterAccess){
+    ?>
+            Copy Writer
+
+    <?php
+        }
+        else if($adminAccess){
+    ?>
+            Admin
+
+    <?php
+        }
+        
+    ?>
+
 </div>
 
 <!-- Nav Item - My Task -->
@@ -89,6 +164,19 @@
         <i class="fas fa-fw fa-tasks"></i>
         <span>My Task</span></a>
 </li>
+
+<?php
+    if($marketingAccess || $adminAccess){
+?>
+    <li class="nav-item active">
+    <a class="nav-link" href="#">
+        <i class="fas fa-fw fa-tasks"></i>
+        <span>Financial Report</span>
+    </a>
+    </li>
+<?php
+    }
+?>
 
 <!-- Divider -->
 <hr class="sidebar-divider d-none d-md-block">
