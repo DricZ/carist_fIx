@@ -200,9 +200,25 @@
                                 </div>
                                 <div class="col-8">
                                     <select id="service" class="form-select" name="service" required >
-                                        <option value="Service1" selected>Service1</option>
-                                        <option value="Service2">Service2</option>
-                                        <option value="Service3">Service3</option>
+                                        <?php
+                                            // Get Service List
+                                            $sql = "SELECT * FROM service_list";
+                                            $result = $conn->query($sql);
+
+                                            if ($result->num_rows > 0) {
+                                                // output data of each row
+                                                while($row = $result->fetch_assoc()) {
+                                                    $service_id = $row['service_id'];
+                                                    $service_name = $row['service_name'];
+                                                    $price = $row['price'];
+                                                    $feed_count = $row['feed_count'];
+                                                    $story_count = $row['story_count'];
+                                                    $reels_count = $row['reels_count'];
+                                                    $tiktok_count = $row['tiktok_count'];
+                                                    echo "<option value='$service_id'>$service_name</option>";
+                                                }
+                                            }
+                                        ?>
                                     </select>
                                 </div>
                             </div><br>
