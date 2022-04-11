@@ -11,6 +11,7 @@
     $designerAccess = false;
     $copywriterAccess = false;
     $operationalAccess = false;
+    $marketingAccess = false;
 
 
     if($_SESSION['role1'] == "admin" || $_SESSION['role2'] == "admin"){
