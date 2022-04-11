@@ -15,7 +15,6 @@
     </head>
 
     <body>
-        <hr style="margin-bottom: 0;" />
         <div class="container-fluid megathronz" style="background-image: url('./img/gp.jpg'); background-repeat:no-repeat ">
             
         </div>
