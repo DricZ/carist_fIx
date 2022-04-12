@@ -1,8 +1,23 @@
+<style>
+    .sliderbutton{
+        width: 35px;
+        height: 40px;
+        background-color: #4e73df;
+        border: 1px solid;
+        border-left: 0;
+        margin-left: -16px;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        border-color: #4e73df;
+    }
+</style>
+
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
     <!-- Sidebar Toggle (Topbar) -->
-    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-        <i class="fa fa-bars"></i>
+    <button class="sliderbutton" onclick="gantiicon('left', 'right')" id="sidebarToggle">
+        <i class="fas fa-angle-left" id="left"></i>
+        <i class="fas fa-angle-right" id="right" hidden></i>
     </button>
 
     <!-- Topbar Search -->
@@ -198,3 +213,20 @@
     </ul>
 
 </nav>
+
+<script>
+    function gantiicon(left, right){
+        l = document.getElementById(left);
+        r = document.getElementById(right);
+
+        if (r.hasAttribute('hidden')){
+            l.setAttribute('hidden', '');
+            r.removeAttribute('hidden');
+        }
+        else{
+            r.setAttribute('hidden','');
+            l.removeAttribute('hidden');
+        }
+        
+    }
+</script>

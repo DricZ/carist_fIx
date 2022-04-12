@@ -3,8 +3,8 @@
 
 <!-- Sidebar - Brand -->
 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.php">
-    <div class="sidebar-brand-icon rotate-n-15">
-        <i class="fas fa-laugh-wink"></i>
+    <div class="sidebar-brand-icon">
+        <img src="./img/carist only cropped.png" style="height: 50px;">
     </div>
     <div class="sidebar-brand-text mx-3">Carist</div>
 </a>
@@ -15,14 +15,14 @@
 <!-- Nav Item - Dashboard -->
 <li class="nav-item active">
     <a class="nav-link" href="dashboard.php">
-        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <img src="./img/logo/Dashboard.png" style="height: 20px;">
         <span>Dashboard</span>
     </a>
 </li>
 
 <li class="nav-item active">
     <a class="nav-link" href="calendar.php">
-        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <img src="./img/logo/Calender.png" style="height: 20px;">
         <span>Calendar</span>
     </a>
 </li>
@@ -37,14 +37,7 @@
 <!-- Heading -->
 <div class="sidebar-heading">
     Head
-</div>
-
-<li class="nav-item active">
-    <a class="nav-link" href="review_copywriter.php">
-        <i class="fas fa-fw fa-user"></i>
-        <span>Review Copywriter</span>
-    </a>
-</li>
+</div> 
 
 <li class="nav-item active">
     <a class="nav-link" href="#">
@@ -84,7 +77,7 @@
 <!-- Nav Item - Approve User -->
 <li class="nav-item active">
     <a class="nav-link" href="user_list.php">
-        <i class="fas fa-fw fa-user"></i>
+        <img src="./img/logo/Staff.png" style="height: 20px;">
         <span>User List</span></a>
 </li>
 
@@ -161,7 +154,7 @@
 <!-- Nav Item - My Task -->
 <li class="nav-item active">
     <a class="nav-link" href="my_task.php">
-        <i class="fas fa-fw fa-tasks"></i>
+        <img src="./img/logo/Task.png" style="height: 20px;">
         <span>My Task</span></a>
 </li>
 
@@ -264,9 +257,9 @@
 </li> -->
 
 <!-- Sidebar Toggler (Sidebar) -->
-<div class="text-center d-none d-md-inline">
+<!-- <div class="text-center d-none d-md-inline">
     <button class="rounded-circle border-0" id="sidebarToggle"></button>
-</div>
+</div> -->
 
 <!-- Sidebar Message -->
 <!-- <div class="sidebar-card d-none d-lg-flex">
