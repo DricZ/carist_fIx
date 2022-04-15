@@ -143,12 +143,15 @@
                                         $copywriter_status = $row2["copywriter_status"];
                                         if($contentwriter_status == "review"){
                                             $step = "contentwriter";
+                                            $nextStep = "designer";
                                         }
                                         if($designer_status == "review"){
                                             $step = "designer";
+                                            $nextStep = "copywriter";
                                         }
                                         if($copywriter_status == "review"){
                                             $step = "copywriter";
+                                            //setelah copywriter nya klo di approve kemana?
                                         }
                                         echo "<a class='nav-link collapsed' href='#' data-toggle='collapse' data-target='#$section_id'
                                                 aria-expanded='true' aria-controls='$section_id'>
@@ -191,10 +194,10 @@
                                                             <div class='d-grid gap-3'><button class='btn btn-danger' data-bs-toggle='modal' data-bs-target='#moveModal' data-step='$step' data-taskid='$task_id'>Move</button></div><br>
                                                         </div>
                                                         <div class='col-sm-2'>
-                                                            <div class='d-grid gap-3'><button class='btn btn-warning' data-bs-toggle='modal' data-bs-target='#revisionModal' data-href='sys/revision_task.php?task_id=$task_id&step=$step'>Revision</button></div><br>
+                                                            <div class='d-grid gap-3'><button class='btn btn-warning' data-bs-toggle='modal' data-bs-target='#revisionModal' data-step='$step' data-taskid='$task_id'>Revision</button></div><br>
                                                         </div>
                                                         <div class='col-sm-2'>
-                                                            <div class='d-grid gap-3'><button class='btn btn-success' data-bs-toggle='modal' data-bs-target='#approveModal' data-href='sys/approve_task.php?task_id=$task_id&step=$step'>Approve</button></div><br>
+                                                            <div class='d-grid gap-3'><button class='btn btn-success' data-bs-toggle='modal' data-bs-target='#approveModal' data-step='$step' data-nextstep='$nextStep' data-taskid='$task_id'>Approve</button></div><br>
                                                         </div>
                                                     </div>
                                                 </fieldset>
@@ -258,16 +261,61 @@
                 <h4 class="modal-title">Are you sure to APPROVE?</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
-
+            
+            <form class="approveForm" method="get" action="sys/approve_task.php">
             <!-- Modal body -->
             <div class="modal-body">
+                <input type='hidden' name='step' class='stepInput'>
+                <input type='hidden' name='nextstep' class='nextstepInput'>
+                <input type='hidden' name='task_id' class='taskidInput'>
+                <label for="approveto">Approve and assign to <span class='textPilih'>TASK STEP</span></label>: <br>
+                <select id="approveto" name="approveto" class="form-select" required>
+                    <?php
+                        //Get Writer List
+                        //echo "<optgroup class='contentwriterSelect' label='CONTENT WRITER'>";
+                        foreach($contentwriter as $id => $name){
+                            echo "<option value='$id' class='contentwriterSelect' hidden>";
+                            echo $name;
+                            echo "</option>";
+                        }
+                        if(empty($contentwriter)){
+                            echo "<option value='0' disabled>NO DATA</option>";
+                        }
+                        echo "</optgroup>";
+
+                        //Get Designer List
+                        //echo "<optgroup class='designerSelect' label='DESIGNER'>";
+                        foreach($designer as $id => $name){
+                            echo "<option value='$id' class='designerSelect' hidden>";
+                            echo $name;
+                            echo "</option>";
+                        }
+                        if(empty($designer)){
+                            echo "<option value='0' disabled>NO DATA</option>";
+                        }
+                        echo "</optgroup>";
+
+                        //Get CopyWriter List
+                        //echo "<optgroup class='copywriterSelect' label='COPY WRITER'>";
+                        foreach($copywriter as $id => $name){
+                            echo "<option value='$id' class='copywriterSelect' hidden>";
+                            echo $name;
+                            echo "</option>";
+                        }
+                        if(empty($copywriter)){
+                            echo "<option value='0' disabled>NO DATA</option>";
+                        }
+                        echo "</optgroup>";
+                    ?>
+                </select>
                 Select "Approve" below if you are sure to approve this task. Any approved task automatically go to next division!
             </div>
 
             <!-- Modal footer -->
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
-                <a class="btn btn-success btn-ok">Approve</a>
+                <button type="submit" class="btn btn-success btn-ok">Approve</button>
+            </form>
             </div>
 
             </div>
@@ -288,9 +336,11 @@
             <!-- Modal body -->
             <div class="modal-body">
                 <form class="revisionForm" method="get" action="sys/revision_task.php">
-                <label for="comment">Notes:</label>
-                <textarea class="form-control" rows="5" id="comment" name="comment">A</textarea>
-                Select "Send Revision" below if you are sure to approve this task.
+                <input type='hidden' name='step' class='stepInput'>
+                <input type='hidden' name='task_id' class='taskidInput'>
+                <label for="notes">Notes:</label>
+                <textarea class="form-control" rows="5" id="notes" name="notes" required></textarea>
+                Select "Send Revision" below if you are sure to RETURN this task.
             </div>
 
             <!-- Modal footer -->
@@ -323,9 +373,9 @@
                 <select id="moveto" name="moveto" class="form-select" required>
                     <?php
                         //Get Writer List
-                        echo "<optgroup class='contentwriterSelect' label='CONTENT WRITER'>";
+                        //echo "<optgroup class='contentwriterSelect' label='CONTENT WRITER'>";
                         foreach($contentwriter as $id => $name){
-                            echo "<option value='$id' class='contentwriterSelect' disabled>";
+                            echo "<option value='$id' class='contentwriterSelect' hidden>";
                             echo $name;
                             echo "</option>";
                         }
@@ -335,9 +385,9 @@
                         echo "</optgroup>";
 
                         //Get Designer List
-                        echo "<optgroup class='designerSelect' label='DESIGNER'>";
+                        //echo "<optgroup class='designerSelect' label='DESIGNER'>";
                         foreach($designer as $id => $name){
-                            echo "<option value='$id' class='designerSelect' disabled>";
+                            echo "<option value='$id' class='designerSelect' hidden>";
                             echo $name;
                             echo "</option>";
                         }
@@ -347,9 +397,9 @@
                         echo "</optgroup>";
 
                         //Get CopyWriter List
-                        echo "<optgroup class='copywriterSelect' label='COPY WRITER'>";
+                        //echo "<optgroup class='copywriterSelect' label='COPY WRITER'>";
                         foreach($copywriter as $id => $name){
-                            echo "<option value='$id' class='copywriterSelect' disabled>";
+                            echo "<option value='$id' class='copywriterSelect' hidden>";
                             echo $name;
                             echo "</option>";
                         }
@@ -358,7 +408,7 @@
                         }
                         echo "</optgroup>";
                     ?>
-                </select><br>
+                </select>
                 Select "Move" below if you are sure to move this task.
             </div>
 
@@ -386,18 +436,27 @@
     <!-- Modal Data -->
     <script>
         $('#approveModal').on('show.bs.modal', function(e) {
-            $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
+            var step = $(e.relatedTarget).data('step');
+            var nextstep = $(e.relatedTarget).data('nextstep');
+            var classTarget = nextstep + "Select";
+            $(this).find('.stepInput').attr('value', $(e.relatedTarget).data('step'));
+            $(this).find('.nextstepInput').attr('value', $(e.relatedTarget).data('nextstep'));
+            $(this).find('.taskidInput').attr('value', $(e.relatedTarget).data('taskid'));
+            $(this).find("."+$(e.relatedTarget).data('nextstep')+"Select").attr('hidden', false);
+            $(this).find('.textPilih').text(nextstep);
         });
         $('#revisionModal').on('show.bs.modal', function(e) {
             $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
+            var step = $(e.relatedTarget).data('step');
+            $(this).find('.stepInput').attr('value', $(e.relatedTarget).data('step'));
+            $(this).find('.taskidInput').attr('value', $(e.relatedTarget).data('taskid'));
         });
         $('#moveModal').on('show.bs.modal', function(e) {
             var step = $(e.relatedTarget).data('step');
             var classTarget = step + "Select";
-            console.log(classTarget);
             $(this).find('.stepInput').attr('value', $(e.relatedTarget).data('step'));
             $(this).find('.taskidInput').attr('value', $(e.relatedTarget).data('taskid'));
-            $(this).find("."+$(e.relatedTarget).data('step')+"Select").attr('disabled', false);
+            $(this).find("."+$(e.relatedTarget).data('step')+"Select").attr('hidden', false);
             $(this).find('.textPilih').text(step);
         });
     </script>

@@ -9,12 +9,12 @@
     
     $task_id = $_GET['task_id'];
     $step = $_GET['step'];
+    $notes = $_GET['notes'];
     $sqlStatus = $step . "_status";
 
 
-
     //SQL
-    $sql = "UPDATE task SET $sqlStatus='revision' WHERE task_id=$task_id";
+    $sql = "UPDATE task SET $sqlStatus='revision', revision_notes='$notes' WHERE task_id=$task_id";
 
     if ($conn->query($sql) === TRUE) {
         echo "Record updated successfully";
