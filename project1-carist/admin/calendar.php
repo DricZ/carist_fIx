@@ -34,6 +34,18 @@
     <link rel="stylesheet" href="css/style1.css">
 
     <title>Calendar</title>
+
+    <style>
+      body{
+        font-family: Nunito,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        
+      }    
+
+      hr{
+        opacity: .25;
+        color: #858796;
+      }
+    </style>
   </head>
   <body>
   <body id="page-top">
