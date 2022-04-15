@@ -105,7 +105,7 @@
                         <div class="col-4">
                             <div class="form-group" style="margin-left: 40px;padding-right: 20px;">
                                 <label class="form-label" for="customFile">Upload</label>
-                                <input type="file" class="form-control" name="logo" id="customFile" />
+                                <input type="file" class="form-control" name="logo" id="customFile" required />
                                 <img id='img-upload'/>
                             </div>
                         </div>
@@ -153,16 +153,16 @@
                             <?php
                                 $today = mktime(0,0,0);
                                 $from = nextDayFrom($today, 7);  //Postdate untuk konten pertama
-                                $to = nextDayFrom($from, 28);  //Postdate untuk konten terakhir
+                                $to = nextDayFrom($from, 1);  //Postdate untuk konten terakhir
                                 $fromDate = date('Y-m-d', $from);
-                                $toDate = date('Y-m-d', $to);
+                                $toDate = '';
                             ?>
                                 <div class="col" style="display: flex; justify-content: center;">
-                                    <input type="date" class="form-control" name="tanggal" name="from" placeholder="tanggal" value="<?=$fromDate?>" disabled required>
+                                    <input type="date" class="form-control" name="from" id="from" placeholder="tanggal" value="<?=$fromDate?>" disabled required>
                                 </div>
 
                                 <div class="col" style="display: flex; justify-content: center;">
-                                    <input type="date" class="form-control" name="tanggal" name="to" placeholder="tanggal2" value="<?=$toDate?>" disabled required>
+                                    <input type="date" class="form-control" name="to" id="to" placeholder="tanggal2" value="<?=$toDate?>" disabled required>
                                 </div>
                             </div><br>
                             
@@ -227,6 +227,7 @@
                                 </div>
                                 <div class="col-8">
                                     <select id="service" class="form-select" name="service" required >
+                                        <option disabled selected>--- please select service ---</option>
                                         <?php
                                             // Get Service List
                                             $sql = "SELECT * FROM service_list";
@@ -238,11 +239,12 @@
                                                     $service_id = $row['service_id'];
                                                     $service_name = $row['service_name'];
                                                     $price = $row['price'];
+                                                    $day = $row['day'];
                                                     $feed_count = $row['feed_count'];
                                                     $story_count = $row['story_count'];
                                                     $reels_count = $row['reels_count'];
                                                     $tiktok_count = $row['tiktok_count'];
-                                                    echo "<option value='$service_id'>$service_name</option>";
+                                                    echo "<option value='$service_id' data-price='$price' data-day='$day'>$service_name</option>";
                                                 }
                                             }
                                         ?>
@@ -255,7 +257,7 @@
                                     <label for="price" class="col-form-label">Price: </label>
                                 </div>
                                 <div class="col-8">
-                                    <input type="text" id="price" class="form-control" name="price" disabled value="1000000">
+                                    <input type="text" id="price" class="form-control" name="price" disabled value="0">
                                 </div>
                             </div><br>
 
@@ -269,7 +271,7 @@
                             </div><br>
 
                             <div class="row g-3 align-items-center">
-                                <div class="col-auto">
+                                <div class="col-2">
                                     <label for="notes" class="col-form-label">Notes: </label>
                                 </div>
                                 <div class="col-8">
@@ -374,7 +376,28 @@
 
 		$("#customFile").change(function(){
 		    readURL(this);
-		}); 	
+		});
+
+        //Change Service
+        $('#service').change(function(e){
+            var price = $(this).find(':selected').data('price');
+            var day = $(this).find(':selected').data('day');
+            $('#price').attr('value', numberWithCommas(price));
+            //Next x Day
+            var dt = new Date();
+            dt.setDate(dt.getDate() + 7);   //Default upload pertama
+            dt.setDate(dt.getDate() + day);
+            var tempDate = dt.toISOString().split('T')[0];
+            $('#to').attr('value', tempDate);
+        });
+
+        function numberWithCommas(x) {
+            x = x.toString();
+            var pattern = /(-?\d+)(\d{3})/;
+            while (pattern.test(x))
+                x = x.replace(pattern, "$1,$2");
+            return x;
+        }
 	});
     </script>
 
