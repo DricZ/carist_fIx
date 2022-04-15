@@ -5,6 +5,26 @@
     if(!$valid){
         header("Location: ./index.php");
     }
+
+    function nextDayFrom($time, $num){
+        //echo "Today is ".date('l, d-m-Y')."<br>";
+        $day = date('d', $time);
+        $month = date('m', $time);
+        $year = date('Y', $time);
+        for ($i = 1; $i <= $num; $i++)
+        {
+            //echo ($i)." ";
+            $tomorrow  = mktime(0, 0, 0, $month  , $day+1, $year);
+            if(date('l', $tomorrow) == "Sunday"){
+                $i--;
+            }
+            $day = date('d', $tomorrow);
+            $month = date('m', $tomorrow);
+            $year = date('Y', $tomorrow);
+            //echo "Day: ".$day." Month: ".$month." Year: ".$year." ".date('l, d-m-Y', $tomorrow)."<br>";
+        }
+        return $tomorrow;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -130,12 +150,19 @@
                             </div>
 
                             <div class="row" style="width: 100%;">
+                            <?php
+                                $today = mktime(0,0,0);
+                                $from = nextDayFrom($today, 7);  //Postdate untuk konten pertama
+                                $to = nextDayFrom($from, 28);  //Postdate untuk konten terakhir
+                                $fromDate = date('Y-m-d', $from);
+                                $toDate = date('Y-m-d', $to);
+                            ?>
                                 <div class="col" style="display: flex; justify-content: center;">
-                                    <input type="date" class="form-control" name="tanggal" name="from" placeholder="tanggal" required="">
+                                    <input type="date" class="form-control" name="tanggal" name="from" placeholder="tanggal" value="<?=$fromDate?>" disabled required>
                                 </div>
 
                                 <div class="col" style="display: flex; justify-content: center;">
-                                    <input type="date" class="form-control" name="tanggal" name="to" placeholder="tanggal2" required="">
+                                    <input type="date" class="form-control" name="tanggal" name="to" placeholder="tanggal2" value="<?=$toDate?>" disabled required>
                                 </div>
                             </div><br>
                             
