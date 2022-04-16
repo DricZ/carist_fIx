@@ -168,7 +168,8 @@
                               }
                               echo "{
                                 title: '$display_name',
-                                start: '$post_date'
+                                start: '$post_date',
+                                backgroundColor: 'maroon'
                               },";
                             }
                             echo "{
