@@ -208,11 +208,21 @@
                                 </div>
                                 <div class="col-8">
                                     <select id="inputmarkt" class="form-select" name="marketing" required>
-                                        <option value="Head" selected>Head</option>
-                                        <option value="1">Steven</option>
-                                        <option value="2">Victor</option>
-                                        <option value="3">Stefany</option>
-                                        <option value="4">Nyoto</option>
+                                        <option value="0" selected>Head</option>
+                                        <?php
+                                            // Get Service List
+                                            $sql = "SELECT * FROM user WHERE role1='marketing' OR role2='marketing'";
+                                            $result = $conn->query($sql);
+
+                                            if ($result->num_rows > 0) {
+                                                // output data of each row
+                                                while($row = $result->fetch_assoc()) {
+                                                    $user_id = $row['user_id'];
+                                                    $name = $row['name'];
+                                                    echo "<option value='$user_id'>$name</option>";
+                                                }
+                                            }
+                                        ?>
                                     </select>
                                 </div>
                             </div><br>
