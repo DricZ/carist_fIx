@@ -87,7 +87,7 @@
                                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                             <thead>
                                                 <tr>
-                                                    <th>User ID</th>
+                                                    <th>No.</th>
                                                     <th>Username</th>
                                                     <th>Name</th>
                                                     <th>Role 1</th>
@@ -108,6 +108,7 @@
                                                     $result = $conn->query($sql);
                                                     if ($result->num_rows > 0) {
                                                         // output data of each row
+                                                        $no = 1;
                                                         while($row = $result->fetch_assoc()) {
                                                             echo "<tr>";
                                                             $user_id = $row['user_id'];
@@ -123,7 +124,8 @@
                                                             $instagram = $row['instagram'];
                                                             $tiktok = $row['tiktok'];
                                                             $status = $row['status'];
-                                                            echo "<td>$user_id</td>";
+                                                            echo "<td>$no</td>";
+                                                            $no++;
                                                             echo "<td>$username</td>";
                                                             echo "<td>$name</td>";
                                                             echo "<td>$role1</td>";
