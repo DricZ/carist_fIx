@@ -196,9 +196,14 @@
                                                         <div class='col-sm-2'>
                                                             <div class='d-grid gap-3'><button class='btn btn-warning' data-bs-toggle='modal' data-bs-target='#revisionModal' data-step='$step' data-taskid='$task_id'>Revision</button></div><br>
                                                         </div>
-                                                        <div class='col-sm-2'>
-                                                            <div class='d-grid gap-3'><button class='btn btn-success' data-bs-toggle='modal' data-bs-target='#approveModal' data-step='$step' data-nextstep='$nextStep' data-taskid='$task_id'>Approve</button></div><br>
-                                                        </div>
+                                                        <div class='col-sm-2'>";
+                                                        if($step == "copywriter"){
+                                                            //Approve Only
+                                                            echo "<div class='d-grid gap-3'><button class='btn btn-success' data-bs-toggle='modal' data-bs-target='#approveOnlyModal' data-step='$step' data-taskid='$task_id'>Final Approve</button></div><br>";
+                                                        }else{
+                                                            echo "<div class='d-grid gap-3'><button class='btn btn-success' data-bs-toggle='modal' data-bs-target='#approveModal' data-step='$step' data-nextstep='$nextStep' data-taskid='$task_id'>Approve</button></div><br>";
+                                                        }
+                                                  echo "</div>
                                                     </div>
                                                 </fieldset>
                                             </div>
@@ -247,6 +252,36 @@
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                     <a class="btn btn-primary" href="logout.php">Logout</a>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Approve Only -->
+    <div class="modal fade" id="approveOnlyModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Are you sure to FINAL APPROVE?</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            
+            <form class="approveOnlyForm" method="get" action="sys/approve_final_task.php">
+            <!-- Modal body -->
+            <div class="modal-body">
+                <input type='hidden' name='step' class='stepInput'>
+                <input type='hidden' name='task_id' class='taskidInput'>
+                Select "Approve" below if you are sure to approve this task. Any approved task automatically go to all client!
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-success btn-ok">Approve</button>
+            </form>
+            </div>
+
             </div>
         </div>
     </div>
@@ -435,6 +470,11 @@
 
     <!-- Modal Data -->
     <script>
+        $('#approveOnlyModal').on('show.bs.modal', function(e) {
+            var step = $(e.relatedTarget).data('step');
+            $(this).find('.stepInput').attr('value', $(e.relatedTarget).data('step'));
+            $(this).find('.taskidInput').attr('value', $(e.relatedTarget).data('taskid'));
+        });
         $('#approveModal').on('show.bs.modal', function(e) {
             var step = $(e.relatedTarget).data('step');
             var nextstep = $(e.relatedTarget).data('nextstep');
