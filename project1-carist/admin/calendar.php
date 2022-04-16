@@ -7,6 +7,8 @@
     }
     $my_id = $_SESSION['userid'];
 
+    
+
 ?>
 
 <!doctype html>
@@ -100,65 +102,132 @@
                         right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
                       },
                       defaultView: 'dayGridMonth',
-                      defaultDate: '2020-02-12',
+                      defaultDate: '<?=date('Y-m-d', mktime(0,0,0)); ?>',
                       navLinks: true, // can click day/week names to navigate views
                       editable: true,
                       eventLimit: true, // allow "more" link when too many events
                       events: [
-                        {
-                          title: 'All Day Event',
-                          start: '2020-02-01',
-                        },
-                        {
-                          title: 'Long Event',
-                          start: '2020-02-07',
-                          end: '2020-02-10'
-                        },
-                        {
-                          groupId: 999,
-                          title: 'Repeating Event',
-                          start: '2020-02-09T16:00:00'
-                        },
-                        {
-                          groupId: 999,
-                          title: 'Repeating Event',
-                          start: '2020-02-16T16:00:00'
-                        },
-                        {
-                          title: 'Conference',
-                          start: '2020-02-11',
-                          end: '2020-02-13'
-                        },
-                        {
-                          title: 'Meeting',
-                          start: '2020-02-12T10:30:00',
-                          end: '2020-02-12T12:30:00'
-                        },
-                        {
-                          title: 'Lunch',
-                          start: '2020-02-12T12:00:00'
-                        },
-                        {
-                          title: 'Meeting',
-                          start: '2020-02-12T14:30:00'
-                        },
-                        {
-                          title: 'Happy Hour',
-                          start: '2020-02-12T17:30:00'
-                        },
-                        {
-                          title: 'Dinner',
-                          start: '2020-02-12T20:00:00'
-                        },
-                        {
-                          title: 'Birthday Party',
-                          start: '2020-02-13T07:00:00'
-                        },
-                        {
-                          title: 'Click for Google',
-                          url: 'http://google.com/',
-                          start: '2020-02-28'
-                        }
+                        // {
+                        //   title: 'All Day Event',
+                        //   url: 'http://google.com/',
+                        //   start: '2020-02-01',
+                        // },
+                        <?php
+                          $sql2 = "SELECT * FROM task"; //WHERE (contentwriter_id = $my_id OR designer_id = $my_id OR copywriter_id = $my_id)";
+                          $result2 = $conn->query($sql2);
+                          if ($result2->num_rows > 0) {
+                            // output data of each row
+                            while($row2 = $result2->fetch_assoc()) {
+                              $task_id = $row2["task_id"];
+                              $client_id = $row2["client_id"];
+                              $sql3 = "SELECT * FROM client WHERE client_id=$client_id";
+                              $result3 = $conn->query($sql3);
+                              if ($result3->num_rows > 0) {
+                                // output data of each row
+                                while($row3 = $result3->fetch_assoc()) {
+                                  $client_name = $row3["name"];
+                                }
+                              }else{
+                                $client_name = "ERROR";
+                              }
+                              $post_date = $row2["post_date"];
+                              $content_no = $row2["content_no"];
+                              $content_type = $row2["content_type"];
+                              $main_topic = $row2["main_topic"];
+                              $sub_topic = $row2["sub_topic"];
+                              $concept = $row2["concept"];
+                              $ref_link = $row2["ref_link"];
+                              $notes = $row2["content_notes"];
+                              $relative = "./drive/design/";
+                              $design1 = $relative . $row2["design_1"];
+                              $design2 = $relative . $row2["design_2"];
+                              $design3 = $relative . $row2["design_3"];
+                              $design4 = $relative . $row2["design_4"];
+                              $design5 = $relative . $row2["design_5"];
+                              $caption = $row2["caption"];
+                              $hashtag = $row2["hashtag"];
+                              $display_name = strtoupper($client_name . " - " . $content_type . " " . $content_no);
+                              $section_id = strtolower("task".$task_id);
+                              if($main_topic != ""){
+                                  $fieldset = "disabled";
+                              }else{
+                                  $fieldset = "";
+                              }
+                              //Check Flow Step
+                              $contentwriter_status = $row2["contentwriter_status"];
+                              $designer_status = $row2["designer_status"];
+                              $copywriter_status = $row2["copywriter_status"];
+                              if($copywriter_status == "pending"){
+                                  $step = "copywriter";
+                              }
+                              if($designer_status == "pending"){
+                                  $step = "designer";
+                              }
+                              if($contentwriter_status == "pending"){
+                                  $step = "contentwriter";
+                              }
+                              echo "{
+                                title: '$display_name',
+                                start: '$post_date'
+                              },";
+                            }
+                            echo "{
+                              title: 'Test Event',
+                              url: 'http://google.com/',
+                              start: '2022-04-12'
+                            }";
+                          }
+                        ?>
+                        // {
+                        //   title: 'Very Long Event',
+                        //   start: '2020-02-07',
+                        //   end: '2020-02-10'
+                        // },
+                        // {
+                        //   groupId: 999,
+                        //   title: 'Repeating Event',
+                        //   start: '2020-02-09T16:00:00'
+                        // },
+                        // {
+                        //   groupId: 999,
+                        //   title: 'Repeating Event',
+                        //   start: '2020-02-16T16:00:00'
+                        // },
+                        // {
+                        //   title: 'Conference',
+                        //   start: '2020-02-11',
+                        //   end: '2020-02-13'
+                        // },
+                        // {
+                        //   title: 'Meeting',
+                        //   start: '2020-02-12T10:30:00',
+                        //   end: '2020-02-12T12:30:00'
+                        // },
+                        // {
+                        //   title: 'Lunch',
+                        //   start: '2020-02-12T12:00:00'
+                        // },
+                        // {
+                        //   title: 'Meeting',
+                        //   start: '2020-02-12T14:30:00'
+                        // },
+                        // {
+                        //   title: 'Happy Hour',
+                        //   start: '2020-02-12T17:30:00'
+                        // },
+                        // {
+                        //   title: 'Dinner',
+                        //   start: '2020-02-12T20:00:00'
+                        // },
+                        // {
+                        //   title: 'Birthday Party',
+                        //   start: '2020-02-13T07:00:00'
+                        // },
+                        // {
+                        //   title: 'Click for Google',
+                        //   url: 'http://google.com/',
+                        //   start: '2020-02-28'
+                        // }
                       ]
                     });
 
