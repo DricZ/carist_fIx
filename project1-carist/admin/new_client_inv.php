@@ -5,6 +5,31 @@
     if(!$valid){
         header("Location: ./index.php");
     }
+
+    if(!isset($_GET['id'])){
+        //header("Location: ./dashboard.php");
+    }
+
+    $client_id = $_GET['id'];
+
+    $sql = "SELECT * FROM client WHERE client_id=$client_id";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        // output data of each row
+        $no = 1;
+        while($row = $result->fetch_assoc()) {
+            $name = $row['name'];
+            $logo = $row['client_logo'];
+            $address = $row['address'];
+            $phone = $row['phone'];
+            $input_date = $row['input_date'];
+            $paid_date = $row['paid_date'];
+
+            $date=date_create($input_date);
+            $disp_date = date_format($date,"j F Y");
+            echo $disp_date;
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -90,7 +115,7 @@
                             <p style="margin: 0;">+62 819 5152 001</p>
                         </div>
                         <div class="col" style="display: grid; justify-content: right; padding:0">
-                            <p style="margin: 0; text-align: right;">To: Nama Brand</p>
+                            <p style="margin: 0; text-align: right;">To: <?=$name?></p>
                         </div>
                     </div>
 
