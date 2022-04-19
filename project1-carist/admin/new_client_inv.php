@@ -74,7 +74,7 @@
                 <!-- Begin Page Content -->
                 <nav style="margin-bottom: 30px;">
                     <ol class="cd-breadcrumb triangle custom-icons" style="justify-content:left; display:flex; margin-left: 35px;">
-                        <li><a class="navnc" href="./new_client.php"><em class="navnc">Brand Information</em></a></li>
+                        <li><a class="navnc" href="./new_client.php?id=<?=$client_id?>"><em class="navnc">Brand Information</em></a></li>
                         <li class="current"><em class="navnc">Invoice</em></li>
                     </ol>
                 </nav>

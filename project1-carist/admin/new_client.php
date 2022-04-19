@@ -25,6 +25,7 @@
         }
         return $tomorrow;
     }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -96,7 +97,38 @@
                 <nav style="margin-bottom: 30px;">
                     <ol class="cd-breadcrumb triangle custom-icons" style="justify-content:left; display:flex; margin-left: 35px;">
                         <li class="current"><em class="navnc">Brand Information</em></li>
-                        <li><a class="navnc" href="./new_client_inv.php">Invoice</a></li>
+                        <?php
+                            if(isset($_GET['id'])){
+                                $client_id = $_GET['id'];
+                                $sql = "SELECT * FROM client WHERE client_id=$client_id";
+                                $result = $conn->query($sql);
+                                if ($result->num_rows > 0) {
+                                    // output data of each row
+                                    $no = 1;
+                                    while($row = $result->fetch_assoc()) {
+                                        $name = $row['name'];
+                                        $logo = $row['client_logo'];
+                                        $address = $row['address'];
+                                        $phone = $row['phone'];
+                                        $input_date = $row['input_date'];
+                                        $paid_date = $row['paid_date'];
+                                        $start_date = $row['start_date'];
+                                        $end_date = $row['end_date'];
+                                        $visit = $row['visit'];
+                                        $instagram = $row['instagram'];
+                                        $tiktok = $row['tiktok'];
+                                        $facebook = $row['facebook'];
+                                        $youtube = $row['youtube'];
+
+                                        $date=date_create($input_date);
+                                        $disp_date = date_format($date,"j F Y");
+                                    }
+                                }
+                                echo "<li><a class='navnc' href='./new_client_inv.php?id=$client_id'>Invoice</a></li>";
+                            }else{
+                                echo "<li><a class='navnc' href='./new_client_inv.php'>Invoice</a></li>";
+                            }
+                        ?>
                     </ol>
                 </nav>
 

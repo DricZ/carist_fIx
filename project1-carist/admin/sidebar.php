@@ -39,7 +39,7 @@
     Head
 </div> 
 
-<li class="nav-item active">
+<!-- <li class="nav-item active">
     <a class="nav-link" href="#">
         <i class="fas fa-fw fa-user"></i>
         <span>Design Staff Review</span>
@@ -51,6 +51,27 @@
         <i class="fas fa-fw fa-user"></i>
         <span>Menu Design</span>
     </a>
+</li> -->
+
+<!-- Nav Item - New Client -->
+<li class="nav-item active">
+    <a class="nav-link" href="new_client.php">
+        <i class="fas fa-fw fa-plus"></i>
+        <span>New Client</span></a>
+</li>
+
+<!-- Nav Item - Client List -->
+<li class="nav-item active">
+    <a class="nav-link" href="client_list.php">
+    <img src="./img/logo/Staff.png" style="height: 20px;">
+        <span>Client List</span></a>
+</li>
+
+<!-- Nav Item - Approve User -->
+<li class="nav-item active">
+    <a class="nav-link" href="user_list.php">
+        <img src="./img/logo/Staff.png" style="height: 20px;">
+        <span>User List</span></a>
 </li>
 
 <li class="nav-item active">
@@ -66,22 +87,6 @@
         <span>Staff Report</span>
     </a>
 </li>
-
-<!-- Nav Item - New Client -->
-<li class="nav-item active">
-    <a class="nav-link" href="new_client.php">
-        <i class="fas fa-fw fa-plus"></i>
-        <span>New Client</span></a>
-</li>
-
-<!-- Nav Item - Approve User -->
-<li class="nav-item active">
-    <a class="nav-link" href="user_list.php">
-        <img src="./img/logo/Staff.png" style="height: 20px;">
-        <span>User List</span></a>
-</li>
-
-
 
 
 <!-- Divider -->
