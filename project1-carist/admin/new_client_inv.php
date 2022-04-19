@@ -7,7 +7,11 @@
     }
 
     if(!isset($_GET['id'])){
-        //header("Location: ./dashboard.php");
+        echo "<script>
+            alert('Please select client first!');
+            //window.location = './new_client.php';
+        </script>";
+        //header("Location: ./new_client.php");
     }
 
     $client_id = $_GET['id'];
@@ -27,7 +31,6 @@
 
             $date=date_create($input_date);
             $disp_date = date_format($date,"j F Y");
-            echo $disp_date;
         }
     }
 ?>
@@ -79,11 +82,11 @@
                 <div class="row" style="padding-left: 40px;padding-right: 40px;">
                     <div class="col">
                         <div class="row">
-                            <div class="col-2">
+                            <div class="col-md-2">
                                 <img src="./img/carist only cropped.png" style="width: 100px;">
                             </div>
 
-                            <div class="col" style="display: table;">
+                            <div class="col-md-8" style="display: table;">
                                 <div class="row" style="display: table-cell; vertical-align: bottom;">
                                     <div class="col">
                                         <p style="margin-bottom: 0; font-size:20px; font-weight: bold;">CARIST</p>
@@ -103,7 +106,7 @@
 
                         <div class="row">
                             <div class="col">
-                                <p>1 January 2022</p>
+                                <p><?=$disp_date?></p>
                             </div>
                         </div>
                     </div>
@@ -121,75 +124,53 @@
 
                     <div class="row" style="border: 2px solid;padding: 20px;margin-left: 10px; margin-top: 20px; width: 98%;">
                         <div class="col">
+                            <?php
+                                $total = 0;
+                                $sql = "SELECT * FROM service WHERE client_id=$client_id";
+                                $result = $conn->query($sql);
+                                if ($result->num_rows > 0) {
+                                    // output data of each row
+                                    $no = 1;
+                                    while($row = $result->fetch_assoc()) {
+                                        $service_name = $row['service_name'];
+                                        $price = $row['price'];
+                                        $disp_price = number_format($price,0,",",".");
+                                        $total += $price;
+                            ?>
                             <div class="row">
-                                <div class="col-7">
-                                    <p>Social Media Management (Instagram)</p>
+                                <div class="col-md-7">
+                                    <p><?=$service_name?></p>
                                 </div>
 
-                                <div class="col-2">
+                                <div class="col-md-2">
 
                                 </div>
 
-                                <div class="col-3">
-                                    <p style="text-align: right;">Rp. 3.000.000</p>
+                                <div class="col-md-3">
+                                    <p style="text-align: right;">Rp. <?=$disp_price?></p>
                                 </div>
                             </div>
+                            <?php
+                                    }
+                                }
+                                $disp_total = number_format($total,0,",",".");
+                            ?>
 
-                            <div class="row">
-                                <div class="col-7">
-                                    <p>Social Media Management (Instagram)</p>
-                                </div>
-
-                                <div class="col-2">
-
-                                </div>
-
-                                <div class="col-3">
-                                    <p style="text-align: right;">Rp. 3.000.000</p>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-7">
-                                    <p>Social Media Management (Instagram)</p>
-                                </div>
-
-                                <div class="col-2">
-
-                                </div>
-
-                                <div class="col-3">
-                                    <p style="text-align: right;">Rp. 3.000.000</p>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-7">
-                                    <p>Social Media Management (Instagram)</p>
-                                </div>
-
-                                <div class="col-2">
-
-                                </div>
-
-                                <div class="col-3">
-                                    <p style="text-align: right;">Rp. 3.000.000</p>
-                                </div>
-                            </div>
+                            
 
                             <hr/>
 
                             <div class="row">
-                                <div class="col-7">
+                                <div class="col-md-8">
 
                                 </div>
 
-                                <div class="col-2">
+                                <div class="col-md-1">
                                     <p style="text-align: right;">Total: </p>
                                 </div>
 
-                                <div class="col-3">
-                                    <p style="text-align: right;">Rp. 12.000.000</p>
+                                <div class="col-md-3">
+                                    <p style="text-align: right;">Rp. <?=$disp_total?></p>
                                 </div>
                             </div>
                         </div>

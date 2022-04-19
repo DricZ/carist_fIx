@@ -264,7 +264,7 @@
         }
 
         //Redirect Back
-        header("Location: ../new_client.php");
+        header("Location: ../new_client.php?id=$last_id");
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
