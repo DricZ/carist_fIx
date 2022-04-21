@@ -1,13 +1,25 @@
+<style>
+    .sliderbutton{
+        width: 40px;
+        height: 40px;
+        border: none;
+        border-left: 0;
+        margin-left: -16px;
+        border-radius: 100%;
+    }
+</style>
+
 <!-- Sidebar -->
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
 <!-- Sidebar - Brand -->
-<a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.php">
-    <div class="sidebar-brand-icon">
+<div class="sidebar-brand d-flex align-items-center justify-content-center">
+    <a href="dashboard.php"><div class="sidebar-brand-icon">
         <img src="./img/carist only cropped.png" style="height: 50px;">
-    </div>
-    <div class="sidebar-brand-text mx-3">Carist</div>
-</a>
+    </div></a>
+    <a href="dashboard.php" style="text-decoration: none; color: white;"><div class="sidebar-brand-text mx-3">Carist</div></a>
+    
+</div>
 
 <!-- Divider -->
 <hr class="sidebar-divider my-0">

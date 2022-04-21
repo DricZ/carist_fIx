@@ -1,24 +1,23 @@
 <style>
     .sliderbutton{
-        width: 35px;
-        height: 40px;
-        background-color: #4e73df;
-        border: 1px solid;
+        width: 30px;
+        height: 30px;
+        border: none;
         border-left: 0;
-        margin-left: -16px;
-        border-top-right-radius: 25px;
-        border-bottom-right-radius: 25px;
-        border-color: #4e73df;
+        margin-left: -15px;
+        border-radius: 100%;
+        position: absolute;
+        margin-top: -75px;
     }
 </style>
 
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
     <!-- Sidebar Toggle (Topbar) -->
-    <button class="sliderbutton" onclick="gantiicon('left', 'right')" id="sidebarToggle">
+    <!-- <button class="sliderbutton" onclick="gantiicon('left', 'right')" id="sidebarToggle">
         <i class="fas fa-angle-left" id="left"></i>
         <i class="fas fa-angle-right" id="right" hidden></i>
-    </button>
+    </button> -->
 
     <!-- Topbar Search -->
     <!-- <form

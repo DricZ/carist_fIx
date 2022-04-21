@@ -47,6 +47,8 @@
 </head>
 
 <body id="page-top">
+    
+    
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -67,6 +69,10 @@
                     require 'header.php';
                 ?>
                 <!-- End of Topbar -->
+
+                <?php
+                    require 'sidebar_button.php';
+                ?>
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">

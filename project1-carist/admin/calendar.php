@@ -73,6 +73,10 @@
                 ?>
                 <!-- End of Topbar -->
 
+                <?php
+                        require 'sidebar_button.php';
+                    ?>
+
                 <!-- Begin Page Content -->
                 <div id='calendar-container'>
                   <div id='calendar'></div>
@@ -105,6 +109,10 @@
                       defaultDate: '<?=date('Y-m-d', mktime(0,0,0)); ?>',
                       navLinks: true, // can click day/week names to navigate views
                       editable: true,
+                      businessHours: {
+                        // days of week. an array of zero-based day of week integers (0=Sunday)
+                        daysOfWeek: [ 1, 2, 3, 4, 5, 6 ], // Monday - Thursday
+                      },
                       eventLimit: true, // allow "more" link when too many events
                       events: [
                         // {
@@ -175,7 +183,8 @@
                             echo "{
                               title: 'Test Event',
                               url: 'http://google.com/',
-                              start: '2022-04-12'
+                              start: '2022-04-12T16:00:00',
+                              end: '2022-04-12T18:00:00'
                             }";
                           }
                         ?>
