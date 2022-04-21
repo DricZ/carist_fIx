@@ -71,6 +71,10 @@
                 ?>
                 <!-- End of Topbar -->
 
+                <?php
+                    require 'sidebar_button.php';
+                ?>
+
                 <!-- Begin Page Content -->
                 <nav style="margin-bottom: 30px;">
                     <ol class="cd-breadcrumb triangle custom-icons" style="justify-content:left; display:flex; margin-left: 35px;">

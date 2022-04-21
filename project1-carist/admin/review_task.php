@@ -94,6 +94,10 @@
                 ?>
                 <!-- End of Topbar -->
 
+                <?php
+                    require 'sidebar_button.php';
+                ?>
+
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 

@@ -93,6 +93,10 @@
                 ?>
                 <!-- End of Topbar -->
 
+                <?php
+                    require 'sidebar_button.php';
+                ?>
+
                 <!-- Begin Page Content -->
                 <nav style="margin-bottom: 30px;">
                     <ol class="cd-breadcrumb triangle custom-icons" style="justify-content:left; display:flex; margin-left: 35px;">
@@ -263,12 +267,12 @@
                         </div>
 
                         <div class="col-4">
-                            <div class="row g-3 align-items-center">
+                            <div id="div1" class="row g-3 align-items-center">
                                 <div class="col-2">
                                     <label for="service" class="col-form-label">Service: </label>
                                 </div>
-                                <div class="col-8">
-                                    <select id="service" class="form-select" name="service" required >
+                                <div id="p1" class="col-8">
+                                    <select id="service" class="form-select" style="width: 85%;" name="service" required >
                                         <option disabled selected>--- please select service ---</option>
                                         <?php
                                             // Get Service List
@@ -291,9 +295,11 @@
                                             }
                                         ?>
                                     </select>
+                                    <i id="s1" class="fa-solid fa-plus" style="position: absolute;margin-top: -25px;margin-left: 90%; cursor:pointer"></i>
                                 </div>
-                            </div><br>
+                            </div>
 
+                            <br>
                             <div class="row g-3 align-items-center">
                                 <div class="col-2">
                                     <label for="price" class="col-form-label">Price: </label>
@@ -385,6 +391,8 @@
     <script src="js/demo/chart-pie-demo.js"></script>
 
     <script>
+        counter = 1;
+
         $(document).ready( function() {
     	$(document).on('change', '.btn-file :file', function() {
 		var input = $(this),
@@ -440,7 +448,61 @@
                 x = x.replace(pattern, "$1,$2");
             return x;
         }
+
+        $("#s1").click(function(){
+
+            svc = $("#s1").parent().parent().attr('id');
+            svcp = "#"+svc;
+
+            loop1 = "div"+(counter+1)
+            loop2 = "removesv"+(counter+1)
+            brid = "br"+(counter+1)
+            counter++;
+
+            var txt1 = "<br id='"+brid+"'><div id='"+
+                            loop1
+                            +"' class='row g-3 align-items-center'>" + "<div class='col-2'>"
+                                        +"<label for='service' class='col-form-label'>Service: </label>"
+                                    +"</div>"
+                                    +"<div class='col-8'>"
+                                        +"<select id='service' class='form-select' style='width: 85%;' name='service' required >"
+                                            +"<option disabled selected>--- please select service ---</option>"
+                                            +"<?php echo
+                                                $sql = "SELECT * FROM service_list";
+                                                $result = $conn->query($sql);
+
+                                                if ($result->num_rows > 0) {
+                                                    while($row = $result->fetch_assoc()) {
+                                                        $service_id = $row['service_id'];
+                                                        $service_name = $row['service_name'];
+                                                        $price = $row['price'];
+                                                        $day = $row['day'];
+                                                        $feed_count = $row['feed_count'];
+                                                        $story_count = $row['story_count'];
+                                                        $reels_count = $row['reels_count'];
+                                                        $tiktok_count = $row['tiktok_count'];
+                                                        echo "<option value='$service_id' data-price='$price' data-day='$day'>$service_name</option>";
+                                                    }
+                                                }
+                                            ?>"
+                                        +"</select>"
+                                        +"<i id='"+loop2+"' onclick='deletesv(`"+
+                                        loop1
+                                        +"`, `"+ brid +"`);' class='fa-solid fa-minus' style='position: absolute;margin-top: -25px;margin-left: 90%; cursor:pointer'></i>"
+                                    +"</div>"
+                                +"</div>";
+
+            $(svcp).after(txt1);
+        });
 	});
+
+    function deletesv(id, brid){
+        const dd1 = document.getElementById(id);
+        const brr = document.getElementById(brid);
+        dd1.remove();
+        brr.remove();
+    };
+
     </script>
 
 </body>
