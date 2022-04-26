@@ -1,13 +1,3 @@
-<style>
-    .sliderbutton{
-        width: 40px;
-        height: 40px;
-        border: none;
-        border-left: 0;
-        margin-left: -16px;
-        border-radius: 100%;
-    }
-</style>
 
 <!-- Sidebar -->
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">

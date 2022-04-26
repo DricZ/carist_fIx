@@ -429,3 +429,22 @@ Add a counter to the multi-steps indicator
     padding-top: 34px;
   }
 }
+
+/* BUTTON SIDEBAR */
+
+.sliderbutton{
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-left: 0;
+  margin-left: -15px;
+  border-radius: 100%;
+  position: absolute;
+  margin-top: -75px;
+}
+
+/* @media only screen and (max-width: 768px) {
+  .sliderbutton{
+    margin-left: 20px;
+  }
+} */

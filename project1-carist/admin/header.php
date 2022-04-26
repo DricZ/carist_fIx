@@ -1,15 +1,3 @@
-<style>
-    .sliderbutton{
-        width: 30px;
-        height: 30px;
-        border: none;
-        border-left: 0;
-        margin-left: -15px;
-        border-radius: 100%;
-        position: absolute;
-        margin-top: -75px;
-    }
-</style>
 
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
@@ -214,18 +202,51 @@
 </nav>
 
 <script>
+    var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+        },
+        any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
+
     function gantiicon(left, right){
+
         l = document.getElementById(left);
         r = document.getElementById(right);
 
         if (r.hasAttribute('hidden')){
+            if( isMobile.any() ){
+                bttn = document.getElementById("sidebarToggle");
+                bttn.style.marginLeft = "20px";
+            }
+
             l.setAttribute('hidden', '');
             r.removeAttribute('hidden');
         }
         else{
+            if( isMobile.any() ){
+                bttn = document.getElementById("sidebarToggle");
+                bttn.style.marginLeft = "-15px";
+            }
+
             r.setAttribute('hidden','');
             l.removeAttribute('hidden');
         }
         
     }
+
 </script>
