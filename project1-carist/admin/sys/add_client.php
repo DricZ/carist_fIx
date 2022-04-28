@@ -17,13 +17,16 @@
     $youtube = $_POST["youtube"];
     $marketing = $_POST["marketing"];
     $notes = $_POST["notes"];
-    $feedcount = 15;
-    $storycount = 4;
+    $feedcount = 15; //BELUM CONNECT
+    $storycount = 4; //BELUM CONNECT
     $visit = 0;
     if(isset($_POST["visit"])){
         $visit = 1;
     }
-    //$service = $_POST["service1"];    //tergantung jumlah services
+    $service = $_POST["service"];    //tergantung jumlah services
+
+    var_dump($service);
+    die();
 
     //Upload Client Logo untuk dapet link
     $target_dir = "../drive/client_logo/";
@@ -256,6 +259,43 @@
                         $due = mktime(0, 0, 0, date('m', $due), date('d', $due)+1, date('Y', $due));
                     }
                     $dueDate = date('Y-m-d', $due);
+                }
+            }
+            //Input service
+            for($i=0; $i<sizeof($service); $i++){
+                $serviceName = "";
+                $price = 0;
+                $sql = "SELECT * FROM service_list";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                // output data of each row
+                while($row = $result->fetch_assoc()) {
+                    $serviceName = $row['service_name'];
+                    $price = $row['price'];
+                    $feed_count = $row['feed_count'];
+                    $story_count = $row['story_count'];
+                    $reels_count = $row['reels_count'];
+                    $tiktok_count = $row['tiktok_count'];
+                }
+                } else {
+                    echo "0 results";
+                }
+                $sql = "INSERT INTO service (
+                    'service_id',
+                    'client_id',	
+                    'service_name',	
+                    'price',
+                    'feed_count',	
+                    'story_count',
+                    'reels_count',
+                    'tiktok_count')
+                    VALUES ($service[$i], $last_id, $serviceName, $price, $feed_count, $story_count, $reels_count, $tiktok_count)";
+                if ($conn->query($sql) === TRUE) {
+                    //echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . $conn->error;
+                    die();
                 }
             }
         }else{

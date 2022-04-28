@@ -201,11 +201,11 @@
                                 $toDate = '';
                             ?>
                                 <div class="col" style="display: flex; justify-content: center;">
-                                    <input type="date" class="form-control" name="from" id="from" placeholder="tanggal" value="<?=$fromDate?>" disabled required>
+                                    <input type="date" class="form-control" name="from" id="from" placeholder="tanggal" value="<?=$fromDate?>" readonly required>
                                 </div>
 
                                 <div class="col" style="display: flex; justify-content: center;">
-                                    <input type="date" class="form-control" name="to" id="to" placeholder="tanggal2" value="<?=$toDate?>" disabled required>
+                                    <input type="date" class="form-control" name="to" id="to" placeholder="tanggal2" value="<?=$toDate?>" readonly required>
                                 </div>
                             </div><br>
                             
@@ -399,8 +399,22 @@
 
     <script>
         counter = 1;
+        counter2 = 1;
         const price = [];
-        const day =[];
+        const day = [];
+
+        for(let i=0; i<20; i++){
+            price[i] = 0;
+            day[i] = 0;
+        }
+
+        function numberWithCommas(x) {
+            x = x.toString();
+            var pattern = /(-?\d+)(\d{3})/;
+            while (pattern.test(x))
+                x = x.replace(pattern, "$1,$2");
+            return x;
+        }
 
         $(document).ready( function() {
     	$(document).on('change', '.btn-file :file', function() {
@@ -437,6 +451,25 @@
 		    readURL(this);
 		});
 
+        //Change Service
+        $('#service1').change(function(e){
+            price[0] = $(this).find(':selected').data('price');
+            day[0] = $(this).find(':selected').data('day');
+            //Total Price
+            let total_price = 0;
+            let total_day = 0;
+            for(let i=0; i<price.length; i++){
+                total_price += price[i];
+                total_day += day[i];
+            }
+            $('#price').attr('value', numberWithCommas(total_price));
+            //Next x Day
+            var dt = new Date();
+            dt.setDate(dt.getDate() + 7);   //Default upload pertama
+            dt.setDate(dt.getDate() + total_day);
+            var tempDate = dt.toISOString().split('T')[0];
+            $('#to').attr('value', tempDate);
+        });
 
         $("#s1").click(function(){
 
@@ -455,7 +488,7 @@
                                         +"<label for='service"+ counter +"' class='col-form-label'>Service "+ counter +": </label>"
                                     +"</div>"
                                     +"<div class='col-8'>"
-                                        +"<select id='service"+ counter +"' class='form-select' style='width: 85%;' name='service' required >"
+                                        +"<select id='service"+ counter +"' class='form-select' style='width: 85%;' name='service[]' required >"
                                             +"<option disabled selected>--- please select service ---</option>"
                                             +"<?php echo
                                                 $sql = "SELECT * FROM service_list";
@@ -485,10 +518,12 @@
             $(loop3).after(txt1);
             //Change Service
             var serviceid = '#service'+counter;
-            console.log(serviceid);
+            $(serviceid).click(function(e){
+                counter2 = parseInt($(this).attr('id').substr(7));
+            });
             $(serviceid).change(function(e){
-                price[counter-1] = $(this).find(':selected').data('price');
-                day[counter-1] = $(this).find(':selected').data('day');
+                price[counter2-1] = $(this).find(':selected').data('price');
+                day[counter2-1] = $(this).find(':selected').data('day');
                 //Total Price
                 let total_price = 0;
                 let total_day = 0;
@@ -503,7 +538,6 @@
                 dt.setDate(dt.getDate() + total_day);
                 var tempDate = dt.toISOString().split('T')[0];
                 $('#to').attr('value', tempDate);
-                console.log(price);
             });
         });
 	});
@@ -511,39 +545,28 @@
     function deletesv(id, brid, index){
         const dd1 = document.getElementById(id);
         const brr = document.getElementById(brid);
-        price[index] = 0;
-        day[index] = 0;
+        price[index-1] = 0;
+        day[index-1] = 0;
+        console.log(index);
+        console.log(price);
+            //Total Price
+            let total_price = 0;
+            let total_day = 0;
+            for(let i=0; i<price.length; i++){
+                total_price += price[i];
+                total_day += day[i];
+            }
+            $('#price').attr('value', numberWithCommas(total_price));
+            //Next x Day
+            var dt = new Date();
+            dt.setDate(dt.getDate() + 7);   //Default upload pertama
+            dt.setDate(dt.getDate() + total_day);
+            var tempDate = dt.toISOString().split('T')[0];
+            $('#to').attr('value', tempDate);
         counter--;
         dd1.remove();
         brr.remove();
     };
-
-    //Change Service
-    function numberWithCommas(x) {
-        x = x.toString();
-        var pattern = /(-?\d+)(\d{3})/;
-        while (pattern.test(x))
-            x = x.replace(pattern, "$1,$2");
-        return x;
-    }
-    $('#service1').change(function(e){
-        price[0] = $(this).find(':selected').data('price');
-        day[0] = $(this).find(':selected').data('day');
-        //Total Price
-        let total_price = 0;
-        let total_day = 0;
-        for(let i=0; i<price.length; i++){
-            total_price += price[i];
-            total_day += day[i];
-        }
-        $('#price').attr('value', numberWithCommas(total_price));
-        //Next x Day
-        var dt = new Date();
-        dt.setDate(dt.getDate() + 7);   //Default upload pertama
-        dt.setDate(dt.getDate() + total_day);
-        var tempDate = dt.toISOString().split('T')[0];
-        $('#to').attr('value', tempDate);
-    });
 
     </script>
 
