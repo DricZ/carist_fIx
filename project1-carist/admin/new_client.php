@@ -478,7 +478,7 @@
                                         +"</select>"
                                         +"<i id='"+loop2+"' onclick='deletesv(`"+
                                         loop1
-                                        +"`, `"+ brid +"`,`"+ counter +"`');' class='fa-solid fa-minus' style='position: absolute;margin-top: -25px;margin-left: 90%; cursor:pointer'></i>"
+                                        +"`, `"+ brid +"`,`"+ counter +"`);' class='fa-solid fa-minus' style='position: absolute;margin-top: -25px;margin-left: 90%; cursor:pointer'></i>"
                                     +"</div>"
                                 +"</div>";
 
