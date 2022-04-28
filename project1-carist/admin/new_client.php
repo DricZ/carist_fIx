@@ -428,18 +428,6 @@
 		    readURL(this);
 		});
 
-        //Change Service
-        $('#service').change(function(e){
-            var price = $(this).find(':selected').data('price');
-            var day = $(this).find(':selected').data('day');
-            $('#price').attr('value', numberWithCommas(price));
-            //Next x Day
-            var dt = new Date();
-            dt.setDate(dt.getDate() + 7);   //Default upload pertama
-            dt.setDate(dt.getDate() + day);
-            var tempDate = dt.toISOString().split('T')[0];
-            $('#to').attr('value', tempDate);
-        });
 
         function numberWithCommas(x) {
             x = x.toString();
@@ -499,9 +487,25 @@
     function deletesv(id, brid){
         const dd1 = document.getElementById(id);
         const brr = document.getElementById(brid);
+        counter--;
         dd1.remove();
         brr.remove();
     };
+
+    //Change Service
+    for(var i=1; i<=counter; i++){
+        $('#service'+i).change(function(e){
+            var price = $(this).find(':selected').data('price');
+            var day = $(this).find(':selected').data('day');
+            $('#price').attr('value', numberWithCommas(price));
+            //Next x Day
+            var dt = new Date();
+            dt.setDate(dt.getDate() + 7);   //Default upload pertama
+            dt.setDate(dt.getDate() + day);
+            var tempDate = dt.toISOString().split('T')[0];
+            $('#to').attr('value', tempDate);
+        });
+    }
 
     </script>
 
