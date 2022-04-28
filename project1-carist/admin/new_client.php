@@ -98,6 +98,13 @@
                 ?>
 
                 <!-- Begin Page Content -->
+                <div id="crouton">
+                    <ul>
+                        <li class="actbc" style="margin-left: 20px;"><a href="#">Brand Information</a></li>
+                        <li><a href="#">Invoice</a></li>
+                    </ul>
+                </div>
+
                 <nav style="margin-bottom: 30px;">
                     <ol class="cd-breadcrumb triangle custom-icons" style="justify-content:left; display:flex; margin-left: 35px;">
                         <li class="current"><em class="navnc">Brand Information</em></li>
@@ -269,10 +276,10 @@
                         <div class="col-4">
                             <div id="div1" class="row g-3 align-items-center">
                                 <div class="col-2">
-                                    <label for="service" class="col-form-label">Service: </label>
+                                    <label for="service1" class="col-form-label">Service: </label>
                                 </div>
                                 <div id="p1" class="col-8">
-                                    <select id="service" class="form-select" style="width: 85%;" name="service" required >
+                                    <select id="service1" class="form-select" style="width: 85%;" name="service[]" required >
                                         <option disabled selected>--- please select service ---</option>
                                         <?php
                                             // Get Service List
@@ -450,10 +457,10 @@
             var txt1 = "<br id='"+brid+"'><div id='"+
                             loop1
                             +"' class='row g-3 align-items-center'>" + "<div class='col-2'>"
-                                        +"<label for='service' class='col-form-label'>Service: </label>"
+                                        +"<label for='service"+ counter +"' class='col-form-label'>Service: </label>"
                                     +"</div>"
                                     +"<div class='col-8'>"
-                                        +"<select id='service' class='form-select' style='width: 85%;' name='service' required >"
+                                        +"<select id='service"+ counter +"' class='form-select' style='width: 85%;' name='service' required >"
                                             +"<option disabled selected>--- please select service ---</option>"
                                             +"<?php echo
                                                 $sql = "SELECT * FROM service_list";
