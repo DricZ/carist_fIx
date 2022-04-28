@@ -399,6 +399,8 @@
 
     <script>
         counter = 1;
+        const price = [];
+        const day =[];
 
         $(document).ready( function() {
     	$(document).on('change', '.btn-file :file', function() {
@@ -436,28 +438,21 @@
 		});
 
 
-        function numberWithCommas(x) {
-            x = x.toString();
-            var pattern = /(-?\d+)(\d{3})/;
-            while (pattern.test(x))
-                x = x.replace(pattern, "$1,$2");
-            return x;
-        }
-
         $("#s1").click(function(){
 
             svc = $("#s1").parent().parent().attr('id');
             svcp = "#"+svc;
 
-            loop1 = "div"+(counter+1)
-            loop2 = "removesv"+(counter+1)
-            brid = "br"+(counter+1)
+            loop1 = "div"+(counter+1);
+            loop2 = "removesv"+(counter+1);
+            loop3 = "#div"+(counter);
+            brid = "br"+(counter+1);
             counter++;
 
             var txt1 = "<br id='"+brid+"'><div id='"+
                             loop1
                             +"' class='row g-3 align-items-center'>" + "<div class='col-2'>"
-                                        +"<label for='service"+ counter +"' class='col-form-label'>Service: </label>"
+                                        +"<label for='service"+ counter +"' class='col-form-label'>Service "+ counter +": </label>"
                                     +"</div>"
                                     +"<div class='col-8'>"
                                         +"<select id='service"+ counter +"' class='form-select' style='width: 85%;' name='service' required >"
@@ -483,36 +478,72 @@
                                         +"</select>"
                                         +"<i id='"+loop2+"' onclick='deletesv(`"+
                                         loop1
-                                        +"`, `"+ brid +"`);' class='fa-solid fa-minus' style='position: absolute;margin-top: -25px;margin-left: 90%; cursor:pointer'></i>"
+                                        +"`, `"+ brid +"`,`"+ counter +"`');' class='fa-solid fa-minus' style='position: absolute;margin-top: -25px;margin-left: 90%; cursor:pointer'></i>"
                                     +"</div>"
                                 +"</div>";
 
-            $(svcp).after(txt1);
+            $(loop3).after(txt1);
+            //Change Service
+            var serviceid = '#service'+counter;
+            console.log(serviceid);
+            $(serviceid).change(function(e){
+                price[counter-1] = $(this).find(':selected').data('price');
+                day[counter-1] = $(this).find(':selected').data('day');
+                //Total Price
+                let total_price = 0;
+                let total_day = 0;
+                for(let i=0; i<price.length; i++){
+                    total_price += price[i];
+                    total_day += day[i];
+                }
+                $('#price').attr('value', numberWithCommas(total_price));
+                //Next x Day
+                var dt = new Date();
+                dt.setDate(dt.getDate() + 7);   //Default upload pertama
+                dt.setDate(dt.getDate() + total_day);
+                var tempDate = dt.toISOString().split('T')[0];
+                $('#to').attr('value', tempDate);
+                console.log(price);
+            });
         });
 	});
 
-    function deletesv(id, brid){
+    function deletesv(id, brid, index){
         const dd1 = document.getElementById(id);
         const brr = document.getElementById(brid);
+        price[index] = 0;
+        day[index] = 0;
         counter--;
         dd1.remove();
         brr.remove();
     };
 
     //Change Service
-    for(var i=1; i<=counter; i++){
-        $('#service'+i).change(function(e){
-            var price = $(this).find(':selected').data('price');
-            var day = $(this).find(':selected').data('day');
-            $('#price').attr('value', numberWithCommas(price));
-            //Next x Day
-            var dt = new Date();
-            dt.setDate(dt.getDate() + 7);   //Default upload pertama
-            dt.setDate(dt.getDate() + day);
-            var tempDate = dt.toISOString().split('T')[0];
-            $('#to').attr('value', tempDate);
-        });
+    function numberWithCommas(x) {
+        x = x.toString();
+        var pattern = /(-?\d+)(\d{3})/;
+        while (pattern.test(x))
+            x = x.replace(pattern, "$1,$2");
+        return x;
     }
+    $('#service1').change(function(e){
+        price[0] = $(this).find(':selected').data('price');
+        day[0] = $(this).find(':selected').data('day');
+        //Total Price
+        let total_price = 0;
+        let total_day = 0;
+        for(let i=0; i<price.length; i++){
+            total_price += price[i];
+            total_day += day[i];
+        }
+        $('#price').attr('value', numberWithCommas(total_price));
+        //Next x Day
+        var dt = new Date();
+        dt.setDate(dt.getDate() + 7);   //Default upload pertama
+        dt.setDate(dt.getDate() + total_day);
+        var tempDate = dt.toISOString().split('T')[0];
+        $('#to').attr('value', tempDate);
+    });
 
     </script>
 
