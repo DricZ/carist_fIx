@@ -69,8 +69,11 @@
   margin-top: -75px;
 }
 
-/* @media only screen and (max-width: 768px) {
-  .sliderbutton{
-    margin-left: 20px;
+@media only screen and (max-width: 768px) {
+  .breadcrumbs{
+    justify-content: center;
+    display: flex;
+    margin-left: 0!important;
+    border: none;
   }
-} */
+}

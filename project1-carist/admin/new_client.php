@@ -309,6 +309,24 @@
                             <br>
                             <div class="row g-3 align-items-center">
                                 <div class="col-md-2 p-0 pl-2">
+                                    <label for="fc" class="col-form-label">Feed Count: </label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" id="fc" class="form-control" name="fc" disabled value="0">
+                                </div>
+                            </div><br>
+
+                            <div class="row g-3 align-items-center">
+                                <div class="col-md-2 p-0 pl-2">
+                                    <label for="sc" class="col-form-label">Story Count: </label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" id="sc" class="form-control" name="sc" disabled value="0">
+                                </div>
+                            </div><br>
+                            
+                            <div class="row g-3 align-items-center">
+                                <div class="col-md-2 p-0 pl-2">
                                     <label for="price" class="col-form-label">Price: </label>
                                 </div>
                                 <div class="col-md-10">
