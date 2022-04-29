@@ -1,82 +1,59 @@
-#crouton ul {
-  margin: 0;
-  padding: 0;
+.breadcrumbs {
+  border: 1px solid #cbd2d9;
+  border-radius: 0.3rem;
+  display: inline-flex;
   overflow: hidden;
-  width: 100%;
-  list-style: none;
 }
 
-#crouton li {
-  float: left;
-  margin: 0 10px;
+.breadcrumbs__item {
+  background: #fff;
+  color: #333;
+  outline: none;
+  padding: 0.75em 0.75em 0.75em 1.25em;
+  position: relative;
+  text-decoration: none;
+  transition: background 0.2s linear;
 }
 
-#crouton a {
-  background: #ddd;
-padding: .7em 1em;
-float: left;
-text-decoration: none;
-color: #444;
-text-shadow: 0 1px 0 rgba(255,255,255,.5);
-position: relative;
+.breadcrumbs__item:hover:after,
+.breadcrumbs__item:hover {
+  background: #edf1f5;
+  text-decoration: none;
 }
 
-#crouton .actbc a {
-  background-color: #99db76;
+.breadcrumbs__item:focus:after,
+.breadcrumbs__item:focus,
+.breadcrumbs__item.is-active:focus,
+.breadcrumbs__item.is-active:focus::after {
+  background: #323f4a;
+  color: #fff;
 }
 
-#crouton .actbc:not(:last-child) > a::after{
-  background-color: #99db76;
-}
-
-#crouton li:first-child a {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-
-#crouton li:last-child a {
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-#crouton a:hover {
-  background: #99db76;
-}
-
-#crouton li:not(:first-child) > a::before {
+.breadcrumbs__item:after,
+.breadcrumbs__item:before {
+  background: white;
+  bottom: 0;
+  clip-path: polygon(50% 50%, -50% -50%, 0 100%);
   content: "";
+  left: 100%;
   position: absolute;
-  top: 50%;
-  margin-top: -1.5em;   
-  border-width: 1.5em 0 1.5em 1em;
-  border-style: solid;
-  border-color: #ddd #ddd #ddd transparent;
-  left: -1em;
+  top: 0;
+  transition: background 0.2s linear;
+  width: 1em;
+  z-index: 1;
 }
 
-#crouton li:not(:first-child) > a:hover::before {
-  border-color: #99db76 #99db76 #99db76 transparent;
+.breadcrumbs__item:before {
+  background: #cbd2d9;
+  margin-left: 1px;
 }
 
-#crouton li:not(:last-child) > a::after {
-content: "";
-position: absolute;
-top: 50%;
-margin-top: -1.5em;   
-border-top: 1.5em solid transparent;
-border-bottom: 1.5em solid transparent;
-border-left: 1em solid #ddd;
-right: -1em;
+.breadcrumbs__item:last-child {
+  border-right: none;
 }
 
-#crouton li:not(:last-child) > a:hover::after {
-  border-left-color: #99db76;
-}
-
-@media only screen and (max-width: 768px) {
-  #crouton a {
-    padding: 5px 10px;
-}
+.breadcrumbs__item.is-active::after, .breadcrumbs__item.is-active {
+  background: #edf1f5;
 }
 
 /* BUTTON SIDEBAR */

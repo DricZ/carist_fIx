@@ -98,54 +98,45 @@
                 ?>
 
                 <!-- Begin Page Content -->
-                <div id="crouton">
-                    <ul>
-                        <li class="actbc" style="margin-left: 20px;"><a href="#">Brand Information</a></li>
-                        <li><a href="#">Invoice</a></li>
-                    </ul>
-                </div>
+                <nav style="margin-bottom: 30px;margin-left: 40px;" class="breadcrumbs">
+                    <a href="" class="breadcrumbs__item is-active">Brand Information</a> 
+                    <?php
+                        if(isset($_GET['id'])){
+                            $client_id = $_GET['id'];
+                            $sql = "SELECT * FROM client WHERE client_id=$client_id";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                                // output data of each row
+                                $no = 1;
+                                while($row = $result->fetch_assoc()) {
+                                    $name = $row['name'];
+                                    $logo = $row['client_logo'];
+                                    $address = $row['address'];
+                                    $phone = $row['phone'];
+                                    $input_date = $row['input_date'];
+                                    $paid_date = $row['paid_date'];
+                                    $start_date = $row['start_date'];
+                                    $end_date = $row['end_date'];
+                                    $visit = $row['visit'];
+                                    $instagram = $row['instagram'];
+                                    $tiktok = $row['tiktok'];
+                                    $facebook = $row['facebook'];
+                                    $youtube = $row['youtube'];
 
-                <nav style="margin-bottom: 30px;">
-                    <ol class="cd-breadcrumb triangle custom-icons" style="justify-content:left; display:flex; margin-left: 35px;">
-                        <li class="current"><em class="navnc">Brand Information</em></li>
-                        <?php
-                            if(isset($_GET['id'])){
-                                $client_id = $_GET['id'];
-                                $sql = "SELECT * FROM client WHERE client_id=$client_id";
-                                $result = $conn->query($sql);
-                                if ($result->num_rows > 0) {
-                                    // output data of each row
-                                    $no = 1;
-                                    while($row = $result->fetch_assoc()) {
-                                        $name = $row['name'];
-                                        $logo = $row['client_logo'];
-                                        $address = $row['address'];
-                                        $phone = $row['phone'];
-                                        $input_date = $row['input_date'];
-                                        $paid_date = $row['paid_date'];
-                                        $start_date = $row['start_date'];
-                                        $end_date = $row['end_date'];
-                                        $visit = $row['visit'];
-                                        $instagram = $row['instagram'];
-                                        $tiktok = $row['tiktok'];
-                                        $facebook = $row['facebook'];
-                                        $youtube = $row['youtube'];
-
-                                        $date=date_create($input_date);
-                                        $disp_date = date_format($date,"j F Y");
-                                    }
+                                    $date=date_create($input_date);
+                                    $disp_date = date_format($date,"j F Y");
                                 }
-                                echo "<li><a class='navnc' href='./new_client_inv.php?id=$client_id'>Invoice</a></li>";
-                            }else{
-                                echo "<li><a class='navnc' href='./new_client_inv.php'>Invoice</a></li>";
                             }
-                        ?>
-                    </ol>
-                </nav>
+                            echo "<a class='breadcrumbs__item' href='./new_client_inv.php?id=$client_id'>Invoice</a>";
+                        }else{
+                            echo "<a class='breadcrumbs__item' href='./new_client_inv.php'>Invoice</a>";
+                        }
+                    ?>
+            </nav>
 
                 <form method="post" action="sys/add_client.php" enctype="multipart/form-data">
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-md-3">
                             <div class="form-group" style="margin-left: 40px;padding-right: 20px;">
                                 <label class="form-label" for="customFile">Upload</label>
                                 <input type="file" class="form-control" name="logo" id="customFile" required />
@@ -153,7 +144,7 @@
                             </div>
                         </div>
 
-                        <div class="col-4">
+                        <div class="col-md-4" style="margin-bottom: 30px;">
                             <div class="row g-3 align-items-center">
                                 <div class="col-3">
                                     <label for="inputnama" class="col-form-label">Brand Name: </label>
@@ -269,11 +260,9 @@
                                     </select>
                                 </div>
                             </div><br>
-
-                            <button type="submit" class="btn btn-primary" style="margin-bottom: 30px;width: 110px;">Submit</button>
                         </div>
 
-                        <div class="col-4">
+                        <div class="col-md-5">
                             <div id="div1" class="row g-3 align-items-center">
                                 <div class="col-2">
                                     <label for="service1" class="col-form-label">Service: </label>
@@ -332,7 +321,12 @@
                                 <div class="col-8">
                                     <textarea type="text" id="notes" rows="4" name="notes" class="form-control"></textarea>
                                 </div>
-                            </div><br>
+                            </div>
+                            <div class="row g-3 align-items-center">
+                                <div class="col-12" style="justify-content: center;display: flex;margin-top: 50px;">
+                                    <button type="submit" class="btn btn-primary" style="margin-bottom: 30px;width: 110px;">Submit</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </form>
