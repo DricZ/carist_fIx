@@ -76,19 +76,19 @@
         <span>User List</span></a>
 </li>
 
-<li class="nav-item active">
-    <a class="nav-link" href="#">
+<!-- <li class="nav-item active">
+    <a class="nav-link">
         <i class="fas fa-fw fa-user"></i>
         <span>Laporan Keuangan</span>
     </a>
 </li>
 
 <li class="nav-item active">
-    <a class="nav-link" href="#">
+    <a class="nav-link">
         <i class="fas fa-fw fa-user"></i>
         <span>Staff Report</span>
     </a>
-</li>
+</li> -->
 
 
 <!-- Divider -->
@@ -168,12 +168,12 @@
 <?php
     if($marketingAccess || $adminAccess){
 ?>
-    <li class="nav-item active">
+    <!-- <li class="nav-item active">
     <a class="nav-link" href="#">
         <i class="fas fa-fw fa-tasks"></i>
         <span>Financial Report</span>
     </a>
-    </li>
+    </li> -->
 <?php
     }
 ?>
