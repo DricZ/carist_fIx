@@ -181,6 +181,15 @@
                                 </div>
                             </div><br>
 
+                            <div class="row g-3 align-items-center">
+                                <div class="col-3">
+                                    <label for="inputnohp" class="col-form-label">Email: </label>
+                                </div>
+                                <div class="col-8">
+                                    <input type="email" id="inputemail" name="email" class="form-control" required>
+                                </div>
+                            </div><br>
+
                             <label for="tanggal" aria-hidden="true">Date: </label>
                             <div class="row" style="width: 100%;">
                                 <div class="col" style="display: flex; justify-content: center;">

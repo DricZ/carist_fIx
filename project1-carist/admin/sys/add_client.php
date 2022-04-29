@@ -9,6 +9,7 @@
     $name = $_POST["client"];
     $address = $_POST["address"];
     $phone = $_POST["phone"];
+    $email = $_POST["email"];
     $from = $_POST["from"];
     $to = $_POST["to"];
     $instagram = $_POST["instagram"];
@@ -85,8 +86,8 @@
     }
 
     //Input Client Data
-    $sql = "INSERT INTO client (name, client_logo, address, phone, input_date, start_date, end_date, visit, instagram, tiktok, facebook, youtube, status, marketing_id, branding_notes)
-            VALUES ('$name', '$basename', '$address','$phone', now(), '$from', '$to', $visit, '$instagram', '$tiktok', '$facebook', '$youtube', 'pending', '$marketing', '$notes')";
+    $sql = "INSERT INTO client (name, client_logo, address, phone, email, input_date, start_date, end_date, visit, instagram, tiktok, facebook, youtube, status, marketing_id, branding_notes)
+            VALUES ('$name', '$basename', '$address','$phone', '$email', now(), '$from', '$to', $visit, '$instagram', '$tiktok', '$facebook', '$youtube', 'pending', '$marketing', '$notes')";
     $result = $conn->query($sql);
 
     if ($result === TRUE) { //Jika input client ke Database Sukses
