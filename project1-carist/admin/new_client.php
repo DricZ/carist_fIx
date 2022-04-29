@@ -65,7 +65,7 @@
             width: 100%;
         }
 
-        .col-8{
+        .col-md-8{
             padding: 0;
         }
     </style>
@@ -135,64 +135,54 @@
             </nav>
 
                 <form method="post" action="sys/add_client.php" enctype="multipart/form-data">
-                    <div class="row">
+                    <div class="row pl-5 pr-5">
                         <div class="col-md-3">
-                            <div class="form-group" style="margin-left: 40px;padding-right: 20px;">
+                            <div class="form-group" style="padding-right: 20px;">
                                 <label class="form-label" for="customFile">Upload</label>
                                 <input type="file" class="form-control" name="logo" id="customFile" required />
                                 <img id='img-upload'/>
                             </div>
                         </div>
 
-                        <div class="col-md-4" style="margin-bottom: 30px;">
-                            <div class="row g-3 align-items-center">
-                                <div class="col-3">
+                        <div class="col-md-5" style="margin-bottom: 30px;">
+                            <div class="row g-3 align-items-center pr-4">
+                                <div class="col-md-4">
                                     <label for="inputnama" class="col-form-label">Brand Name: </label>
                                 </div>
-                                <div class="col-8">
+                                <div class="col-md-8">
                                     <input type="text" id="inputnama" name="client" class="form-control" required>
                                 </div>
                             </div><br>
 
-                            <div class="row g-3 align-items-center">
-                                <div class="col-3">
+                            <div class="row g-3 align-items-center pr-4">
+                                <div class="col-md-4">
                                     <label for="inputalamat" class="col-form-label">Address: </label>
                                 </div>
-                                <div class="col-8">
+                                <div class="col-md-8">
                                     <input type="text" id="inputalamat" name="address" class="form-control" required>
                                 </div>
                             </div><br>
 
-                            <div class="row g-3 align-items-center">
-                                <div class="col-3">
+                            <div class="row g-3 align-items-center pr-4">
+                                <div class="col-md-4">
                                     <label for="inputnohp" class="col-form-label">Phone Number: </label>
                                 </div>
-                                <div class="col-8">
+                                <div class="col-md-8">
                                     <input type="number" id="inputnohp" name="phone" class="form-control" required>
                                 </div>
                             </div><br>
 
-                            <div class="row g-3 align-items-center">
-                                <div class="col-3">
+                            <div class="row g-3 align-items-center pr-4">
+                                <div class="col-md-4">
                                     <label for="inputnohp" class="col-form-label">Email: </label>
                                 </div>
-                                <div class="col-8">
+                                <div class="col-md-8">
                                     <input type="email" id="inputemail" name="email" class="form-control" required>
                                 </div>
                             </div><br>
 
                             <label for="tanggal" aria-hidden="true">Date: </label>
-                            <div class="row" style="width: 100%;">
-                                <div class="col" style="display: flex; justify-content: center;">
-                                    From
-                                </div>
-
-                                <div class="col" style="display: flex; justify-content: center;">
-                                    To
-                                </div>
-                            </div>
-
-                            <div class="row" style="width: 100%;">
+                            <div class="row pr-4 pl-4">
                             <?php
                                 $today = mktime(0,0,0);
                                 $from = nextDayFrom($today, 7);  //Postdate untuk konten pertama
@@ -200,56 +190,68 @@
                                 $fromDate = date('Y-m-d', $from);
                                 $toDate = '';
                             ?>
-                                <div class="col" style="display: flex; justify-content: center;">
-                                    <input type="date" class="form-control" name="from" id="from" placeholder="tanggal" value="<?=$fromDate?>" readonly required>
+                                <div class="col-md" style="display: flex; justify-content: center;">
+                                    <div class="col-md" style="display: flex; justify-content: center;">
+                                        From
+                                    </div>
+
+                                    <div class="col-md" style="display: flex; justify-content: center;">
+                                        To
+                                    </div>
                                 </div>
 
-                                <div class="col" style="display: flex; justify-content: center;">
-                                    <input type="date" class="form-control" name="to" id="to" placeholder="tanggal2" value="<?=$toDate?>" readonly required>
+                                <div class="col-md" style="display: flex; justify-content: center;">
+                                    <div class="col-md" style="display: flex; justify-content: center;">
+                                        <input type="date" class="form-control" name="from" id="from" placeholder="tanggal" value="<?=$fromDate?>" readonly required>
+                                    </div>
+
+                                    <div class="col-md" style="display: flex; justify-content: center;">
+                                        <input type="date" class="form-control" name="to" id="to" placeholder="tanggal2" value="<?=$toDate?>" readonly required>
+                                    </div>
                                 </div>
                             </div><br>
                             
-                            <div class="row g-3 align-items-center">
-                                <div class="col-3">
+                            <div class="row g-3 align-items-center pr-4">
+                                <div class="col-md-4">
                                     <label for="inputig" class="col-form-label">Instagram ID: </label>
                                 </div>
-                                <div class="col-8">
+                                <div class="col-md-8">
                                     <input type="text" id="inputig" class="form-control" name="instagram">
                                 </div>
                             </div><br>
 
-                            <div class="row g-3 align-items-center">
-                                <div class="col-3">
+                            <div class="row g-3 align-items-center pr-4">
+                                <div class="col-md-4">
                                     <label for="inputtt" class="col-form-label">Tiktok ID: </label>
                                 </div>
-                                <div class="col-8">
+                                <div class="col-md-8">
                                     <input type="text" id="inputtt" class="form-control" name="tiktok">
                                 </div>
                             </div><br>
 
-                            <div class="row g-3 align-items-center">
-                                <div class="col-3">
+                            <div class="row g-3 align-items-center pr-4">
+                                <div class="col-md-4">
                                     <label for="fb" class="col-form-label">Facebook: </label>
                                 </div>
-                                <div class="col-8">
+                                <div class="col-md-8">
                                     <input type="text" id="fb" class="form-control" name="facebook">
                                 </div>
                             </div><br>
 
-                            <div class="row g-3 align-items-center">
-                                <div class="col-3">
+                            <div class="row g-3 align-items-center pr-4">
+                                <div class="col-md-4">
                                     <label for="yt" class="col-form-label">Youtube: </label>
                                 </div>
-                                <div class="col-8">
+                                <div class="col-md-8">
                                     <input type="text" id="yt" class="form-control" name="youtube">
                                 </div>
                             </div><br>
 
-                            <div class="row g-3 align-items-center">
-                                <div class="col-3">
+                            <div class="row g-3 align-items-center pr-4">
+                                <div class="col-md-4">
                                     <label for="inputmarkt" class="col-form-label">Marketing: </label>
                                 </div>
-                                <div class="col-8">
+                                <div class="col-md-8">
                                     <select id="inputmarkt" class="form-select" name="marketing" required>
                                         <option value="0" selected>Head</option>
                                         <?php
@@ -271,12 +273,12 @@
                             </div><br>
                         </div>
 
-                        <div class="col-md-5">
+                        <div class="col-md-4">
                             <div id="div1" class="row g-3 align-items-center">
-                                <div class="col-2">
+                                <div class="col-md-2 p-0 pl-2">
                                     <label for="service1" class="col-form-label">Service: </label>
                                 </div>
-                                <div id="p1" class="col-8">
+                                <div id="p1" class="col-md-10">
                                     <select id="service1" class="form-select" style="width: 85%;" name="service[]" required >
                                         <option disabled selected>--- please select service ---</option>
                                         <?php
@@ -300,39 +302,39 @@
                                             }
                                         ?>
                                     </select>
-                                    <i id="s1" class="fa-solid fa-plus" style="position: absolute;margin-top: -25px;margin-left: 90%; cursor:pointer"></i>
+                                    <i id="s1" class="fa-solid fa-plus" style="position: absolute;margin-top: -25px;margin-left: 86%; cursor:pointer"></i>
                                 </div>
                             </div>
 
                             <br>
                             <div class="row g-3 align-items-center">
-                                <div class="col-2">
+                                <div class="col-md-2 p-0 pl-2">
                                     <label for="price" class="col-form-label">Price: </label>
                                 </div>
-                                <div class="col-8">
+                                <div class="col-md-10">
                                     <input type="text" id="price" class="form-control" name="price" disabled value="0">
                                 </div>
                             </div><br>
 
                             <div class="row g-3 align-items-center">
-                                <div class="col-2">
+                                <div class="col-md-2 p-0 pl-2">
                                     <label for="visit" class="col-form-label">Visit: </label>
                                 </div>
-                                <div class="col-8">
+                                <div class="col-md-10">
                                     <input class="form-check-input" type="checkbox" style="position: relative; margin-left: 0" name="visit" value="visit" id="visit">
                                 </div>
                             </div><br>
 
                             <div class="row g-3 align-items-center">
-                                <div class="col-2">
+                                <div class="col-md-2 p-0 pl-2">
                                     <label for="notes" class="col-form-label">Notes: </label>
                                 </div>
-                                <div class="col-8">
+                                <div class="col-md-10">
                                     <textarea type="text" id="notes" rows="4" name="notes" class="form-control"></textarea>
                                 </div>
                             </div>
                             <div class="row g-3 align-items-center">
-                                <div class="col-12" style="justify-content: center;display: flex;margin-top: 50px;">
+                                <div class="col-md-12" style="justify-content: center;display: flex;margin-top: 50px;">
                                     <button type="submit" class="btn btn-primary" style="margin-bottom: 30px;width: 110px;">Submit</button>
                                 </div>
                             </div>
@@ -487,10 +489,10 @@
 
             var txt1 = "<br id='"+brid+"'><div id='"+
                             loop1
-                            +"' class='row g-3 align-items-center'>" + "<div class='col-2'>"
+                            +"' class='row g-3 align-items-center'>" + "<div class='col-md-2 p-0 pl-2'>"
                                         +"<label for='service"+ counter +"' class='col-form-label'>Service "+ counter +": </label>"
                                     +"</div>"
-                                    +"<div class='col-8'>"
+                                    +"<div class='col-md-10'>"
                                         +"<select id='service"+ counter +"' class='form-select' style='width: 85%;' name='service[]' required >"
                                             +"<option disabled selected>--- please select service ---</option>"
                                             +"<?php echo
@@ -514,7 +516,7 @@
                                         +"</select>"
                                         +"<i id='"+loop2+"' onclick='deletesv(`"+
                                         loop1
-                                        +"`, `"+ brid +"`,`"+ counter +"`);' class='fa-solid fa-minus' style='position: absolute;margin-top: -25px;margin-left: 90%; cursor:pointer'></i>"
+                                        +"`, `"+ brid +"`,`"+ counter +"`);' class='fa-solid fa-minus' style='position: absolute;margin-top: -25px;margin-left: 86%; cursor:pointer'></i>"
                                     +"</div>"
                                 +"</div>";
 
