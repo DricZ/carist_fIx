@@ -312,7 +312,7 @@
                                     <label for="fc" class="col-form-label">Feed Count: </label>
                                 </div>
                                 <div class="col-md-10">
-                                    <input type="text" id="fc" class="form-control" name="fc" disabled value="0">
+                                    <input type="text" id="fc" class="form-control" name="fc" readonly value="0">
                                 </div>
                             </div><br>
 
@@ -321,7 +321,7 @@
                                     <label for="sc" class="col-form-label">Story Count: </label>
                                 </div>
                                 <div class="col-md-10">
-                                    <input type="text" id="sc" class="form-control" name="sc" disabled value="0">
+                                    <input type="text" id="sc" class="form-control" name="sc" readonly value="0">
                                 </div>
                             </div><br>
                             
