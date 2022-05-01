@@ -297,7 +297,7 @@
                                                     $story_count = $row['story_count'];
                                                     $reels_count = $row['reels_count'];
                                                     $tiktok_count = $row['tiktok_count'];
-                                                    echo "<option value='$service_id' data-price='$price' data-day='$day'>$service_name</option>";
+                                                    echo "<option value='$service_id' data-price='$price' data-day='$day' data-feed='$feed_count' data-story='$story_count'>$service_name</option>";
                                                 }
                                             }
                                         ?>
@@ -425,10 +425,14 @@
         counter2 = 1;
         const price = [];
         const day = [];
+        const feed = [];
+        const story = [];
 
         for(let i=0; i<20; i++){
             price[i] = 0;
             day[i] = 0;
+            feed[i] = 0;
+            story[i] = 0;
         }
 
         function numberWithCommas(x) {
@@ -478,12 +482,18 @@
         $('#service1').change(function(e){
             price[0] = $(this).find(':selected').data('price');
             day[0] = $(this).find(':selected').data('day');
+            feed[0] = $(this).find(':selected').data('feed');
+            story[0] = $(this).find(':selected').data('story');
             //Total Price
             let total_price = 0;
             let total_day = 0;
+            let total_feed = 0;
+            let total_story = 0;
             for(let i=0; i<price.length; i++){
                 total_price += price[i];
                 total_day += day[i];
+                total_feed += feed[i];
+                total_story += story[i];
             }
             $('#price').attr('value', numberWithCommas(total_price));
             //Next x Day
@@ -492,6 +502,8 @@
             dt.setDate(dt.getDate() + total_day);
             var tempDate = dt.toISOString().split('T')[0];
             $('#to').attr('value', tempDate);
+            $('#fc').attr('value', total_feed);
+            $('#sc').attr('value', total_story);
         });
 
         $("#s1").click(function(){
@@ -527,7 +539,7 @@
                                                         $story_count = $row['story_count'];
                                                         $reels_count = $row['reels_count'];
                                                         $tiktok_count = $row['tiktok_count'];
-                                                        echo "<option value='$service_id' data-price='$price' data-day='$day'>$service_name</option>";
+                                                        echo "<option value='$service_id' data-price='$price' data-day='$day' data-feed='$feed_count' data-story='$story_count'>$service_name</option>";
                                                     }
                                                 }
                                             ?>"
@@ -547,12 +559,18 @@
             $(serviceid).change(function(e){
                 price[counter2-1] = $(this).find(':selected').data('price');
                 day[counter2-1] = $(this).find(':selected').data('day');
+                feed[counter2-1] = $(this).find(':selected').data('feed');
+                story[counter2-1] = $(this).find(':selected').data('story');
                 //Total Price
                 let total_price = 0;
                 let total_day = 0;
+                let total_feed = 0;
+                let total_story = 0;
                 for(let i=0; i<price.length; i++){
                     total_price += price[i];
                     total_day += day[i];
+                    total_feed += feed[i];
+                    total_story += story[i];
                 }
                 $('#price').attr('value', numberWithCommas(total_price));
                 //Next x Day
@@ -561,6 +579,8 @@
                 dt.setDate(dt.getDate() + total_day);
                 var tempDate = dt.toISOString().split('T')[0];
                 $('#to').attr('value', tempDate);
+                $('#fc').attr('value', total_feed);
+                $('#sc').attr('value', total_story);
             });
         });
 	});
@@ -570,14 +590,20 @@
         const brr = document.getElementById(brid);
         price[index-1] = 0;
         day[index-1] = 0;
+        feed[index-1] = 0;
+        story[index-1] = 0;
         console.log(index);
         console.log(price);
             //Total Price
             let total_price = 0;
             let total_day = 0;
+            let total_feed = 0;
+            let total_story = 0;
             for(let i=0; i<price.length; i++){
                 total_price += price[i];
                 total_day += day[i];
+                total_feed += feed[i];
+                total_story += story[i];
             }
             $('#price').attr('value', numberWithCommas(total_price));
             //Next x Day
@@ -586,6 +612,8 @@
             dt.setDate(dt.getDate() + total_day);
             var tempDate = dt.toISOString().split('T')[0];
             $('#to').attr('value', tempDate);
+            $('#fc').attr('value', total_feed);
+            $('#sc').attr('value', total_story);
         counter--;
         dd1.remove();
         brr.remove();
