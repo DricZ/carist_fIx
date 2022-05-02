@@ -100,15 +100,12 @@
       position: absolute;"></div>
 
       <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" id="header-video" style="
-         width: 130%;
-         height: 130%;
-         position: absolute;
-         top:  -20%;
-         left: -15%;
-         filter: brightness(60%);
-         object-fit: cover;
-      ">
-         <source src="assets/video/tumbnail.mp4" type="video/mp4">
+      width: 100%;
+      height: 120%;
+      position: absolute;
+      filter: brightness(60%);
+      object-fit: fill;">
+         <source src="./assets/video/bgvideo.mp4" type="video/mp4">
       </video>
 
       <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
@@ -326,86 +323,92 @@
             <div class="carousel-item active">
               <div class="row aos-init aos-animate" data-aos="zoom-in">
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+                  <img src="assets/img/clients/logoc (1).png" class="img-fluid" alt="">
                 </div>
       
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+                  <img src="assets/img/clients/logoc (2).png" class="img-fluid" alt="">
                 </div>
       
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+                  <img src="assets/img/clients/logoc (3).png" class="img-fluid" alt="">
                 </div>
 
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+                  <img src="assets/img/clients/logoc (4).png" class="img-fluid" alt="">
                 </div>
       
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+                  <img src="assets/img/clients/logoc (5).png" class="img-fluid" alt="">
                 </div>
 
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+                  <img src="assets/img/clients/logoc (6).png" class="img-fluid" alt="">
                 </div>
               </div>
             </div>
 
+            <?php
+              $idClient = 7;
+              for($i = 0; $i < 6; $i++){
+            ?>
             <div class="carousel-item">
               <div class="row aos-init aos-animate" data-aos="zoom-in">
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
-                </div>
-      
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
-                </div>
-      
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+                  <img src="assets/img/clients/logoc (<?=strval($idClient)?>).png" class="img-fluid" alt="">
                 </div>
 
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
-                </div>
+                <?php
+                  $idClient++;
+                ?>
       
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+                  <img src="assets/img/clients/logoc (<?=strval($idClient)?>).png" class="img-fluid" alt="">
                 </div>
 
+                <?php
+                  $idClient++;
+                ?>
+      
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+                  <img src="assets/img/clients/logoc (<?=strval($idClient)?>).png" class="img-fluid" alt="">
                 </div>
+
+                <?php
+                  $idClient++;
+                ?>
+
+                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                  <img src="assets/img/clients/logoc (<?=strval($idClient)?>).png" class="img-fluid" alt="">
+                </div>
+
+                <?php
+                  $idClient++;
+                ?>
+      
+                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                  <img src="assets/img/clients/logoc (<?=strval($idClient)?>).png" class="img-fluid" alt="">
+                </div>
+
+                <?php
+                  $idClient++;
+                ?>
+
+                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                  <img src="assets/img/clients/logoc (<?=strval($idClient)?>).png" class="img-fluid" alt="">
+                </div>
+
+                <?php
+                  $idClient++;
+                ?>
               </div>
             </div>
+            
+            <?php
 
-            <div class="carousel-item">
-              <div class="row aos-init aos-animate" data-aos="zoom-in">
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
-                </div>
-      
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
-                </div>
-      
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
-                </div>
-
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
-                </div>
-      
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
-                </div>
-
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
-                </div>
-              </div>
-            </div>
+              }
+            ?>
+            
           </div>
 
           <!-- Left and right controls/icons -->
