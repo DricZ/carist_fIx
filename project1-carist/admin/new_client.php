@@ -132,7 +132,7 @@
                             echo "<a class='breadcrumbs__item' href='./new_client_inv.php'>Invoice</a>";
                         }
                     ?>
-            </nav>
+                </nav>
 
                 <form method="post" action="sys/add_client.php" enctype="multipart/form-data">
                     <div class="row pl-5 pr-5">

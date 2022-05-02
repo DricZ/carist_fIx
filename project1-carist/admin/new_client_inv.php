@@ -76,11 +76,9 @@
                 ?>
 
                 <!-- Begin Page Content -->
-                <nav style="margin-bottom: 30px;">
-                    <ol class="cd-breadcrumb triangle custom-icons" style="justify-content:left; display:flex; margin-left: 35px;">
-                        <li><a class="navnc" href="./new_client.php?id=<?=$client_id?>"><em class="navnc">Brand Information</em></a></li>
-                        <li class="current"><em class="navnc">Invoice</em></li>
-                    </ol>
+                <nav style="margin-bottom: 30px;margin-left: 40px;" class="breadcrumbs">
+                    <a href="./new_client.php?id=<?=$client_id?>" class="breadcrumbs__item">Brand Information</a> 
+                    <a href="#" class="breadcrumbs__item is-active">Invoice</a> 
                 </nav>
 
                 <div class="row" style="padding-left: 40px;padding-right: 40px;">
@@ -126,10 +124,11 @@
                         </div>
                     </div>
 
-                    <div class="row" style="border: 2px solid;padding: 20px;margin-left: 10px; margin-top: 20px; width: 98%;">
-                        <div class="col">
+                    <table class="table table-borderless table-responsive-md invtb">
+                        <tbody>
                             <?php
                                 $total = 0;
+                                $ids = 0;
                                 $sql = "SELECT * FROM service WHERE client_id=$client_id";
                                 $result = $conn->query($sql);
                                 if ($result->num_rows > 0) {
@@ -140,45 +139,32 @@
                                         $price = $row['price'];
                                         $disp_price = number_format($price,0,",",".");
                                         $total += $price;
+                                        $ids += 1;
                             ?>
-                            <div class="row">
-                                <div class="col-md-7">
-                                    <p><?=$service_name?></p>
-                                </div>
-
-                                <div class="col-md-2">
-
-                                </div>
-
-                                <div class="col-md-3">
-                                    <p style="text-align: right;">Rp. <?=$disp_price?></p>
-                                </div>
-                            </div>
+                            <tr>
+                                <td class="svc-<?=$ids?>" style="text-align: left;padding: 30px;padding-bottom: 10px; padding-top: 10px;"><?=$service_name?></td>
+                                <td></td>
+                                <td></td>
+                                <td class="svc-<?=$ids?>" style="text-align: right;padding: 30px;padding-bottom: 10px; padding-top: 10px;">Rp. <?=$disp_price?></td>
+                            </tr>
                             <?php
                                     }
                                 }
                                 $disp_total = number_format($total,0,",",".");
                             ?>
-
-                            
-
-                            <hr/>
-
-                            <div class="row">
-                                <div class="col-md-8">
-
-                                </div>
-
-                                <div class="col-md-1">
-                                    <p style="text-align: right;">Total: </p>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <p style="text-align: right;">Rp. <?=$disp_total?></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                            <tr>
+                                <td colspan="4" style="padding-bottom: 0px;padding-left: 30px;padding-right: 30px;">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td style="text-align: right;padding: 30px;padding-bottom: 30px; padding-top:10px">Total</td>
+                                <td style="text-align: right;width: 15%;padding: 30px;padding-bottom: 30px; padding-top:10px">Rp. <?=$disp_total?></td>
+                            </tr>
+                        </tbody>
+                    </table>
 
                     <div class="row g-3 align-items-center mb-2">
                             <label for="notes" class="col-form-label">Notes: </label>
