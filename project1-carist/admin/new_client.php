@@ -182,7 +182,6 @@
                             </div><br>
 
                             <label for="tanggal" aria-hidden="true">Date: </label>
-                            <div class="row pr-4 pl-4">
                             <?php
                                 $today = mktime(0,0,0);
                                 $from = nextDayFrom($today, 7);  //Postdate untuk konten pertama
@@ -190,26 +189,20 @@
                                 $fromDate = date('Y-m-d', $from);
                                 $toDate = '';
                             ?>
-                                <div class="col-md" style="display: flex; justify-content: center;">
-                                    <div class="col-md" style="display: flex; justify-content: center;">
-                                        From
-                                    </div>
-
-                                    <div class="col-md" style="display: flex; justify-content: center;">
-                                        To
-                                    </div>
-                                </div>
-
-                                <div class="col-md" style="display: flex; justify-content: center;">
-                                    <div class="col-md" style="display: flex; justify-content: center;">
-                                        <input type="date" class="form-control" name="from" id="from" placeholder="tanggal" value="<?=$fromDate?>" readonly required>
-                                    </div>
-
-                                    <div class="col-md" style="display: flex; justify-content: center;">
-                                        <input type="date" class="form-control" name="to" id="to" placeholder="tanggal2" value="<?=$toDate?>" readonly required>
-                                    </div>
-                                </div>
-                            </div><br>
+                            <table class="table table-borderless table-responsive-md">
+                                <thead>
+                                <tr>
+                                    <th style="text-align: center;">From</th>
+                                    <th style="text-align: center;">To</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><input type="date" class="form-control" name="from" id="from" placeholder="tanggal" value="<?=$fromDate?>" readonly required></td>
+                                    <td><input type="date" class="form-control" name="to" id="to" placeholder="tanggal2" value="<?=$toDate?>" readonly required></td>
+                                </tr>
+                                </tbody>
+                            </table><br>
                             
                             <div class="row g-3 align-items-center pr-4">
                                 <div class="col-md-4">
