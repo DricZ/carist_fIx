@@ -199,6 +199,9 @@
                                 <tbody>
                                 <tr>
                                     <td><input type="date" class="form-control" name="from" id="from" placeholder="tanggal" value="<?=$fromDate?>" readonly required></td>
+                                    <?php
+
+                                    ?>
                                     <td><input type="date" class="form-control" name="to" id="to" placeholder="tanggal2" value="<?=$toDate?>" readonly required></td>
                                 </tr>
                                 </tbody>
@@ -273,7 +276,7 @@
                                 </div>
                                 <div id="p1" class="col-md-10">
                                     <select id="service1" class="form-select" style="width: 85%;" name="service[]" required >
-                                        <option disabled selected>--- please select service ---</option>
+                                        <option value='0' data-price='0' data-day='0' data-feed='0' data-story='0' selected>--- Please Select Service ---</option>
                                         <?php
                                             // Get Service List
                                             $sql = "SELECT * FROM service_list";
@@ -416,10 +419,18 @@
     <script>
         counter = 1;
         counter2 = 1;
+        total_day = 0
         const price = [];
         const day = [];
         const feed = [];
         const story = [];
+
+        if(total_day == 0){
+            $('#to').removeAttr('readonly');
+        }
+        else{
+            $('#to').attr('readonly', true);
+        }
 
         for(let i=0; i<20; i++){
             price[i] = 0;
@@ -479,7 +490,7 @@
             story[0] = $(this).find(':selected').data('story');
             //Total Price
             let total_price = 0;
-            let total_day = 0;
+            total_day = 0;
             let total_feed = 0;
             let total_story = 0;
             for(let i=0; i<price.length; i++){
@@ -497,6 +508,13 @@
             $('#to').attr('value', tempDate);
             $('#fc').attr('value', total_feed);
             $('#sc').attr('value', total_story);
+
+            if(total_day == 0){
+                $('#to').removeAttr('readonly');
+            }
+            else{
+                $('#to').attr('readonly', true);
+            }
         });
 
         $("#s1").click(function(){
@@ -517,7 +535,7 @@
                                     +"</div>"
                                     +"<div class='col-md-10'>"
                                         +"<select id='service"+ counter +"' class='form-select' style='width: 85%;' name='service[]' required >"
-                                            +"<option disabled selected>--- please select service ---</option>"
+                                            +"<option value='0' data-price='0' data-day='0' data-feed='0' data-story='0' selected>--- Please Select Service ---</option>"
                                             +"<?php echo
                                                 $sql = "SELECT * FROM service_list";
                                                 $result = $conn->query($sql);
@@ -574,6 +592,8 @@
                 $('#to').attr('value', tempDate);
                 $('#fc').attr('value', total_feed);
                 $('#sc').attr('value', total_story);
+
+                console.log(total_day);
             });
         });
 	});
@@ -610,6 +630,13 @@
         counter--;
         dd1.remove();
         brr.remove();
+
+        if(total_day == 0){
+            $('#to').removeAttr('readonly');
+        }
+        else{
+            $('#to').attr('readonly', true);
+        }
     };
 
     </script>
