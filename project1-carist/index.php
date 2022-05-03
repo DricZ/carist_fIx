@@ -323,23 +323,23 @@
             <div class="carousel-item active">
               <div class="row aos-init aos-animate" data-aos="zoom-in">
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/logoc (1).png" class="img-fluid" alt="">
+                  <img src="assets/img/clients/logoc (1).svg" class="img-fluid" alt="">
                 </div>
       
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/logoc (2).png" class="img-fluid" alt="">
+                  <img src="assets/img/clients/logoc (2).svg" class="img-fluid" alt="">
                 </div>
       
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/logoc (3).png" class="img-fluid" alt="">
+                  <img src="assets/img/clients/logoc (3).svg" class="img-fluid" alt="">
                 </div>
 
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/logoc (4).png" class="img-fluid" alt="">
+                  <img src="assets/img/clients/logoc (4).svg" class="img-fluid" alt="">
                 </div>
       
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/logoc (5).png" class="img-fluid" alt="">
+                  <img src="assets/img/clients/logoc (5).svg" class="img-fluid" alt="">
                 </div>
 
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
@@ -355,7 +355,7 @@
             <div class="carousel-item">
               <div class="row aos-init aos-animate" data-aos="zoom-in">
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/logoc (<?=strval($idClient)?>).png" class="img-fluid" alt="">
+                  <img src="assets/img/clients/logoc (<?=strval($idClient)?>).svg" class="img-fluid" alt="">
                 </div>
 
                 <?php
@@ -363,7 +363,7 @@
                 ?>
       
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/logoc (<?=strval($idClient)?>).png" class="img-fluid" alt="">
+                  <img src="assets/img/clients/logoc (<?=strval($idClient)?>).svg" class="img-fluid" alt="">
                 </div>
 
                 <?php
@@ -371,7 +371,7 @@
                 ?>
       
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/logoc (<?=strval($idClient)?>).png" class="img-fluid" alt="">
+                  <img src="assets/img/clients/logoc (<?=strval($idClient)?>).svg" class="img-fluid" alt="">
                 </div>
 
                 <?php
@@ -379,7 +379,7 @@
                 ?>
 
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/logoc (<?=strval($idClient)?>).png" class="img-fluid" alt="">
+                  <img src="assets/img/clients/logoc (<?=strval($idClient)?>).svg" class="img-fluid" alt="">
                 </div>
 
                 <?php
@@ -387,7 +387,7 @@
                 ?>
       
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/logoc (<?=strval($idClient)?>).png" class="img-fluid" alt="">
+                  <img src="assets/img/clients/logoc (<?=strval($idClient)?>).svg" class="img-fluid" alt="">
                 </div>
 
                 <?php
@@ -395,7 +395,7 @@
                 ?>
 
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/logoc (<?=strval($idClient)?>).png" class="img-fluid" alt="">
+                  <img src="assets/img/clients/logoc (<?=strval($idClient)?>).svg" class="img-fluid" alt="">
                 </div>
 
                 <?php
@@ -505,12 +505,16 @@
       <div class="container" data-aos="zoom-in">
 
         <div class="row">
-          <div class="col-lg-9 text-center text-lg-start">
-            <h3>Call To Action</h3>
-            <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <div class="col-lg-12 text-center text-lg-start">
+            <h3 style="text-align: center;">but there's more ...</h3>
+            <h3 style="text-align: center;">are you ready to talk more about your brand and business</h3>
+            <p style="text-align: center;"> Create your mind at ease and contact us in detail down below for any further questions.</p>
           </div>
-          <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Call To Action</a>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 cta-btn-container text-center" style="display: flex;justify-content: center;">
+            <a class="cta-btn align-middle" href="tel:(+62) 823-3030-5005">Call Us</a>
+            <a class="cta-btn align-middle" href="mailto: caristcorporation@gmail.com">Email</a>
           </div>
         </div>
 
