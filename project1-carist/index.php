@@ -46,7 +46,7 @@
       <!-- Uncomment below if you prefer to use an image logo -->
       
       <div class="col-sm-6">
-        <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+        <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
       </div>
       <div class="col-sm-6" style="padding-left: 56vw;">
         <nav id="navbar" class="navbar">
@@ -108,14 +108,14 @@
          <source src="./assets/video/bgvideo.mp4" type="video/mp4">
       </video>
 
-      <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+      <!-- <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
         <h1>Creative Solutions For Your Business / Transformation</h1>
         <h2>We Love What We Do, We Do What We Love</h2>
         <div class="d-flex justify-content-center justify-content-lg-start">
           <a href="#about" class="btn-get-started scrollto">Get Started</a>
           <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
         </div>
-      </div>
+      </div> -->
    </div>
 
     <!-- <div class="container">
@@ -173,15 +173,15 @@
         <!-- The slideshow/carousel -->
         <div class="carousel-inner">
 
-          <div class="carousel-item active">
+          <!-- <div class="carousel-item active">
             <div class="container text-left" style="width: 1024px; height: 220px;">
               <h3 class="m-b-30">“Brandworks is a company that displays the rarity of right-left brain balance. In a world where designers and brand consultants are focusing merely on aesthetics (while neglecting the strategy), Brandworks excels in aligning aesthetics with an impeccable branding strategy. For Brandworks, solving a problem is not enough, they just have to do it with style.”</h3>
               <h6 class="block-title hint-text fs-12">NATHAN SANTOSO - DIRECTOR OF MARKETING COMMUNICATIONS OF SINGHASARI INTEGRATED TOURISM COMPLEX (SITC)</h6>
             </div>
-          </div>
+          </div> -->
 
-          <div class="carousel-item">
-            <div class="container text-left" style="width: 1024px; height: 220px;">
+          <div class="carousel-item active">
+            <div class="container text-left" style="width: 1024px; height: 100px;">
               <h3 class="m-b-30">“Cooperative and responsive. Good at giving constructive input for our projects.”</h3>
               <h6 class="block-title hint-text fs-12">RICKY SUBAGIO – CEO OF INTERNATIONAL SORJ</h6>
             </div>
@@ -190,12 +190,12 @@
         </div>
       
         <!-- Left and right controls/icons -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
           <span class="carousel-control-prev-icon"></span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
           <span class="carousel-control-next-icon"></span>
-        </button>
+        </button> -->
       </div>
 
       <!-- <div class="swiper-container swiper-container-horizontal" id="testimonials_slider">
@@ -241,9 +241,11 @@
       <div class="container-fluid" data-aos="fade-up">
 
         <div class="row">
-          <div class="img" data-aos="zoom-in" data-aos-delay="150">
+          
+
+          <!-- <div class="img" data-aos="zoom-in" data-aos-delay="150">
             <center><img src="assets/img/why-us.png" id="why-us_img" style="width: 50%;"></center>
-          </div>
+          </div> -->
         </div>
 
       </div>
@@ -794,13 +796,13 @@
       <div class="container">
         <div class="row" style="margin-top: 10px;">
           <div class="col-sm-12">
-            <center><a href="index.html" class="logo1 me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid" id="logoft"></a></center>
+            <center><a href="index.html" class="logo1 me-auto"><img src="assets/img/logo.svg" alt="" class="img-fluid" id="logoft"></a></center>
           </div>
         </div>
 
         <div class="row">
           <div class="col-lg-2 col-md-6 footer-contact" style="margin-left: 34%; padding:0%" >
-            <p>
+            <p style="color: white;">
               <strong>Phone:</strong> +62 823 3030 5005<br>
               <strong>Email:</strong> caristcorporation@gmail.com<br><br>
 
@@ -829,24 +831,18 @@
           </div> -->
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Social Networks</h4>
+            <h4 style="color: white;">Our Social Networks</h4>
             <!-- <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p> -->
-            <div class="social-links mt-3">
-              <a href="https://www.instagram.com/carist.id/" class="instagram"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-              </svg></a>
-              <a href="https://www.tiktok.com/@carist.id" class="tiktok"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
-                <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z"/>
-              </svg></a>
+            <div class="social-links">
+              <a href="https://www.instagram.com/carist.id/" class="instagram"><span class="iconify" data-icon="akar-icons:instagram-fill" style="color: white;"></span></a>
+              <a href="https://www.tiktok.com/@carist.id" class="tiktok"><span class="iconify" data-icon="bi:tiktok" style="color: white;"></span></a>
 
               <a href="#" class="youtube">
-                <i class="bx bxl-youtube">
-                </i>
+              <span class="iconify" data-icon="akar-icons:youtube-fill" style="color: white;"></span>
               </a>
 
               <a href="https://wa.me/6282330305005" class="whatsapp">
-                <i class="bx bxl-whatsapp">
-                </i>
+              <span class="iconify" data-icon="akar-icons:whatsapp-fill" style="color: white;"></span>
               </a>
             </div>
           </div>
@@ -862,6 +858,7 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
+  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>

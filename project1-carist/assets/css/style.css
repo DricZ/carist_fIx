@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  background: #37517e;
+  background: #34c0b2;
 }
 
 #preloader:before {
@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #37517e;
+  border: 6px solid #34c0b2;
   border-top-color: #fff;
   border-bottom-color: #fff;
   border-radius: 50%;
@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #47b2e4;
+  background: #34c0b2;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -513,7 +513,7 @@ section {
 }
 
 .section-bg {
-  background-color: #d1d9e8;
+  background-color: #dbdbdb;
 }
 
 .section-title {
@@ -879,9 +879,9 @@ section {
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url("../img/cta-bg.png") fixed center center;
+  background: linear-gradient(rgba(52, 192, 178, 0.8), rgba(52, 192, 178, 0.8)), url("../img/cta-bg.png") fixed center center;
   background-size: cover;
-  padding: 120px 0;
+  padding: 55px 0;
 }
 
 .cta h3 {
@@ -1691,7 +1691,7 @@ section {
 
 #footer .footer-top {
   padding: 10px 0 10px 0;
-  background: #fff;
+  background: black;
 }
 
 #footer .footer-top .footer-contact {
@@ -1766,11 +1766,9 @@ section {
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #47b2e4;
   color: black;
   line-height: 1;
   padding: 8px 0;
-  margin-right: 4px;
   border-radius: 50%;
   text-align: center;
   width: 36px;
@@ -1779,7 +1777,7 @@ section {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #209dd8;
+  background: #34c0b2;
   color: black;
   text-decoration: none;
 }

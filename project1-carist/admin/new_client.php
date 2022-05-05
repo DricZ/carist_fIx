@@ -348,7 +348,7 @@
                                 </div>
                             </div>
                             <div class="row g-3 align-items-center">
-                                <div class="col-md-12" style="justify-content: center;display: flex;margin-top: 50px;">
+                                <div class="col-md-12" style="margin-top: 50px;margin-left: 70px;">
                                     <button type="submit" class="btn btn-primary" style="margin-bottom: 30px;width: 110px;">Submit</button>
                                 </div>
                             </div>

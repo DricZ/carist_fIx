@@ -80,8 +80,8 @@
                                     </div>";
                                     echo"<div id='$section_id' class='collapse'>
                                             <div class='row'>
-                                                <div class='col-md-1'></div>
-                                                <div class='col-md-11'>
+                                                
+                                                <div class='col-md-12' style='padding-left: 30px;'>
                                                     <!-- SELURUH TASK -->";
                                                     //Search All Task with that client ID
                                                     $sql2 = "SELECT * FROM task WHERE client_id = $client_id";
