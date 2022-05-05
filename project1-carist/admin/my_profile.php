@@ -11,8 +11,6 @@
 ?>
 
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,6 +23,28 @@
     <meta name="author" content="">
 
     <title>My Profile</title>
+
+    <style>
+        .kv-avatar .krajee-default.file-preview-frame,.kv-avatar .krajee-default.file-preview-frame:hover {
+            margin: 0;
+            padding: 0;
+            border: none;
+            box-shadow: none;
+            text-align: center;
+        }
+        .kv-avatar {
+            display: inline-block;
+        }
+        .kv-avatar .file-input {
+            display: table-cell;
+            width: 213px;
+        }
+        .kv-reqd {
+            color: red;
+            font-family: monospace;
+            font-weight: normal;
+        }
+</style>
 
 </head>
 
@@ -105,7 +125,18 @@
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
-                                    <form method="post" action="sys/update_profile.php">
+                                    <form method="post" action="sys/update_profile.php" enctype="multipart/form-data">
+                                        <!-- File Upload -->
+                                        <div class="row">
+                                            <div class="kv-avatar">
+                                                <div class="file-loading">
+                                                    <input id="avatar-1" name="avatar-1" type="file" required>
+                                                </div>
+                                            </div>
+                                            <div class="kv-avatar-hint">
+                                                <small>Select file < 1500 KB</small>
+                                            </div>
+                                        </div>
                                         <div class="row my-3">
                                             <div class="col-md-1">
                                                 <label class="form-label mt-1" for="name">Name</label>
@@ -244,6 +275,30 @@
             $(this).find('.taskidInput').attr('value', $(e.relatedTarget).data('taskid'));
             $(this).find("."+$(e.relatedTarget).data('step')+"Select").attr('disabled', false);
             $(this).find('.textPilih').text(step);
+        });
+    </script>
+
+    <!-- the fileinput plugin initialization -->
+    <script>
+        var btnCust = '<button type="button" class="btn btn-secondary" title="Add picture tags" ' + 
+            'onclick="alert(\'Call your custom code here.\')">' +
+            '<i class="bi-tag"></i>' +
+            '</button>'; 
+        $("#avatar-1").fileinput({
+            overwriteInitial: true,
+            maxFileSize: 1500,
+            showClose: false,
+            showCaption: false,
+            browseLabel: '',
+            removeLabel: '',
+            browseIcon: '<i class="bi-folder2-open"></i>',
+            removeIcon: '<i class="bi-x-lg"></i>',
+            removeTitle: 'Cancel or reset changes',
+            elErrorContainer: '#kv-avatar-errors-1',
+            msgErrorClass: 'alert alert-block alert-danger',
+            defaultPreviewContent: '<img src="/drive/" alt="Your Avatar">',
+            layoutTemplates: {main2: '{preview} ' +  btnCust + ' {remove} {browse}'},
+            allowedFileExtensions: ["jpg", "png", "gif"]
         });
     </script>
 
