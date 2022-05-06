@@ -909,8 +909,8 @@ section {
 }
 
 .cta .cta-btn:hover {
-  background: #47b2e4;
-  border: 2px solid #47b2e4;
+  background: #34c0b2;
+  border: 2px solid #34c0b2;
 }
 
 @media (max-width: 1024px) {
@@ -1800,6 +1800,17 @@ section {
 
 #footer .credits a {
   transition: 0.3s;
+}
+
+.img-service{
+  float: left;
+  width: 60px;
+  height: 90px;
+  margin-right: 20px;
+}
+
+.pddsv{
+  padding: 10px;
 }
 
 @media (max-width: 768px) {
