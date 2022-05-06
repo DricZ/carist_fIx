@@ -113,6 +113,7 @@
                                     $logo = $row['client_logo'];
                                     $address = $row['address'];
                                     $phone = $row['phone'];
+                                    $email = $row['email'];
                                     $input_date = $row['input_date'];
                                     $paid_date = $row['paid_date'];
                                     $start_date = $row['start_date'];
@@ -129,10 +130,26 @@
                             }
                             echo "<a class='breadcrumbs__item' href='./new_client_inv.php?id=$client_id'>Invoice</a>";
                         }else{
+                            $client_id = "";
+                            $name = "";
+                            $logo = "";
+                            $address = "";
+                            $phone = "";
+                            $email = "";
+                            $instagram = "";
+                            $tiktok = "";
+                            $facebook = "";
+                            $youtube = "";
                             echo "<a class='breadcrumbs__item' href='./new_client_inv.php'>Invoice</a>";
                         }
                     ?>
                 </nav>
+
+                <?php
+                    if(isset($_GET['id'])){
+                        echo "<span class='ml-3'>Client ID: $client_id</span>";
+                    }
+                ?>
 
                 <form method="post" action="sys/add_client.php" enctype="multipart/form-data">
                     <div class="row pl-5 pr-5">
@@ -150,7 +167,7 @@
                                     <label for="inputnama" class="col-form-label">Brand Name: </label>
                                 </div>
                                 <div class="col-md-8">
-                                    <input type="text" id="inputnama" name="client" class="form-control" required>
+                                    <input type="text" id="inputnama" name="client" class="form-control" value="<?=$name?>" required>
                                 </div>
                             </div><br>
 
@@ -159,7 +176,7 @@
                                     <label for="inputalamat" class="col-form-label">Address: </label>
                                 </div>
                                 <div class="col-md-8">
-                                    <input type="text" id="inputalamat" name="address" class="form-control" required>
+                                    <input type="text" id="inputalamat" name="address" class="form-control"  value="<?=$address?>" required>
                                 </div>
                             </div><br>
 
@@ -168,7 +185,7 @@
                                     <label for="inputnohp" class="col-form-label">Phone Number: </label>
                                 </div>
                                 <div class="col-md-8">
-                                    <input type="number" id="inputnohp" name="phone" class="form-control" required>
+                                    <input type="tel" id="inputnohp" name="phone" class="form-control" value="<?=$phone?>" required>
                                 </div>
                             </div><br>
 
@@ -177,7 +194,7 @@
                                     <label for="inputnohp" class="col-form-label">Email: </label>
                                 </div>
                                 <div class="col-md-8">
-                                    <input type="email" id="inputemail" name="email" class="form-control" required>
+                                    <input type="email" id="inputemail" name="email" class="form-control" value="<?=$email?>" required>
                                 </div>
                             </div><br>
 
@@ -212,7 +229,7 @@
                                     <label for="inputig" class="col-form-label">Instagram ID: </label>
                                 </div>
                                 <div class="col-md-8">
-                                    <input type="text" id="inputig" class="form-control" name="instagram">
+                                    <input type="text" id="inputig" class="form-control" name="instagram" value="<?=$instagram?>">
                                 </div>
                             </div><br>
 
@@ -221,7 +238,7 @@
                                     <label for="inputtt" class="col-form-label">Tiktok ID: </label>
                                 </div>
                                 <div class="col-md-8">
-                                    <input type="text" id="inputtt" class="form-control" name="tiktok">
+                                    <input type="text" id="inputtt" class="form-control" name="tiktok" value="<?=$tiktok?>">
                                 </div>
                             </div><br>
 
@@ -230,7 +247,7 @@
                                     <label for="fb" class="col-form-label">Facebook: </label>
                                 </div>
                                 <div class="col-md-8">
-                                    <input type="text" id="fb" class="form-control" name="facebook">
+                                    <input type="text" id="fb" class="form-control" name="facebook"  value="<?=$facebook?>">
                                 </div>
                             </div><br>
 
@@ -239,7 +256,7 @@
                                     <label for="yt" class="col-form-label">Youtube: </label>
                                 </div>
                                 <div class="col-md-8">
-                                    <input type="text" id="yt" class="form-control" name="youtube">
+                                    <input type="text" id="yt" class="form-control" name="youtube"  value="<?=$youtube?>">
                                 </div>
                             </div><br>
 
