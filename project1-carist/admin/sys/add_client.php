@@ -26,8 +26,8 @@
     }
     $service = $_POST["service"];    //tergantung jumlah services
 
-    var_dump($service);
-    die();
+    //var_dump($service);
+    //die();
 
     //Upload Client Logo untuk dapet link
     $target_dir = "../drive/client_logo/";
@@ -82,7 +82,7 @@
 
     if (!$uploadSuccess){
         echo "<br><a href='../dashboard.php'>Dashboard</a><br>";
-        die();    //Comment untuk skip file upload
+        //die();    //Comment untuk skip file upload
     }
 
     //Input Client Data
@@ -93,7 +93,7 @@
     if ($result === TRUE) { //Jika input client ke Database Sukses
         $last_id = $conn->insert_id; //Get Client ID
         //Generate Tasks non Visit
-        if($visit == 0){
+        
             //First task = 7 hari kerja setelah input date
             $today = mktime(0,0,0);
             $due = nextDayFrom($today, 7);  //Postdate untuk konten pertama
@@ -291,7 +291,7 @@
                     'story_count',
                     'reels_count',
                     'tiktok_count')
-                    VALUES ($service[$i], $last_id, $serviceName, $price, $feed_count, $story_count, $reels_count, $tiktok_count)";
+                    VALUES ($service[$i], $last_id, '$serviceName', $price, $feed_count, $story_count, $reels_count, $tiktok_count)";
                 if ($conn->query($sql) === TRUE) {
                     //echo "New record created successfully";
                 } else {
@@ -299,10 +299,6 @@
                     die();
                 }
             }
-        }else{
-            //Generate Task with Visit
-
-        }
 
         //Redirect Back
         header("Location: ../new_client.php?id=$last_id");
