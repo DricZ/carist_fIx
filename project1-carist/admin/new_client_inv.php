@@ -167,8 +167,8 @@
                     </table>
 
                     <div class="row mb-2">
-                        <div class="col-md-4 ml-3">
-                            <img src="./img/qr.jpg" style="max-width: 100%;">
+                        <div class="col-md-2 ml-4">
+                            <img src="./img/qr-crop.jpg" style="max-width: 100%;">
                         </div>
                         <div class="col-md-4">
                             <label for="notes" class="col-form-label">Notes: </label>
