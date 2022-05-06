@@ -18,8 +18,8 @@
     $youtube = $_POST["youtube"];
     $marketing = $_POST["marketing"];
     $notes = $_POST["notes"];
-    $feedcount = $_POST["fc"]; //BELUM CONNECT
-    $storycount = $_POST["sc"]; //BELUM CONNECT
+    $feedcount = $_POST["fc"];
+    $storycount = $_POST["sc"];
     $visit = 0;
     if(isset($_POST["visit"])){
         $visit = 1;
