@@ -354,7 +354,7 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-2 col-md-6 footer-contact" style="margin-left: 34%; padding:0%" >
+          <div class="col-lg-2 col-md-6 pr-3 footer-contact" style="margin-left: 34%; padding:0%" >
             <p style="color: white;">
               <strong>Phone:</strong> +62 823 3030 5005<br>
               <strong>Email:</strong> caristcorporation@gmail.com<br><br>
@@ -363,7 +363,7 @@
             </p>
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
+          <div class="col-lg-3 col-md-6 pl-3 footer-links">
             <h4 style="color: white;">Our Social Networks</h4>
             <div class="social-links">
               <a href="https://www.instagram.com/carist.id/" class="instagram"><span class="iconify" data-icon="akar-icons:instagram-fill" style="color: white;"></span></a>
@@ -379,6 +379,10 @@
             </div>
           </div>
 
+        </div>
+
+        <div class="row">
+          <center><p style="color: white;">Copyright © 2022 <b>Carist</b>. All Right Reserved</p></center>
         </div>
       </div>
     </div>
