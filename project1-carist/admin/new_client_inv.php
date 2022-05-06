@@ -166,9 +166,12 @@
                         </tbody>
                     </table>
 
-                    <div class="row g-3 align-items-center mb-2">
+                    <div class="row mb-2">
+                        <div class="col-md-4 ml-3">
+                            <img src="./img/qr.jpg" style="max-width: 100%;">
+                        </div>
+                        <div class="col-md-4">
                             <label for="notes" class="col-form-label">Notes: </label>
-                        <div class="col-4 mt-0">
                             <textarea type="text" id="notes" rows="5" name="notes" class="form-control"></textarea>
                         </div>
                     </div>
