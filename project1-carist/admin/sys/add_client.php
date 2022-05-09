@@ -283,14 +283,14 @@
                     echo "0 results";
                 }
                 $sql = "INSERT INTO service (
-                    'service_id',
-                    'client_id',	
-                    'service_name',	
-                    'price',
-                    'feed_count',	
-                    'story_count',
-                    'reels_count',
-                    'tiktok_count')
+                    service_id,
+                    client_id,	
+                    service_name,	
+                    price,
+                    feed_count,	
+                    story_count,
+                    reels_count,
+                    tiktok_count)
                     VALUES ($service[$i], $last_id, '$serviceName', $price, $feed_count, $story_count, $reels_count, $tiktok_count)";
                 if ($conn->query($sql) === TRUE) {
                     //echo "New record created successfully";
