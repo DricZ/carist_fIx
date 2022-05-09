@@ -513,7 +513,8 @@ section {
 }
 
 .section-bg {
-  background-color: #dbdbdb;
+  background-color: #818081;
+  color: white;
 }
 
 .section-title {
