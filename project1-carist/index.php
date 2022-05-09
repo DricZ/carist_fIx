@@ -150,12 +150,12 @@
             <div class="col-md pddsv">
               <span class="iconify img-service" data-icon="tabler:brand-google-analytics" style="color: black;"></span>
               <h4>Branding & Strategic</h4>
-              <p>From concept brainstroming, defining approach, tone of voice, identity building, to launch end development. We help you in dwdsdadasd</p>
+              <p>Branding strategy is an attempt to introduce business values ​​to consumers.</p>
             </div>
             <div class="col-md pddsv">
               <span class="iconify img-service" data-icon="akar-icons:instagram-fill" style="color: black;"></span>
               <h4>Social Media Management</h4>
-              <p>From concept brainstroming, defining approach, tone of voice, identity building, to launch end development. We help you in dwdsdadasd</p>
+              <p>Social media management is the use of various tools, software and services that can help businesses share their business content on social media.</p>
             </div>
           </div>
           <div class="row">
@@ -174,12 +174,12 @@
             <div class="col-md pddsv">
             <span class="iconify img-service" data-icon="bi:music-note-beamed" style="color: black;"></span>
               <h4>Music Production</h4>
-              <p>From concept brainstroming, defining approach, tone of voice, identity building, to launch end development. We help you in dwdsdadasd</p>
+              <p>A music producer oversees all aspects of creating a song or album. Includes the choice of songs, the choice of musicians, instruments and vocalists and how the instruments are played and the notes sung and where the song or album was recorded.</p>
             </div>
             <div class="col-md pddsv">
             <span class="iconify img-service" data-icon="mdi:human-female-dance" style="color: black;"></span>
               <h4>Talent Management</h4>
-              <p>From concept brainstroming, defining approach, tone of voice, identity building, to launch end development. We help you in dwdsdadasd</p>
+              <p>Talent management program, namely aligning the company's strategic plan with the needs of the company as a whole.</p>
             </div>
           </div>
           <div class="row" style="justify-content: center;">
@@ -200,7 +200,7 @@
     <!-- End Why Us Section -->
 
     <!-- Start Cliens Section -->
-    <section id="cliens" class="cliens section-bg">
+    <section id="cliens" class="cliens section-bg" style="background-color: #d4d2d4">
       <div class="container">
 
         <!-- Carousel -->
@@ -218,27 +218,27 @@
             <div class="carousel-item active">
               <div class="row aos-init aos-animate" data-aos="zoom-in">
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/logoc (1).svg" class="img-fluid" alt="">
-                </div>
-      
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
                   <img src="assets/img/clients/logoc (2).svg" class="img-fluid" alt="">
                 </div>
       
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
                   <img src="assets/img/clients/logoc (3).svg" class="img-fluid" alt="">
                 </div>
+      
+                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                  <img src="assets/img/clients/logoc (6).svg" class="img-fluid" alt="">
+                </div>
 
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/logoc (4).svg" class="img-fluid" alt="">
+                  <img src="assets/img/clients/logoc (11).svg" class="img-fluid" alt="">
                 </div>
       
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/logoc (5).svg" class="img-fluid" alt="">
+                  <img src="assets/img/clients/logoc (29).svg" class="img-fluid" alt="">
                 </div>
 
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/logoc (6).svg" class="img-fluid" alt="">
+                  <img src="assets/img/clients/logoc (31).svg" class="img-fluid" alt="">
                 </div>
               </div>
             </div>
