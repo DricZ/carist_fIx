@@ -332,8 +332,8 @@
         </div>
         <div class="row">
           <div class="col-lg-12 cta-btn-container text-center" style="display: flex;justify-content: center;">
-            <a class="cta-btn align-middle" href="https://wa.me/6282330305005?text=Halo%20Admin%20Carist%2C%20saya%20mau%20order%20jasa%20nya">Contact Us</a>
-            <a class="cta-btn align-middle" href="mailto: caristcorporation@gmail.com">Email</a>
+            <a class="cta-btn align-middle" target="_blank" href="https://wa.me/6282330305005?text=Halo%20Admin%20Carist%2C%20saya%20mau%20order%20jasa%20nya">Contact Us</a>
+            <a class="cta-btn align-middle" target="_blank" href="mailto: caristcorporation@gmail.com">Email</a>
           </div>
         </div>
 
@@ -366,14 +366,14 @@
           <div class="col-lg-3 col-md-6 pl-3 footer-links">
             <h4 style="color: white;">Our Social Networks</h4>
             <div class="social-links">
-              <a href="https://www.instagram.com/carist.id/" class="instagram"><span class="iconify" data-icon="akar-icons:instagram-fill" style="color: white;"></span></a>
-              <a href="https://www.tiktok.com/@carist.id" class="tiktok"><span class="iconify" data-icon="bi:tiktok" style="color: white;"></span></a>
+              <a target="_blank" href="https://www.instagram.com/carist.id/" class="instagram"><span class="iconify" data-icon="akar-icons:instagram-fill" style="color: white;"></span></a>
+              <a target="_blank" href="https://www.tiktok.com/@carist.id" class="tiktok"><span class="iconify" data-icon="bi:tiktok" style="color: white;"></span></a>
 
-              <a href="#" class="youtube">
+              <a target="_blank" href="#" class="youtube">
               <span class="iconify" data-icon="akar-icons:youtube-fill" style="color: white;"></span>
               </a>
 
-              <a href="https://wa.me/6282330305005?text=Halo%20Admin%20Carist%2C%20saya%20mau%20order%20jasa%20nya" class="whatsapp">
+              <a target="_blank" href="https://wa.me/6282330305005?text=Halo%20Admin%20Carist%2C%20saya%20mau%20order%20jasa%20nya" class="whatsapp">
               <span class="iconify" data-icon="akar-icons:whatsapp-fill" style="color: white;"></span>
               </a>
             </div>
