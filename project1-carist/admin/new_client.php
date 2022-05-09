@@ -203,7 +203,7 @@
                                 $today = mktime(0,0,0);
                                 $from = nextDayFrom($today, 7);  //Postdate untuk konten pertama
                                 $to = nextDayFrom($from, 1);  //Postdate untuk konten terakhir
-                                $fromDate = date('Y-m-d', $from);
+                                $fromDate = date('Y-m-d', $today);
                                 $toDate = '';
                             ?>
                             <table class="table table-borderless table-responsive-md">
@@ -215,7 +215,7 @@
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td><input type="date" class="form-control" name="from" id="from" placeholder="tanggal" value="<?=$fromDate?>" readonly required></td>
+                                    <td><input type="date" class="form-control" name="from" id="from" placeholder="tanggal" value="<?=$fromDate?>" required></td>
                                     <?php
 
                                     ?>

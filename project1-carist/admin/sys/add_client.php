@@ -96,7 +96,7 @@
         
             //First task = 7 hari kerja setelah input date
             $today = mktime(0,0,0);
-            $due = nextDayFrom($today, 7);  //Postdate untuk konten pertama
+            $due = strtotime($from);  //Postdate untuk konten pertama
 
             //Jika Feed > Story
             if($feedcount > $storycount){
