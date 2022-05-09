@@ -69,7 +69,6 @@
       width: 100%;
       height: 120%;
       position: absolute;
-      filter: brightness(60%);
       object-fit: fill;">
          <source src="./assets/video/bgvideo.mp4" type="video/mp4">
       </video>
