@@ -149,7 +149,7 @@
 
             <div class="login">
                 <form method="post" action="sys/check_login.php">
-                    <label for="chk" aria-hidden="true"><img src="./img/carist only cropped.png" style="width: 40%;"></label>
+                    <label onclick="window.location.href = '../.'" for="chk" aria-hidden="true"><img src="./img/carist only cropped.png" style="width: 40%;"></label>
                     
                         <input type="text" name="username" placeholder="Username" required="">
                     <div class="form-group">

@@ -149,7 +149,7 @@
           <h2 style="text-align: center;margin-bottom: 50px;">We Have Four Departments, One Big Idea.</h2>
           <div class="row">
             <div class="col-md pddsv">
-              <span class="iconify img-service" data-icon="akar-icons:instagram-fill" style="color: black;"></span>
+              <span class="iconify img-service" data-icon="tabler:brand-google-analytics" style="color: black;"></span>
               <h4>Branding & Strategic</h4>
               <p>From concept brainstroming, defining approach, tone of voice, identity building, to launch end development. We help you in dwdsdadasd</p>
             </div>
@@ -161,31 +161,31 @@
           </div>
           <div class="row">
             <div class="col-md pddsv">
-            <span class="iconify img-service" data-icon="akar-icons:instagram-fill" style="color: black;"></span>
+            <span class="iconify img-service" data-icon="dashicons:playlist-video" style="color: black;"></span>
               <h4>Photo & Video Production</h4>
               <p>From concept brainstroming, defining approach, tone of voice, identity building, to launch end development. We help you in dwdsdadasd</p>
             </div>
             <div class="col-md pddsv">
-            <span class="iconify img-service" data-icon="akar-icons:instagram-fill" style="color: black;"></span>
+            <span class="iconify img-service" data-icon="clarity:animation-solid" style="color: black;"></span>
               <h4>Animation & VFX</h4>
               <p>From concept brainstroming, defining approach, tone of voice, identity building, to launch end development. We help you in dwdsdadasd</p>
             </div>
           </div>
           <div class="row">
             <div class="col-md pddsv">
-            <span class="iconify img-service" data-icon="akar-icons:instagram-fill" style="color: black;"></span>
+            <span class="iconify img-service" data-icon="bi:music-note-beamed" style="color: black;"></span>
               <h4>Music Production</h4>
               <p>From concept brainstroming, defining approach, tone of voice, identity building, to launch end development. We help you in dwdsdadasd</p>
             </div>
             <div class="col-md pddsv">
-            <span class="iconify img-service" data-icon="akar-icons:instagram-fill" style="color: black;"></span>
+            <span class="iconify img-service" data-icon="mdi:human-female-dance" style="color: black;"></span>
               <h4>Talent Management</h4>
               <p>From concept brainstroming, defining approach, tone of voice, identity building, to launch end development. We help you in dwdsdadasd</p>
             </div>
           </div>
           <div class="row" style="justify-content: center;">
             <div class="col-6 pddsv">
-            <span class="iconify img-service" data-icon="akar-icons:instagram-fill" style="color: black;"></span>
+            <span class="iconify img-service" data-icon="tabler:brand-tabler" style="color: black;"></span>
               <h4>Website & Apps Developer</h4>
               <p>From concept brainstroming, defining approach, tone of voice, identity building, to launch end development. We help you in dwdsdadasd</p>
             </div>
@@ -239,7 +239,7 @@
                 </div>
 
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/logoc (6).png" class="img-fluid" alt="">
+                  <img src="assets/img/clients/logoc (6).svg" class="img-fluid" alt="">
                 </div>
               </div>
             </div>
@@ -332,7 +332,7 @@
         </div>
         <div class="row">
           <div class="col-lg-12 cta-btn-container text-center" style="display: flex;justify-content: center;">
-            <a class="cta-btn align-middle" href="tel:(+62) 823-3030-5005">Call Us</a>
+            <a class="cta-btn align-middle" href="https://wa.me/6282330305005?text=Halo%20Admin%20Carist%2C%20saya%20mau%20order%20jasa%20nya">Contact Us</a>
             <a class="cta-btn align-middle" href="mailto: caristcorporation@gmail.com">Email</a>
           </div>
         </div>
@@ -373,7 +373,7 @@
               <span class="iconify" data-icon="akar-icons:youtube-fill" style="color: white;"></span>
               </a>
 
-              <a href="https://wa.me/6282330305005" class="whatsapp">
+              <a href="https://wa.me/6282330305005?text=Halo%20Admin%20Carist%2C%20saya%20mau%20order%20jasa%20nya" class="whatsapp">
               <span class="iconify" data-icon="akar-icons:whatsapp-fill" style="color: white;"></span>
               </a>
             </div>
