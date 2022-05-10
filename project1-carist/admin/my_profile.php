@@ -44,6 +44,10 @@
             font-family: monospace;
             font-weight: normal;
         }
+
+        #img-upload{
+            width: 100%;
+        }
 </style>
 
 </head>
@@ -128,14 +132,23 @@
                                     <form method="post" action="sys/update_profile.php" enctype="multipart/form-data">
                                         <!-- File Upload -->
                                         <div class="row">
-                                            <div class="kv-avatar">
+                                            <div class="col-md-3">
+                                                <div class="form-group" style="padding-right: 20px;">
+                                                    <label class="form-label" for="avatar-1">Upload</label>
+                                                    <input type="file" class="form-control" name="avatar-1" id="avatar-1" style="margin-bottom: 20px;" required />
+                                                    <img id='img-upload'/>
+                                                </div>
+                                            </div>
+                                            
+
+                                            <!-- <div class="kv-avatar">
                                                 <div class="file-loading">
                                                     <input id="avatar-1" name="avatar-1" type="file" required>
                                                 </div>
                                             </div>
                                             <div class="kv-avatar-hint">
                                                 <small>Select file < 1500 KB</small>
-                                            </div>
+                                            </div> -->
                                         </div>
                                         <div class="row my-3">
                                             <div class="col-md-1">
@@ -299,6 +312,45 @@
             defaultPreviewContent: '<img src="/drive/" alt="Your Avatar">',
             layoutTemplates: {main2: '{preview} ' +  btnCust + ' {remove} {browse}'},
             allowedFileExtensions: ["jpg", "png", "gif"]
+        });
+    </script>
+
+    <script>
+        $(document).ready( function() {
+    	$(document).on('change', '.btn-file :file', function() {
+		var input = $(this),
+			label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+		input.trigger('fileselect', [label]);
+		});
+
+		$('.btn-file :file').on('fileselect', function(event, label) {
+		    
+		    var input = $(this).parents('.input-group').find(':text'),
+		        log = label;
+		    
+		    if( input.length ) {
+		        input.val(log);
+		    } else {
+		        if( log ) alert(log);
+		    }
+	    
+		});
+		function readURL(input) {
+		    if (input.files && input.files[0]) {
+		        var reader = new FileReader();
+		        
+		        reader.onload = function (e) {
+		            $('#img-upload').attr('src', e.target.result);
+		        }
+		        
+		        reader.readAsDataURL(input.files[0]);
+		    }
+		}
+
+		$("#avatar-1").change(function(){
+		    readURL(this);
+		});
+
         });
     </script>
 

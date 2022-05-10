@@ -156,7 +156,7 @@
                         <div class="col-md-3">
                             <div class="form-group" style="padding-right: 20px;">
                                 <label class="form-label" for="customFile">Upload</label>
-                                <input type="file" class="form-control" name="logo" id="customFile" required />
+                                <input type="file" class="form-control" name="logo" id="customFile" style="margin-bottom: 20px;" required />
                                 <img id='img-upload'/>
                             </div>
                         </div>
