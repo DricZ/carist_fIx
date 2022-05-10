@@ -5,9 +5,11 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Carist - Fix</title>
+  <title>Carist Corporation</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+
+  <link rel="icon" type="image/x-icon" href="./assets/img/carist only cropped.png" style="margin: -10px;">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -162,12 +164,12 @@
             <div class="col-md pddsv">
             <span class="iconify img-service" data-icon="dashicons:playlist-video" style="color: black;"></span>
               <h4>Photo & Video Production</h4>
-              <p>From concept brainstroming, defining approach, tone of voice, identity building, to launch end development. We help you in dwdsdadasd</p>
+              <p>Photos and videos are used for several things, one of the functions that is considered to be the main thing is to make a product or service attractive and conceptual.</p>
             </div>
             <div class="col-md pddsv">
             <span class="iconify img-service" data-icon="clarity:animation-solid" style="color: black;"></span>
               <h4>Animation & VFX</h4>
-              <p>From concept brainstroming, defining approach, tone of voice, identity building, to launch end development. We help you in dwdsdadasd</p>
+              <p>Animation is a method in which images are manipulated to appear as moving images. We provide animation creation services with a capacity that is tailored to the needs of the client</p>
             </div>
           </div>
           <div class="row">
@@ -182,11 +184,12 @@
               <p>Talent management program, namely aligning the company's strategic plan with the needs of the company as a whole.</p>
             </div>
           </div>
-          <div class="row" style="justify-content: center;">
+          <div class="row" style="justify-content: left;">
             <div class="col-6 pddsv">
             <span class="iconify img-service" data-icon="tabler:brand-tabler" style="color: black;"></span>
               <h4>Website & Apps Developer</h4>
-              <p>From concept brainstroming, defining approach, tone of voice, identity building, to launch end development. We help you in dwdsdadasd</p>
+              <p>A web developer is a programmer or a coder who develops World Wide Web applications using a client–server model. <br>
+                Apps developers are enabled to create a mobile application that can be used for Android, iOS or other platforms.</p>
             </div>
           </div>
 
@@ -202,6 +205,7 @@
     <!-- Start Cliens Section -->
     <section id="cliens" class="cliens section-bg" style="background-color: #d4d2d4">
       <div class="container">
+        <h3 style="text-align: center;padding-top: 10px;"><b>Our Partners</b></h3>
 
         <!-- Carousel -->
         <div id="c-clients" class="carousel slide" data-bs-ride="carousel">
@@ -218,34 +222,34 @@
             <div class="carousel-item active">
               <div class="row aos-init aos-animate" data-aos="zoom-in">
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                  <img src="assets/img/clients/logoc (1).svg" class="img-fluid" alt="">
+                </div>
+      
+                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
                   <img src="assets/img/clients/logoc (2).svg" class="img-fluid" alt="">
                 </div>
       
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
                   <img src="assets/img/clients/logoc (3).svg" class="img-fluid" alt="">
                 </div>
+
+                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                  <img src="assets/img/clients/logoc (4).svg" class="img-fluid" alt="">
+                </div>
       
+                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                  <img src="assets/img/clients/logoc (5).svg" class="img-fluid" alt="">
+                </div>
+
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
                   <img src="assets/img/clients/logoc (6).svg" class="img-fluid" alt="">
-                </div>
-
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/logoc (11).svg" class="img-fluid" alt="">
-                </div>
-      
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/logoc (29).svg" class="img-fluid" alt="">
-                </div>
-
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                  <img src="assets/img/clients/logoc (31).svg" class="img-fluid" alt="">
                 </div>
               </div>
             </div>
 
             <?php
               $idClient = 7;
-              for($i = 0; $i < 6; $i++){
+              for($i = 0; $i < 5; $i++){
             ?>
             <div class="carousel-item">
               <div class="row aos-init aos-animate" data-aos="zoom-in">
@@ -332,7 +336,7 @@
         <div class="row">
           <div class="col-lg-12 cta-btn-container text-center" style="display: flex;justify-content: center;">
             <a class="cta-btn align-middle" target="_blank" href="https://wa.me/6282330305005?text=Halo%20Admin%20Carist%2C%20saya%20mau%20order%20jasa%20nya">Contact Us</a>
-            <a class="cta-btn align-middle" target="_blank" href="mailto: caristcorporation@gmail.com">Email</a>
+            <a class="cta-btn align-middle" target="_blank" style="margin-right: 35px;" href="mailto: caristcorporation@gmail.com">Email</a>
           </div>
         </div>
 
@@ -353,7 +357,7 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-2 col-md-6 pr-3 footer-contact" style="margin-left: 34%; padding:0%" >
+          <div class="col-md-6 footer-contact" style="justify-content: right;display: flex;">
             <p style="color: white;">
               <strong>Phone:</strong> +62 823 3030 5005<br>
               <strong>Email:</strong> caristcorporation@gmail.com<br><br>
@@ -362,8 +366,8 @@
             </p>
           </div>
 
-          <div class="col-lg-3 col-md-6 pl-3 footer-links">
-            <h4 style="color: white;">Our Social Networks</h4>
+          <div class="col-md-6 footer-links" style="padding-left: 30px;">
+            <h4 style="color: white;padding-bottom: 5px;">Our Social Networks</h4>
             <div class="social-links">
               <a target="_blank" href="https://www.instagram.com/carist.id/" class="instagram"><span class="iconify" data-icon="akar-icons:instagram-fill" style="color: white;"></span></a>
               <a target="_blank" href="https://www.tiktok.com/@carist.id" class="tiktok"><span class="iconify" data-icon="bi:tiktok" style="color: white;"></span></a>

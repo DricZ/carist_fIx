@@ -880,9 +880,10 @@ section {
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(52, 192, 178, 0), rgba(52, 192, 178, 0.8)), url("../img/cta-bg.png") fixed center center;
-  background-size: cover;
+  background: linear-gradient(rgba(52, 192, 178, 0), rgba(52, 192, 178, 0.8)), url(../img/cta-bg.png) center center;
+  background-size: 140vw;
   padding: 55px 0;
+  background-position-y: 0px;
 }
 
 .cta h3 {
