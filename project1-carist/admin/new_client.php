@@ -325,7 +325,7 @@
                                     <label for="fc" class="col-form-label">Feed Count: </label>
                                 </div>
                                 <div class="col-md-10">
-                                    <input type="text" id="fc" class="form-control" name="fc" readonly value="0">
+                                    <input type="number" id="fc" class="form-control" name="fc" value="0">
                                 </div>
                             </div><br>
 
@@ -334,7 +334,7 @@
                                     <label for="sc" class="col-form-label">Story Count: </label>
                                 </div>
                                 <div class="col-md-10">
-                                    <input type="text" id="sc" class="form-control" name="sc" readonly value="0">
+                                    <input type="number" id="sc" class="form-control" name="sc" value="0">
                                 </div>
                             </div><br>
                             
@@ -343,7 +343,7 @@
                                     <label for="price" class="col-form-label">Price: </label>
                                 </div>
                                 <div class="col-md-10">
-                                    <input type="text" id="price" class="form-control" name="price" disabled value="0">
+                                    <input type="number" id="price" class="form-control" name="price" value="0">
                                 </div>
                             </div><br>
 
