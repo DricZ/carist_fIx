@@ -179,7 +179,7 @@
 
                     <div class="row mb-5" style="display: grid; justify-content: right;">
                         <div class="col">
-                            <button class="btn btn-primary" type="submit">SEND</button>
+                            <button class="btn btn-primary" onclick="window.location.href='./invoice_email.php?id=<?=$client_id?>'">SEND</button>
                         </div>
                     </div>
                 </div>
