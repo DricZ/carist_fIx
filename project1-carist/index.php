@@ -39,7 +39,7 @@
       <div class="col-sm-6">
         <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-6" style="display: flex;justify-content: right;">
         <nav id="navbar" class="navbar">
           <ul>           
             <!-- Ke Login Page -->
@@ -151,13 +151,13 @@
 
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us">
-      <div class="container-fluid" data-aos="fade-up">
+      <div class="container-fluid">
 
         <div class="row" style="display: flex;justify-content: center;text-align: justify;">
-          <h2 style="text-align: center;margin-bottom: 50px;">We Have Four Departments, One Big Idea.</h2>
+          <h2 style="text-align: center;margin-bottom: 50px;" data-aos="fade-up">We Have Four Departments, One Big Idea.</h2>
           <div class="row">
             <div class="col-md-1"></div>
-            <div class="col-md pddsv">
+            <div class="col-md pddsv" data-aos="fade-up">
               <div class="row">
                 <div class="col-md-2 product-img">
                   <span class="iconify img-service" data-icon="tabler:brand-google-analytics" style="color: black;"></span>
@@ -169,7 +169,7 @@
               </div>
             </div>
             <div class="col-md-1"></div>
-            <div class="col-md pddsv">
+            <div class="col-md pddsv" data-aos="fade-up">
               <div class="row">
                 <div class="col-md-2 product-img">
                   <span class="iconify img-service" data-icon="akar-icons:instagram-fill" style="color: black;"></span>
@@ -182,9 +182,10 @@
             </div>
             <div class="col-md-1"></div>
           </div>
+          
           <div class="row">
           <div class="col-md-1"></div>
-            <div class="col-md pddsv">
+            <div class="col-md pddsv" data-aos="fade-up">
               <div class="row">
                 <div class="col-md-2 product-img">
                   <span class="iconify img-service" data-icon="dashicons:playlist-video" style="color: black;"></span>
@@ -196,7 +197,7 @@
               </div>
             </div>
             <div class="col-md-1"></div>
-            <div class="col-md pddsv">
+            <div class="col-md pddsv" data-aos="fade-up">
               <div class="row">
                 <div class="col-md-2 product-img">
                   <span class="iconify img-service" data-icon="clarity:animation-solid" style="color: black;"></span>
@@ -209,9 +210,10 @@
             </div>
             <div class="col-md-1"></div>
           </div>
+
           <div class="row">
             <div class="col-md-1"></div>
-            <div class="col-md pddsv">
+            <div class="col-md pddsv" data-aos="fade-up">
               <div class="row">
                 <div class="col-md-2 product-img">
                   <span class="iconify img-service" data-icon="bi:music-note-beamed" style="color: black;"></span>
@@ -223,7 +225,7 @@
               </div>
             </div>
             <div class="col-md-1"></div>
-            <div class="col-md pddsv">
+            <div class="col-md pddsv" data-aos="fade-up">
               <div class="row">
                 <div class="col-md-2 product-img">
                   <span class="iconify img-service" data-icon="mdi:human-female-dance" style="color: black;"></span>
@@ -236,9 +238,10 @@
             </div>
             <div class="col-md-1"></div>
           </div>
+
           <div class="row" style="justify-content: left;">
             <div class="col-md-1"></div>
-            <div class="col-md pddsv">
+            <div class="col-md pddsv" data-aos="fade-up">
               <div class="row">
                 <div class="col-md-2 product-img">
                   <span class="iconify img-service" data-icon="tabler:brand-tabler" style="color: black;"></span>
@@ -266,7 +269,7 @@
 
     <!-- Start Cliens Section -->
     <section id="cliens" class="cliens section-bg" style="background-color: #d4d2d4">
-      <div class="container">
+      <div class="container" data-aos="zoom-in" data-aos-delay="150">
         <h3 style="text-align: center;padding-top: 10px; color: black"><b>Our Partners</b></h3>
 
         <!-- Carousel -->
