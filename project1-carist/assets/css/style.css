@@ -1699,6 +1699,8 @@ section {
 
 #footer .footer-top .footer-contact {
   margin-bottom: 30px;
+  justify-content: right;
+  display: flex;
 }
 
 #footer .footer-top .footer-contact h3 {
@@ -1729,6 +1731,7 @@ section {
 
 #footer .footer-top .footer-links {
   margin-bottom: 30px;
+  padding-left: 30px;
 }
 
 #footer .footer-top .footer-links ul {
@@ -1831,4 +1834,15 @@ section {
   #footer .credits {
     padding-top: 4px;
   }
+
+  #footer .footer-top .footer-contact{
+    justify-content: center!important;
+    text-align: center;
+  }
+
+  #footer .footer-links{
+    text-align: center;
+    padding-left: calc(var(--bs-gutter-x)/ 2)!important;
+  }
 }
+
