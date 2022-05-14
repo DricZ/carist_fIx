@@ -34,12 +34,12 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="position-absolute">
-    <div class="container d-flex align-items-center">
+  <header id="header" class="position-absolute" style="width: 100%;padding-right: 20px;">
+    <div class="container d-flex align-items-center" style="margin-right: 0; justify-content: right">
       <div class="col-sm-6">
         <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
       </div>
-      <div class="col-sm-6" style="padding-left: 56vw;">
+      <div class="col-sm-6">
         <nav id="navbar" class="navbar">
           <ul>           
             <!-- Ke Login Page -->
@@ -55,13 +55,13 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center" style="height: 90%">
+  <section id="hero" class="d-flex align-items-center" style="height: 100%;padding: 0;">
 
     <div class="video-container" style="
          display: grid;
          width:  100vw;
          place-items: center;
-         height: 100vh;
+         height: 50vw;
          position: relative;">
 
       <div class="overlay" style="
@@ -103,7 +103,15 @@
 
     <!-- ======= Quotes Section ======= -->
     <section id="quotes" class="quotes section-bg">
-      <div id="demo" class="carousel slide" data-bs-ride="carousel" data-aos="fade-up">
+      <div class="container-fluid">
+        <div class="row" style="display: flex;justify-content: center;">
+          <div class="col-md-6" data-aos="fade-up">
+              <h3 class="m-b-30">“Cooperative and responsive. Good at giving constructive input for our projects.”</h3>
+              <h6 class="block-title hint-text fs-12">RICKY SUBAGIO – CEO OF INTERNATIONAL SORJ</h6>
+          </div>
+        </div>
+      </div>
+      <!-- <div id="demo" class="carousel slide" data-bs-ride="carousel" data-aos="fade-up"> -->
 
         <!-- Indicators/dots -->
         <!-- <div class="carousel-indicators  ">
@@ -113,7 +121,7 @@
         </div> -->
       
         <!-- The slideshow/carousel -->
-        <div class="carousel-inner">
+        <!-- <div class="carousel-inner"> -->
 
           <!-- <div class="carousel-item active">
             <div class="container text-left" style="width: 1024px; height: 220px;">
@@ -122,14 +130,13 @@
             </div>
           </div> -->
 
-          <div class="carousel-item active">
+          <!-- <div class="carousel-item active">
             <div class="container text-left" style="width: 1024px; height: 100px;">
-              <h3 class="m-b-30">“Cooperative and responsive. Good at giving constructive input for our projects.”</h3>
-              <h6 class="block-title hint-text fs-12">RICKY SUBAGIO – CEO OF INTERNATIONAL SORJ</h6>
+              
             </div>
           </div>
           
-        </div>
+        </div> -->
       
         <!-- Left and right controls/icons -->
         <!-- <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
@@ -137,60 +144,115 @@
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
           <span class="carousel-control-next-icon"></span>
-        </button> -->
-      </div>
+        </button>
+      </div> -->
     </section>
   <!-- End Cliens Section -->
 
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us">
-      <div class="container-fluid" data-aos="fade-up" style="padding-left: 100px;padding-right: 100px;">
+      <div class="container-fluid" data-aos="fade-up">
 
-        <div class="row" style="display: flex;justify-content: center;">
+        <div class="row" style="display: flex;justify-content: center;text-align: justify;">
           <h2 style="text-align: center;margin-bottom: 50px;">We Have Four Departments, One Big Idea.</h2>
           <div class="row">
+            <div class="col-md-1"></div>
             <div class="col-md pddsv">
-              <span class="iconify img-service" data-icon="tabler:brand-google-analytics" style="color: black;"></span>
-              <h4>Branding & Strategic</h4>
-              <p>Branding strategy is an attempt to introduce business values ​​to consumers.</p>
+              <div class="row">
+                <div class="col-md-2 product-img">
+                  <span class="iconify img-service" data-icon="tabler:brand-google-analytics" style="color: black;"></span>
+                </div>
+                <div class="col-md">
+                  <h4>Branding & Strategic</h4>
+                  <p>Branding strategy is an attempt to introduce business values ​​to consumers.</p>
+                </div>
+              </div>
             </div>
+            <div class="col-md-1"></div>
             <div class="col-md pddsv">
-              <span class="iconify img-service" data-icon="akar-icons:instagram-fill" style="color: black;"></span>
-              <h4>Social Media Management</h4>
-              <p>Social media management is the use of various tools, software and services that can help businesses share their business content on social media.</p>
+              <div class="row">
+                <div class="col-md-2 product-img">
+                  <span class="iconify img-service" data-icon="akar-icons:instagram-fill" style="color: black;"></span>
+                </div>
+                <div class="col-md">
+                  <h4>Social Media Management</h4>
+                  <p>Social media management is the use of various tools, software and services that can help businesses share their business content on social media.</p>
+                </div>
+              </div>
             </div>
+            <div class="col-md-1"></div>
           </div>
           <div class="row">
+          <div class="col-md-1"></div>
             <div class="col-md pddsv">
-            <span class="iconify img-service" data-icon="dashicons:playlist-video" style="color: black;"></span>
-              <h4>Photo & Video Production</h4>
-              <p>Photos and videos are used for several things, one of the functions that is considered to be the main thing is to make a product or service attractive and conceptual.</p>
+              <div class="row">
+                <div class="col-md-2 product-img">
+                  <span class="iconify img-service" data-icon="dashicons:playlist-video" style="color: black;"></span>
+                </div>
+                <div class="col-md">
+                  <h4>Photo & Video Production</h4>
+                  <p>Photos and videos are used for several things, one of the functions that is considered to be the main thing is to make a product or service attractive and conceptual.</p>
+                </div>
+              </div>
             </div>
+            <div class="col-md-1"></div>
             <div class="col-md pddsv">
-            <span class="iconify img-service" data-icon="clarity:animation-solid" style="color: black;"></span>
-              <h4>Animation & VFX</h4>
-              <p>Animation is a method in which images are manipulated to appear as moving images. We provide animation creation services with a capacity that is tailored to the needs of the client</p>
+              <div class="row">
+                <div class="col-md-2 product-img">
+                  <span class="iconify img-service" data-icon="clarity:animation-solid" style="color: black;"></span>
+                </div>
+                <div class="col-md">
+                  <h4>Animation & VFX</h4>
+                  <p>Animation is a method in which images are manipulated to appear as moving images. We provide animation creation services with a capacity that is tailored to the needs of the client</p>
+                </div>
+              </div>
             </div>
+            <div class="col-md-1"></div>
           </div>
           <div class="row">
+            <div class="col-md-1"></div>
             <div class="col-md pddsv">
-            <span class="iconify img-service" data-icon="bi:music-note-beamed" style="color: black;"></span>
-              <h4>Music Production</h4>
-              <p>A music producer oversees all aspects of creating a song or album. Includes the choice of songs, the choice of musicians, instruments and vocalists and how the instruments are played and the notes sung and where the song or album was recorded.</p>
+              <div class="row">
+                <div class="col-md-2 product-img">
+                  <span class="iconify img-service" data-icon="bi:music-note-beamed" style="color: black;"></span>
+                </div>
+                <div class="col-md">
+                  <h4>Music Production</h4>
+                  <p>A music producer oversees all aspects of creating a song or album. Includes the choice of songs, the choice of musicians, instruments and vocalists and how the instruments are played and the notes sung and where the song or album was recorded.</p>
+                </div>
+              </div>
             </div>
+            <div class="col-md-1"></div>
             <div class="col-md pddsv">
-            <span class="iconify img-service" data-icon="mdi:human-female-dance" style="color: black;"></span>
-              <h4>Talent Management</h4>
-              <p>Talent management program, namely aligning the company's strategic plan with the needs of the company as a whole.</p>
+              <div class="row">
+                <div class="col-md-2 product-img">
+                  <span class="iconify img-service" data-icon="mdi:human-female-dance" style="color: black;"></span>
+                </div>
+                <div class="col-md">
+                  <h4>Talent Management</h4>
+                  <p>Talent management program, namely aligning the company's strategic plan with the needs of the company as a whole.</p>
+                </div>
+              </div>
             </div>
+            <div class="col-md-1"></div>
           </div>
           <div class="row" style="justify-content: left;">
-            <div class="col-6 pddsv">
-            <span class="iconify img-service" data-icon="tabler:brand-tabler" style="color: black;"></span>
-              <h4>Website & Apps Developer</h4>
-              <p>A web developer is a programmer or a coder who develops World Wide Web applications using a client–server model. <br>
-                Apps developers are enabled to create a mobile application that can be used for Android, iOS or other platforms.</p>
+            <div class="col-md-1"></div>
+            <div class="col-md pddsv">
+              <div class="row">
+                <div class="col-md-2 product-img">
+                  <span class="iconify img-service" data-icon="tabler:brand-tabler" style="color: black;"></span>
+                </div>
+                <div class="col-md">
+                  <h4>Website & Apps Developer</h4>
+                  <p>A web developer is a programmer or a coder who develops World Wide Web applications using a client–server model. <br>
+                  Apps developers are enabled to create a mobile application that can be used for Android, iOS or other platforms.</p>
+                </div>
+              </div>
             </div>
+            <div class="col-md-1"></div>
+            <div class="col-md"></div>
+            <div class="col-md-1"></div>
           </div>
 
           <!-- <div class="img" data-aos="zoom-in" data-aos-delay="150">
@@ -205,7 +267,7 @@
     <!-- Start Cliens Section -->
     <section id="cliens" class="cliens section-bg" style="background-color: #d4d2d4">
       <div class="container">
-        <h3 style="text-align: center;padding-top: 10px;"><b>Our Partners</b></h3>
+        <h3 style="text-align: center;padding-top: 10px; color: black"><b>Our Partners</b></h3>
 
         <!-- Carousel -->
         <div id="c-clients" class="carousel slide" data-bs-ride="carousel">

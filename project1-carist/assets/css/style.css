@@ -880,7 +880,7 @@ section {
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(52, 192, 178, 0), rgba(52, 192, 178, 0.8)), url(../img/cta-bg.png) center center;
+  background: linear-gradient(rgba(52, 192, 178, 0), rgba(52, 192, 178, 0.8)), url(../img/cta-bg.jpg) center center;
   background-size: 140vw;
   padding: 55px 0;
   background-position-y: 0px;
@@ -902,7 +902,7 @@ section {
   font-size: 16px;
   letter-spacing: 1px;
   display: inline-block;
-  padding: 12px 40px;
+  padding: 12px 30px;
   border-radius: 50px;
   transition: 0.5s;
   margin: 10px;
@@ -918,6 +918,7 @@ section {
 @media (max-width: 1024px) {
   .cta {
     background-attachment: scroll;
+    background-size: cover;
   }
 }
 
@@ -1805,14 +1806,17 @@ section {
 }
 
 .img-service{
-  float: left;
   width: 60px;
   height: 110px;
-  margin-right: 20px;
 }
 
 .pddsv{
   padding: 10px;
+}
+
+.product-img{
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
