@@ -23,43 +23,104 @@
 
     
     <link rel="stylesheet" href="fonts/icomoon/style.css"> -->
+  
+    <link href='fullcalendar/packages/core/main.css' rel='stylesheet' />
+    <link href='fullcalendar/packages/daygrid/main.css' rel='stylesheet' />
+    
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- FullCalendar -->
-    <link href='./fullcalendar/main.css' rel='stylesheet' />
-    <script src='./fullcalendar/main.js'></script>
     
     <!-- Style -->
+    <link rel="stylesheet" href="css/style2.css">
     <link rel="stylesheet" href="css/style1.css">
-    <script>
 
-  document.addEventListener('DOMContentLoaded', function() {
-    var calendarEl = document.getElementById('calendar');
+    <title>Calendar</title>
 
-    var calendar = new FullCalendar.Calendar(calendarEl, {
-      headerToolbar: {
-        left: 'prev,next today',
-        center: 'title',
-        right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
-      },
-      initialDate: '<?=date('Y-m-d', mktime(0,0,0)); ?>',
-      navLinks: true, // can click day/week names to navigate views
-      businessHours: {
+    <style>
+      body{
+        font-family: Nunito,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        
+      }    
+
+      hr{
+        opacity: .25;
+        color: #858796;
+      }
+    </style>
+  </head>
+  <body>
+  <body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <?php
+            require 'sidebar.php';
+        ?>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <?php
+                    require 'header.php';
+                ?>
+                <!-- End of Topbar -->
+
+                <?php
+                        require 'sidebar_button.php';
+                    ?>
+
+                <!-- Begin Page Content -->
+                <div id='calendar-container'>
+                  <div id='calendar'></div>
+                </div>
+                  <script src="js/jquery-3.3.1.min.js"></script>
+                  <script src="js/popper.min.js"></script>
+                  <script src="js/bootstrap.min.js"></script>
+
+                  <script src='fullcalendar/packages/core/main.js'></script>
+                  <script src='fullcalendar/packages/interaction/main.js'></script>
+                  <script src='fullcalendar/packages/daygrid/main.js'></script>
+                  <script src='fullcalendar/packages/timegrid/main.js'></script>
+                  <script src='fullcalendar/packages/list/main.js'></script>
+
+                  
+
+                  <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                    var calendarEl = document.getElementById('calendar');
+
+                    var calendar = new FullCalendar.Calendar(calendarEl, {
+                      plugins: [ 'interaction', 'dayGrid', 'timeGrid', 'list' ],
+                      height: 'parent',
+                      header: {
+                        left: 'prev,next today',
+                        center: 'title',
+                        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+                      },
+                      defaultView: 'dayGridMonth',
+                      defaultDate: '<?=date('Y-m-d', mktime(0,0,0)); ?>',
+                      navLinks: true, // can click day/week names to navigate views
+                      editable: true,
+                      businessHours: {
                         // days of week. an array of zero-based day of week integers (0=Sunday)
                         daysOfWeek: [ 1, 2, 3, 4, 5, 6 ], // Monday - Thursday
                       },
-      editable: false,
-      selectable: true,
-      dayMaxEventRows: true,
-
-      events: [
-
-        <?php
+                      eventLimit: true, // allow "more" link when too many events
+                      events: [
+                        // {
+                        //   title: 'All Day Event',
+                        //   url: 'http://google.com/',
+                        //   start: '2020-02-01',
+                        // },
+                        <?php
                           $sql2 = "SELECT * FROM task"; //WHERE (contentwriter_id = $my_id OR designer_id = $my_id OR copywriter_id = $my_id)";
                           $result2 = $conn->query($sql2);
                           if ($result2->num_rows > 0) {
@@ -127,124 +188,65 @@
                             }";
                           }
                         ?>
-        // {
-        //   title: 'Business Lunch',
-        //   start: '2020-09-03T13:00:00',
-        //   constraint: 'businessHours'
-        // },
-        // {
-        //   title: 'Meeting',
-        //   start: '2020-09-13T11:00:00',
-        //   constraint: 'availableForMeeting', // defined below
-        //   color: '#257e4a'
-        // },
-        // {
-        //   title: 'Conference',
-        //   start: '2020-09-18',
-        //   end: '2020-09-20'
-        // },
-        // {
-        //   title: 'Party',
-        //   start: '2020-09-29T20:00:00'
-        // },
+                        // {
+                        //   title: 'Very Long Event',
+                        //   start: '2020-02-07',
+                        //   end: '2020-02-10'
+                        // },
+                        // {
+                        //   groupId: 999,
+                        //   title: 'Repeating Event',
+                        //   start: '2020-02-09T16:00:00'
+                        // },
+                        // {
+                        //   groupId: 999,
+                        //   title: 'Repeating Event',
+                        //   start: '2020-02-16T16:00:00'
+                        // },
+                        // {
+                        //   title: 'Conference',
+                        //   start: '2020-02-11',
+                        //   end: '2020-02-13'
+                        // },
+                        // {
+                        //   title: 'Meeting',
+                        //   start: '2020-02-12T10:30:00',
+                        //   end: '2020-02-12T12:30:00'
+                        // },
+                        // {
+                        //   title: 'Lunch',
+                        //   start: '2020-02-12T12:00:00'
+                        // },
+                        // {
+                        //   title: 'Meeting',
+                        //   start: '2020-02-12T14:30:00'
+                        // },
+                        // {
+                        //   title: 'Happy Hour',
+                        //   start: '2020-02-12T17:30:00'
+                        // },
+                        // {
+                        //   title: 'Dinner',
+                        //   start: '2020-02-12T20:00:00'
+                        // },
+                        // {
+                        //   title: 'Birthday Party',
+                        //   start: '2020-02-13T07:00:00'
+                        // },
+                        // {
+                        //   title: 'Click for Google',
+                        //   url: 'http://google.com/',
+                        //   start: '2020-02-28'
+                        // }
+                      ]
+                    });
 
-        // areas where "Meeting" must be dropped
-        // {
-        //   groupId: 'availableForMeeting',
-        //   start: '2020-09-11T10:00:00',
-        //   end: '2020-09-11T16:00:00',
-        //   display: 'background'
-        // },
-        // {
-        //   groupId: 'availableForMeeting',
-        //   start: '2020-09-13T10:00:00',
-        //   end: '2020-09-13T16:00:00',
-        //   display: 'background'
-        // },
-
-        // // red areas where no events can be dropped
-        // {
-        //   start: '2020-09-24',
-        //   end: '2020-09-28',
-        //   overlap: false,
-        //   display: 'background',
-        //   color: '#ff9f89'
-        // },
-        // {
-        //   start: '2020-09-06',
-        //   end: '2020-09-08',
-        //   overlap: false,
-        //   display: 'background',
-        //   color: '#ff9f89'
-        // }
-      ]
-    });
-
-    calendar.render();
-  });
-
-</script>
-<style>
-
-  body {
-    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
-  }
-
-  #calendar {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-</style>
-
-    <title>Calendar</title>
-
-    <style>
-      body{
-        font-family: Nunito,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-        
-      }    
-
-      hr{
-        opacity: .25;
-        color: #858796;
-      }
-    </style>
-  </head>
-  <body>
-  <body id="page-top">
-
-    <!-- Page Wrapper -->
-    <div id="wrapper">
-
-        <!-- Sidebar -->
-        <?php
-            require 'sidebar.php';
-        ?>
-        <!-- End of Sidebar -->
-
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
-
-            <!-- Main Content -->
-            <div id="content">
-
-                <!-- Topbar -->
-                <?php
-                    require 'header.php';
-                ?>
-                <!-- End of Topbar -->
-
-                <?php
-                        require 'sidebar_button.php';
-                    ?>
-
-                <div id='calendar'></div>
-
-                <!-- Begin Page Content -->
-                  
+                    calendar.render();
+                  });
 
                 </script>
+
+                <script src="js/main.js"></script>
                 <!-- /.container-fluid -->
 
             </div>
