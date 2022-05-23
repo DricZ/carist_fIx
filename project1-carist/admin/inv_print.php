@@ -147,12 +147,12 @@
                     </table>
 
                     <div class="row mb-2">
-                        <div class="col-md-4" style="padding-left: 30px;">
-                            <label for="notes" class="col-form-label">Notes: </label>
-                            <textarea type="text" id="notes" rows="5" name="notes" class="form-control"></textarea>
+                        <div class="col-4" style="padding-left: 30px;">
+                            <label for="notes">Notes: </label>
+                            <textarea class="form-control" id="notes" rows="5" cols="2" name="notes"></textarea>
                         </div>
 
-                        <div class="col-md-8" style="justify-content: right;display: flex;padding-top: 20px;padding-bottom: 20px;padding-right: 20px;">
+                        <div class="col-8" style="justify-content: right;display: flex;padding-top: 20px;padding-bottom: 20px;padding-right: 20px;">
                             <img src="./img/qr-crop.jpg" style="width: 25%;">
                         </div>
                     </div>
