@@ -12,8 +12,8 @@
   <link rel="icon" type="image/x-icon" href="./assets/img/carist only cropped.png" style="margin: -10px;">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -43,7 +43,7 @@
         <nav id="navbar" class="navbar">
           <ul>           
             <!-- Ke Login Page -->
-            <li><a class="getstarted scrollto" href="./admin/">Log In</a></li>
+            <li><a class="getstarted scrollto" href="https://life.carist.id">Log In</a></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
