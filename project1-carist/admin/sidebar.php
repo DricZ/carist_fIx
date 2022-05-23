@@ -174,6 +174,13 @@
         <span>Financial Report</span>
     </a>
     </li> -->
+
+    <!-- Potential Client -->
+    <li class="nav-item active">
+    <a class="nav-link" href="potential_client.php">
+    <img src="./img/logo/Marketing.png" style="height: 20px;">
+        <span>Potential Client</span></a>
+    </li>
 <?php
     }
 ?>
