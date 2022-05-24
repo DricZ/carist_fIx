@@ -77,7 +77,7 @@
                               }else{
                                 $client_name = "ERROR";
                               }
-                              $post_date = $row2["post_date"];
+                              $post_date = $row2["post_date"] . "T16:00:00";
                               $content_no = $row2["content_no"];
                               $content_type = $row2["content_type"];
                               $main_topic = $row2["main_topic"];
@@ -121,12 +121,12 @@
                             }
                             echo "{
                               title: 'Test Event',
-                              url: 'http://google.com/',
-                              start: '2022-04-12T16:00:00',
-                              end: '2022-04-12T18:00:00'
+                              start: '2022-04-12T16:00:00'
                             }";
                           }
                         ?>
+                        
+
         // {
         //   title: 'Business Lunch',
         //   start: '2020-09-03T13:00:00',
