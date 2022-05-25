@@ -13,6 +13,12 @@
 
 <!-- Divider -->
 <hr class="sidebar-divider my-0">
+ 
+<?php
+    // echo "Admin" . $adminAccess;
+    // echo "Head" . $headAccess;
+    // echo "Marketing" . $marketingAccess;
+?>
 
 <!-- Nav Item - Dashboard -->
 <li class="nav-item active">
@@ -124,7 +130,7 @@
 ?>
 
 <?php
-    if($contentwriterAccess || $designerAccess || $copywriterAccess || $adminAccess){
+    if($contentwriterAccess || $designerAccess || $copywriterAccess || $adminAccess || $marketingAccess){
 ?>
 
 <!-- Heading -->
@@ -153,6 +159,12 @@
 
     <?php
         }
+        else if($marketingAccess){
+    ?>
+            Marketing
+
+    <?php
+        }
         
     ?>
 
@@ -166,7 +178,7 @@
 </li>
 
 <?php
-    if($marketingAccess || $adminAccess){
+    if($marketingAccess || $adminAccess || $headAccess){
 ?>
     <!-- <li class="nav-item active">
     <a class="nav-link" href="#">
@@ -177,10 +189,12 @@
 
     <!-- Potential Client -->
     <li class="nav-item active">
-    <a class="nav-link" href="potential_client.php">
-    <img src="./img/logo/Marketing.png" style="height: 20px;">
-        <span>Potential Client</span></a>
+        <a class="nav-link" href="potential_client.php">
+            <img src="./img/logo/Marketing.png" style="height: 20px;">
+            <span>Potential Client</span>
+        </a>
     </li>
+
 <?php
     }
 ?>

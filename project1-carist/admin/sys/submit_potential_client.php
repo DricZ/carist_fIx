@@ -10,6 +10,7 @@
     $nama_brand = $_POST['nama_brand'];
     $instagram = $_POST['instagram'];
     $whatsapp = $_POST['whatsapp'];
+    $line = $_POST['line'];
     $penawaran = $_POST['penawaran'];
     $keterangan = $_POST['keterangan'];
     $brand_partner = $_POST['brand_partner'];
@@ -31,8 +32,8 @@
         }
     } else {
         //Data not exist
-        $sql = "INSERT INTO `potential_client` (`id`, `nama_brand`, `instagram`, `whatsapp`, `contact`, `penawaran`, `keterangan`, `tanggal`, `brand_partner`, `instagram_partner`, `sales_id`)
-        VALUES (NULL, '$nama_brand', '$instagram', '$whatsapp', '$contact', '$penawaran', '$keterangan', current_timestamp(), '$brand_partner', '$instagram_partner', $my_id);";
+        $sql = "INSERT INTO `potential_client` (`id`, `nama_brand`, `instagram`, `whatsapp`, `line`, contact`, `penawaran`, `keterangan`, `tanggal`, `brand_partner`, `instagram_partner`, `sales_id`)
+        VALUES (NULL, '$nama_brand', '$instagram', '$whatsapp', '$line', '$contact', '$penawaran', '$keterangan', current_timestamp(), '$brand_partner', '$instagram_partner', $my_id);";
         if ($conn->query($sql) === TRUE) {
             //echo "New record created successfully";
         } else {

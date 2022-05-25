@@ -89,12 +89,17 @@
                                         </div>
                                         <br>
                                         <div class="row">
+                                            Line <input type="text" class="form-control" name="line">
+                                        </div>
+                                        <br>
+                                        <div class="row">
                                             Penawaran
                                             <select class="form-select" name="penawaran" required>
                                                 <option hidden disabled selected value> -- select an option -- </option>
                                                 <option value="Branding">Branding</option>
                                                 <option value="Social Media">Social Media</option>
                                                 <option value="Video Production">Video Production</option>
+                                                <option value="Photo">Photo</option>
                                                 <option value="Music Production">Music Production</option>
                                                 <option value="Website">Website</option>
                                             </select>
@@ -130,6 +135,15 @@
                                                 <input type="radio" class="form-check-input" id="radio2" name="contact" value="DM">
                                                 <label class="form-check-label" for="radio2">DM</label>
                                             </div>
+                                            <div class="form-check">
+                                                <input type="radio" class="form-check-input" id="radio2" name="contact" value="Line">
+                                                <label class="form-check-label" for="radio2">Line</label>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            Upload Bukti Chat:
+                                            <input type="file" class="form-control-file">
                                         </div>
                                         <br>
                                         <div class='d-grid gap-2 d-md-flex justify-content-md'>
@@ -174,6 +188,7 @@
                                                     <th>Brand Name</th>
                                                     <th>Instagram</th>
                                                     <th>WhatsApp</th>
+                                                    <th>Line</th>
                                                     <th>Contact</th>
                                                     <th>Penawaran</th>
                                                     <th>Keterangan</th>
@@ -196,6 +211,7 @@
                                                             $nama_brand = $row['nama_brand'];
                                                             $instagram = $row['instagram'];
                                                             $whatsapp = $row['whatsapp'];
+                                                            $line = $row['line'];
                                                             $contact = $row['contact'];
                                                             $penawaran = $row['penawaran'];
                                                             $keterangan = $row['keterangan'];
@@ -208,6 +224,7 @@
                                                             echo "<td>$nama_brand</td>";
                                                             echo "<td>$instagram</td>";
                                                             echo "<td>$whatsapp</td>";
+                                                            echo "<td>$line</td>";
                                                             echo "<td>$contact</td>";
                                                             echo "<td>$penawaran</td>";
                                                             echo "<td>$keterangan</td>";
