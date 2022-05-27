@@ -74,7 +74,7 @@
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
-                                <form method="post" action="./sys/submit_potential_client.php">
+                                <form method="post" action="./sys/submit_potential_client.php" enctype='multipart/form-data'>
                                     <div class="col">
                                         <div class="row">
                                             Nama Brand <input type="text" class="form-control" name="nama_brand" required>
@@ -143,7 +143,7 @@
                                         <br>
                                         <div class="row">
                                             Upload Bukti Chat:
-                                            <input type="file" class="form-control-file">
+                                            <input type='file' name='bukti' id='bukti' class='form-control' required>
                                         </div>
                                         <br>
                                         <div class='d-grid gap-2 d-md-flex justify-content-md'>
@@ -196,6 +196,19 @@
                                                     <th>Brand Partner</th>
                                                     <th>Instagram Partner</th>
                                                     <th>Sales</th>
+                                                    <?php
+                                                        if($headAccess || $my_id == "33"){
+                                                            $see_bukti = true;
+                                                        }else{
+                                                            $see_bukti = false;
+                                                        }
+
+                                                        if($see_bukti){
+                                                    ?>
+                                                    <th>Bukti Chat</th>
+                                                    <?php
+                                                        }
+                                                    ?>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -219,6 +232,8 @@
                                                             $brand_partner = $row['brand_partner'];
                                                             $instagram_partner = $row['instagram_partner'];
                                                             $sales_id = $row['sales_id'];
+                                                            $bukti = $row['bukti'];
+                                                            $bukti_url = "../drive/bukti_marketing/" . $bukti; 
                                                             echo "<td>$no</td>";
                                                             $no++;
                                                             echo "<td>$nama_brand</td>";
@@ -243,6 +258,10 @@
                                                                 }
                                                             } else {
                                                                 echo "<td>Not Found</td>";
+                                                            }
+                                                            
+                                                            if($see_bukti){
+                                                                echo "<td><a href='https://life.carist.id/drive/bukti_marketing/$bukti' target='_blank'><img src='$bukti_url' alt='$bukti' class='buktichat' style='max-width: 200px'></a></td>";
                                                             }
                                                             
                                                             echo "</tr>";
@@ -335,6 +354,7 @@
             $(this).find("."+$(e.relatedTarget).data('step')+"Select").attr('disabled', false);
             $(this).find('.textPilih').text(step);
         });
+        
     </script>
 
 <?php

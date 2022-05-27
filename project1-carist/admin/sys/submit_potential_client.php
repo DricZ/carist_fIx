@@ -17,27 +17,97 @@
     $instagram_partner = $_POST['instagram_partner'];
     $contact = $_POST['contact'];
     $sales_id = $my_id;
-    $data_exist = false;
+    $success = true;
+    $notif = "";
 
-    $sql = "SELECT * FROM potential_client WHERE LOWER(nama_brand) = LOWER('$nama_brand') OR LOWER(instagram) = LOWER('$instagram') OR LOWER(whatsapp) = LOWER('$whatsapp')";
+    $sql = "SELECT * FROM potential_client WHERE LOWER(nama_brand) = LOWER('$nama_brand') OR LOWER(instagram) = LOWER('$instagram') OR (LOWER(whatsapp) = LOWER('$whatsapp') AND $whatsapp IS NOT '')";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
-            $data_exist = true;
+            $success = false;
+            $notif = "Data Already Exist";
             echo "Data already exist <br>";
             echo "<a href='../potential_client.php'>Back</a>";
-            die();
+
         }
     } else {
         //Data not exist
-        $sql = "INSERT INTO `potential_client` (`id`, `nama_brand`, `instagram`, `whatsapp`, `line`, contact`, `penawaran`, `keterangan`, `tanggal`, `brand_partner`, `instagram_partner`, `sales_id`)
+        $sql = "INSERT INTO `potential_client` (`id`, `nama_brand`, `instagram`, `whatsapp`, `line`, `contact`, `penawaran`, `keterangan`, `tanggal`, `brand_partner`, `instagram_partner`, `sales_id`)
         VALUES (NULL, '$nama_brand', '$instagram', '$whatsapp', '$line', '$contact', '$penawaran', '$keterangan', current_timestamp(), '$brand_partner', '$instagram_partner', $my_id);";
         if ($conn->query($sql) === TRUE) {
+            $last_id = $conn->insert_id;
             //echo "New record created successfully";
+            //Upload file
+            $target_dir = "../drive/bukti_marketing/";
+            if($_FILES["bukti"] > 0){
+                $rename_file = "bukti_$last_id" . "_" . basename($_FILES["bukti"]["name"]);
+                $target_file = $target_dir . $rename_file;
+                $uploadOk = 1;
+                $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+    
+                // Check if image file is a actual image or fake image
+                if(isset($_POST["submit"])) {
+                $check = getimagesize($_FILES["bukti"]["tmp_name"]);
+                if($check !== false) {
+                    echo "File is an image - " . $check["mime"] . ".";
+                    $uploadOk = 1;
+                } else {
+                    echo "File is not an image.";
+                    $uploadOk = 0;
+                }
+                }
+    
+                // Check if file already exists
+                if (file_exists($target_file)) {
+                    echo "Sorry, file already exists.";
+                    $uploadOk = 0;
+                }
+    
+                // Check file size
+                if ($_FILES["bukti"]["size"] > 500000) {
+                    echo "Sorry, your file is too large.";
+                    $uploadOk = 0;
+                }
+    
+                // Allow certain file formats
+                if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+                && $imageFileType != "gif" ) {
+                    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+                    $uploadOk = 0;
+                }
+    
+                // Check if $uploadOk is set to 0 by an error
+                if ($uploadOk == 0) {
+                    $success = false;
+                    $notif = "Sorry, your file was not uploaded";
+                // if everything is ok, try to upload file
+                } else {
+                    if (move_uploaded_file($_FILES["bukti"]["tmp_name"], $target_file)) {
+                        echo "The file ". htmlspecialchars( basename( $_FILES["bukti"]["name"])). " has been uploaded.";
+                        //SAVE TO DATABASE
+                        $sql = "UPDATE potential_client SET bukti='$rename_file' WHERE id=$last_id";
+    
+                        if ($conn->query($sql) === TRUE) {
+                            //echo "Record $i updated successfully";
+                            //Redirect Back
+                        } else {
+                            echo "Error updating record: " . $conn->error;
+                            $success = false;
+                            $notif = "Error updating record: " . $conn->error;
+                        }
+                    } else {
+                        echo "Sorry, there was an error uploading your file.";
+                        $success = false;
+                        $notif = "Sorry, there was an error uploading your file.";
+                    }
+                }
+            }//End If
         } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
+            $success = false;
+            $notif =  "SQL Error: " . $sql . $conn->error;
+            echo "SQL Error: " . $sql . $conn->error;
         }
     }
 
@@ -46,5 +116,9 @@
     $conn->close();
 
     //Redirect Back
-    header("Location: ../potential_client.php");
+    if($success){
+        header("Location: ../potential_client.php");
+    }else{
+        header("Location: ../potential_client.php?notif=$notif");
+    }
 ?>

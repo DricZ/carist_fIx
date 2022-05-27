@@ -130,7 +130,7 @@
 ?>
 
 <?php
-    if($contentwriterAccess || $designerAccess || $copywriterAccess || $adminAccess || $marketingAccess){
+    if($contentwriterAccess || $designerAccess || $copywriterAccess || $adminAccess || $marketingAccess || $headAccess){
 ?>
 
 <!-- Heading -->
@@ -165,7 +165,11 @@
 
     <?php
         }
-        
+        else if($headAccess){
+    ?>
+            Head
+    <?php
+        }
     ?>
 
 </div>
