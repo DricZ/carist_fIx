@@ -118,9 +118,6 @@
                                   $color = "red";
                               }
 
-
-                              $adminAccess = false;
-
                               if($adminAccess){
                                 
                                 echo "{
