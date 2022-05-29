@@ -25,10 +25,10 @@
     <link rel="stylesheet" href="fonts/icomoon/style.css"> -->
     
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> -->
 
     <!-- FullCalendar -->
     <link href='./fullcalendar/main.css' rel='stylesheet' />
@@ -75,9 +75,9 @@
                                   $client_name = $row3["name"];
                                 }
                               }else{
-                                $client_name = "ERROR";
+                                $client_name = "ERR01";
                               }
-                              $post_date = $row2["post_date"] . "T16:00:00";
+                              $post_date = $row2["post_date"] . "T01:00:00";
                               $content_no = $row2["content_no"];
                               $content_type = $row2["content_type"];
                               $main_topic = $row2["main_topic"];
@@ -104,24 +104,65 @@
                               $contentwriter_status = $row2["contentwriter_status"];
                               $designer_status = $row2["designer_status"];
                               $copywriter_status = $row2["copywriter_status"];
+                              $color = "blue";
                               if($copywriter_status == "pending"){
                                   $step = "copywriter";
+                                  $color = "green";
                               }
                               if($designer_status == "pending"){
                                   $step = "designer";
+                                  $color = "orange";
                               }
                               if($contentwriter_status == "pending"){
                                   $step = "contentwriter";
+                                  $color = "red";
                               }
-                              echo "{
-                                title: '$display_name',
-                                start: '$post_date',
-                                backgroundColor: 'maroon'
-                              },";
+
+
+                              $adminAccess = false;
+
+                              if($adminAccess){
+                                
+                                echo "{
+                                  title: '$display_name',
+                                  start: '$post_date',
+                                  backgroundColor: '$color'
+                                },";
+                              }else{
+                                $color = "blue";
+                                $role1 = $_SESSION['role1'];
+                                $role2 = $_SESSION['role2'];
+                                $stat1 = $role1 . "_status";
+                                $stat2 = $role2 . "_status";
+                                //echo "<script>console.log($stat1);</script>";
+                                $rule1 = $_SESSION['role1'] . "_id";
+                                if($_SESSION['role2'] != ""){
+                                  $rule2 = $_SESSION['role2'] . "_id";
+                                }else{
+                                  $rule2 = $rule1;
+                                }
+                                
+                                if($row2["$rule1"] == "$my_id" || $row2["$rule2"] == "$my_id"){
+                                  $color = "blue";
+                                  if(${$stat1} == "pending"){
+                                    $color = "red";
+                                  } else if(${$stat1} == "review"){
+                                    $color = "orange";
+                                  } else if(${$stat1} == "approved"){
+                                    $color = "green";
+                                  }
+                                  echo "{
+                                    title: '$display_name',
+                                    start: '$post_date',
+                                    backgroundColor: '$color'
+                                  },";
+                                }
+                              }
                             }
                             echo "{
                               title: 'Test Event',
-                              start: '2022-04-12T16:00:00'
+                              start: '2022-05-12T01:00:00',
+                              backgroundColor: '$color'
                             }";
                           }
                         ?>
@@ -236,8 +277,8 @@
                 <!-- End of Topbar -->
 
                 <?php
-                        require 'sidebar_button.php';
-                    ?>
+                    require 'sidebar_button.php';
+                ?>
 
                 <div id='calendar'></div>
 
@@ -261,6 +302,11 @@
 
     </div>
     <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
 
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -292,6 +338,19 @@
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/datatables-demo.js"></script>
   
   </body>
 </html>
