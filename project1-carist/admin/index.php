@@ -1,3 +1,23 @@
+<?php
+    //Set the session timeout for 2 seconds
+    $timeout = 60;
+
+    //Set the maxlifetime of the session
+    ini_set( "session.gc_maxlifetime", $timeout );
+
+    //Set the cookie lifetime of the session
+    ini_set( "session.cookie_lifetime", $timeout );
+    session_start();
+    if (isset($_SESSION["userid"]) && isset($_SESSION["username"])){
+        $valid = true;
+    }else{
+        $valid = false;
+    }
+    if($valid){
+        header("Location: ./dashboard.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

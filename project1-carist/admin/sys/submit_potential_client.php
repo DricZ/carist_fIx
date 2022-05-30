@@ -34,8 +34,8 @@
         }
     } else {
         //Data not exist
-        $sql = "INSERT INTO `potential_client` (`id`, `nama_brand`, `instagram`, `whatsapp`, `line`, `contact`, `penawaran`, `keterangan`, `tanggal`, `brand_partner`, `instagram_partner`, `sales_id`)
-        VALUES (NULL, '$nama_brand', '$instagram', '$whatsapp', '$line', '$contact', '$penawaran', '$keterangan', current_timestamp(), '$brand_partner', '$instagram_partner', $my_id);";
+        $sql = 'INSERT INTO `potential_client` (`id`, `nama_brand`, `instagram`, `whatsapp`, `line`, `contact`, `penawaran`, `keterangan`, `tanggal`, `brand_partner`, `instagram_partner`, `sales_id`)
+        VALUES (NULL, "$nama_brand", "$instagram", "$whatsapp", "$line", "$contact", "$penawaran", "$keterangan", current_timestamp(), "$brand_partner", "$instagram_partner", $my_id);';
         if ($conn->query($sql) === TRUE) {
             $last_id = $conn->insert_id;
             //echo "New record created successfully";
@@ -60,10 +60,10 @@
                 }
     
                 // Check if file already exists
-                if (file_exists($target_file)) {
-                    echo "Sorry, file already exists.";
-                    $uploadOk = 0;
-                }
+                // if (file_exists($target_file)) {
+                //     echo "Sorry, file already exists.";
+                //     $uploadOk = 0;
+                // }
     
                 // Check file size
                 if ($_FILES["bukti"]["size"] > 500000) {
