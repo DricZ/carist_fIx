@@ -38,7 +38,7 @@
         //Upload file
         $target_dir = "../drive/bukti_marketing/";
         if($_FILES["bukti"] > 0){
-            $rename_file = "bukti_$last_id" . "_" . basename($_FILES["bukti"]["name"]);
+            $rename_file = "bukti" . "_" . basename($_FILES["bukti"]["name"]);
             $target_file = $target_dir . $rename_file;
             $uploadOk = 1;
             $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));

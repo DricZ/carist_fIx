@@ -154,6 +154,37 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Col 2 -->
+                        <div class="col-lg-6">
+                            <!-- Leaderboard -->
+                            <div class="row-lg-6">
+                                <div class="card shadow mb-4">
+                                    <!-- Card Header - Dropdown -->
+                                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                        <h6 class="m-0 font-weight-bold text-primary">Leaderboard</h6>
+                                    </div>
+                                    <!-- Card Body -->
+                                    <div class="card-body">
+                                        Your leaderboard here
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Report -->
+                            <div class="row-lg-6">
+                                <div class="card shadow mb-4">
+                                    <!-- Card Header - Dropdown -->
+                                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                        <h6 class="m-0 font-weight-bold text-primary">Monthly Report</h6>
+                                    </div>
+                                    <!-- Card Body -->
+                                    <div class="card-body">
+                                        Your monthly report here
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Potential Client -->
@@ -213,7 +244,7 @@
                                             </thead>
                                             <tbody>
                                                 <?php
-                                                    $sql = "SELECT * FROM potential_client";
+                                                    $sql = "SELECT * FROM potential_client ORDER BY id DESC";
                                                     $result = $conn->query($sql);
                                                     if ($result->num_rows > 0) {
                                                         // output data of each row
