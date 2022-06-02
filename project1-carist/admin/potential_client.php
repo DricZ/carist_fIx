@@ -8,6 +8,8 @@
     }
     $my_id = $_SESSION['userid'];
 
+    $this_month = date('n');
+    $this_year = date('Y');
 ?>
 
 
@@ -156,9 +158,9 @@
                         </div>
 
                         <!-- Col 2 -->
-                        <div class="col-lg-6">
+                        <div class="col-md-6">
                             <!-- Leaderboard -->
-                            <div class="row-lg-6">
+                            <div class="row-md-6">
                                 <div class="card shadow mb-4">
                                     <!-- Card Header - Dropdown -->
                                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -166,13 +168,52 @@
                                     </div>
                                     <!-- Card Body -->
                                     <div class="card-body">
-                                        Your leaderboard here
+                                        <!-- Leaderboard -->
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered" id="leaderboard" width="100%" cellspacing="0">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Rank</th>
+                                                        <th>Nama</th>
+                                                        <th>Input</th>
+                                                        <th>Target</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php
+                                                        $no = 1;
+                                                        $sql = "SELECT user.user_id, user.name, COUNT(nama_brand) AS input
+                                                        FROM `potential_client`
+                                                        LEFT JOIN user ON potential_client.sales_id = user.user_id
+                                                        WHERE potential_client.id IN (SELECT id FROM `potential_client` WHERE EXTRACT(MONTH FROM tanggal) = '$this_month' AND EXTRACT(YEAR FROM tanggal) = '$this_year')
+                                                        GROUP BY sales_id
+                                                        ORDER BY COUNT(nama_brand) DESC;";
+                                                        $result = $conn->query($sql);
+                                                        if ($result->num_rows > 0) {
+                                                            // output data of each row
+                                                            while($row = $result->fetch_assoc()) {
+                                                                echo "<tr>";
+                                                                $id = $row['user_id'];
+                                                                $name = $row['name'];
+                                                                $input = $row['input'];
+                                                                echo "<td>$no</td>";
+                                                                $no++;
+                                                                echo "<td>$name</td>";
+                                                                echo "<td>$input</td>";
+                                                                echo "<td>250</td>";
+                                                                echo "</tr>";
+                                                            }
+                                                        }
+                                                    ?>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Report -->
-                            <div class="row-lg-6">
+                            <div class="row-md-6">
                                 <div class="card shadow mb-4">
                                     <!-- Card Header - Dropdown -->
                                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -180,7 +221,76 @@
                                     </div>
                                     <!-- Card Body -->
                                     <div class="card-body">
-                                        Your monthly report here
+                                        <form id="monthlyreport">
+                                            <div class="input-group">
+                                                <span class="input-group-text">See Monthly Report for</span>
+                                                <!-- <span class="input-group-text">Month</span> -->
+                                                <select class="form-select" id="monthselect" name="month">
+                                                    <option value="1">January</option>
+                                                    <option value="2">February</option>
+                                                    <option value="3">March</option>
+                                                    <option value="4">April</option>
+                                                    <option value="5">May</option>
+                                                    <option value="6">June</option>
+                                                    <option value="7">July</option>
+                                                    <option value="8">August</option>
+                                                    <option value="9">September</option>
+                                                    <option value="10">October</option>
+                                                    <option value="11">November</option>
+                                                    <option value="12">December</option>
+                                                </select>
+                                                <!-- <span class="input-group-text">Year</span> -->
+                                                <select class="form-select" id="yearselect" name="year">
+                                                    <option value="2022">2022</option>
+                                                </select>
+                                                <!-- <input type="submit" value="Update" class="btn btn-primary"/> -->
+                                            </div>
+                                        </form>
+                                        <br>
+                                        <div id="month_report">
+                                            <!-- Monthly Report -->
+                                            <div class="table-responsive">
+                                            <table class="table table-bordered" id="leaderboard" width="100%" cellspacing="0">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Rank</th>
+                                                        <th>Nama</th>
+                                                        <th>Input</th>
+                                                        <th>Target</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php
+                                                        $no = 1;
+                                                        $sql = "SELECT user.user_id, user.name, COUNT(nama_brand) AS input
+                                                        FROM `potential_client`
+                                                        LEFT JOIN user ON potential_client.sales_id = user.user_id
+                                                        WHERE potential_client.id IN (SELECT id FROM `potential_client` WHERE EXTRACT(MONTH FROM tanggal) = '$this_month' AND EXTRACT(YEAR FROM tanggal) = '$this_year')
+                                                        GROUP BY sales_id
+                                                        ORDER BY COUNT(nama_brand) DESC;";
+                                                        $result = $conn->query($sql);
+                                                        if ($result->num_rows > 0) {
+                                                            // output data of each row
+                                                            while($row = $result->fetch_assoc()) {
+                                                                echo "<tr>";
+                                                                $id = $row['user_id'];
+                                                                $name = $row['name'];
+                                                                $input = $row['input'];
+                                                                echo "<td>$no</td>";
+                                                                $no++;
+                                                                echo "<td>$name</td>";
+                                                                echo "<td>$input</td>";
+                                                                echo "<td>250</td>";
+                                                                echo "</tr>";
+                                                            }
+                                                        }else{
+                                                            echo "<tr><td colspan=4><center>No Data</center></td></tr>";
+                                                        }
+                                                    ?>
+                                                </tbody>
+                                            </table>
+                                            </div>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -194,20 +304,6 @@
                                 <!-- Card Header - Dropdown -->
                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Potential Client</h6>
-                                    <!-- <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div> -->
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
@@ -244,7 +340,11 @@
                                             </thead>
                                             <tbody>
                                                 <?php
-                                                    $sql = "SELECT * FROM potential_client ORDER BY id DESC";
+                                                    $sql = "SELECT potential_client.*, user.name AS nama_sales
+                                                    FROM `potential_client`
+                                                    LEFT JOIN user ON potential_client.sales_id = user.user_id
+                                                    WHERE potential_client.id IN (SELECT id FROM `potential_client` WHERE EXTRACT(MONTH FROM tanggal) = '$this_month' AND EXTRACT(YEAR FROM tanggal) = '$this_year')
+                                                    ORDER BY id DESC";
                                                     $result = $conn->query($sql);
                                                     if ($result->num_rows > 0) {
                                                         // output data of each row
@@ -262,7 +362,7 @@
                                                             $tanggal = $row['tanggal'];
                                                             $brand_partner = $row['brand_partner'];
                                                             $instagram_partner = $row['instagram_partner'];
-                                                            $sales_id = $row['sales_id'];
+                                                            $sales = $row['nama_sales'];
                                                             $bukti = $row['bukti'];
                                                             $bukti_url = "../drive/bukti_marketing/" . $bukti; 
                                                             echo "<td>$no</td>";
@@ -277,19 +377,7 @@
                                                             echo "<td>$tanggal</td>";
                                                             echo "<td>$brand_partner</td>";
                                                             echo "<td>$instagram_partner</td>";
-
-                                                            $sql2 = "SELECT user_id, username, name FROM user WHERE user_id = $sales_id";
-                                                            $result2 = $conn->query($sql2);
-
-                                                            if ($result2->num_rows > 0) {
-                                                                // output data of each row
-                                                                while($row2 = $result2->fetch_assoc()) {
-                                                                    $name = $row2["name"];
-                                                                    echo "<td>$name</td>";
-                                                                }
-                                                            } else {
-                                                                echo "<td>Not Found</td>";
-                                                            }
+                                                            echo "<td>$sales</td>";
                                                             
                                                             if($see_bukti){
                                                                 echo "<td><a href='https://life.carist.id/drive/bukti_marketing/$bukti' target='_blank'><img src='$bukti_url' alt='$bukti' class='buktichat' style='max-width: 200px'></a></td>";
@@ -384,6 +472,69 @@
             $(this).find('.taskidInput').attr('value', $(e.relatedTarget).data('taskid'));
             $(this).find("."+$(e.relatedTarget).data('step')+"Select").attr('disabled', false);
             $(this).find('.textPilih').text(step);
+        });
+        $( document ).ready(function() {
+            var request;
+            // Bind to the submit event of our form
+            $("#monthlyreport").change(function(event){
+
+                // Prevent default posting of form - put here to work in case of errors
+                event.preventDefault();
+
+                // Abort any pending request
+                if (request) {
+                    request.abort();
+                }
+                // setup some local variables
+                var $form = $(this);
+
+                // Let's select and cache all the fields
+                var $inputs = $form.find("input, select, button, textarea");
+
+                // Serialize the data in the form
+                var serializedData = $form.serialize();
+
+                // Let's disable the inputs for the duration of the Ajax request.
+                // Note: we disable elements AFTER the form data has been serialized.
+                // Disabled form elements will not be serialized.
+                $inputs.prop("disabled", true);
+
+                // Fire off the request to /form.php
+                request = $.ajax({
+                    url: "./sys/monthly_report.php",
+                    type: "post",
+                    data: serializedData
+                });
+
+                // Callback handler that will be called on success
+                request.done(function (response, textStatus, jqXHR){
+                    // Log a message to the console
+                    console.log("Hooray, it worked!");
+                    console.log(response);
+                    $('#month_report').html(response);
+                });
+
+                // Callback handler that will be called on failure
+                request.fail(function (jqXHR, textStatus, errorThrown){
+                    // Log the error to the console
+                    console.error(
+                        "The following error occurred: "+
+                        textStatus, errorThrown
+                    );
+                });
+
+                // Callback handler that will be called regardless
+                // if the request failed or succeeded
+                request.always(function () {
+                    // Reenable the inputs
+                    $inputs.prop("disabled", false);
+                });
+
+            }); //Monthly Report End
+
+            //Change default month and year
+            $("#monthselect").val("<?=$this_month?>");
+            $("#yearselect").val("<?=$this_year?>");
         });
         
     </script>
